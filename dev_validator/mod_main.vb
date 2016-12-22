@@ -14,7 +14,6 @@ Module mod_main
         Dim s_profile_fnp As String = arguments(2)
         _cl(Convert.ToString("Loading assembly: ") & s_assembl_fnp & " & profile: " & s_profile_fnp)
 
-
         Dim cls_VP As New cls_Profile
         Dim s_buf As String = File.ReadAllText(s_profile_fnp)
         cls_VP.lst_parametrs = s_buf.Split(vbCrLf).ToList
