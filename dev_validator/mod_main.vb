@@ -9,8 +9,6 @@ Imports System.IO
 Module mod_main
     Sub Main()
         '
-        MsgBox(1)
-
         Dim arguments As [String]() = Environment.GetCommandLineArgs()
         Dim s_assembl_fnp As String = arguments(1)
         Dim s_profile_fnp As String = arguments(2)
