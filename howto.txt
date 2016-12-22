@@ -1,0 +1,19 @@
+﻿install:
+0. download XAMPP: https://www.apachefriends.org/ru/download.html
+1. install bitnami XAMPP to: c:\xampp (MySQL + PHP остальное - не надо).
+2. веб рут по-умолчанию тут: c:\xampp\htdocs.
+4. скачать последнюю версию валидатора с профилями у меся с ДБокса: https://dl.dropboxusercontent.com/u/48344701/validator_core.exe
+5. распаковать в c:\xampp\htdocs (это SFX он сам распакует).
+6. зайти в браузере: http://localhost:10000/validate_fe.php
+7. загрузить тестовую сборку: c:\xampp\htdocs\test\WindowsApplication1.exe
+8. резульат должен быть такой: http://clip2net.com/s/3FLvSMN
+9. Профиль валидации тут: c:\xampp\htdocs\validator\profile1.txt
+10. Формат профиля: 
+----------------------------------------------
+System.Windows.Forms.TextBox:TextBox1:1:50
+System.Windows.Forms.TextBox:TextBox2:2:50
+System.Windows.Forms.TextBox:TextBox3::50
+----------------------------------------------
+тип_контрола:имя контрола:значение:баллы_за_ок
+----------------------------------------------
++ поговорить
