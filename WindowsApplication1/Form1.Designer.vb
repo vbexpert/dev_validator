@@ -37,21 +37,21 @@ Partial Class Form1
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(234, 47)
         Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Calculate!"
+        Me.Button1.Text = "Додати!"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(22, 16)
+        Me.Label1.Location = New System.Drawing.Point(9, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(43, 13)
+        Me.Label1.Size = New System.Drawing.Size(56, 13)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "input A:"
+        Me.Label1.Text = "Ввести А:"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(74, 13)
+        Me.TextBox1.Location = New System.Drawing.Point(90, 12)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(77, 20)
         Me.TextBox1.TabIndex = 2
@@ -59,24 +59,24 @@ Partial Class Form1
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(74, 39)
+        Me.TextBox2.Location = New System.Drawing.Point(90, 39)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(77, 20)
         Me.TextBox2.TabIndex = 4
-        Me.TextBox2.Text = "Закрыть"
+        Me.TextBox2.Text = "2"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(22, 42)
+        Me.Label2.Location = New System.Drawing.Point(9, 42)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 13)
+        Me.Label2.Size = New System.Drawing.Size(56, 13)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "input B:"
+        Me.Label2.Text = "Ввести Б:"
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(74, 102)
+        Me.TextBox3.Location = New System.Drawing.Point(90, 102)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(77, 20)
         Me.TextBox3.TabIndex = 6
@@ -86,9 +86,9 @@ Partial Class Form1
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(22, 105)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(43, 13)
+        Me.Label3.Size = New System.Drawing.Size(62, 13)
         Me.Label3.TabIndex = 5
-        Me.Label3.Text = "input B:"
+        Me.Label3.Text = "Результат:"
         '
         'Form1
         '

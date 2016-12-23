@@ -16,22 +16,22 @@ static class mod_main
         if (arguments.GetLength(0) != 3)
         {
             _cl("not enough CLAs!");
-            _cl("press any key to quit...");
-            Console.ReadKey();
+            //_cl("press any key to quit...");
+            //Console.ReadKey();
             Environment.Exit(0);
         }
         //-------------------------->
         string s_assembl_fnp = arguments[1];
         string s_profile_fnp = arguments[2];
-        _cl(Convert.ToString("Loading assembly...")); //+ s_assembl_fnp + " & profile: " + s_profile_fnp);
+        //_cl(Convert.ToString("Loading assembly...")); //+ s_assembl_fnp + " & profile: " + s_profile_fnp);
                                                       //-------------------------->
                                                       //lodaing profile:
         cls_Profile cls_VP = new cls_Profile();
         if (File.Exists(s_profile_fnp) == false)
         {
             _cl("Profile file not found! " + s_profile_fnp);
-            _cl("press any key to quit...");
-            Console.ReadKey();
+            //_cl("press any key to quit...");
+            //Console.ReadKey();
             Environment.Exit(0);
         }
         string s_buf = File.ReadAllText(s_profile_fnp);
@@ -42,9 +42,9 @@ static class mod_main
         {
             cls_VP.lst_parametrs[i] = cls_VP.lst_parametrs[i].Trim();
         }
-        _cl("----------------------------------->");
+        //_cl("----------------------------------->");
         _get_assembly_FormNames_and_validate(s_assembl_fnp, cls_VP);
-        _cl("----------------------------------->");
+        //_cl("----------------------------------->");
         //_cl("press any key to quit...")
         //Console.ReadKey()
         //
@@ -72,10 +72,10 @@ static class mod_main
                 // - но оно всё равно будет работать :-) форма будет невидимая, но рабочая на 100%):
                 f.Show();
                 //07. с этой точки сть доступ ко всей програмой начинке:
-                Console.WriteLine("Form size: " + f.Height + ":" + f.Width); //размер
-                Console.WriteLine(f.GetType() + ":" + f.Name); //тип объекта и его имя
+                //Console.WriteLine("Form size: " + f.Height + ":" + f.Width); //размер
+                //Console.WriteLine(f.GetType() + ":" + f.Name); //тип объекта и его имя
                                                                //08. итератор по всем внутренним контролам внутри формы (лейблы, кнопки, картинки, текстбоксы)
-                Console.WriteLine("-- состояние контролов ДО нажатия ---------------------------------->");
+                //Console.WriteLine("-- состояние контролов ДО нажатия ---------------------------------->");
                 foreach (Control obj_control in f.Controls)
                 {
                     //09. если тип кнопка: 
@@ -98,16 +98,16 @@ static class mod_main
                         //<------------
                     }
                     //12. отображаем Тип контрола, его Имя и Текст:
-                    Console.WriteLine(obj_control.GetType() + "\t title=" + obj_control.Name + "\t value=[" + obj_control.Text + "]");
+                    //Console.WriteLine(obj_control.GetType() + "\t title=" + obj_control.Name + "\t value=[" + obj_control.Text + "]");
                 }
                 //------------------------------------------->
                 //13. теперь опять проводим итерацию по всем контролам, но...
                 //уже ПОСЛЕ того, как кнопка была нажата и результат попал в ТекстБокс3:
-                Console.WriteLine("-- состояние контролов ПОСЛЕ нажатия ---------------------------------->");
+                //Console.WriteLine("-- состояние контролов ПОСЛЕ нажатия ---------------------------------->");
                 foreach (Control obj_control in f.Controls)
                 {
                     //14. отображаем Тип контрола, его Имя и Текст:
-                    Console.WriteLine(obj_control.GetType() + "\t title=" + obj_control.Name + "\t value=[" + obj_control.Text + "]");
+                    //Console.WriteLine(obj_control.GetType() + "\t title=" + obj_control.Name + "\t value=[" + obj_control.Text + "]");
                 }
             }
         }
@@ -124,8 +124,8 @@ static class mod_main
             {
                 //Convert Type to Object: 
                 Form f = (Form)Activator.CreateInstance(AllTypesInProjects[i]);
-                _cl("Form size: " + f.Height + ":" + f.Width);
-                _cl(f.GetType().FullName + ":" + f.Name);
+                //_cl("Form size: " + f.Height + ":" + f.Width);
+                //_cl(f.GetType().FullName + ":" + f.Name);
                 //
                 //_cl("validation score is: " & cls_VP._get_validation_score(f.Controls))
                 //
