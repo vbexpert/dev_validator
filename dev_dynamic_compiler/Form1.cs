@@ -19,14 +19,20 @@ namespace dev_DynCC
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string s_profile_fnp = "code1.txt";
-            string s_buf = File.ReadAllText(s_profile_fnp);
-            //
-            this._compile(s_buf);
+            string s_code_file_fnp = "c:\\Users\\Admin\\Source\\Repos\\dev_validator\\dev_dynamic_compiler\\code1.txt";
+            string s_student_app_fnp = "WindowsApplication1.exe";  
+
+            object r = this._compile_run_and_validate(s_code_file_fnp, s_student_app_fnp);
+
+            r = null;
         }
 
-        public void _compile(string s_code = "")
+        public object _compile_run_and_validate(string s_code_file_fnp = "", 
+                                                string s_student_app_fnp = "")
         {
+            //read code:
+            string s_dynamic_code = File.ReadAllText(s_code_file_fnp);
+
             //init compiler:
             CSharpCodeProvider obj_CSharpCodeProvider = new CSharpCodeProvider();
             CodeDomProvider obj_CodeDomProvider = CodeDomProvider.CreateProvider("CSharp");
@@ -48,7 +54,7 @@ namespace dev_DynCC
             _CompilerParameters.ReferencedAssemblies.Add("System.dll");
 
             //main compile call:
-            CompilerResults obj_results = obj_CSharpCodeProvider.CompileAssemblyFromSource(_CompilerParameters, s_code);
+            CompilerResults obj_results = obj_CSharpCodeProvider.CompileAssemblyFromSource(_CompilerParameters, s_dynamic_code);
 
             //error handling:
             if (obj_results.Errors.HasErrors == true) {
@@ -89,7 +95,7 @@ namespace dev_DynCC
             MethodInfo main1 = program.GetMethod("test");
             object obj_result = main1.Invoke(null, new object[] { f });
             
-            MessageBox.Show("validator func returned: " + obj_result);
+            return obj_result;
             
         }
     }
