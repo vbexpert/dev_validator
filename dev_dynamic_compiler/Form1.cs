@@ -24,6 +24,7 @@ namespace dev_DynCC
             string s_student_app_fnp = "WindowsApplication1.exe";  
 
             //test new
+            //force conflit:
 
 
             object r = this._compile_run_and_validate(s_code_file_fnp, s_student_app_fnp);
