@@ -23,7 +23,7 @@ namespace dev_DynCC
             string s_code_file_fnp = "c:\\Users\\Admin\\Source\\Repos\\dev_validator\\dev_dynamic_compiler\\code1.txt";
             string s_student_app_fnp = "WindowsApplication1.exe";  
 
-            //test new
+            //test new ok
 
 
             object r = this._compile_run_and_validate(s_code_file_fnp, s_student_app_fnp);
