@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{5FD8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev_dynamic_compiler", "dev_dynamic_compiler\dev_dynamic_compiler.csproj", "{37E41F61-1B61-4123-999B-241E874FD17F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsApplication1", "WindowsApplication1\WindowsApplication1.csproj", "{32201FD5-D13E-40DF-90AD-00513AE53649}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,14 @@ Global
 		{37E41F61-1B61-4123-999B-241E874FD17F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{37E41F61-1B61-4123-999B-241E874FD17F}.Release|x86.ActiveCfg = Release|Any CPU
 		{37E41F61-1B61-4123-999B-241E874FD17F}.Release|x86.Build.0 = Release|Any CPU
+		{32201FD5-D13E-40DF-90AD-00513AE53649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32201FD5-D13E-40DF-90AD-00513AE53649}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32201FD5-D13E-40DF-90AD-00513AE53649}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{32201FD5-D13E-40DF-90AD-00513AE53649}.Debug|x86.Build.0 = Debug|Any CPU
+		{32201FD5-D13E-40DF-90AD-00513AE53649}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32201FD5-D13E-40DF-90AD-00513AE53649}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32201FD5-D13E-40DF-90AD-00513AE53649}.Release|x86.ActiveCfg = Release|Any CPU
+		{32201FD5-D13E-40DF-90AD-00513AE53649}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
