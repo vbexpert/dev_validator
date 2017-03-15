@@ -1,0 +1,28 @@
+using System.Windows.Forms;
+using System;
+namespace ns_d_code
+{
+    public class cls_Main
+    {
+		//----------------------------------------------->
+        public static void Main()
+        {
+		    Console.Beep(5000, 1000);
+            Console.WriteLine("Hello, world!");
+        }
+        public static string test(Form f)
+        {
+            return(f.Text + "; " + f.Size.Width + "; " + f.Size.Height);
+        }
+		//----------------------------------------------->
+        private string s_echo_vailid(string s_value, int i_i_score)
+        {
+            return ("<div class='green'></div>");
+        }
+        private string s_echo_invalid(string s_value)
+        {
+            return ("<div class='green'></div>");
+        }
+		//----------------------------------------------->
+    }
+}
