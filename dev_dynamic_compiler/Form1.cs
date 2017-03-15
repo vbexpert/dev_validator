@@ -20,7 +20,7 @@ namespace dev_DynCC
         private void Form1_Load(object sender, EventArgs e)
         {
             //test123 test ! 321
-            string s_code_file_fnp = "c:\\Users\\Admin\\Source\\Repos\\dev_validator\\dev_dynamic_compiler\\code1.txt";
+            string s_code_file_fnp = "code1.txt";
             string s_student_app_fnp = "WindowsApplication1.exe";  
 
             //test new ok
