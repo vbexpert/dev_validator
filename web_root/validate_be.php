@@ -12,9 +12,17 @@
 	</style>
 </head>
 <?php
-$target_dir = "uploads\\";
-$profile_fnp = "c:\\xampp\\htdocs\\validator\\profile1.txt";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$target_dir = "uploads";
+$s_codefile_fnp = "tasks\\".$_POST["codefile"]."\\code.txt";
+
+//$s_codefile_fnp = "c:\\xampp\\htdocs\\validator\\validation_scripts\\code1.txt";
+
+//using uploaded fn:
+//$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+
+//using unique name: (for multiple users):
+$target_file = $target_dir . uniqid(rand(), true) . '.exe';
+
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if file already exists:
@@ -39,8 +47,10 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded Ok! running validatior...";
-		$command = "validator\\dev_validator.exe $target_file $profile_fnp";
+		$command = "validator.exe $target_file $s_codefile_fnp";
 		$ret = system($command);
+		//delete file:
+		unlink($target_file);
     } else {
         echo "Sorry, there was an error uploading your file.";
     }

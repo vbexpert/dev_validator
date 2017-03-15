@@ -43,8 +43,6 @@ static class mod_main
             Environment.Exit(0);
         }
         //-------------------------->
-        string s_buf = File.ReadAllText(s_vCodeFile);
-        //-------------------------->
         //main call:
         object r = _compile_run_and_validate(s_vCodeFile, s_assembl_fnp);
         //-------------------------->
@@ -100,7 +98,7 @@ static class mod_main
         //get form instance:
         Form f = null;
         //01. загрузка .нет сборки из файла в мастер-объект с помощью "отражения":
-        Assembly obj_Assemply = Assembly.LoadFrom("WindowsApplication1.exe");
+        Assembly obj_Assemply = Assembly.LoadFrom(s_student_app_fnp);
         //02. получение всех типов объектов внитри сборки:
         Type[] AllTypesInProjects = obj_Assemply.GetTypes();
         //03. итератор по всем типам:
@@ -114,8 +112,8 @@ static class mod_main
                 goto _form_detected;
             }
         }
-    //<--------------------------------------------------------------
-    _form_detected:
+        //<--------------------------------------------------------------
+        _form_detected:
 
         //calling validation code:
         MethodInfo main1 = program.GetMethod("test");
@@ -129,5 +127,4 @@ static class mod_main
     {
         Console.WriteLine(s_msg);
     }
-
 }
