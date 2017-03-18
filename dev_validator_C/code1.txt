@@ -22,13 +22,22 @@ namespace ns_d_code
 			    cls_output_controller._add_validation_failed("Форма відсутня!", 0);
 			}
 
-			if (f.Text != "Form1")
+			if (f.Text == "Form1")
 			{
 			    cls_output_controller._add_validation_ok("Вірний заголовок форми!", 20);
 			}
 			else
 			{
 			    cls_output_controller._add_validation_failed("Невірний заголовок форми!", 0);
+			}
+			//колір:
+			if (f.BackColor = Color.Red;)
+			{
+			    cls_output_controller._add_validation_ok("Колір форми вірний!", 20);
+			}
+			else
+			{
+			    cls_output_controller._add_validation_ok("Колір форми невірний!", 0);
 			}
 			
 			//return validation buffer:

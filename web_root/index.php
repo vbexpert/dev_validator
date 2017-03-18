@@ -1,9 +1,12 @@
 ﻿<?php
 //utf8 support:
 header('Content-Type: text/html; charset=utf-8');
+include_once("validator_be.php");
 ?>
 <html>
   <head>
+    <!-- title -->
+    <title>Перевірка:</title>
     <!-- utf8 support: -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<!-- jq CDN (bootsrtrap reqired): -->
@@ -34,20 +37,37 @@ header('Content-Type: text/html; charset=utf-8');
          padding:30px;
          text-align:center;
          font-size:55px;
-       }
-       .lead-top-fix{
+      }
+      .lead-top-fix{
          padding-top:0px;	  
-       }
-       .pic-centered{
-        text-align:center;
+      }
+      .pic-centered{
+         text-align:center;
          padding:20px;
-       }
-       .bold{
-        font-weight:bold !important;
-       }
-       .note{
+      }
+      .bold{
+         font-weight:bold !important;
+      }
+      .note{
          padding:10px;
-       }
+      }
+	  .c_correct{
+		 color:green;
+		 text-align:left;
+		 font-size:35px;
+	  }
+	  .c_wrong{
+		 color:red;
+		 text-align:left;
+		 font-weight:bold !important;
+		 padding:10px;
+		 font-size:35px;
+	  }
+	  .task_desc_row{
+		 text-align:left;
+		 padding:10px;
+		 font-size:25px;
+	  }	  
 	</style>
  </head>
  <body>
@@ -66,33 +86,26 @@ header('Content-Type: text/html; charset=utf-8');
        <div class="jumbotron">
 	   
 		 <!-- task info block start --------------------------------------------------------------------------------->
-         <h2 class=''>Завдання 1: 'Додавання'</h2>
-         <br>
-         <p class="lead lead-top-fix">Створи програму із двома текстовими полями <span class='bold'>TextBox1</span> та <span class='bold'>TextBox2</span>. Додай кнопку <span class='bold'>Button1</span> "Додати" та напиши програму виводу результату до <span class='bold'>TextBox3</span>:</p>
-         <div class="row pic-centered">
-           <img src="addition.png" alt="...">
+         <h2 class=''>Доступні завдання:</h2>
+         <hr>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/5.1.1/task.php">Завдання 1: "Winforms 5.1"</a>
          </div>
-         <p class="lead">
-           <a class="btn btn-info btn-warning" href="//youtube.com" role="button">Подивитися відео</a>
-         </p>  
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/5.1.2/task.php">Завдання 2: "Winforms 5.2"</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/5.1.3/task.php">Завдання 3: "Winforms 5.3"</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/5.1.4/task.php">Завдання 4: "Winforms 5.4"</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/5.1.5/task.php">Завдання 5: "Winforms 5.5"</a>
+         </div>
          <hr>
          <!-- task info block end ----------------------------------------------------------------------------------->
 
-         <!-- task validation block start --------------------------------------------------------------------------->
-         <h2 class=''>Перевірка:</h2>
-           <!-- uploader start -->
-           <form action="..\..\validate_be.php" method="post" enctype="multipart/form-data">
-             Оберіть файл програми, для валідації:
-             <label class="btn btn-info btn-browse" for="fileToUpload">
-             <input id="fileToUpload" name="fileToUpload" type="file" style="display:none;">
-               Обрати файл
-             </label>
-             <input class='btn btn-primary btn-upload' type="submit" value="Відправити файл" name="submit"></input>
-			 <!-- uploader end -->
-			 <input type="hidden" name="codefile" value="5.1.0"> <!-- task id -->
-         </form>
-		 <!-- task validation block end ------------------------------------------------------------------------------>
-		
 		</div>
 		
       </div>

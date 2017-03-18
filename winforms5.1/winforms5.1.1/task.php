@@ -4,6 +4,8 @@ header('Content-Type: text/html; charset=utf-8');
 ?>
 <html>
   <head>
+    <!-- title -->
+    <title>Завдання Winforms 5.1.1:</title>
     <!-- utf8 support: -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<!-- jq CDN (bootsrtrap reqired): -->
@@ -66,22 +68,33 @@ header('Content-Type: text/html; charset=utf-8');
        <div class="jumbotron">
 	   
 		 <!-- task info block start --------------------------------------------------------------------------------->
-         <h2 class=''>Завдання 1: 'Додавання'</h2>
+         <h2 class=''>Завдання Winforms 5.1.1: 'Створення простої програми із 1 формою'</h2>
          <br>
-         <p class="lead lead-top-fix">Створи програму із двома текстовими полями <span class='bold'>TextBox1</span> та <span class='bold'>TextBox2</span>. Додай кнопку <span class='bold'>Button1</span> "Додати" та напиши програму виводу результату до <span class='bold'>TextBox3</span>:</p>
+         <p class="lead lead-top-fix">1. Створи новий проект програми С# із Winforms.</p>
+		 <p class="lead lead-top-fix">2. Встановити розмір вікна форми 400x300 пікселів.</p>
+		 <p class="lead lead-top-fix">3. Встановити колір вікна форми на "яскраво червоний".</p>
+		 <p class="lead lead-top-fix">4. Змінити назву вікна форми на власне імя та прізвище.</p>
+		 <p class="lead lead-top-fix">5. Встановити початкову позицію вікна на х:200 y:200.</p>
+		 <p class="lead lead-top-fix">6. Побудувати проект.</p>
+		 <p class="lead lead-top-fix">7. Знайти побудовану програму та завантажити у Валідатор.</p>
+		 <p class="lead lead-top-fix">8. Добитися повної алідації програми.</p>
+		 
          <div class="row pic-centered">
-           <img src="addition.png" alt="...">
+           <img src="target_form.png" alt="...">
          </div>
+		 <!-- 
          <p class="lead">
            <a class="btn btn-info btn-warning" href="//youtube.com" role="button">Подивитися відео</a>
          </p>  
          <hr>
+		 -->
+		 
          <!-- task info block end ----------------------------------------------------------------------------------->
 
          <!-- task validation block start --------------------------------------------------------------------------->
          <h2 class=''>Перевірка:</h2>
            <!-- uploader start -->
-           <form action="..\..\validate_be.php" method="post" enctype="multipart/form-data">
+           <form action="..\..\validator_fe.php" method="post" enctype="multipart/form-data">
              Оберіть файл програми, для валідації:
              <label class="btn btn-info btn-browse" for="fileToUpload">
              <input id="fileToUpload" name="fileToUpload" type="file" style="display:none;">
@@ -89,7 +102,7 @@ header('Content-Type: text/html; charset=utf-8');
              </label>
              <input class='btn btn-primary btn-upload' type="submit" value="Відправити файл" name="submit"></input>
 			 <!-- uploader end -->
-			 <input type="hidden" name="codefile" value="5.1.0"> <!-- task id -->
+			 <input type="hidden" name="codefile" value="5.1.1"> <!-- task id -->
          </form>
 		 <!-- task validation block end ------------------------------------------------------------------------------>
 		
