@@ -7,6 +7,7 @@ include_once("validator_be.php");
   <head>
     <!-- title -->
     <title>Перевірка:</title>
+	
     <!-- utf8 support: -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<!-- jq CDN (bootsrtrap reqired): -->
@@ -19,51 +20,8 @@ include_once("validator_be.php");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
     <!-- favicon: -->
 	<link rel="icon" href="favicon.ico?v=2" />
-	<!-- embedded CSS: -->
-    <style media="screen" type="text/css">
-      .btn-browse{
-         width:200px !important;
-         margin-left:46px;
-         margin-top:9px;
-      }
-      .btn-upload{
-         width:200px !important;
-         margin-left:10px;
-      }
-      .c-dropdown{
-         margin-top:10px;
-	  }
-      .h1_main{
-         padding:30px;
-         text-align:center;
-         font-size:55px;
-      }
-      .lead-top-fix{
-         padding-top:0px;	  
-      }
-      .pic-centered{
-         text-align:center;
-         padding:20px;
-      }
-      .bold{
-         font-weight:bold !important;
-      }
-      .note{
-         padding:10px;
-      }
-	  .c_correct{
-		 color:green;
-		 text-align:left;
-		 font-size:35px;
-	  }
-	  .c_wrong{
-		 color:red;
-		 text-align:left;
-		 font-weight:bold !important;
-		 padding:10px;
-		 font-size:35px;
-	  }	  
-	</style>
+	<!-- external CSS: -->
+    <link rel="stylesheet" type="text/css" href="_css/global.css">
  </head>
  <body>
    <div class="container">
@@ -80,7 +38,6 @@ include_once("validator_be.php");
 	
        <div class="jumbotron">
 	   
-		 <!-- task info block start --------------------------------------------------------------------------------->
          <h2 class=''>Перевірка програми:</h2>
          <br>
          <p class="lead lead-top-fix">
@@ -90,10 +47,7 @@ include_once("validator_be.php");
 
          <!-- validator code end:  ---------------------------------------------------------------------------------->
 		 
-         <!-- task info block end ----------------------------------------------------------------------------------->
-
 		</div>
-		
       </div>
     </div>
   </body>

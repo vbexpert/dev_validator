@@ -6,6 +6,7 @@ header('Content-Type: text/html; charset=utf-8');
   <head>
     <!-- title -->
     <title>Завдання Winforms 5.1.1:</title>
+	
     <!-- utf8 support: -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<!-- jq CDN (bootsrtrap reqired): -->
@@ -18,39 +19,8 @@ header('Content-Type: text/html; charset=utf-8');
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
     <!-- favicon: -->
 	<link rel="icon" href="favicon.ico?v=2" />
-	<!-- embedded CSS: -->
-    <style media="screen" type="text/css">
-      .btn-browse{
-         width:200px !important;
-         margin-left:46px;
-         margin-top:9px;
-      }
-      .btn-upload{
-         width:200px !important;
-         margin-left:10px;
-      }
-      .c-dropdown{
-         margin-top:10px;
-	  }
-      .h1_main{
-         padding:30px;
-         text-align:center;
-         font-size:55px;
-       }
-       .lead-top-fix{
-         padding-top:0px;	  
-       }
-       .pic-centered{
-        text-align:center;
-         padding:20px;
-       }
-       .bold{
-        font-weight:bold !important;
-       }
-       .note{
-         padding:10px;
-       }
-	</style>
+	<!-- external CSS: -->
+    <link rel="stylesheet" type="text/css" href="../../_css/global.css">
  </head>
  <body>
    <div class="container">

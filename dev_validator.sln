@@ -22,6 +22,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winforms5.1.1", "winforms5.1\winforms5.1.1\winforms5.1.1.csproj", "{65A901DD-158C-4E54-A929-17F0C714D1CB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_js", "_js", "{1281CA4F-FFC0-4486-9606-06F3AB42ABF0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_css", "_css", "{C30028BD-AA82-44FF-B3CF-340C4C535901}"
+	ProjectSection(SolutionItems) = preProject
+		web_root\_css\global.css = web_root\_css\global.css
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,5 +58,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{65A901DD-158C-4E54-A929-17F0C714D1CB} = {564D395B-0F76-4D5D-9AFA-9B373BD7C53D}
+		{1281CA4F-FFC0-4486-9606-06F3AB42ABF0} = {672F46FC-BD77-4A44-9021-57B96A7583CA}
+		{C30028BD-AA82-44FF-B3CF-340C4C535901} = {672F46FC-BD77-4A44-9021-57B96A7583CA}
 	EndGlobalSection
 EndGlobal
