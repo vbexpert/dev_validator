@@ -84,6 +84,7 @@
     <Content Include="code1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="places_to_replace_for_new_task.txt" />
     <Content Include="WindowsApplication1.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
