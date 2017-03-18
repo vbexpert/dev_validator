@@ -89,11 +89,7 @@ include_once("validator_be.php");
 		 <?php _validate_uploaded_app(); ?>
 
          <!-- validator code end:  ---------------------------------------------------------------------------------->
-		 </p>
-         <div class="row pic-centered">
-           
-         </div>
-         <hr>
+		 
          <!-- task info block end ----------------------------------------------------------------------------------->
 
 		</div>

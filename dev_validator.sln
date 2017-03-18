@@ -10,8 +10,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web_root", "web_root", "{FE260EE6-3E18-4D9D-AB2D-8A0D1D0E6A79}"
 	ProjectSection(SolutionItems) = preProject
 		web_root\favicon.ico = web_root\favicon.ico
-		web_root\validate_be.php = web_root\validate_be.php
-		web_root\validate_fe.php = web_root\validate_fe.php
+		web_root\validator_be.php = web_root\validator_be.php
+		web_root\validator_fe.php = web_root\validator_fe.php
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{672F46FC-BD77-4A44-9021-57B96A7583CA}"
