@@ -15,5 +15,5 @@ rem 3. сборка для web_root:
 mkdir "web_root\tasks\%s_task_name%"
 copy "%s_task_dev_dir%\task.php" "web_root\tasks\%s_task_name%\task.php"
 copy "%s_task_dev_dir%\code.txt" "web_root\tasks\%s_task_name%\code.txt"
-copy "%s_task_dev_dir%\addition.png" "web_root\tasks\%s_task_name%\target_form.png"
+copy "%s_task_dev_dir%\target_form.png" "web_root\tasks\%s_task_name%\target_form.png"
 rem ------------------------------------------------------------------------------->
