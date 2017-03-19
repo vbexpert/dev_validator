@@ -100,6 +100,12 @@ namespace WindowsApplication1
             {
                 cls_output_controller._add_validation_failed("Неправильна прозорість!", 0);
             }
+
+            TextBox tbx = (TextBox)f.Controls.Find("textBox1", true).FirstOrDefault();
+
+
+
+
             //------------------------------------------------------------------------>
             //кінець коду валідації:
             //------------------------------------------------------------------------>
