@@ -5,9 +5,8 @@ header('Content-Type: text/html; charset=utf-8');
 <html>
   <head>
     <!-- title -->
-    <title>Р—Р°РІРґР°РЅРЅСЏ winforms 5.1.2:</title>
-	
-    <!-- utf8 support: -->
+    <title>Завдання button 5.3.1:</title>
+	<!-- utf8 support: -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<!-- jq CDN (bootsrtrap reqired): -->
 	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
@@ -28,74 +27,65 @@ header('Content-Type: text/html; charset=utf-8');
 
        <!-- header info block start: -------------------------------------------------------------------------------->
        <h1 class='h1_main'>
-         РЎ# - С†Рµ РїСЂРѕСЃС‚Рѕ<sup>*</sup>!
+         С# - це просто<sup>*</sup>!
        </h1>
        <div class='note'>
-         <sup>* СЏРєС‰Рѕ РїРѕРїСЂР°С†СЋРµС€ :-)</sup>
+         <sup>* якщо попрацюеш :-)</sup>
        </div>
        <!-- header info block end: -------------------------------------------------------------------------------->
 	
        <div class="jumbotron">
 	   
 		 <!-- task info block start --------------------------------------------------------------------------------->
-         <h2 class=''><a href = "../../index.php">Р”РѕСЃС‚СѓРїРЅС– Р·Р°РІРґР°РЅРЅСЏ:</a></h2>
+          
+		 <h2 class=''><a href = "../../index.php">Доступні завдання:</a></h2>
          <hr>
-		 <h2 class=''>Р—Р°РІРґР°РЅРЅСЏ Winforms: 5.1.2</h2>
-        
-         <p class="lead lead-top-fix">РЎС‚РІРѕСЂРёС‚Рё С„РѕСЂРјСѓ РІС–РґРїРѕРІС–РґРЅРѕ СЃРїРµС†РёС„С–РєР°С†С–С—</p>
-         
+		 <h1 class=''>Завдання button 5.3.1</h1>
+         <h3 class=''>Створення простої програми із 1 формою...</h3>
+		
+         <p class="lead lead-top-fix">Створити форму відповідно специфікації</p>
+         <br>
 		 <table style="width:100%" class="table table-striped table-condensed">
-			  <caption style="caption-side: top">РЎРїРµС†РёС„С–РєР°С†С–СЏ РїСЂРѕРіСЂР°РјРё</caption>
+			  <caption style="caption-side: top">Специфікація програми</caption>
 			<thead>
 			  <tr>
-				<th>РќРѕРјРµСЂ</th>
-				<th>Р’Р»Р°СЃС‚РёРІС–СЃС‚СЊ</th>
-				<th>Р—РЅР°С‡РµРЅРЅСЏ</th>
-				<th>РЎС‚Р°РЅ</th>
+				<th width="50px">Номер</th>
+				<th>Властивість</th>
+				<th>Значення</th>
+				<th>Стан</th>
 			  </tr>
 			</thead>
 			 <tr>
 				<td>1.</td>
-				<td>Р¤РѕСЂРјР°</td>
+				<td>Форма</td>
 				<td>Windows Forms</td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 			  <tr>
 				<td>2.</td>
-				<td>Р РѕР·РјС–СЂ С„РѕСЂРјРё</td>
-				<td><b>500</b> x <b>500</b> РїС–РєСЃРµР»С–РІ</td>
+				<td>Розмір форми</td>
+				<td><b>400</b> x <b>300</b> пікселів</td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 			  
 			  <tr>
 				<td>3.</td>
-				<td>РљРѕР»С–СЂ С„РѕСЂРјРё</td>
-				<td><b>CadetBlue</b></td>
+				<td>Колір форми</td>
+				<td><b>Червоний</b></td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 
 			  <tr>
 				<td>4.</td>
-				<td>Р—Р°РіРѕР»РѕРІРѕРє С„РѕСЂРјРё</td>
-				<td><b>РџСЂРѕРіСЂР°РјР° 2</b></td>
+				<td>Заголовок форми</td>
+				<td><b>Прізвище та Ім'я</td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
+
 			   <tr>
 				<td>5.</td>
-				<td>РџРѕС‡Р°С‚РєРѕРІР° РїРѕР·РёС†С–СЏ</td>
-				<td><b>Manual</b></td>
-				<td><input type="checkbox" value=""></td>
-			 </tr>
-			   <tr>
-				<td>6.</td>
-				<td>Р РѕР·РјС–С‰РµРЅРЅСЏ РІС–РєРЅР°</td>
-				<td><b>Р’РµСЂС…РЅС–Р№ Р»С–РІРёР№ РєСѓС‚ РµРєСЂР°РЅСѓ</b></td>
-				<td><input type="checkbox" value=""></td>
-			 </tr>
-			  <tr>
-				<td>7.</td>
-				<td>РџСЂРѕР·РѕСЂС–СЃС‚СЊ РІС–РєРЅР°</td>
-				<td><b>50%</b></td>
+				<td>Початкова позиція вікна</td>
+				<td><b>X: </b>200 <b>Y: </b>200 пікселів</td>
 				<td><input type="checkbox" value=""></td>
 			 </tr>
 			
@@ -111,9 +101,9 @@ header('Content-Type: text/html; charset=utf-8');
 	     <div style="text-align: center;"> 
 		  <hr>
 		  <p class="lead">
-           <a class="btn btn-info " href="https://learn.ztu.edu.ua/mod/lesson/view.php?id=9977&pageid=8" role="button" target="_blank">РџРѕС‡РёС‚Р°С‚Рё РЅР° РїРѕСЂС‚Р°Р»С– Р–Р”РўРЈ</a>
-		   <a class="btn btn-danger" href="https://youtu.be/hP0UsFULLuU?list=PLgNmtqlNFVjpYzErepZF2E8Mc4R27yXYf" role="button" target="_blank">РџРѕРґРёРІРёС‚РёСЃСЊ РІС–РґРµРѕСѓСЂРѕРє</a>
-		   <a class="btn btn-warning" href="https://vk.com/club106906794" role="button" target="_blank">РћР±РіРѕРІРѕСЂРёС‚Рё Сѓ СЃРїС–Р»СЊРЅРѕС‚С–</a>
+           <a class="btn btn-info " href="https://learn.ztu.edu.ua/mod/lesson/view.php?id=9977&pageid=8" role="button" target="_blank">Почитати на порталі ЖДТУ</a>
+		   <a class="btn btn-danger" href="https://youtu.be/hP0UsFULLuU?list=PLgNmtqlNFVjpYzErepZF2E8Mc4R27yXYf" role="button" target="_blank">Подивитись відеоурок</a>
+		   <a class="btn btn-warning" href="https://vk.com/club106906794" role="button" target="_blank">Обговорити у спільноті</a>
         
 		 </p> 
 		<hr> 
@@ -121,17 +111,17 @@ header('Content-Type: text/html; charset=utf-8');
 		<!-- help block end ----------------------------------------------------------------------------------->
          
          <!-- task validation block start --------------------------------------------------------------------------->
-         <h2 class=''>РџРµСЂРµРІС–СЂРєР°:</h2>
+         <h2 class=''>Перевірка:</h2>
            <!-- uploader start -->
            <form action="..\..\validator_fe.php" method="post" enctype="multipart/form-data">
-             РћР±РµСЂС–С‚СЊ С„Р°Р№Р» РїСЂРѕРіСЂР°РјРё, РґР»СЏ РІР°Р»С–РґР°С†С–С—:
+             Оберіть файл програми, для валідації:
              <label class="btn btn-success btn-browse" for="fileToUpload">
              <input id="fileToUpload" name="fileToUpload" type="file" style="display:none;">
-               РћР±СЂР°С‚Рё С„Р°Р№Р»
+               Обрати файл
              </label>
-             <input class='btn btn-primary btn-upload' type="submit" value="Р’С–РґРїСЂР°РІРёС‚Рё С„Р°Р№Р»" name="submit"></input>
+             <input class='btn btn-primary btn-upload' type="submit" value="Відправити файл" name="submit"></input>
 			 <!-- uploader end -->
-			 <input type="hidden" name="codefile" value="winforms5.1.2"> <!-- task id -->
+			 <input type="hidden" name="codefile" value="button5.3.1"> <!-- task id -->
          </form>
 		 <!-- task validation block end ------------------------------------------------------------------------------>
 		
