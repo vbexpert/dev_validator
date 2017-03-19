@@ -6,8 +6,7 @@ header('Content-Type: text/html; charset=utf-8');
   <head>
     <!-- title -->
     <title>Завдання [task_title] [task_id]:</title>
-	
-    <!-- utf8 support: -->
+	<!-- utf8 support: -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<!-- jq CDN (bootsrtrap reqired): -->
 	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
@@ -38,8 +37,12 @@ header('Content-Type: text/html; charset=utf-8');
        <div class="jumbotron">
 	   
 		 <!-- task info block start --------------------------------------------------------------------------------->
-         <h2 class=''>Завдання [task_title]: Task desc</h2>
-         <br>
+         <h2 class=''><a href = "../../index.php">Доступні завдання:</a></h2>
+         <hr>
+		 <h1 class=''>Завдання [task_title] [task_id]</h1>
+         <h3 class=''>Створення простої програми із 1 формою...</h3>
+		 <br>
+		
          <p class="lead lead-top-fix">line 1</p>
          <p class="lead lead-top-fix">line 2</p>
          <p class="lead lead-top-fix">line 3</p>
