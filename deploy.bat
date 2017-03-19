@@ -9,3 +9,4 @@ rem deploy web root:
 xcopy /s/y "web_root\*" "%s_xampp_web_root%\validator\*"
 
 start "" http://127.0.0.1/validator/index.php
+rem global:
