@@ -14,10 +14,9 @@ namespace ns_d_code
         {
 			cls_output_controller cls_output_controller = new cls_output_controller();
 		
-			//----------------------------------------------->
-			// validation code start:
-			//----------------------------------------------->
-
+			            //------------------------------------------------------------------------>
+            //початок коду валідації:
+            //------------------------------------------------------------------------>
             //форма:
             if (f is Form)
             {
@@ -27,7 +26,6 @@ namespace ns_d_code
             {
                 cls_output_controller._add_validation_failed("Форма відсутня!", 0);
             }
-
             //розміри:
             if ((f.Width == 500) && (f.Height == 500))
             {
@@ -49,13 +47,22 @@ namespace ns_d_code
             }
 
             //заголовок:
-            if (f.Text != "Програма 2")
+            if (f.Text == "Програма 2")
             {
                 cls_output_controller._add_validation_ok("Вірний заголовок форми!", 20);
             }
             else
             {
                 cls_output_controller._add_validation_failed("Невірний заголовок форми!", 0);
+            }
+            //початкова позиція:
+            if (f.StartPosition == FormStartPosition.Manual)
+            {
+                cls_output_controller._add_validation_ok("Вірна початкова позиція!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("Неправильна початкова позиція!", 0);
             }
 
             //положення:
@@ -65,22 +72,22 @@ namespace ns_d_code
             }
             else
             {
-                cls_output_controller._add_validation_failed("Невірне розташування форми!", 0);
+                cls_output_controller._add_validation_failed("Неправильне розташування форми!", 0);
             }
 
-			//Прозорість:
+            //Прозорість:
             if (f.Opacity == .50)
             {
-                cls_output_controller._add_validation_ok("Прозорість вірна! ", 20);
+                cls_output_controller._add_validation_ok("Вірна прозорість!", 20);
             }
             else
             {
-                cls_output_controller._add_validation_failed("Прозорість неправильна! ", 0);
+                cls_output_controller._add_validation_failed("Неправильна прозорість!", 0);
             }
-
-			//----------------------------------------------->
-			// validation code end:
-			//----------------------------------------------->
+            //------------------------------------------------------------------------>
+            //кінець коду валідації:
+            //------------------------------------------------------------------------>
+        }
 			
 			//return validation buffer:
             return(cls_output_controller._final_result());

@@ -34,13 +34,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Red;
-            this.ClientSize = new System.Drawing.Size(384, 261);
+            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.ClientSize = new System.Drawing.Size(484, 461);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Location = new System.Drawing.Point(200, 200);
             this.Name = "Form1";
+            this.Opacity = 0.5D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Петренко Василь Іванович";
+            this.Text = "Програма 2";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 

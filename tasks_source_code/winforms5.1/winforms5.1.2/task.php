@@ -80,15 +80,20 @@ header('Content-Type: text/html; charset=utf-8');
 				<td><b>Програма 2</b></td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
-
 			   <tr>
 				<td>5.</td>
-				<td>Початкова позиція вікна</td>
+				<td>Початкова позиція</td>
+				<td><b>Manual</b></td>
+				<td><input type="checkbox" value=""></td>
+			 </tr>
+			   <tr>
+				<td>6.</td>
+				<td>Розміщення вікна</td>
 				<td><b>Верхній лівий кут екрану</b></td>
 				<td><input type="checkbox" value=""></td>
 			 </tr>
 			  <tr>
-				<td>6.</td>
+				<td>7.</td>
 				<td>Прозорість вікна</td>
 				<td><b>50%</b></td>
 				<td><input type="checkbox" value=""></td>

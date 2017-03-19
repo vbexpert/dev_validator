@@ -63,28 +63,39 @@ header('Content-Type: text/html; charset=utf-8');
 			  <tr>
 				<td>2.</td>
 				<td>Розмір форми</td>
-				<td><b>400</b> x <b>300</b> пікселів</td>
+				<td><b>500</b> x <b>500</b> пікселів</td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 			  
 			  <tr>
 				<td>3.</td>
 				<td>Колір форми</td>
-				<td><b>Червоний</b></td>
+				<td><b>CadetBlue</b></td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 
 			  <tr>
 				<td>4.</td>
 				<td>Заголовок форми</td>
-				<td><b>Прізвище та Ім'я</td>
+				<td><b>Програма 2</b></td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
-
 			   <tr>
 				<td>5.</td>
-				<td>Початкова позиція вікна</td>
-				<td><b>X: </b>200 <b>Y: </b>200 пікселів</td>
+				<td>Початкова позиція</td>
+				<td><b>Manual</b></td>
+				<td><input type="checkbox" value=""></td>
+			 </tr>
+			   <tr>
+				<td>6.</td>
+				<td>Розміщення вікна</td>
+				<td><b>Верхній лівий кут екрану</b></td>
+				<td><input type="checkbox" value=""></td>
+			 </tr>
+			  <tr>
+				<td>7.</td>
+				<td>Прозорість вікна</td>
+				<td><b>50%</b></td>
 				<td><input type="checkbox" value=""></td>
 			 </tr>
 			
@@ -114,7 +125,7 @@ header('Content-Type: text/html; charset=utf-8');
            <!-- uploader start -->
            <form action="..\..\validator_fe.php" method="post" enctype="multipart/form-data">
              Оберіть файл програми, для валідації:
-             <label class="btn btn-info btn-browse" for="fileToUpload">
+             <label class="btn btn-success btn-browse" for="fileToUpload">
              <input id="fileToUpload" name="fileToUpload" type="file" style="display:none;">
                Обрати файл
              </label>

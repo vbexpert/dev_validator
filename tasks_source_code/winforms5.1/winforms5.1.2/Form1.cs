@@ -42,7 +42,64 @@ namespace WindowsApplication1
             {
                 cls_output_controller._add_validation_failed("Форма відсутня!", 0);
             }
-            
+            //розміри:
+            if ((f.Width == 500) && (f.Height == 500))
+            {
+                cls_output_controller._add_validation_ok("Розміри форми вірні!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("Розміри форми невірні!", 0);
+            }
+
+            //колір:
+            if (f.BackColor.Name == "CadetBlue")
+            {
+                cls_output_controller._add_validation_ok("Колір форми вірний!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("Колір форми невірний!", 0);
+            }
+
+            //заголовок:
+            if (f.Text == "Програма 2")
+            {
+                cls_output_controller._add_validation_ok("Вірний заголовок форми!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("Невірний заголовок форми!", 0);
+            }
+            //початкова позиція:
+            if (f.StartPosition == FormStartPosition.Manual)
+            {
+                cls_output_controller._add_validation_ok("Вірна початкова позиція!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("Неправильна початкова позиція!", 0);
+            }
+
+            //положення:
+            if (f.Location.X == 0 && f.Location.Y == 0)
+            {
+                cls_output_controller._add_validation_ok("Вірние розташування форми!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("Неправильне розташування форми!", 0);
+            }
+
+            //Прозорість:
+            if (f.Opacity == .50)
+            {
+                cls_output_controller._add_validation_ok("Вірна прозорість!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("Неправильна прозорість!", 0);
+            }
             //------------------------------------------------------------------------>
             //кінець коду валідації:
             //------------------------------------------------------------------------>
