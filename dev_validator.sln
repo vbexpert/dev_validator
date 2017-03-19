@@ -17,10 +17,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{672F46FC-BD77-4A44-9021-57B96A7583CA}"
 	ProjectSection(SolutionItems) = preProject
 		build_web_root.bat = build_web_root.bat
+		create_new_task_project.bat = create_new_task_project.bat
 		deploy.bat = deploy.bat
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winforms5.1.1", "winforms5.1\winforms5.1.1\winforms5.1.1.csproj", "{65A901DD-158C-4E54-A929-17F0C714D1CB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_js", "_js", "{1281CA4F-FFC0-4486-9606-06F3AB42ABF0}"
 EndProject
@@ -28,6 +27,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_css", "_css", "{C30028BD-A
 	ProjectSection(SolutionItems) = preProject
 		web_root\_css\global.css = web_root\_css\global.css
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tasks_source_code", "tasks_source_code", "{413FB722-6CC8-4EDC-88CC-DE643CEF879F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task_template", "tasks_source_code\task_template\template\task_template.csproj", "{87277D0C-686D-4621-964F-1552D7888E13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winforms5.1.1", "tasks_source_code\winforms5.1\winforms5.1.1\winforms5.1.1.csproj", "{65A901DD-158C-4E54-A929-17F0C714D1CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +49,14 @@ Global
 		{89E53C47-5189-4FAE-AE59-C48C31477783}.Release|Any CPU.ActiveCfg = Release|x86
 		{89E53C47-5189-4FAE-AE59-C48C31477783}.Release|x86.ActiveCfg = Release|x86
 		{89E53C47-5189-4FAE-AE59-C48C31477783}.Release|x86.Build.0 = Release|x86
+		{87277D0C-686D-4621-964F-1552D7888E13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87277D0C-686D-4621-964F-1552D7888E13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87277D0C-686D-4621-964F-1552D7888E13}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{87277D0C-686D-4621-964F-1552D7888E13}.Debug|x86.Build.0 = Debug|Any CPU
+		{87277D0C-686D-4621-964F-1552D7888E13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87277D0C-686D-4621-964F-1552D7888E13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87277D0C-686D-4621-964F-1552D7888E13}.Release|x86.ActiveCfg = Release|Any CPU
+		{87277D0C-686D-4621-964F-1552D7888E13}.Release|x86.Build.0 = Release|Any CPU
 		{65A901DD-158C-4E54-A929-17F0C714D1CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{65A901DD-158C-4E54-A929-17F0C714D1CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65A901DD-158C-4E54-A929-17F0C714D1CB}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -57,8 +70,10 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{65A901DD-158C-4E54-A929-17F0C714D1CB} = {564D395B-0F76-4D5D-9AFA-9B373BD7C53D}
+		{564D395B-0F76-4D5D-9AFA-9B373BD7C53D} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 		{1281CA4F-FFC0-4486-9606-06F3AB42ABF0} = {672F46FC-BD77-4A44-9021-57B96A7583CA}
 		{C30028BD-AA82-44FF-B3CF-340C4C535901} = {672F46FC-BD77-4A44-9021-57B96A7583CA}
+		{87277D0C-686D-4621-964F-1552D7888E13} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
+		{65A901DD-158C-4E54-A929-17F0C714D1CB} = {564D395B-0F76-4D5D-9AFA-9B373BD7C53D}
 	EndGlobalSection
 EndGlobal

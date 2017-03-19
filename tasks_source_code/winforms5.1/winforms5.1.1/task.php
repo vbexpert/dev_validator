@@ -72,7 +72,7 @@ header('Content-Type: text/html; charset=utf-8');
              </label>
              <input class='btn btn-primary btn-upload' type="submit" value="Відправити файл" name="submit"></input>
 			 <!-- uploader end -->
-			 <input type="hidden" name="codefile" value="5.1.1"> <!-- task id -->
+			 <input type="hidden" name="codefile" value="Winforms5.1.1"> <!-- task id -->
          </form>
 		 <!-- task validation block end ------------------------------------------------------------------------------>
 		

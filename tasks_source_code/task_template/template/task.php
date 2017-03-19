@@ -5,7 +5,7 @@ header('Content-Type: text/html; charset=utf-8');
 <html>
   <head>
     <!-- title -->
-    <title>Завдання Winforms 5.1.1:</title>
+    <title>Завдання [task_title] [task_id]:</title>
 	
     <!-- utf8 support: -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -38,16 +38,11 @@ header('Content-Type: text/html; charset=utf-8');
        <div class="jumbotron">
 	   
 		 <!-- task info block start --------------------------------------------------------------------------------->
-         <h2 class=''>Завдання Winforms 5.1.1: 'Створення простої програми із 1 формою'</h2>
+         <h2 class=''>Завдання [task_title]: Task desc</h2>
          <br>
-         <p class="lead lead-top-fix">1. Створи новий проект програми С# із Winforms.</p>
-		 <p class="lead lead-top-fix">2. Встановити розмір вікна форми 400x300 пікселів.</p>
-		 <p class="lead lead-top-fix">3. Встановити колір вікна форми на "яскраво червоний".</p>
-		 <p class="lead lead-top-fix">4. Змінити назву вікна форми на власне імя та прізвище.</p>
-		 <p class="lead lead-top-fix">5. Встановити початкову позицію вікна на х:200 y:200.</p>
-		 <p class="lead lead-top-fix">6. Побудувати проект.</p>
-		 <p class="lead lead-top-fix">7. Знайти побудовану програму та завантажити у Валідатор.</p>
-		 <p class="lead lead-top-fix">8. Добитися повної алідації програми.</p>
+         <p class="lead lead-top-fix">line 1</p>
+         <p class="lead lead-top-fix">line 2</p>
+         <p class="lead lead-top-fix">line 3</p>
 		 
          <div class="row pic-centered">
            <img src="target_form.png" alt="...">
@@ -72,7 +67,7 @@ header('Content-Type: text/html; charset=utf-8');
              </label>
              <input class='btn btn-primary btn-upload' type="submit" value="Відправити файл" name="submit"></input>
 			 <!-- uploader end -->
-			 <input type="hidden" name="codefile" value="5.1.1"> <!-- task id -->
+			 <input type="hidden" name="codefile" value="[task_id]"> <!-- task id -->
          </form>
 		 <!-- task validation block end ------------------------------------------------------------------------------>
 		
