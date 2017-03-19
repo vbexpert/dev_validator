@@ -42,19 +42,19 @@ include_once("validator_be.php");
          <h2 class=''>Доступні завдання:</h2>
          <hr>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/5.1.1/task.php">Завдання 1: "Winforms 5.1"</a>
+           <a href="/validator/tasks/winforms5.1.1/task.php">Завдання 1: "Winforms 5.1"</a>
          </div>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/5.1.2/task.php">Завдання 2: "Winforms 5.2"</a>
+           <a href="/validator/tasks/winforms5.1.2/task.php">Завдання 2: "Winforms 5.2"</a>
          </div>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/5.1.3/task.php">Завдання 3: "Winforms 5.3"</a>
+           <a href="/validator/tasks/winforms5.1.3/task.php">Завдання 3: "Winforms 5.3"</a>
          </div>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/5.1.4/task.php">Завдання 4: "Winforms 5.4"</a>
+           <a href="/validator/tasks/winforms5.1.4/task.php">Завдання 4: "Winforms 5.4"</a>
          </div>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/5.1.5/task.php">Завдання 5: "Winforms 5.5"</a>
+           <a href="/validator/tasks/winforms5.1.5/task.php">Завдання 5: "Winforms 5.5"</a>
          </div>
          <hr>
          <!-- task info block end ----------------------------------------------------------------------------------->
