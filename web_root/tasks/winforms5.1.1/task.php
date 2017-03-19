@@ -14,7 +14,6 @@ header('Content-Type: text/html; charset=utf-8');
 	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
     <script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>
 	<!-- bootstrap CDN: -->
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
     <!-- favicon: -->
@@ -140,7 +139,7 @@ header('Content-Type: text/html; charset=utf-8');
              </label>
              <input class='btn btn-primary btn-upload' type="submit" value="Відправити файл" name="submit"></input>
 			 <!-- uploader end -->
-			 <input type="hidden" name="codefile" value="5.1.1"> <!-- task id -->
+			 <input type="hidden" name="codefile" value="winforms5.1.1"> <!-- task id -->
          </form>
 		 <!-- task validation block end ------------------------------------------------------------------------------>
 		

@@ -5,7 +5,7 @@ header('Content-Type: text/html; charset=utf-8');
 <html>
   <head>
     <!-- title -->
-    <title>Завдання winforms 5.1.2:</title>
+    <title>Р—Р°РІРґР°РЅРЅСЏ winforms 5.1.2:</title>
 	
     <!-- utf8 support: -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -28,68 +28,68 @@ header('Content-Type: text/html; charset=utf-8');
 
        <!-- header info block start: -------------------------------------------------------------------------------->
        <h1 class='h1_main'>
-         С# - це просто<sup>*</sup>!
+         РЎ# - С†Рµ РїСЂРѕСЃС‚Рѕ<sup>*</sup>!
        </h1>
        <div class='note'>
-         <sup>* якщо попрацюеш :-)</sup>
+         <sup>* СЏРєС‰Рѕ РїРѕРїСЂР°С†СЋРµС€ :-)</sup>
        </div>
        <!-- header info block end: -------------------------------------------------------------------------------->
 	
        <div class="jumbotron">
 	   
 		 <!-- task info block start --------------------------------------------------------------------------------->
-         <h2 class=''>Завдання winforms: Task desc</h2>
+         <h2 class=''>Р—Р°РІРґР°РЅРЅСЏ winforms: Task desc</h2>
          <br>
          <p class="lead lead-top-fix">line 1</p>
          <p class="lead lead-top-fix">line 2</p>
          <p class="lead lead-top-fix">line 3</p>
 
 		 <table style="width:100%" class="table table-striped table-condensed">
-			  <caption style="caption-side: top">Специфікація програми</caption>
+			  <caption style="caption-side: top">РЎРїРµС†РёС„С–РєР°С†С–СЏ РїСЂРѕРіСЂР°РјРё</caption>
 			<thead>
 			  <tr>
-				<th width=20%>Номер</th>
-				<th>Властивість</th>
-				<th>Значення</th>
-				<th>Вартість</th>
-				<th>Стан</th>
+				<th width=20%>РќРѕРјРµСЂ</th>
+				<th>Р’Р»Р°СЃС‚РёРІС–СЃС‚СЊ</th>
+				<th>Р—РЅР°С‡РµРЅРЅСЏ</th>
+				<th>Р’Р°СЂС‚С–СЃС‚СЊ</th>
+				<th>РЎС‚Р°РЅ</th>
 			  </tr>
 			</thead>
 			 <tr>
 				<td>1.</td>
-				<td>Форма</td>
+				<td>Р¤РѕСЂРјР°</td>
 				<td>Windows Forms</td>
 				<td>20</td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 			  <tr>
 				<td>2.</td>
-				<td>Розмір форми</td>
-				<td><b>400</b> x <b>300</b> пікселів</td>
+				<td>Р РѕР·РјС–СЂ С„РѕСЂРјРё</td>
+				<td><b>400</b> x <b>300</b> РїС–РєСЃРµР»С–РІ</td>
 				<td>20</td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 			  
 			  <tr>
 				<td>3.</td>
-				<td>Колір форми</td>
-				<td><b>Червоний</b></td>
+				<td>РљРѕР»С–СЂ С„РѕСЂРјРё</td>
+				<td><b>Р§РµСЂРІРѕРЅРёР№</b></td>
 				<td>20</td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 
 			  <tr>
 				<td>4.</td>
-				<td>Заголовок форми</td>
-				<td><b>Прізвище та Ім'я</td>
+				<td>Р—Р°РіРѕР»РѕРІРѕРє С„РѕСЂРјРё</td>
+				<td><b>РџСЂС–Р·РІРёС‰Рµ С‚Р° Р†Рј'СЏ</td>
 				<td>20</td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 
 			   <tr>
 				<td>5.</td>
-				<td>Початкова позиція вікна</td>
-				<td><b>X: </b>200 <b>Y: </b>200 пікселів</td>
+				<td>РџРѕС‡Р°С‚РєРѕРІР° РїРѕР·РёС†С–СЏ РІС–РєРЅР°</td>
+				<td><b>X: </b>200 <b>Y: </b>200 РїС–РєСЃРµР»С–РІ</td>
 				<td>20</td>
 				<td><input type="checkbox" value=""></td>
 			 </tr>
@@ -106,9 +106,9 @@ header('Content-Type: text/html; charset=utf-8');
 	     <div style="text-align: center;"> 
 		  <hr>
 		  <p class="lead">
-           <a class="btn btn-info " href="https://learn.ztu.edu.ua/mod/lesson/view.php?id=9977&pageid=8" role="button" target="_blank">Почитати на Освітньому порталі ЖДТУ </a>
-		   <a class="btn btn-danger" href="https://youtu.be/hP0UsFULLuU?list=PLgNmtqlNFVjpYzErepZF2E8Mc4R27yXYf" role="button" target="_blank">Подивитись відеоурок</a>
-		   <a class="btn btn-warning" href="https://vk.com/club106906794" role="button" target="_blank">Обговорити у спільноті</a>
+           <a class="btn btn-info " href="https://learn.ztu.edu.ua/mod/lesson/view.php?id=9977&pageid=8" role="button" target="_blank">РџРѕС‡РёС‚Р°С‚Рё РЅР° РћСЃРІС–С‚РЅСЊРѕРјСѓ РїРѕСЂС‚Р°Р»С– Р–Р”РўРЈ </a>
+		   <a class="btn btn-danger" href="https://youtu.be/hP0UsFULLuU?list=PLgNmtqlNFVjpYzErepZF2E8Mc4R27yXYf" role="button" target="_blank">РџРѕРґРёРІРёС‚РёСЃСЊ РІС–РґРµРѕСѓСЂРѕРє</a>
+		   <a class="btn btn-warning" href="https://vk.com/club106906794" role="button" target="_blank">РћР±РіРѕРІРѕСЂРёС‚Рё Сѓ СЃРїС–Р»СЊРЅРѕС‚С–</a>
         
 		 </p> 
 		<hr> 
@@ -116,17 +116,17 @@ header('Content-Type: text/html; charset=utf-8');
 		<!-- help block end ----------------------------------------------------------------------------------->
          
          <!-- task validation block start --------------------------------------------------------------------------->
-         <h2 class=''>Перевірка:</h2>
+         <h2 class=''>РџРµСЂРµРІС–СЂРєР°:</h2>
            <!-- uploader start -->
            <form action="..\..\validator_fe.php" method="post" enctype="multipart/form-data">
-             Оберіть файл програми, для валідації:
+             РћР±РµСЂС–С‚СЊ С„Р°Р№Р» РїСЂРѕРіСЂР°РјРё, РґР»СЏ РІР°Р»С–РґР°С†С–С—:
              <label class="btn btn-info btn-browse" for="fileToUpload">
              <input id="fileToUpload" name="fileToUpload" type="file" style="display:none;">
-               Обрати файл
+               РћР±СЂР°С‚Рё С„Р°Р№Р»
              </label>
-             <input class='btn btn-primary btn-upload' type="submit" value="Відправити файл" name="submit"></input>
+             <input class='btn btn-primary btn-upload' type="submit" value="Р’С–РґРїСЂР°РІРёС‚Рё С„Р°Р№Р»" name="submit"></input>
 			 <!-- uploader end -->
-			 <input type="hidden" name="codefile" value="5.1.2"> <!-- task id -->
+			 <input type="hidden" name="codefile" value="winforms5.1.2"> <!-- task id -->
          </form>
 		 <!-- task validation block end ------------------------------------------------------------------------------>
 		
