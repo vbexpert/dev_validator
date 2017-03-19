@@ -17,6 +17,11 @@ namespace WindowsApplication1
             InitializeComponent();
         }
 
+        public TextBox getTextBox()
+        {
+            return textBox1;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
            //extBox3.Text = (Int32.Parse(textBox1.Text) + Int32.Parse(textBox2.Text)).ToString();
@@ -33,24 +38,26 @@ namespace WindowsApplication1
             //------------------------------------------------------------------------>
             //початок коду валідації:
             //------------------------------------------------------------------------>
-            //форма:
-            if (f is Form)
+            //TextBox:
+            TextBox tbx1 = (TextBox)f.Controls.Find("textBox1", true).FirstOrDefault();
+            if (tbx1 is TextBox)
             {
-                cls_output_controller._add_validation_ok("Форма присутня!", 20);
+                cls_output_controller._add_validation_ok("TextBox присутній!", 20);
             }
             else
             {
-                cls_output_controller._add_validation_failed("Форма відсутня!", 0);
+                cls_output_controller._add_validation_failed("TextBox відсутній!", 0);
             }
-            //Прозорість:
-            if (f.Opacity == .50)
+            //textbox:
+            if (tbx1.Text == "2")
             {
-                cls_output_controller._add_validation_ok("Прозорість вірна! ", 20);
+                cls_output_controller._add_validation_ok("TextBox.Text вірний!", 20);
             }
             else
             {
-                cls_output_controller._add_validation_failed("Прозорість неправильна! ", 0);
+                cls_output_controller._add_validation_failed("TextBox.Text неправильнй!", 0);
             }
+
 
 
 

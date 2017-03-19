@@ -113,7 +113,7 @@ namespace WindowsApplication1
         public void _add_validation_ok(string s_value, int i_i_score)
         {
             i_total_score += i_i_score;
-            s_output_buffer += "<div class='c_correct'>+ " + s_value + " +" + i_i_score + " баллів!</div><br>\r\n";
+            s_output_buffer += "<div class='c_correct'>+ " + s_value + " +" + i_i_score + " балів!</div><br>\r\n";
         }
         public void _add_validation_failed(string s_value, int i_i_score)
         {

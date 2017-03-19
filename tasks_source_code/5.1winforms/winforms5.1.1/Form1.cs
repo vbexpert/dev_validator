@@ -1,23 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using System;
-namespace ns_d_code
-{
-    public class cls_Main
-    {
-		
-        public static void Main() //main entry point:
-        {
-		    //Console.Beep(5000, 1000);
-            //Console.WriteLine("Hello, world!");
-        }
-        public static string test(Form f) //validation sub:
-        {
-			cls_output_controller cls_output_controller = new cls_output_controller();
-		
-			//----------------------------------------------->
-			// validation code start:
-			//----------------------------------------------->
 
+namespace WindowsApplication1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           //extBox3.Text = (Int32.Parse(textBox1.Text) + Int32.Parse(textBox2.Text)).ToString();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            _test_validate(this);
+        }
+        private void _test_validate(Form f)
+        {
+            cls_output_controller cls_output_controller = new cls_output_controller();
+
+            //------------------------------------------------------------------------>
+            //початок коду валідації:
+            //------------------------------------------------------------------------>
             //форма:
             if (f is Form)
             {
@@ -45,7 +60,7 @@ namespace ns_d_code
             }
             else
             {
-                cls_output_controller._add_validation_failed("Колір форми невірний!", 0);
+                cls_output_controller._add_validation_ok("Колір форми невірний!", 0);
             }
 
             //заголовок:
@@ -67,15 +82,12 @@ namespace ns_d_code
             {
                 cls_output_controller._add_validation_failed("Невірне розташування форми!", 0);
             }
-
-			//----------------------------------------------->
-			// validation code end:
-			//----------------------------------------------->
-			
-			//return validation buffer:
-            return(cls_output_controller._final_result());
+            //------------------------------------------------------------------------>
+            //кінець коду валідації:
+            //------------------------------------------------------------------------>
         }
     }
+
     public class cls_output_controller
     {
         public string s_output_buffer = "";
@@ -83,7 +95,7 @@ namespace ns_d_code
         public void _add_validation_ok(string s_value, int i_i_score)
         {
             i_total_score += i_i_score;
-            s_output_buffer += "<div class='c_correct'>+ " + s_value + " +" + i_i_score + " баллів!</div><br>\r\n";
+            s_output_buffer += "<div class='c_correct'>+ " + s_value + " +" + i_i_score + " балів!</div><br>\r\n";
         }
         public void _add_validation_failed(string s_value, int i_i_score)
         {
@@ -92,7 +104,7 @@ namespace ns_d_code
             s_output_buffer += "<div class='c_wrong'>- " + s_value + "</div><br>\r\n";
         }
         public string _final_result() {
-            return this.s_output_buffer += "<hr><div class='c_correct'>Всього: " + i_total_score + " баллів!</div><br>\r\n";
+            return this.s_output_buffer += "<div class='c_correct'>Всього: " + i_total_score + "</div><br>\r\n";
         }
     }
 }

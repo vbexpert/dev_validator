@@ -99,7 +99,7 @@ namespace ns_d_code
         public void _add_validation_ok(string s_value, int i_i_score)
         {
             i_total_score += i_i_score;
-            s_output_buffer += "<div class='c_correct'>+ " + s_value + " +" + i_i_score + " баллів!</div><br>\r\n";
+            s_output_buffer += "<div class='c_correct'>+ " + s_value + " +" + i_i_score + " балів!</div><br>\r\n";
         }
         public void _add_validation_failed(string s_value, int i_i_score)
         {
@@ -108,7 +108,7 @@ namespace ns_d_code
             s_output_buffer += "<div class='c_wrong'>- " + s_value + "</div><br>\r\n";
         }
         public string _final_result() {
-            return this.s_output_buffer += "<hr><div class='c_correct'>Всього: " + i_total_score + " баллів!</div><br>\r\n";
+            return this.s_output_buffer += "<hr><div class='c_correct'>Всього: " + i_total_score + " балів!</div><br>\r\n";
         }
     }
 }
