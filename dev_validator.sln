@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web_root", "web_root", "{FE260EE6-3E18-4D9D-AB2D-8A0D1D0E6A79}"
 	ProjectSection(SolutionItems) = preProject
 		web_root\favicon.ico = web_root\favicon.ico
+		web_root\index.php = web_root\index.php
 		web_root\validator_be.php = web_root\validator_be.php
 		web_root\validator_fe.php = web_root\validator_fe.php
 	EndProjectSection
@@ -33,6 +34,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task_template", "tasks_source_code\task_template\template\task_template.csproj", "{87277D0C-686D-4621-964F-1552D7888E13}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winforms5.1.1", "tasks_source_code\winforms5.1\winforms5.1.1\winforms5.1.1.csproj", "{65A901DD-158C-4E54-A929-17F0C714D1CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winforms5.1.2", "tasks_source_code\winforms5.1\winforms5.1.2\winforms5.1.2.csproj", "{CC029C58-4625-4FFD-9F55-F7946EE1A845}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +68,14 @@ Global
 		{65A901DD-158C-4E54-A929-17F0C714D1CB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{65A901DD-158C-4E54-A929-17F0C714D1CB}.Release|x86.ActiveCfg = Release|Any CPU
 		{65A901DD-158C-4E54-A929-17F0C714D1CB}.Release|x86.Build.0 = Release|Any CPU
+		{CC029C58-4625-4FFD-9F55-F7946EE1A845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC029C58-4625-4FFD-9F55-F7946EE1A845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC029C58-4625-4FFD-9F55-F7946EE1A845}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CC029C58-4625-4FFD-9F55-F7946EE1A845}.Debug|x86.Build.0 = Debug|Any CPU
+		{CC029C58-4625-4FFD-9F55-F7946EE1A845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC029C58-4625-4FFD-9F55-F7946EE1A845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC029C58-4625-4FFD-9F55-F7946EE1A845}.Release|x86.ActiveCfg = Release|Any CPU
+		{CC029C58-4625-4FFD-9F55-F7946EE1A845}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,5 +86,6 @@ Global
 		{C30028BD-AA82-44FF-B3CF-340C4C535901} = {672F46FC-BD77-4A44-9021-57B96A7583CA}
 		{87277D0C-686D-4621-964F-1552D7888E13} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 		{65A901DD-158C-4E54-A929-17F0C714D1CB} = {564D395B-0F76-4D5D-9AFA-9B373BD7C53D}
+		{CC029C58-4625-4FFD-9F55-F7946EE1A845} = {564D395B-0F76-4D5D-9AFA-9B373BD7C53D}
 	EndGlobalSection
 EndGlobal
