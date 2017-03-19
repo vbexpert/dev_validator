@@ -6,7 +6,6 @@ header('Content-Type: text/html; charset=utf-8');
   <head>
     <!-- title -->
     <title>Завдання Winforms 5.1.1:</title>
-	
     <!-- utf8 support: -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<!-- jq CDN (bootsrtrap reqired): -->
@@ -15,12 +14,45 @@ header('Content-Type: text/html; charset=utf-8');
 	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
     <script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>
 	<!-- bootstrap CDN: -->
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
     <!-- favicon: -->
 	<link rel="icon" href="favicon.ico?v=2" />
-	<!-- external CSS: -->
-    <link rel="stylesheet" type="text/css" href="../../_css/global.css">
+	<!-- embedded CSS: -->
+    <style media="screen" type="text/css">
+      .btn-browse{
+         width:200px !important;
+         margin-left:46px;
+         margin-top:9px;
+      }
+      .btn-upload{
+         width:200px !important;
+         margin-left:10px;
+      }
+      .c-dropdown{
+         margin-top:10px;
+	  }
+      .h1_main{
+         padding:30px;
+         text-align:center;
+         font-size:55px;
+       }
+       .lead-top-fix{
+         padding-top:0px;	  
+       }
+       .pic-centered{
+        text-align:center;
+         padding:20px;
+       }
+       .bold{
+        font-weight:bold !important;
+       }
+       .note{
+         padding:10px;
+       }
+	   
+	</style>
  </head>
  <body>
    <div class="container">
@@ -38,41 +70,103 @@ header('Content-Type: text/html; charset=utf-8');
        <div class="jumbotron">
 	   
 		 <!-- task info block start --------------------------------------------------------------------------------->
-         <h2 class=''>Завдання Winforms 5.1.1: 'Створення простої програми із 1 формою'</h2>
-         <br>
-         <p class="lead lead-top-fix">1. Створи новий проект програми С# із Winforms.</p>
-		 <p class="lead lead-top-fix">2. Встановити розмір вікна форми 400x300 пікселів.</p>
-		 <p class="lead lead-top-fix">3. Встановити колір вікна форми на "яскраво червоний".</p>
-		 <p class="lead lead-top-fix">4. Змінити назву вікна форми на власне імя та прізвище.</p>
-		 <p class="lead lead-top-fix">5. Встановити початкову позицію вікна на х:200 y:200.</p>
+         <h4 class="">Завдання Winforms 5.1.1</h4>
+         <h3 class="">Створення простої програми із 1 формою...</h3>
+		 <br>
+	     <p class="lead lead-top-fix">1. Створити новий проект програми <strong>С#</strong> із <b>Winforms</b>.</p>
+		 <p class="lead lead-top-fix">2. Встановити розмір вікна форми <b>400x300 пікселів.</p>
+		 <p class="lead lead-top-fix">3. Встановити колір вікна форми на <b>"Червоний"</b>.</p>
+		 <p class="lead lead-top-fix">4. Змінити назву вікна форми на власне <b>Прізвище та Ім'я</b>.</p>
+		 <p class="lead lead-top-fix">5. Встановити початкову позицію вікна на <b>X: 200</b> <b>Y: 200.</b></p>
 		 <p class="lead lead-top-fix">6. Побудувати проект.</p>
-		 <p class="lead lead-top-fix">7. Знайти побудовану програму та завантажити у Валідатор.</p>
-		 <p class="lead lead-top-fix">8. Добитися повної алідації програми.</p>
+		 <p class="lead lead-top-fix">7. Знайти побудовану програму та завантажити у <b>Валідатор</b>.</p>
+		 <p class="lead lead-top-fix">8. Добитися повної валідації програми.</p>
 		 
-         <div class="row pic-centered">
-           <img src="target_form.png" alt="...">
+         
+
+		<table style="width:100%" class="table table-striped table-condensed">
+			  <caption style="caption-side: top">Специфікація програми</caption>
+			<thead>
+			  <tr>
+				<th width=20%>Номер</th>
+				<th>Властивість</th>
+				<th>Значення</th>
+				<th>Вартість</th>
+				<th>Стан</th>
+			  </tr>
+			</thead>
+			
+			   <tr>
+				<td>1.</td>
+				<td>Форма</td>
+				<td>Windows Forms</td>
+				<td>20</td>
+				<td><input type="checkbox" value=""></td>
+			  </tr>
+			  <tr>
+				<td>2.</td>
+				<td>Розмір форми</td>
+				<td><b>400</b> x <b>300</b> пікселів</td>
+				<td>20</td>
+				<td><input type="checkbox" value=""></td>
+			  </tr>
+			  
+			  <tr>
+				<td>3.</td>
+				<td>Колір форми</td>
+				<td><b>Червоний</b></td>
+				<td>20</td>
+				<td><input type="checkbox" value=""></td>
+			  </tr>
+
+			  <tr>
+				<td>4.</td>
+				<td>Заголовок форми</td>
+				<td><b>Прізвище та Ім'я</td>
+				<td>20</td>
+				<td><input type="checkbox" value=""></td>
+			  </tr>
+
+			   <tr>
+				<td>5.</td>
+				<td>Початкова позиція вікна</td>
+				<td><b>X: </b>200 <b>Y: </b>200 пікселів</td>
+				<td>20</td>
+				<td><input type="checkbox" value=""></td>
+			 </tr>
+			
+		</table>
+        <div class="row pic-centered">
+           <img src="target_form.png" alt="Скріншот програми" class="">
          </div>
-		 <!-- 
-         <p class="lead">
-           <a class="btn btn-info btn-warning" href="//youtube.com" role="button">Подивитися відео</a>
-         </p>  
-         <hr>
-		 -->
+		<!-- task info block end ----------------------------------------------------------------------------------->
 		 
-         <!-- task info block end ----------------------------------------------------------------------------------->
+		 <hr>
+		
+		<!-- help block start ----------------------------------------------------------------------------------->
+		 
+		
+         <p class="lead">
+           <a class="btn btn-info " href="https://learn.ztu.edu.ua/mod/lesson/view.php?id=9977&pageid=5&startlastseen=no" role="button" target="_blank">Почитати на Освітньому порталі ЖДТУ </a>
+		   <a class="btn btn-info btn-warning" href="https://youtu.be/hP0UsFULLuU?list=PLgNmtqlNFVjpYzErepZF2E8Mc4R27yXYf" role="button" target="_blank">Подивитись відеоурок</a>
+         </p> 
+		 
+		<!-- help block end ----------------------------------------------------------------------------------->
+         
+		 <hr>
 
          <!-- task validation block start --------------------------------------------------------------------------->
          <h2 class=''>Перевірка:</h2>
            <!-- uploader start -->
            <form action="..\..\validator_fe.php" method="post" enctype="multipart/form-data">
              Оберіть файл програми, для валідації:
-             <label class="btn btn-info btn-browse" for="fileToUpload">
+             <label class="btn btn-success btn-browse" for="fileToUpload">
              <input id="fileToUpload" name="fileToUpload" type="file" style="display:none;">
                Обрати файл
              </label>
              <input class='btn btn-primary btn-upload' type="submit" value="Відправити файл" name="submit"></input>
 			 <!-- uploader end -->
-			 <input type="hidden" name="codefile" value="Winforms5.1.1"> <!-- task id -->
+			 <input type="hidden" name="codefile" value="5.1.1"> <!-- task id -->
          </form>
 		 <!-- task validation block end ------------------------------------------------------------------------------>
 		
