@@ -27,9 +27,9 @@ include_once("validator_be.php");
    <div class="container">
      <div class="starter-template">
 
-       <!-- header info block start: -------------------------------------------------------------------------------->
+      <!-- header info block start: -------------------------------------------------------------------------------->
        <h1 class='h1_main'>
-         <a href = "index.php">С# - це просто<sup>*</sup>!</a>
+         С# - це просто<sup>*</sup>!
        </h1>
        <div class='note'>
          <sup>* якщо попрацюеш :-)</sup>
@@ -37,9 +37,8 @@ include_once("validator_be.php");
        <!-- header info block end: -------------------------------------------------------------------------------->
 	
        <div class="jumbotron">
-	   
-         <a href = "index.php">Доступні завдання</a>
-       
+	   <h2 class=''><a href = "index.php">Доступні завдання:</a></h2>
+       <hr>
          <h2 class=''>Перевірка програми:</h2>
          <br>
          <p class="lead lead-top-fix">

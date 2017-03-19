@@ -36,7 +36,7 @@ header('Content-Type: text/html; charset=utf-8');
       .h1_main{
          padding:30px;
          text-align:center;
-         font-size:55px;
+         font-size:45px;
        }
        .lead-top-fix{
          padding-top:0px;	  
@@ -58,7 +58,7 @@ header('Content-Type: text/html; charset=utf-8');
    <div class="container">
      <div class="starter-template">
 
-       <!-- header info block start: -------------------------------------------------------------------------------->
+      <!-- header info block start: -------------------------------------------------------------------------------->
        <h1 class='h1_main'>
          С# - це просто<sup>*</sup>!
        </h1>
@@ -70,7 +70,9 @@ header('Content-Type: text/html; charset=utf-8');
        <div class="jumbotron">
 	   
 		 <!-- task info block start --------------------------------------------------------------------------------->
-         <h4 class="">Завдання Winforms 5.1.1</h4>
+         <h2 class=''><a href = "../../index.php">Доступні завдання:</a></h2>
+         <hr>
+		 <h4 class="">Завдання Winforms 5.1.1</h4>
          <h3 class="">Створення простої програми із 1 формою...</h3>
 		 <br>
 	     <p class="lead lead-top-fix">1. Створити новий проект програми <strong>С#</strong> із <b>Winforms</b>.</p>
