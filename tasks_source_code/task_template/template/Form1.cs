@@ -42,7 +42,18 @@ namespace WindowsApplication1
             {
                 cls_output_controller._add_validation_failed("Форма відсутня!", 0);
             }
-            
+            //Прозорість:
+            if (f.Opacity == .50)
+            {
+                cls_output_controller._add_validation_ok("Прозорість вірна! ", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("Прозорість неправильна! ", 0);
+            }
+
+
+
             //------------------------------------------------------------------------>
             //кінець коду валідації:
             //------------------------------------------------------------------------>

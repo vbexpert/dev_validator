@@ -37,24 +37,21 @@ header('Content-Type: text/html; charset=utf-8');
        <div class="jumbotron">
 	   
 		 <!-- task info block start --------------------------------------------------------------------------------->
-         <h2 class=''><a href = "../../index.php">Доступні завдання:</a></h2>
+          
+		 <h2 class=''><a href = "../../index.php">Доступні завдання:</a></h2>
          <hr>
 		 <h1 class=''>Завдання [task_title] [task_id]</h1>
          <h3 class=''>Створення простої програми із 1 формою...</h3>
-		 <br>
 		
-         <p class="lead lead-top-fix">line 1</p>
-         <p class="lead lead-top-fix">line 2</p>
-         <p class="lead lead-top-fix">line 3</p>
-
+         <p class="lead lead-top-fix">Створити форму відповідно специфікації</p>
+         <br>
 		 <table style="width:100%" class="table table-striped table-condensed">
 			  <caption style="caption-side: top">Специфікація програми</caption>
 			<thead>
 			  <tr>
-				<th width=20%>Номер</th>
+				<th width="50px">Номер</th>
 				<th>Властивість</th>
 				<th>Значення</th>
-				<th>Вартість</th>
 				<th>Стан</th>
 			  </tr>
 			</thead>
@@ -62,14 +59,12 @@ header('Content-Type: text/html; charset=utf-8');
 				<td>1.</td>
 				<td>Форма</td>
 				<td>Windows Forms</td>
-				<td>20</td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 			  <tr>
 				<td>2.</td>
 				<td>Розмір форми</td>
 				<td><b>400</b> x <b>300</b> пікселів</td>
-				<td>20</td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 			  
@@ -77,7 +72,6 @@ header('Content-Type: text/html; charset=utf-8');
 				<td>3.</td>
 				<td>Колір форми</td>
 				<td><b>Червоний</b></td>
-				<td>20</td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 
@@ -85,7 +79,6 @@ header('Content-Type: text/html; charset=utf-8');
 				<td>4.</td>
 				<td>Заголовок форми</td>
 				<td><b>Прізвище та Ім'я</td>
-				<td>20</td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 
@@ -93,7 +86,6 @@ header('Content-Type: text/html; charset=utf-8');
 				<td>5.</td>
 				<td>Початкова позиція вікна</td>
 				<td><b>X: </b>200 <b>Y: </b>200 пікселів</td>
-				<td>20</td>
 				<td><input type="checkbox" value=""></td>
 			 </tr>
 			
@@ -109,7 +101,7 @@ header('Content-Type: text/html; charset=utf-8');
 	     <div style="text-align: center;"> 
 		  <hr>
 		  <p class="lead">
-           <a class="btn btn-info " href="https://learn.ztu.edu.ua/mod/lesson/view.php?id=9977&pageid=8" role="button" target="_blank">Почитати на Освітньому порталі ЖДТУ </a>
+           <a class="btn btn-info " href="https://learn.ztu.edu.ua/mod/lesson/view.php?id=9977&pageid=8" role="button" target="_blank">Почитати на порталі ЖДТУ</a>
 		   <a class="btn btn-danger" href="https://youtu.be/hP0UsFULLuU?list=PLgNmtqlNFVjpYzErepZF2E8Mc4R27yXYf" role="button" target="_blank">Подивитись відеоурок</a>
 		   <a class="btn btn-warning" href="https://vk.com/club106906794" role="button" target="_blank">Обговорити у спільноті</a>
         
@@ -123,7 +115,7 @@ header('Content-Type: text/html; charset=utf-8');
            <!-- uploader start -->
            <form action="..\..\validator_fe.php" method="post" enctype="multipart/form-data">
              Оберіть файл програми, для валідації:
-             <label class="btn btn-info btn-browse" for="fileToUpload">
+             <label class="btn btn-success btn-browse" for="fileToUpload">
              <input id="fileToUpload" name="fileToUpload" type="file" style="display:none;">
                Обрати файл
              </label>

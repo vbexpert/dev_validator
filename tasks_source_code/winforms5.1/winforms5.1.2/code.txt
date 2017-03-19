@@ -29,7 +29,7 @@ namespace ns_d_code
             }
 
             //розміри:
-            if ((f.Width == 400) && (f.Height == 300))
+            if ((f.Width == 500) && (f.Height == 500))
             {
                 cls_output_controller._add_validation_ok("Розміри форми вірні!", 20);
             }
@@ -39,7 +39,7 @@ namespace ns_d_code
             }
 
             //колір:
-            if (f.BackColor.Name == "Red")
+            if (f.BackColor.Name == "CadetBlue")
             {
                 cls_output_controller._add_validation_ok("Колір форми вірний!", 20);
             }
@@ -49,7 +49,7 @@ namespace ns_d_code
             }
 
             //заголовок:
-            if (f.Text != "Form1")
+            if (f.Text != "Програма 2")
             {
                 cls_output_controller._add_validation_ok("Вірний заголовок форми!", 20);
             }
@@ -59,13 +59,23 @@ namespace ns_d_code
             }
 
             //положення:
-            if (f.Location.X == 200 && f.Location.Y == 200)
+            if (f.Location.X == 0 && f.Location.Y == 0)
             {
                 cls_output_controller._add_validation_ok("Вірние розташування форми!", 20);
             }
             else
             {
                 cls_output_controller._add_validation_failed("Невірне розташування форми!", 0);
+            }
+
+			//Прозорість:
+            if (f.Opacity == .50)
+            {
+                cls_output_controller._add_validation_ok("Прозорість вірна! ", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("Прозорість неправильна! ", 0);
             }
 
 			//----------------------------------------------->

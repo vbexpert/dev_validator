@@ -68,6 +68,16 @@ namespace ns_d_code
                 cls_output_controller._add_validation_failed("Невірне розташування форми!", 0);
             }
 
+			//Прозорість:
+            if (f.Opacity == .50)
+            {
+                cls_output_controller._add_validation_ok("Прозорість вірна! ", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("Прозорість неправильна! ", 0);
+            }
+
 			//----------------------------------------------->
 			// validation code end:
 			//----------------------------------------------->
