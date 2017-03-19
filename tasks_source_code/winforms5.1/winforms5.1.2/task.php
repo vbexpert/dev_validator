@@ -40,7 +40,7 @@ header('Content-Type: text/html; charset=utf-8');
 		 <!-- task info block start --------------------------------------------------------------------------------->
          <h2 class=''><a href = "../../index.php">Доступні завдання:</a></h2>
          <hr>
-		 <h2 class=''>Завдання Winforms: </h2>
+		 <h2 class=''>Завдання Winforms: 5.1.2</h2>
         
          <p class="lead lead-top-fix">Створити форму відповідно специфікації</p>
          
