@@ -44,7 +44,7 @@ namespace ns_d_code
             }
             else
             {
-                cls_output_controller._add_validation_ok("Колір форми неправильний!", 0);
+                cls_output_controller._add_validation_failed("Колір форми неправильний!", 0);
             }
 
             //заголовок:
