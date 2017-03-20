@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Reflection;
 using System.Windows.Forms;
-using System.Collections.Generic;
 using System.IO;
 using Microsoft.CSharp;
 using System.CodeDom.Compiler;
 using System.Text;
+using System.Collections.Generic;
 
 static class mod_main
 {
@@ -56,8 +56,9 @@ static class mod_main
         //read code:
         string s_dynamic_code = File.ReadAllText(s_code_file_fnp);
 
-        //init compiler:
-        CSharpCodeProvider obj_CSharpCodeProvider = new CSharpCodeProvider();
+        //init compiler: https://stackoverflow.com/questions/4063285/missing-assembly-references-in-dynamically-compiled-code
+        CSharpCodeProvider obj_CSharpCodeProvider = new CSharpCodeProvider(new Dictionary<String, String> { { "CompilerVersion", "v3.5" } });
+
         CodeDomProvider obj_CodeDomProvider = CodeDomProvider.CreateProvider("CSharp");
 
         //init parms:
@@ -75,7 +76,8 @@ static class mod_main
         _CompilerParameters.ReferencedAssemblies.Add("System.Data.dll");
         _CompilerParameters.ReferencedAssemblies.Add("System.Xml.dll");
         _CompilerParameters.ReferencedAssemblies.Add("System.dll");
-
+        _CompilerParameters.ReferencedAssemblies.Add("System.Core.dll");
+        
         //main compile call:
         CompilerResults obj_results = obj_CSharpCodeProvider.CompileAssemblyFromSource(_CompilerParameters, s_dynamic_code);
 

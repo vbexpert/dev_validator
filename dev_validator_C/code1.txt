@@ -1,5 +1,6 @@
 using System.Windows.Forms;
 using System;
+using System.Linq;
 namespace ns_d_code
 {
     public class cls_Main
@@ -21,25 +22,19 @@ namespace ns_d_code
 			else{
 			    cls_output_controller._add_validation_failed("Форма відсутня!", 0);
 			}
-
-			if (f.Text == "Form1")
-			{
-			    cls_output_controller._add_validation_ok("Вірний заголовок форми!", 20);
-			}
-			else
-			{
-			    cls_output_controller._add_validation_failed("Невірний заголовок форми!", 0);
-			}
-			//колір:
-			if (f.BackColor = Color.Red;)
-			{
-			    cls_output_controller._add_validation_ok("Колір форми вірний!", 20);
-			}
-			else
-			{
-			    cls_output_controller._add_validation_ok("Колір форми невірний!", 0);
-			}
 			
+			//test box via reflection test:
+            Control c = f.Controls.Find("textBox1", true)[0];
+            TextBox tbx = (TextBox)c;
+            if (tbx.Text == "1")
+            {
+                cls_output_controller._add_validation_ok("TextBox містить вірний текст!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("TextBox містить неправильний текст!", 20);
+            }
+
 			//return validation buffer:
             return(cls_output_controller.s_output_buffer);
         }

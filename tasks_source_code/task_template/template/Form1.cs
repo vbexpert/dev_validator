@@ -30,6 +30,22 @@ namespace WindowsApplication1
         {
             cls_output_controller cls_output_controller = new cls_output_controller();
 
+
+            //test box via reflection test:
+            //Control c = f.Controls.Find("textBox1", true)[0];
+
+            //TextBox tbx = (TextBox)c;
+            //if (tbx.Text == "1")
+            //{
+            //    cls_output_controller._add_validation_ok("TextBox містить вірний текст!", 20);
+            //}
+            //else
+            //{
+            //    cls_output_controller._add_validation_ok("TextBox містить неправильний текст!", 20);
+            //}
+            //MessageBox.Show(tbx.Text);
+
+
             //------------------------------------------------------------------------>
             //початок коду валідації:
             //------------------------------------------------------------------------>
