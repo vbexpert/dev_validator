@@ -23,12 +23,9 @@
      <div class="starter-template">
 
        <!-- header info block start: -------------------------------------------------------------------------------->
-       <h1 class='h1_main'>
-         С# - це просто<sup>*</sup>!
-       </h1>
-       <div class='note'>
-         <sup>* якщо попрацюеш :-)</sup>
-       </div>
+		<?php
+			include_once("validator/header.php");
+		?>
        <!-- header info block end: -------------------------------------------------------------------------------->
 	
        <div class="jumbotron">

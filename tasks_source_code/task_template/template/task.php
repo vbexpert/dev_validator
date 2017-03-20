@@ -24,14 +24,10 @@ header('Content-Type: text/html; charset=utf-8');
  <body>
    <div class="container">
      <div class="starter-template">
-
-       <!-- header info block start: -------------------------------------------------------------------------------->
-       <h1 class='h1_main'>
-         С# - це просто<sup>*</sup>!
-       </h1>
-       <div class='note'>
-         <sup>* якщо попрацюеш :-)</sup>
-       </div>
+	  <!-- header info block start: -------------------------------------------------------------------------------->
+		<?php
+			include_once("../../header.php");
+		?>
        <!-- header info block end: -------------------------------------------------------------------------------->
 	
        <div class="jumbotron">
