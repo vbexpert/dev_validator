@@ -1,12 +1,12 @@
-﻿<?php
+<?php
 //utf8 support:
 header('Content-Type: text/html; charset=utf-8');
 ?>
 <html>
   <head>
     <!-- title -->
-    <title>Завдання Winforms 5.1.1:</title>
-    <!-- utf8 support: -->
+    <title>Завдання winforms 5.1.3:</title>
+	<!-- utf8 support: -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<!-- jq CDN (bootsrtrap reqired): -->
 	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
@@ -24,7 +24,7 @@ header('Content-Type: text/html; charset=utf-8');
  <body>
    <div class="container">
      <div class="starter-template">
-      <!-- header info block start: -------------------------------------------------------------------------------->
+	  <!-- header info block start: -------------------------------------------------------------------------------->
 		<?php
 			include_once("../../header.php");
 		?>
@@ -33,17 +33,16 @@ header('Content-Type: text/html; charset=utf-8');
        <div class="jumbotron">
 	   
 		 <!-- task info block start --------------------------------------------------------------------------------->
-         <h2 class=''><a href = "../../index.php">Доступні завдання:</a></h2>
+		 <h2 class=""><a href = "../../index.php">Доступні завдання:</a></h2>
          <hr>
-		 <h1 class="">Завдання Winforms 5.1.1</h1>
-         <h3 class="">Створення програми з формою та встановлення її властивостей</h3>
-		 <p class="lead lead-top-fix">1. На робочому столі створити папку <b>Назва команди</b></p>
-	     <p class="lead lead-top-fix">2. Створити новий проект програми <strong>С#</strong> із <b>Winforms</b>.</p>
-		 <p class="lead lead-top-fix">5. Створити форму відповідно специфікації</p>
-		 <p class="lead lead-top-fix">6. Завантажити програму у <b>DEV-VALIDATOR</b>.</p>
-		 <p class="lead lead-top-fix">7. Добитися повної валідації програми.</p>
-		 <p class="lead lead-top-fix">8. Зберегти скріншот результатів у командну папку в папку <b>Release</b>.</p>
-		 <table style="width:100%" class="table table-striped table-condensed">
+		 <h1 class="">Завдання Winforms 5.1.3</h1>
+         <h3 class="">Створення програми із формою та встановлення її властивостей</h3>
+         <p class="lead lead-top-fix">1. Створити новий проект програми <strong>С#</strong> із <b>Winforms</b>.</p>
+		 <p class="lead lead-top-fix">2. Створити форму відповідно специфікації.</p>
+		 <p class="lead lead-top-fix">3. Завантажити програму у <b>DEV-VALIDATOR</b>.</p>
+		 <p class="lead lead-top-fix">4. Добитися повної валідації програми.</p>
+		 <p class="lead lead-top-fix">5. Зберегти скріншот результатів у командну папку в папку <b>Release</b>.</p>
+         <table style="width:100%" class="table table-striped table-condensed">
 			  <caption style="caption-side: top">Специфікація програми</caption>
 			<thead>
 			  <tr>
@@ -56,16 +55,16 @@ header('Content-Type: text/html; charset=utf-8');
 			<tr>
 				<td>Solution</td>
 				<td>Ім'я рішення</td>
-				<td><b>project_5.1</b></td>
+				<td><b>Lesson_1</b></td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 			  <tr>
 				<td>Program name</td>
 				<td>Ім'я програми</td>
-				<td><b>program_5.1.1</b></td>
+				<td><b>program_5.1.3</b></td>
 				<td><input type="checkbox" value=""></td>
-			  </tr>
-			   <tr>
+			 </tr>
+			 <tr>
 				<td>Form</td>
 				<td>Форма</td>
 				<td><b>Windows Forms</b></td>
@@ -74,37 +73,45 @@ header('Content-Type: text/html; charset=utf-8');
 			  <tr>
 				<td>Size</td>
 				<td>Розмір форми</td>
-				<td><b>400</b> x <b>300</b> пікселів</td>
+				<td><b>700</b> x <b>300</b> пікселів</td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 			  
 			  <tr>
 				<td>BackColor</td>
 				<td>Колір форми</td>
-				<td><b>Червоний</b></td>
+				<td><b>IndianRed</b></td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 
 			  <tr>
 				<td>Text</td>
 				<td>Заголовок форми</td>
-				<td><b>Прізвище та Ім'я</td>
+				<td><b>Програма 3</td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 
 			   <tr>
-				<td>Location</td>
+				<td>StartPosition</td>
 				<td>Початкова позиція вікна</td>
-				<td><b>X: </b>200 <b>Y: </b>200 пікселів</td>
+				<td><b>CenterScreen</b></td>
+				<td><input type="checkbox" value=""></td>
+			 </tr>
+
+			 <tr>
+				<td>Opacity</td>
+				<td>Прозорість</td>
+				<td><b>50%</b></td>
 				<td><input type="checkbox" value=""></td>
 			 </tr>
 			
 		</table>
-        <div class="row pic-centered">
-           <img src="target_form.png" alt="Скріншот програми" class="">
+
+         <div class="row pic-centered">
+           <img src="target_form.png" alt="...">
          </div>
-		
-		<!-- task info block end ----------------------------------------------------------------------------------->
+				 
+         <!-- task info block end ----------------------------------------------------------------------------------->
 
 		<!-- help block start ----------------------------------------------------------------------------------->
 			<hr>
@@ -125,7 +132,7 @@ header('Content-Type: text/html; charset=utf-8');
              </label>
              <input class='btn btn-primary btn-upload' type="submit" value="Відправити файл" name="submit"></input>
 			 <!-- uploader end -->
-			 <input type="hidden" name="codefile" value="winforms5.1.1"> <!-- task id -->
+			 <input type="hidden" name="codefile" value="winforms5.1.3"> <!-- task id -->
          </form>
 		 <!-- task validation block end ------------------------------------------------------------------------------>
 		

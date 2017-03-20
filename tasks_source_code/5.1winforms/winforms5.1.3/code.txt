@@ -1,36 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
-namespace WindowsApplication1
+using System;
+namespace ns_d_code
 {
-    public partial class Form1 : Form
+    public class cls_Main
     {
-        public Form1()
+		
+        public static void Main() //main entry point:
         {
-            InitializeComponent();
+		    //Console.Beep(5000, 1000);
+            //Console.WriteLine("Hello, world!");
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        public static string test(Form f) //validation sub:
         {
-           //extBox3.Text = (Int32.Parse(textBox1.Text) + Int32.Parse(textBox2.Text)).ToString();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            _test_validate(this);
-        }
-        private void _test_validate(Form f)
-        {
-            cls_output_controller cls_output_controller = new cls_output_controller();
-
-            //------------------------------------------------------------------------>
+			cls_output_controller cls_output_controller = new cls_output_controller();
+		
+			 //------------------------------------------------------------------------>
             //початок коду валідації:
             //------------------------------------------------------------------------>
             //форма:
@@ -60,7 +44,7 @@ namespace WindowsApplication1
             }
             else
             {
-                cls_output_controller._add_validation_ok("Колір форми неправильний!", 0);
+                cls_output_controller._add_validation_failed("Колір форми неправильний!", 0);
             }
 
             //заголовок:
@@ -98,9 +82,11 @@ namespace WindowsApplication1
             //------------------------------------------------------------------------>
             //кінець коду валідації:
             //------------------------------------------------------------------------>
+			
+			//return validation buffer:
+            return(cls_output_controller._final_result());
         }
     }
-
     public class cls_output_controller
     {
         public string s_output_buffer = "";
@@ -117,7 +103,7 @@ namespace WindowsApplication1
             s_output_buffer += "<div class='c_wrong'>- " + s_value + "</div><br>\r\n";
         }
         public string _final_result() {
-            return this.s_output_buffer += "<div class='c_correct'>Всього: " + i_total_score + "</div><br>\r\n";
+            return this.s_output_buffer += "<hr><div class='c_correct'>Всього: " + i_total_score + " балів!</div><br>\r\n";
         }
     }
 }
