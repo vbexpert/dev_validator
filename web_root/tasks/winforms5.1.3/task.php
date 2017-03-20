@@ -1,12 +1,13 @@
-﻿<?php
+<?php
 //utf8 support:
 header('Content-Type: text/html; charset=utf-8');
 ?>
 <html>
   <head>
     <!-- title -->
-    <title>Завдання [task_title] [task_id]:</title>
-	<!-- utf8 support: -->
+    <title>Завдання winforms 5.1.2:</title>
+	
+    <!-- utf8 support: -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<!-- jq CDN (bootsrtrap reqired): -->
 	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
@@ -37,59 +38,20 @@ header('Content-Type: text/html; charset=utf-8');
        <div class="jumbotron">
 	   
 		 <!-- task info block start --------------------------------------------------------------------------------->
-          
-		 <h2 class=''><a href = "../../index.php">Доступні завдання:</a></h2>
+         <h2 class=''><a href = "../../index.php">Доступні завдання:</a></h2>
          <hr>
-		 <h1 class=''>Завдання [task_title] [task_id]</h1>
-         <h3 class=''>Створення простої програми із 1 формою...</h3>
-		
-         <p class="lead lead-top-fix">Створити форму відповідно специфікації</p>
-         <br>
-		 <table style="width:100%" class="table table-striped table-condensed">
-			  <caption style="caption-side: top">Специфікація програми</caption>
-			<thead>
-			  <tr>
-				<th width="50px">Номер</th>
-				<th>Властивість</th>
-				<th>Значення</th>
-				<th>Стан</th>
-			  </tr>
-			</thead>
-			 <tr>
-				<td>1.</td>
-				<td>Форма</td>
-				<td>Windows Forms</td>
-				<td><input type="checkbox" value=""></td>
-			  </tr>
-			  <tr>
-				<td>2.</td>
-				<td>Розмір форми</td>
-				<td><b>400</b> x <b>300</b> пікселів</td>
-				<td><input type="checkbox" value=""></td>
-			  </tr>
-			  
-			  <tr>
-				<td>3.</td>
-				<td>Колір форми</td>
-				<td><b>Червоний</b></td>
-				<td><input type="checkbox" value=""></td>
-			  </tr>
-
-			  <tr>
-				<td>4.</td>
-				<td>Заголовок форми</td>
-				<td><b>Прізвище та Ім'я</td>
-				<td><input type="checkbox" value=""></td>
-			  </tr>
-
-			   <tr>
-				<td>5.</td>
-				<td>Початкова позиція вікна</td>
-				<td><b>X: </b>200 <b>Y: </b>200 пікселів</td>
-				<td><input type="checkbox" value=""></td>
-			 </tr>
-			
-		</table>
+		 <h2 class=''>Завдання Winforms: 5.1.3</h2>
+         <p class="lead lead-top-fix">1. Відкрити <b>Освітній портал ЖДТУ</b>.</p>
+         <p class="lead lead-top-fix">2. Ознайомитись з матеріалом <b>ТЕМА 1. Середовище розробки Microsoft Visual Studio</b>.</p>
+         <p class="lead lead-top-fix">3. Виконати <b>Практичне завдання</b>.</p>
+		 <p class="lead lead-top-fix">4. Виконати <b>Практичне завдання</b>.</p>
+		 <p class="lead lead-top-fix">5. Перевірити програми  <b>самостійно</b>.</p>
+		 <p class="lead lead-top-fix">6. У папці своеї команди підготувати папку <b>Release</b>:</p>
+		 <blockquote>
+		 	<p class="lead lead-top-fix">- Чотири програми готові до запуску</p>
+		 	<p class="lead lead-top-fix">- Два скріншота з результатами <b>DEV-VALIDATOR</b></p>
+		 </blockquote>
+		 
 
          <div class="row pic-centered">
            <img src="target_form.png" alt="...">
@@ -97,6 +59,7 @@ header('Content-Type: text/html; charset=utf-8');
 				 
          <!-- task info block end ----------------------------------------------------------------------------------->
 
+		
 		<!-- help block start ----------------------------------------------------------------------------------->
 			<hr>
 				<?php
@@ -105,6 +68,9 @@ header('Content-Type: text/html; charset=utf-8');
 			<hr> 
 		<!-- help block end ----------------------------------------------------------------------------------->
 
+        
+
+         
          <!-- task validation block start --------------------------------------------------------------------------->
          <h2 class=''>Перевірка:</h2>
            <!-- uploader start -->
@@ -116,7 +82,7 @@ header('Content-Type: text/html; charset=utf-8');
              </label>
              <input class='btn btn-primary btn-upload' type="submit" value="Відправити файл" name="submit"></input>
 			 <!-- uploader end -->
-			 <input type="hidden" name="codefile" value="[task_title][task_id]"> <!-- task id -->
+			 <input type="hidden" name="codefile" value="winforms5.1.2"> <!-- task id -->
          </form>
 		 <!-- task validation block end ------------------------------------------------------------------------------>
 		

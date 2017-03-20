@@ -38,23 +38,25 @@
          <h2 class=''>Система для перевірки навиків візуального програмування</h2>
          <hr>
          <div class="row pic-centered task_desc_row">
-            <br>
+           
            <a class="btn btn-success btn-lg btn-block" href="/validator/index.php">Розпочати валідацію</a>
-           <br>
+          
          </div>
-         
-         <hr>
+                
          <!-- task info block end ----------------------------------------------------------------------------------->
+			
 		 <!-- help block start ----------------------------------------------------------------------------------->
+			<hr>  
 			<?php
-			//utf8 support:
-			header('Content-Type: text/html; charset=utf-8');
-			include_once("/validator/help.php");
-			?>
+				//utf8 support:
+				header('Content-Type: text/html; charset=utf-8');
+				include_once("/validator/help.php");
+				?>
+			<hr> 
 		<!-- help block end ----------------------------------------------------------------------------------->
-     
-		<div>
-		     <img src = "validator/images/programming.gif"
+			
+		<div style="text-align: center;">
+		     <img src = "validator/images/programming.gif">
 		</div>
 
 		</div>
