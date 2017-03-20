@@ -25,4 +25,3 @@ powershell -Command "(Get-Content %s_task_fp%\task.php).replace('[task_id]', '%s
 
 move %s_task_fp%\task_template.csproj %s_task_fp%\%s_task_title%%s_task_id%.csproj
 
-pause
