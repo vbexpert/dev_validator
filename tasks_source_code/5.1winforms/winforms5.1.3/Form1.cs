@@ -50,7 +50,7 @@ namespace WindowsApplication1
             }
             else
             {
-                cls_output_controller._add_validation_failed("Розміри форми невірні!", 0);
+                cls_output_controller._add_validation_failed("Розміри форми неправильні!", 0);
             }
 
             //колір:
@@ -64,23 +64,23 @@ namespace WindowsApplication1
             }
 
             //заголовок:
-            if (f.Text == "Програма 1")
+            if (f.Text == "Програма 3")
             {
-                cls_output_controller._add_validation_ok("Вірний заголовок форми!", 20);
+                cls_output_controller._add_validation_ok("Заголовок форми вірний!", 20);
             }
             else
             {
-                cls_output_controller._add_validation_failed("Невірний заголовок форми!", 0);
+                cls_output_controller._add_validation_failed("Заголовок форми неправильний!", 0);
             }
 
             //положення:
             if (f.StartPosition == FormStartPosition.CenterScreen)
             {
-                cls_output_controller._add_validation_ok("Вірние розташування форми!", 20);
+                cls_output_controller._add_validation_ok("Розташування форми вірне!", 20);
             }
             else
             {
-                cls_output_controller._add_validation_failed("Невірне розташування форми!", 0);
+                cls_output_controller._add_validation_failed("Розташування форми неправильний!", 0);
             }
 
             //Прозорість:

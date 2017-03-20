@@ -33,12 +33,12 @@ header('Content-Type: text/html; charset=utf-8');
        <div class="jumbotron">
 	   
 		 <!-- task info block start --------------------------------------------------------------------------------->
-		 <h2 class=''><a href = "../../index.php">Доступні завдання:</a></h2>
+		 <h2 class=""><a href = "../../index.php">Доступні завдання:</a></h2>
          <hr>
 		 <h1 class="">Завдання Winforms 5.1.3</h1>
-         <h3 class="">Створення програми із формою</h3>
+         <h3 class="">Створення програми із формою та встановлення її властивостей</h3>
          <p class="lead lead-top-fix">1. Створити новий проект програми <strong>С#</strong> із <b>Winforms</b>.</p>
-		 <p class="lead lead-top-fix">2. Створити форму відповідно специфікації</p>
+		 <p class="lead lead-top-fix">2. Створити форму відповідно специфікації.</p>
 		 <p class="lead lead-top-fix">3. Завантажити програму у <b>DEV-VALIDATOR</b>.</p>
 		 <p class="lead lead-top-fix">4. Добитися повної валідації програми.</p>
 		 <p class="lead lead-top-fix">5. Зберегти скріншот результатів у командну папку в папку <b>Release</b>.</p>
@@ -46,7 +46,7 @@ header('Content-Type: text/html; charset=utf-8');
 			  <caption style="caption-side: top">Специфікація програми</caption>
 			<thead>
 			  <tr>
-				<th width="50px">Properties</th>
+				<th>Properties</th>
 				<th>Властивість</th>
 				<th>Значення</th>
 				<th>Стан</th>
@@ -63,11 +63,11 @@ header('Content-Type: text/html; charset=utf-8');
 				<td>Ім'я програми</td>
 				<td><b>program_5.1.3</b></td>
 				<td><input type="checkbox" value=""></td>
-			  </tr>
+			 </tr>
 			 <tr>
 				<td>Form</td>
 				<td>Форма</td>
-				<td>Windows Forms</td>
+				<td><b>Windows Forms</b></td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 			  <tr>
@@ -87,7 +87,7 @@ header('Content-Type: text/html; charset=utf-8');
 			  <tr>
 				<td>Text</td>
 				<td>Заголовок форми</td>
-				<td><b>Програма 1</td>
+				<td><b>Програма 3</td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 

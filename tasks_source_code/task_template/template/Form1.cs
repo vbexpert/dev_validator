@@ -42,6 +42,47 @@ namespace WindowsApplication1
             {
                 cls_output_controller._add_validation_failed("Форма відсутня!", 0);
             }
+
+            //розміри:
+            if ((f.Width == 700) && (f.Height == 300))
+            {
+                cls_output_controller._add_validation_ok("Розміри форми вірні!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("Розміри форми неправильні!", 0);
+            }
+
+            //колір:
+            if (f.BackColor.Name == "IndianRed")
+            {
+                cls_output_controller._add_validation_ok("Колір форми вірний!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_ok("Колір форми неправильний!", 0);
+            }
+
+            //заголовок:
+            if (f.Text == "Програма 3")
+            {
+                cls_output_controller._add_validation_ok("Заголовок форми вірний!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("Заголовок форми неправильний!", 0);
+            }
+
+            //положення:
+            if (f.StartPosition == FormStartPosition.CenterScreen)
+            {
+                cls_output_controller._add_validation_ok("Розташування форми вірне!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("Розташування форми неправильний!", 0);
+            }
+
             //Прозорість:
             if (f.Opacity == .50)
             {

@@ -5,7 +5,7 @@ header('Content-Type: text/html; charset=utf-8');
 <html>
   <head>
     <!-- title -->
-    <title>Завдання winforms 5.1.1:</title>
+    <title>Завдання Winforms 5.1.1:</title>
     <!-- utf8 support: -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<!-- jq CDN (bootsrtrap reqired): -->
@@ -36,7 +36,7 @@ header('Content-Type: text/html; charset=utf-8');
          <h2 class=''><a href = "../../index.php">Доступні завдання:</a></h2>
          <hr>
 		 <h1 class="">Завдання Winforms 5.1.1</h1>
-         <h3 class="">Створення простої програми із 1 формою...</h3>
+         <h3 class="">Створення програми з формою та встановлення її властивостей</h3>
 		 <p class="lead lead-top-fix">1. На робочому столі створити папку <b>Назва команди</b></p>
 	     <p class="lead lead-top-fix">2. Створити новий проект програми <strong>С#</strong> із <b>Winforms</b>.</p>
 		 <p class="lead lead-top-fix">5. Створити форму відповідно специфікації</p>
