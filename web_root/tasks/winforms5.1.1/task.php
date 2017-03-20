@@ -43,8 +43,11 @@ header('Content-Type: text/html; charset=utf-8');
 		 <h1 class="">Завдання Winforms 5.1.1</h1>
          <h3 class="">Створення простої програми із 1 формою...</h3>
 		 <br>
+		 <p class="lead lead-top-fix">На робочому столі створити папку <b>Назва команди</b></p>
 	     <p class="lead lead-top-fix">1. Створити новий проект програми <strong>С#</strong> із <b>Winforms</b>.</p>
-		 <p class="lead lead-top-fix">2. Встановити розмір вікна форми <b>400x300 пікселів.</p>
+		 <p class="lead lead-top-fix">Ім'я рішення <b>project_5.1</b></p>
+		 <p class="lead lead-top-fix">Ім'я програми <b>program_5.1.3</b></p>
+		 <p class="lead lead-top-fix">2. Встановити розмір вікна форми <b>400x300 пікселів.</b></p>
 		 <p class="lead lead-top-fix">3. Встановити колір вікна форми на <b>"Червоний"</b>.</p>
 		 <p class="lead lead-top-fix">4. Змінити назву вікна форми на власне <b>Прізвище та Ім'я</b>.</p>
 		 <p class="lead lead-top-fix">5. Встановити початкову позицію вікна на <b>X: 200</b> <b>Y: 200.</b></p>
