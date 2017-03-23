@@ -33,42 +33,87 @@ include_once("validator_be.php");
 	
        <div class="jumbotron">
 	   
-		 <!-- task info block start --------------------------------------------------------------------------------->
+		 <!-- task Winforms info block start --------------------------------------------------------------------------------->
          <h2 class=''>Доступні завдання:</h2>
          <hr>
+		 <h3 class=''>Форми WindowsForms:</h2>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/winforms5.1.1/task.php">Завдання 1: "Winforms 5.1"</a>
+           <a href="/validator/tasks/winforms5.1.1/task.php">Завдання 1</a>
          </div>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/winforms5.1.2/task.php">Завдання 2: "Winforms 5.2"</a>
+           <a href="/validator/tasks/winforms5.1.2/task.php">Завдання 2</a>
          </div>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/winforms5.1.3/task.php">Завдання 3: "Winforms 5.3"</a>
+           <a href="/validator/tasks/winforms5.1.3/task.php">Завдання 3</a>
          </div>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/winforms5.1.4/task.php">Завдання 4: "Winforms 5.4"</a>
+           <a href="/validator/tasks/winforms5.1.4/task.php">Завдання 4</a>
          </div>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/winforms5.1.5/task.php">Завдання 5: "Winforms 5.5"</a>
+           <a href="/validator/tasks/winforms5.1.5/task.php">Завдання 5</a>
          </div>
+		 <!-- task Winforms info block end --------------------------------------------------------------------------------->
+
+		 <!-- task Events info block start --------------------------------------------------------------------------------->
          <hr>
+		 <h3 class=''>Події Events:</h2>
 		  <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/winforms5.1.1/task.php">Завдання 1: "Winforms 5.1"</a>
+           <a href="/validator/tasks/winforms5.1.1/task.php">Завдання 1</a>
          </div>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/winforms5.1.2/task.php">Завдання 2: "Winforms 5.2"</a>
+           <a href="/validator/tasks/winforms5.1.2/task.php">Завдання 2</a>
          </div>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/winforms5.1.3/task.php">Завдання 3: "Winforms 5.3"</a>
+           <a href="/validator/tasks/winforms5.1.3/task.php">Завдання 3</a>
          </div>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/winforms5.1.4/task.php">Завдання 4: "Winforms 5.4"</a>
+           <a href="/validator/tasks/winforms5.1.4/task.php">Завдання 4</a>
          </div>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/winforms5.1.5/task.php">Завдання 5: "Winforms 5.5"</a>
+           <a href="/validator/tasks/winforms5.1.5/task.php">Завдання 5</a>
          </div>
+		 
+         <!-- task Events info block end --------------------------------------------------------------------------------->
+
+		 <!-- task Controls Button info block start --------------------------------------------------------------------------------->
+			<hr>
+		 <h3 class=''>Елементи керування Controls Button:</h2>
+		  <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/winforms5.1.1/task.php">Завдання 1</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/winforms5.1.2/task.php">Завдання 2</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/winforms5.1.3/task.php">Завдання 3</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/winforms5.1.4/task.php">Завдання 4</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/winforms5.1.5/task.php">Завдання 5</a>
+         </div>
+		 <!-- task Controls Button info block end --------------------------------------------------------------------------------->
+
+		 <!-- task Controls Label info block start --------------------------------------------------------------------------------->
 		 <hr>
-         <!-- task info block end ----------------------------------------------------------------------------------->
+		 <h3 class=''>Елементи керування Controls Button:</h2>
+		  <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/winforms5.1.1/task.php">Завдання 1</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/winforms5.1.2/task.php">Завдання 2</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/winforms5.1.3/task.php">Завдання 3</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/winforms5.1.4/task.php">Завдання 4</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/winforms5.1.5/task.php">Завдання 5</a>
+         </div>
+		 <!-- task Controls Label info block end --------------------------------------------------------------------------------->
 
 		</div>
 		
