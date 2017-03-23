@@ -1,6 +1,5 @@
 using System.Windows.Forms;
 using System;
-using System.Linq;
 namespace ns_d_code
 {
     public class cls_Main
@@ -19,6 +18,7 @@ namespace ns_d_code
 			// validation code start:
 			//----------------------------------------------->
 
+            
             //форма:
             if (f is Form)
             {
@@ -30,48 +30,81 @@ namespace ns_d_code
             }
 
             //розміри:
-            if ((f.Width == 400) && (f.Height == 300))
+            if ((f.Width == 700) && (f.Height == 300))
             {
                 cls_output_controller._add_validation_ok("Розміри форми вірні!", 20);
             }
             else
             {
-                cls_output_controller._add_validation_failed("Розміри форми невірні!", 0);
+                cls_output_controller._add_validation_failed("Розміри форми неправильні!", 0);
             }
 
             //колір:
-            if (f.BackColor.Name == "Red")
+            if (f.BackColor.Name == "IndianRed")
             {
                 cls_output_controller._add_validation_ok("Колір форми вірний!", 20);
             }
             else
             {
-                cls_output_controller._add_validation_failed("Колір форми невірний!", 0);
+                cls_output_controller._add_validation_ok("Колір форми неправильний!", 0);
             }
 
             //заголовок:
-            if (f.Text != "Form1")
+            if (f.Text == "TextBox")
             {
-                cls_output_controller._add_validation_ok("Вірний заголовок форми!", 20);
+                cls_output_controller._add_validation_ok("Заголовок форми вірний!", 20);
             }
             else
             {
-                cls_output_controller._add_validation_failed("Невірний заголовок форми!", 0);
+                cls_output_controller._add_validation_failed("Заголовок форми неправильний!", 0);
             }
 
             //положення:
-            if (f.Location.X == 200 && f.Location.Y == 200)
+            if (f.StartPosition == FormStartPosition.CenterScreen)
             {
-                cls_output_controller._add_validation_ok("Вірние розташування форми!", 20);
+                cls_output_controller._add_validation_ok("Розташування форми вірне!", 20);
             }
             else
             {
-                cls_output_controller._add_validation_failed("Невірне розташування форми!", 0);
+                cls_output_controller._add_validation_failed("Розташування форми неправильний!", 0);
+            }
+
+            //Прозорість:
+            /*if (f.Opacity == .50)
+            {
+                cls_output_controller._add_validation_ok("Прозорість вірна! ", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("Прозорість неправильна! ", 0);
+            }
+            */
+
+
+            //
+            //test box via reflection test:
+            Control c = f.Controls.Find("textBox1", true)[0];
+            TextBox tbx = (TextBox)c;
+
+            if (tbx is TextBox)
+            {
+                cls_output_controller._add_validation_ok("Текстове поле TextBox присутнє!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("Текстове поле TextBox відсутнє!", 0);
             }
 
 
-         
-
+            if (tbx.Text == "")
+            {
+                cls_output_controller._add_validation_ok("TextBox містить вірний текст!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("TextBox містить неправильний текст!", 20);
+            }
+           
 			//----------------------------------------------->
 			// validation code end:
 			//----------------------------------------------->
