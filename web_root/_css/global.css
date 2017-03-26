@@ -31,14 +31,14 @@
 .c_correct {
     color: green;
     text-align: left;
-    font-size: 35px;
+    font-size: 22px;
 }
 .c_wrong {
     color: red;
     text-align: left;
     font-weight: bold !important;
     padding: 10px;
-    font-size: 35px;
+    font-size: 22px;
 }
 .task_desc_row {
     text-align: left;

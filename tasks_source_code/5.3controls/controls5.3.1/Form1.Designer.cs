@@ -28,28 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_Hello = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tb_Hello
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 161);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 20);
-            this.textBox1.TabIndex = 0;
+            this.tb_Hello.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tb_Hello.Location = new System.Drawing.Point(100, 100);
+            this.tb_Hello.Name = "tb_Hello";
+            this.tb_Hello.Size = new System.Drawing.Size(300, 41);
+            this.tb_Hello.TabIndex = 0;
+            this.tb_Hello.Text = "Вивчаємо TextBox1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(484, 461);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_Hello);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
-            this.Opacity = 0.5D;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Програма 2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "TextBox1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -58,7 +59,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_Hello;
     }
 }
 
