@@ -50,6 +50,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winforms5.1.4", "tasks_sour
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "controls5.3.1", "tasks_source_code\5.3controls\controls5.3.1\controls5.3.1.csproj", "{2BE12C50-55BE-4F71-B9BB-EF7BF63D88BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task_manager", "tasks_source_code\task_manager\task_manager.csproj", "{181C4257-8364-45BB-8E82-4C8FAA46B2E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +115,14 @@ Global
 		{2BE12C50-55BE-4F71-B9BB-EF7BF63D88BF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2BE12C50-55BE-4F71-B9BB-EF7BF63D88BF}.Release|x86.ActiveCfg = Release|Any CPU
 		{2BE12C50-55BE-4F71-B9BB-EF7BF63D88BF}.Release|x86.Build.0 = Release|Any CPU
+		{181C4257-8364-45BB-8E82-4C8FAA46B2E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{181C4257-8364-45BB-8E82-4C8FAA46B2E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{181C4257-8364-45BB-8E82-4C8FAA46B2E9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{181C4257-8364-45BB-8E82-4C8FAA46B2E9}.Debug|x86.Build.0 = Debug|Any CPU
+		{181C4257-8364-45BB-8E82-4C8FAA46B2E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{181C4257-8364-45BB-8E82-4C8FAA46B2E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{181C4257-8364-45BB-8E82-4C8FAA46B2E9}.Release|x86.ActiveCfg = Release|Any CPU
+		{181C4257-8364-45BB-8E82-4C8FAA46B2E9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -129,5 +139,6 @@ Global
 		{9438AEB7-7427-4EB4-A09F-8320FDD7E98D} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 		{85E6F912-993E-408A-9AC7-BAF9221CAD83} = {A334ACA2-C943-4E47-835B-FAE3F8B850A9}
 		{2BE12C50-55BE-4F71-B9BB-EF7BF63D88BF} = {9438AEB7-7427-4EB4-A09F-8320FDD7E98D}
+		{181C4257-8364-45BB-8E82-4C8FAA46B2E9} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 	EndGlobalSection
 EndGlobal
