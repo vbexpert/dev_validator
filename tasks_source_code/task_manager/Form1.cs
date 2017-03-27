@@ -63,7 +63,7 @@ namespace task_manager
         private void button1_Click(object sender, EventArgs e)
         {
             //r
-            lb_Task.Items.Add("<!-- " + lb_Controls.SelectedItem + " -->");
+            lb_Task.Items.Add("		<!-- " + lb_Controls.SelectedItem + " -->");
             int count = lb_OneItemTask.Items.Count;
             int i = 0;
             while(i<count)
@@ -72,7 +72,7 @@ namespace task_manager
                 i++;
             }
                      
-            lb_Task.Items.Add("</ table >");
+            lb_Task.Items.Add("		</table>");
             lb_Task.Items.Add("");
             lb_OneItemTask.Items.Clear();
             lb_Controls.Enabled = true;
@@ -88,17 +88,17 @@ namespace task_manager
         private void lb_Controls_SelectedIndexChanged(object sender, EventArgs e)
         {
             // lb_OneItemTask.Items.Add(lb_OneItemTask.Text+lb_Controls.SelectedItem);
-            
-            lb_OneItemTask.Items.Add("<table style='width: 100 %' class='table table - striped table - condensed'>");
-            lb_OneItemTask.Items.Add("<caption style='caption - side: top'>" + lb_Controls.SelectedItem + "</caption>");
-            lb_OneItemTask.Items.Add(" <thead>");
-            lb_OneItemTask.Items.Add("  <tr>");
-            lb_OneItemTask.Items.Add("   <th>Properties</th>");
-            lb_OneItemTask.Items.Add("   <th>Властивість</th>");
-            lb_OneItemTask.Items.Add("   <th>Значення</th>");
-            lb_OneItemTask.Items.Add("   <th>Стан</th>");
-            lb_OneItemTask.Items.Add("  </tr>");
-            lb_OneItemTask.Items.Add(" </thead>");
+            const string quote = "\"";
+            lb_OneItemTask.Items.Add("		<table style=" + quote + "width: 100%" + quote + " class=" + quote + "table table-striped table-condensed" + quote + ">");
+            lb_OneItemTask.Items.Add("		<caption style=" + quote + "caption-side: top" + quote + ">" + lb_Controls.SelectedItem + "</caption>");
+            lb_OneItemTask.Items.Add(" 		 <thead>");
+            lb_OneItemTask.Items.Add("		  <tr>");
+            lb_OneItemTask.Items.Add("		   <th>Properties</th>");
+            lb_OneItemTask.Items.Add("		   <th>Властивість</th>");
+            lb_OneItemTask.Items.Add("		   <th>Значення</th>");
+            lb_OneItemTask.Items.Add("		   <th>Стан</th>");
+            lb_OneItemTask.Items.Add("		  </tr>");
+            lb_OneItemTask.Items.Add("		 </thead>");
             lb_Controls.Enabled = false;
 
         }
@@ -110,13 +110,13 @@ namespace task_manager
 
         private void btn_AddOneItemTask_Click(object sender, EventArgs e)
         {
-
-            lb_OneItemTask.Items.Add("  <tr>");
-            lb_OneItemTask.Items.Add("   <td>" + lb_Properties.SelectedItem + "</td>");
-            lb_OneItemTask.Items.Add("   <td>" + lb_PropertiesTranslate.SelectedItem + "</td>");
-            lb_OneItemTask.Items.Add("   <td><b>" + tb_Value.Text + "</b></td>");
-            lb_OneItemTask.Items.Add("   <td><input type='checkbox' value=''></td>");
-            lb_OneItemTask.Items.Add("  </tr>");
+            const string quote = "\"";
+            lb_OneItemTask.Items.Add("		  <tr>");
+            lb_OneItemTask.Items.Add("		   <td>" + lb_Properties.SelectedItem + "</td>");
+            lb_OneItemTask.Items.Add("		   <td>" + lb_PropertiesTranslate.SelectedItem + "</td>");
+            lb_OneItemTask.Items.Add("		   <td><b>" + tb_Value.Text + "</b></td>");
+            lb_OneItemTask.Items.Add("		   <td><input type=" + quote + "checkbox" + quote + " value=" + quote + "" + quote + "></td>");
+            lb_OneItemTask.Items.Add("		  </tr>");
             
 
         }
@@ -134,6 +134,8 @@ namespace task_manager
         private void lb_Properties_SelectedIndexChanged(object sender, EventArgs e)
         {
             lb_PropertiesTranslate.SelectedIndex = lb_Properties.SelectedIndex;
+            tb_Value.Text = "";
+            tb_Value.Focus();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

@@ -30,16 +30,16 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.lb_Controls = new System.Windows.Forms.ListBox();
             this.lb_Properties = new System.Windows.Forms.ListBox();
+            this.lb_Controls = new System.Windows.Forms.ListBox();
             this.Properties = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lb_OneItemCode = new System.Windows.Forms.ListBox();
-            this.lb_OneItemTask = new System.Windows.Forms.ListBox();
+            this.lb_PropertiesTranslate = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tb_Value = new System.Windows.Forms.TextBox();
+            this.lb_OneItemCode = new System.Windows.Forms.ListBox();
+            this.lb_OneItemTask = new System.Windows.Forms.ListBox();
             this.btn_AddOneItemTask = new System.Windows.Forms.Button();
-            this.lb_PropertiesTranslate = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lb_Task = new System.Windows.Forms.ListBox();
@@ -90,15 +90,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Control";
             // 
-            // lb_Controls
-            // 
-            this.lb_Controls.FormattingEnabled = true;
-            this.lb_Controls.Location = new System.Drawing.Point(3, 162);
-            this.lb_Controls.Name = "lb_Controls";
-            this.lb_Controls.Size = new System.Drawing.Size(120, 446);
-            this.lb_Controls.TabIndex = 10;
-            this.lb_Controls.SelectedIndexChanged += new System.EventHandler(this.lb_Controls_SelectedIndexChanged);
-            // 
             // lb_Properties
             // 
             this.lb_Properties.FormattingEnabled = true;
@@ -107,6 +98,15 @@
             this.lb_Properties.Size = new System.Drawing.Size(120, 446);
             this.lb_Properties.TabIndex = 7;
             this.lb_Properties.SelectedIndexChanged += new System.EventHandler(this.lb_Properties_SelectedIndexChanged);
+            // 
+            // lb_Controls
+            // 
+            this.lb_Controls.FormattingEnabled = true;
+            this.lb_Controls.Location = new System.Drawing.Point(3, 162);
+            this.lb_Controls.Name = "lb_Controls";
+            this.lb_Controls.Size = new System.Drawing.Size(120, 446);
+            this.lb_Controls.TabIndex = 10;
+            this.lb_Controls.SelectedIndexChanged += new System.EventHandler(this.lb_Controls_SelectedIndexChanged);
             // 
             // Properties
             // 
@@ -128,21 +128,13 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Переклад";
             // 
-            // lb_OneItemCode
+            // lb_PropertiesTranslate
             // 
-            this.lb_OneItemCode.FormattingEnabled = true;
-            this.lb_OneItemCode.Location = new System.Drawing.Point(967, 38);
-            this.lb_OneItemCode.Name = "lb_OneItemCode";
-            this.lb_OneItemCode.Size = new System.Drawing.Size(341, 121);
-            this.lb_OneItemCode.TabIndex = 6;
-            // 
-            // lb_OneItemTask
-            // 
-            this.lb_OneItemTask.FormattingEnabled = true;
-            this.lb_OneItemTask.Location = new System.Drawing.Point(538, 38);
-            this.lb_OneItemTask.Name = "lb_OneItemTask";
-            this.lb_OneItemTask.Size = new System.Drawing.Size(410, 121);
-            this.lb_OneItemTask.TabIndex = 6;
+            this.lb_PropertiesTranslate.FormattingEnabled = true;
+            this.lb_PropertiesTranslate.Location = new System.Drawing.Point(255, 162);
+            this.lb_PropertiesTranslate.Name = "lb_PropertiesTranslate";
+            this.lb_PropertiesTranslate.Size = new System.Drawing.Size(120, 446);
+            this.lb_PropertiesTranslate.TabIndex = 7;
             // 
             // label5
             // 
@@ -161,23 +153,31 @@
             this.tb_Value.Size = new System.Drawing.Size(102, 20);
             this.tb_Value.TabIndex = 9;
             // 
+            // lb_OneItemCode
+            // 
+            this.lb_OneItemCode.FormattingEnabled = true;
+            this.lb_OneItemCode.Location = new System.Drawing.Point(967, 38);
+            this.lb_OneItemCode.Name = "lb_OneItemCode";
+            this.lb_OneItemCode.Size = new System.Drawing.Size(341, 121);
+            this.lb_OneItemCode.TabIndex = 6;
+            // 
+            // lb_OneItemTask
+            // 
+            this.lb_OneItemTask.FormattingEnabled = true;
+            this.lb_OneItemTask.Location = new System.Drawing.Point(538, 38);
+            this.lb_OneItemTask.Name = "lb_OneItemTask";
+            this.lb_OneItemTask.Size = new System.Drawing.Size(410, 121);
+            this.lb_OneItemTask.TabIndex = 6;
+            // 
             // btn_AddOneItemTask
             // 
-            this.btn_AddOneItemTask.Location = new System.Drawing.Point(657, 172);
+            this.btn_AddOneItemTask.Location = new System.Drawing.Point(509, 172);
             this.btn_AddOneItemTask.Name = "btn_AddOneItemTask";
             this.btn_AddOneItemTask.Size = new System.Drawing.Size(154, 23);
             this.btn_AddOneItemTask.TabIndex = 11;
             this.btn_AddOneItemTask.Text = "AddOneItemTask";
             this.btn_AddOneItemTask.UseVisualStyleBackColor = true;
             this.btn_AddOneItemTask.Click += new System.EventHandler(this.btn_AddOneItemTask_Click);
-            // 
-            // lb_PropertiesTranslate
-            // 
-            this.lb_PropertiesTranslate.FormattingEnabled = true;
-            this.lb_PropertiesTranslate.Location = new System.Drawing.Point(255, 162);
-            this.lb_PropertiesTranslate.Name = "lb_PropertiesTranslate";
-            this.lb_PropertiesTranslate.Size = new System.Drawing.Size(120, 446);
-            this.lb_PropertiesTranslate.TabIndex = 7;
             // 
             // label8
             // 
