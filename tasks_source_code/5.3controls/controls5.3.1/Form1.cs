@@ -60,7 +60,7 @@ namespace WindowsApplication1
             }
 
             //розміри:
-            if ((f.Width == 700) && (f.Height == 300))
+            if ((f.Width == 500) && (f.Height == 500))
             {
                 cls_output_controller._add_validation_ok("Розміри форми вірні!", 20);
             }
@@ -70,7 +70,7 @@ namespace WindowsApplication1
             }
 
             //колір:
-            if (f.BackColor.Name == "IndianRed")
+            if (f.BackColor.Name == "LightSteelBlue")
             {
                 cls_output_controller._add_validation_ok("Колір форми вірний!", 20);
             }
@@ -99,21 +99,12 @@ namespace WindowsApplication1
                 cls_output_controller._add_validation_failed("Розташування форми неправильний!", 0);
             }
 
-            //Прозорість:
-            /*if (f.Opacity == .50)
-            {
-                cls_output_controller._add_validation_ok("Прозорість вірна! ", 20);
-            }
-            else
-            {
-                cls_output_controller._add_validation_failed("Прозорість неправильна! ", 0);
-            }
-            */
+           
 
 
             //
             //test box via reflection test:
-            Control c = f.Controls.Find("textBox1", true)[0];
+            Control c = f.Controls.Find("tb_Hello", true)[0];
             TextBox tbx = (TextBox)c;
 
             if (tbx is TextBox)
@@ -125,15 +116,88 @@ namespace WindowsApplication1
                 cls_output_controller._add_validation_failed("Текстове поле TextBox відсутнє!", 0);
             }
 
-
-            if (tbx.Text == "")
+            //Name
+            if (tbx.Name == "tb_Hello")
             {
-                cls_output_controller._add_validation_ok("TextBox містить вірний текст!", 20);
+                cls_output_controller._add_validation_ok("TextBox названий вірно!", 20);
             }
             else
             {
-                cls_output_controller._add_validation_failed("TextBox містить неправильний текст!", 20);
+                cls_output_controller._add_validation_failed("TextBox названий неправильно!", 20);
             }
+
+            //Width
+            if (tbx.Width == 300)
+            {
+                cls_output_controller._add_validation_ok("tb_Hello.Width вірний!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("tb_Hello.Width неправильний!", 20);
+            }
+
+            //Location.X
+            if (tbx.Location.X == 100)
+            {
+                cls_output_controller._add_validation_ok("tb_Hello.Location.X вірний!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("tb_Hello.Location.X неправильний!", 20);
+            }
+
+            //Location.Y
+            if (tbx.Location.Y == 100)
+            {
+                cls_output_controller._add_validation_ok("tb_Hello.Location.Y вірний!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("tb_Hello.Location.Y неправильний!", 20);
+            }
+
+            //Text
+            if (tbx.Text == "Вивчаємо TextBox")
+            {
+                cls_output_controller._add_validation_ok("tb_Hello.Text містить вірний текст!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("tb_Hello.Text містить неправильний текст!", 20);
+            }
+
+            //TextAlign
+            if (tbx.TextAlign == HorizontalAlignment.Center)
+            {
+                cls_output_controller._add_validation_ok("tb_Hello.TextAlign = HorizontalAlignment.Center!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("tb_Hello.TextAlign != HorizontalAlignment.Center!", 20);
+            }
+
+            //Font.Size            
+            if (tbx.Font.Size == 24)
+            {
+                cls_output_controller._add_validation_ok("tb_Hello.Font.Size вірний!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("tb_Hello.Font.Size неправильний!", 20);
+            }
+
+            //Font.Bold 
+            if (tbx.Font.Bold)
+            {
+                cls_output_controller._add_validation_ok("tb_Hello.Font.Bold == true!", 20);
+            }
+            else
+            {
+                cls_output_controller._add_validation_failed("tb_Hello.Font.Bold == false!", 20);
+            }
+
+
+
             //----------------------------------------------->
             // validation code end:
             //----------------------------------------------->

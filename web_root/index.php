@@ -97,9 +97,9 @@ include_once("validator_be.php");
 
 		 <!-- task Controls Label info block start --------------------------------------------------------------------------------->
 		 <hr>
-		 <h3 class=''>Елементи керування Controls Button:</h2>
+		 <h3 class=''>Елементи керування Controls TextBox:</h2>
 		  <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/winforms5.1.1/task.php">Завдання 1</a>
+           <a href="/validator/tasks/controls5.3.1/task.php">Завдання 1</a>
          </div>
          <div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/winforms5.1.2/task.php">Завдання 2</a>

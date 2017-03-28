@@ -32,7 +32,7 @@
 	   
 		 <!-- task info block start --------------------------------------------------------------------------------->
          <h2 class=''><b>DEV-VALIDATOR</b></h2>
-         <h2 class=''>Система для перевірки навиків візуального програмування</h2>
+         <h2 class=''>Система для перевірки навиків прикладного програмування</h2>
          <hr>
          <div class="row pic-centered task_desc_row">
            
@@ -41,19 +41,15 @@
          </div>
                 
          <!-- task info block end ----------------------------------------------------------------------------------->
-			
-		 <!-- help block start ----------------------------------------------------------------------------------->
-			<hr>  
-			<?php
-				//utf8 support:
-				header('Content-Type: text/html; charset=utf-8');
-				include_once("/validator/help.php");
-				?>
-			<hr> 
+			<!-- help block start ----------------------------------------------------------------------------------->
+			<hr>
+				
+			<br> 
 		<!-- help block end ----------------------------------------------------------------------------------->
-			
+
+		
 		<div style="text-align: center;">
-		     <img src = "validator/images/programming.gif">
+		     <img src = "/validator/images/programming.gif">
 		</div>
 
 		</div>
