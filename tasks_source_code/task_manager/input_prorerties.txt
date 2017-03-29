@@ -1,0 +1,6 @@
+Name
+BackColor
+BackgroundImage
+BackgroundImageLayout
+ControlBox
+Cursor
