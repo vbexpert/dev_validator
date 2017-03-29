@@ -1,0 +1,6 @@
+Ім'я
+Колір фону
+Фонова картинка
+BackgroundImageLayout
+ControlBox
+Курсор
