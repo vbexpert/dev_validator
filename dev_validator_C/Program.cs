@@ -34,7 +34,7 @@ static class mod_main
         //check if exists:
         if (File.Exists(s_vCodeFile) == false)
         {
-            _cl("codefile not found! " + s_vCodeFile);
+            _cl("code file not found! " + s_vCodeFile);
             Environment.Exit(0);
         }
         if (File.Exists(s_assembl_fnp) == false)
