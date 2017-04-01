@@ -41,22 +41,46 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02_Button", "02_Button", "{05C3A92C-9322-4F7C-B221-32BE385B8882}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03_Label", "03_Label", "{E9762C41-5F65-4581-8551-6E2252604FD2}"
+	ProjectSection(SolutionItems) = preProject
+		tasks_source_code\03_Label\0.txt = tasks_source_code\03_Label\0.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_TextBox", "04_TextBox", "{3F2A4EE8-1B1E-4655-9D4D-18372B077C95}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05_CheckBox", "05_CheckBox", "{828BCC0B-E326-4D33-9BC7-584FE235587A}"
+	ProjectSection(SolutionItems) = preProject
+		tasks_source_code\05_CheckBox\0.txt = tasks_source_code\05_CheckBox\0.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06_ComboBox", "06_ComboBox", "{58E30388-4BE8-40E4-A314-E3B7526F86F7}"
+	ProjectSection(SolutionItems) = preProject
+		tasks_source_code\06_ComboBox\0.txt = tasks_source_code\06_ComboBox\0.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "50_Click", "50_Click", "{1938479F-0D03-441E-97EB-5E62B764E2F3}"
+	ProjectSection(SolutionItems) = preProject
+		tasks_source_code\06_ComboBox\0.txt = tasks_source_code\06_ComboBox\0.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "51_DoubleClick", "51_DoubleClick", "{7C451B7A-ED56-4C44-87CB-FB8F565CD6C8}"
+	ProjectSection(SolutionItems) = preProject
+		tasks_source_code\51_DoubleClick\0.txt = tasks_source_code\51_DoubleClick\0.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "52_Load", "52_Load", "{03F11F58-F1C0-43A7-86A6-4A522A4D8909}"
+	ProjectSection(SolutionItems) = preProject
+		tasks_source_code\52_Load\0.txt = tasks_source_code\52_Load\0.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "53_KeyPress", "53_KeyPress", "{2EC3CE73-AF45-424B-80E2-A84CAEB46ED9}"
+	ProjectSection(SolutionItems) = preProject
+		tasks_source_code\53_KeyPress\0.txt = tasks_source_code\53_KeyPress\0.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "54_MouseMove", "54_MouseMove", "{808DAB69-4BAE-4045-924F-9A2A013D79E7}"
+	ProjectSection(SolutionItems) = preProject
+		tasks_source_code\54_MouseMove\0.txt = tasks_source_code\54_MouseMove\0.txt
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01", "tasks_source_code\01_Form\01\01.csproj", "{65A901DD-158C-4E54-A929-17F0C714D1CB}"
 EndProject
