@@ -211,6 +211,11 @@ namespace WindowsApplication1
             // validation code end:
             //----------------------------------------------->
         }
+
+        private void btn_Hello_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public class cls_output_controller

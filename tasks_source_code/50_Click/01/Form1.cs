@@ -24,13 +24,13 @@ namespace WindowsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            _test_validate(this);
-
+            //_test_validate(this);
         }
 
         public void Form1_Click(object sender, EventArgs e)
         {
-            this.Text = "OK";
+            //this.button1.PerformClick();
+            //this.Text = "OK";
         }
 
         private void _test_validate(Form f)
@@ -69,7 +69,10 @@ namespace WindowsApplication1
             //----------------------------------------------->
         }
 
-       
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Text = "Program1";
+        }
     }
 
     public class cls_output_controller

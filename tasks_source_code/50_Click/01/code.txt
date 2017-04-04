@@ -6,24 +6,14 @@ namespace ns_d_code
 {
     public class cls_Main
     {
-		
         public static void Main() //main entry point:
         {
-		    //Console.Beep(5000, 1000);
-            //Console.WriteLine("Hello, world!");
-        }
-
-		 public void Form1_Click(object sender, EventArgs e)
-        {
-            this.Text = "OK";
+		    //do nothing;
         }
 
         public static string test(Form f) //validation sub:
         {
 			cls_output_controller cls_output_controller = new cls_output_controller();
-		
-
-
 			 //----------------------------------------------->
             // validation code start:
             //----------------------------------------------->
@@ -37,20 +27,37 @@ namespace ns_d_code
                 cls_output_controller._add_validation_failed("Form відсутня!", 0);
             }
 
-           
-            //Event Click
+			
+			//===========================================================>
+			//find button via reflection:
+            Control c = f.Controls.Find("button1", true)[0];
+            Button tbx = (Button)c;
 
-            Form1_Click(null, null);
+			//activate Form:
+			f.Show();
 
-            //заголовок:
-            if (f.Text == "OK")
+			//emulate button click:
+			tbx.PerformClick();
+			
+			//pump messages:
+			Application.DoEvents();
+
+			//debug:
+			//MessageBox.Show(f.Text);
+			//===========================================================>
+
+            //validate form title:
+            if (f.Text == "Program1")
             {
-                cls_output_controller._add_validation_ok("Form.Text true!", 20);
+                cls_output_controller._add_validation_ok("Click event is Ok!", 20);
             }
             else
             {
-                cls_output_controller._add_validation_failed("Form.Text false!", 0);
+                cls_output_controller._add_validation_failed("Click event is NOT Ok!", 0);
             }
+
+			//deactivate Form;
+			f.Close();
 
             //----------------------------------------------->
             // validation code end:

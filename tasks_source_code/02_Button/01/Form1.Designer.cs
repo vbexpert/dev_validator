@@ -41,6 +41,7 @@
             this.btn_Hello.TabIndex = 0;
             this.btn_Hello.Text = "Hello";
             this.btn_Hello.UseVisualStyleBackColor = false;
+            this.btn_Hello.Click += new System.EventHandler(this.btn_Hello_Click);
             // 
             // Form1
             // 

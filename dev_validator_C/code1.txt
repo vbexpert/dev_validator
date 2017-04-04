@@ -26,6 +26,10 @@ namespace ns_d_code
 			//test box via reflection test:
             Control c = f.Controls.Find("textBox1", true)[0];
             TextBox tbx = (TextBox)c;
+
+			//emulate button click:
+			tbx.PerformClick;
+
             if (tbx.Text == "1")
             {
                 cls_output_controller._add_validation_ok("TextBox містить вірний текст!", 20);

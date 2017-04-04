@@ -24,7 +24,7 @@ namespace WindowsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            _test_validate(this);
+            //_test_validate(this);
         }
         private void _test_validate(Form f)
         {
@@ -114,6 +114,11 @@ namespace WindowsApplication1
             //------------------------------------------------------------------------>
             //кінець коду валідації:
             //------------------------------------------------------------------------>
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Text = "Button Event!";
         }
     }
 
