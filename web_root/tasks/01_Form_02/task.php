@@ -5,7 +5,7 @@ header('Content-Type: text/html; charset=utf-8');
 <html>
   <head>
     <!-- title -->
-    <title>Завдання winforms 5.1.2:</title>
+    <title>Завдання Form_02</title>
     <!-- utf8 support: -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<!-- jq CDN (bootsrtrap reqired): -->
@@ -35,13 +35,14 @@ header('Content-Type: text/html; charset=utf-8');
 		 <!-- task info block start --------------------------------------------------------------------------------->
          <h2 class=''><a href = "../../index.php">Доступні завдання:</a></h2>
          <hr>
-		 <h1 class="">Завдання Winforms 5.1.2</h1>
+		 <h1 class="">Завдання Form_02</h1>
          <h3 class="">Створення програми із формою</h3>
-         <p class="lead lead-top-fix">1. Додати новий проект програми у існуюче рішення.</p>
+         
 		 <p class="lead lead-top-fix">2. Створити форму відповідно специфікації</p>
-		 <p class="lead lead-top-fix">6. Завантажити програму у <b>DEV-VALIDATOR</b>.</p>
-		 <p class="lead lead-top-fix">7. Добитися повної валідації програми.</p>
-		 <p class="lead lead-top-fix">8. Зберегти скріншот результатів у командну папку в папку <b>Release</b>.</p>
+		 <p class="lead lead-top-fix">3. Завантажити програму у <b>DEV-VALIDATOR</b>.</p>
+		 <p class="lead lead-top-fix">4. Добитися повної валідації програми.</p>
+		 <p class="lead lead-top-fix">5. Зберегти скріншот результатів у папку <b>Release</b>.</p>
+		 <p class="lead lead-top-fix">6. Зберегти програму у папку <b>Release</b>.</p>
 		 <table style="width:100%" class="table table-striped table-condensed">
 			  <caption style="caption-side: top">Специфікація програми</caption>
 			<thead>
@@ -55,13 +56,13 @@ header('Content-Type: text/html; charset=utf-8');
 			<tr>
 				<td>Solution</td>
 				<td>Ім'я рішення</td>
-				<td><b>project_5.1</b></td>
+				<td><b>Lesson_1</b></td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 			  <tr>
 				<td>Program name</td>
 				<td>Ім'я програми</td>
-				<td><b>program_5.1.2</b></td>
+				<td><b>Form_02</b></td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 			 <tr>

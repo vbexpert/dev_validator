@@ -5,7 +5,7 @@ header('Content-Type: text/html; charset=utf-8');
 <html>
   <head>
     <!-- title -->
-    <title>Завдання Winforms 5.1.1:</title>
+    <title>Завдання Form_01</title>
     <!-- utf8 support: -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<!-- jq CDN (bootsrtrap reqired): -->
@@ -37,12 +37,12 @@ header('Content-Type: text/html; charset=utf-8');
          <hr>
 		 <h1 class="">Завдання Form_01</h1>
          <h3 class="">Створення програми з формою та встановлення її властивостей</h3>
-		 <p class="lead lead-top-fix">1. На робочому столі створити папку <b>Назва команди</b></p>
-	     <p class="lead lead-top-fix">2. Створити новий проект програми <strong>С#</strong> із <b>Winforms</b>.</p>
-		 <p class="lead lead-top-fix">3. Створити форму відповідно специфікації</p>
-		 <p class="lead lead-top-fix">4. Завантажити програму у <b>DEV-VALIDATOR</b>.</p>
-		 <p class="lead lead-top-fix">5. Добитися повної валідації програми.</p>
-		 <p class="lead lead-top-fix">6. Зберегти скріншот результатів у командну папку в папку <b>Release</b>.</p>
+		 
+		 <p class="lead lead-top-fix">1. Створити форму відповідно специфікації</p>
+		 <p class="lead lead-top-fix">2. Завантажити програму у <b>DEV-VALIDATOR</b>.</p>
+		 <p class="lead lead-top-fix">3. Добитися повної валідації програми.</p>
+		 <p class="lead lead-top-fix">4. Зберегти скріншот результатів у папку <b>Release</b>.</p>
+		 <p class="lead lead-top-fix">5. Зберегти програму у папку <b>Release</b>.</p>
 		 <table style="width:100%" class="table table-striped table-condensed">
 			  <caption style="caption-side: top">Специфікація програми</caption>
 			<thead>
@@ -56,16 +56,16 @@ header('Content-Type: text/html; charset=utf-8');
 			<tr>
 				<td>Solution</td>
 				<td>Ім'я рішення</td>
-				<td><b>project_5.1</b></td>
+				<td><b>Lesson_1</b></td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
 			  <tr>
-				<td>Program name</td>
-				<td>Ім'я програми</td>
-				<td><b>program_5.1.1</b></td>
+				<td>Project name</td>
+				<td>Ім'я проекту</td>
+				<td><b>Form_01</b></td>
 				<td><input type="checkbox" value=""></td>
 			  </tr>
-			   <tr>
+			  <tr>
 				<td>Form</td>
 				<td>Форма</td>
 				<td><b>Windows Forms</b></td>

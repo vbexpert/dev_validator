@@ -58,11 +58,37 @@ copy "%s_task_dev_dir%\target_form.png" "web_root\tasks\%s_task_name%\target_for
 rem ------------------------------------------------------------------------------->
 
 rem ------------------------------------------------------------------------------->
+rem сборка таска: 01_Form_05
+rem 1. имя таска:
+set s_task_name=01_Form_05
+rem 2. путь до базовой директории проекта таска:
+set s_task_dev_dir=tasks_source_code\01_Form\05
+rem 3. сборка для web_root:
+mkdir "web_root\tasks\%s_task_name%"
+copy "%s_task_dev_dir%\task.php" "web_root\tasks\%s_task_name%\task.php"
+copy "%s_task_dev_dir%\code.txt" "web_root\tasks\%s_task_name%\code.txt"
+copy "%s_task_dev_dir%\target_form.png" "web_root\tasks\%s_task_name%\target_form.png"
+rem ------------------------------------------------------------------------------->
+
+rem ------------------------------------------------------------------------------->
 rem сборка таска: 02_Button_01
 rem 1. имя таска:
 set s_task_name=02_Button_01
 rem 2. путь до базовой директории проекта таска:
 set s_task_dev_dir=tasks_source_code\02_Button\01
+rem 3. сборка для web_root:
+mkdir "web_root\tasks\%s_task_name%"
+copy "%s_task_dev_dir%\task.php" "web_root\tasks\%s_task_name%\task.php"
+copy "%s_task_dev_dir%\code.txt" "web_root\tasks\%s_task_name%\code.txt"
+copy "%s_task_dev_dir%\target_form.png" "web_root\tasks\%s_task_name%\target_form.png"
+rem ------------------------------------------------------------------------------->
+
+rem ------------------------------------------------------------------------------->
+rem сборка таска: 02_Button_02
+rem 1. имя таска:
+set s_task_name=02_Button_02
+rem 2. путь до базовой директории проекта таска:
+set s_task_dev_dir=tasks_source_code\02_Button\02
 rem 3. сборка для web_root:
 mkdir "web_root\tasks\%s_task_name%"
 copy "%s_task_dev_dir%\task.php" "web_root\tasks\%s_task_name%\task.php"
@@ -85,3 +111,15 @@ copy "%s_task_dev_dir%\code.txt" "web_root\tasks\%s_task_name%\code.txt"
 copy "%s_task_dev_dir%\target_form.png" "web_root\tasks\%s_task_name%\target_form.png"
 rem ------------------------------------------------------------------------------->
 
+rem ------------------------------------------------------------------------------->
+rem сборка таска: 50_Click_01
+rem 1. имя таска:
+set s_task_name=50_Click_01
+rem 2. путь до базовой директории проекта таска:
+set s_task_dev_dir=tasks_source_code\50_Click\01
+rem 3. сборка для web_root:
+mkdir "web_root\tasks\%s_task_name%"
+copy "%s_task_dev_dir%\task.php" "web_root\tasks\%s_task_name%\task.php"
+copy "%s_task_dev_dir%\code.txt" "web_root\tasks\%s_task_name%\code.txt"
+copy "%s_task_dev_dir%\target_form.png" "web_root\tasks\%s_task_name%\target_form.png"
+rem ------------------------------------------------------------------------------->

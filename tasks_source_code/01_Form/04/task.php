@@ -5,7 +5,7 @@ header('Content-Type: text/html; charset=utf-8');
 <html>
   <head>
     <!-- title -->
-    <title>Завдання winforms 5.1.4:</title>
+    <title>Завдання Form_04</title>
 	<!-- utf8 support: -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<!-- jq CDN (bootsrtrap reqired): -->
@@ -35,13 +35,13 @@ header('Content-Type: text/html; charset=utf-8');
 		 <!-- task info block start --------------------------------------------------------------------------------->
     	 <h2 class=""><a href = "../../index.php">Доступні завдання:</a></h2>
          <hr>
-		 <h1 class="">Завдання winforms 5.1.4</h1>
+		 <h1 class="">Завдання Form_04</h1>
          <h3 class="">Створення програми із формою та встановлення її властивостей</h3>
-		 <p class="lead lead-top-fix">1. Додати новий проект програми у існуюче рішення.</p>
-		 <p class="lead lead-top-fix">2. Створити форму відповідно специфікації.</p>
-		 <p class="lead lead-top-fix">3. Завантажити програму у <b>DEV-VALIDATOR</b>.</p>
-		 <p class="lead lead-top-fix">4. Добитися повної валідації програми.</p>
-		 <p class="lead lead-top-fix">5. Зберегти скріншот результатів у командну папку в папку <b>Release</b>.</p>
+		 <p class="lead lead-top-fix">1. Створити форму відповідно специфікації</p>
+		 <p class="lead lead-top-fix">2. Завантажити програму у <b>DEV-VALIDATOR</b>.</p>
+		 <p class="lead lead-top-fix">3. Добитися повної валідації програми.</p>
+		 <p class="lead lead-top-fix">4. Зберегти скріншот результатів у папку <b>Release</b>.</p>
+		 <p class="lead lead-top-fix">5. Зберегти програму у папку <b>Release</b>.</p>
          <table style="width:100%" class="table table-striped table-condensed">
 			  <caption style="caption-side: top">Специфікація програми</caption>
 			<thead>
@@ -57,13 +57,13 @@ header('Content-Type: text/html; charset=utf-8');
 				<td>Ім'я рішення</td>
 				<td><b>Lesson_1</b></td>
 				<td><input type="checkbox" value=""></td>
-			</tr>
-			<tr>
-				<td>Program name</td>
-				<td>Ім'я програми</td>
-				<td><b>program_5.1.4</b></td>
+			  </tr>
+			  <tr>
+				<td>Project name</td>
+				<td>Ім'я проекту</td>
+				<td><b>Form_04</b></td>
 				<td><input type="checkbox" value=""></td>
-			</tr>
+			  </tr>
 			<tr>
 				<td>Form</td>
 				<td>Форма</td>

@@ -5,7 +5,7 @@ header('Content-Type: text/html; charset=utf-8');
 <html>
   <head>
     <!-- title -->
-    <title>Завдання Winforms 5.1.1:</title>
+    <title>Завдання Button_01</title>
     <!-- utf8 support: -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<!-- jq CDN (bootsrtrap reqired): -->
@@ -37,14 +37,12 @@ header('Content-Type: text/html; charset=utf-8');
          <hr>
 		 <h1 class="">Завдання Button_01</h1>
          <h3 class="">Створення програми з формою та кнопкою</h3>
-		 <p class="lead lead-top-fix">1. Створити робочу папку <b>Назва команди</b></p>
-	     <p class="lead lead-top-fix">2. Створити новий проект програми <strong>С#</strong> із <b>WindowsForms</b>.</p>
-		 <p class="lead lead-top-fix">3. Створити форму відповідно специфікації</p>
-		 <p class="lead lead-top-fix">4. Додати на форму кнопку відповідно специфікації</p>
-		 <p class="lead lead-top-fix">5. Завантажити програму у <b>DEV-VALIDATOR</b>.</p>
-		 <p class="lead lead-top-fix">6. Добитися повної валідації програми.</p>
-		 <p class="lead lead-top-fix">7. Зберегти скріншот результатів у папку <b>Release</b>.</p>
-		 <p class="lead lead-top-fix">8. Зберегти програму у папку <b>Release</b>.</p>
+		 
+		 <p class="lead lead-top-fix">1. Створити форму відповідно специфікації</p>
+		 <p class="lead lead-top-fix">2. Завантажити програму у <b>DEV-VALIDATOR</b>.</p>
+		 <p class="lead lead-top-fix">3. Добитися повної валідації програми.</p>
+		 <p class="lead lead-top-fix">4. Зберегти скріншот результатів у папку <b>Release</b>.</p>
+		 <p class="lead lead-top-fix">5. Зберегти програму у папку <b>Release</b>.</p>
 		 
 		 		<!-- Form -->
 		<table style="width: 100%" class="table table-striped table-condensed">
@@ -57,6 +55,18 @@ header('Content-Type: text/html; charset=utf-8');
 		   <th>Стан</th>
 		  </tr>
 		 </thead>
+		  <tr>
+		   <td>Solution</td>
+		   <td>Ім'я рішення</td>
+		   <td><b>Lesson_2</b></td>
+		   <td><input type="checkbox" value=""></td>
+		  </tr>
+		  <tr>
+		   <td>Project name</td>
+		   <td>Ім'я проекту</td>
+		   <td><b>Button_01</b></td>
+		   <td><input type="checkbox" value=""></td>
+		  </tr>
 		  <tr>
 		   <td>BackColor</td>
 		   <td>Колір фону</td>

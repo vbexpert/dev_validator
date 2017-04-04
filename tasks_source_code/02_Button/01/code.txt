@@ -1,6 +1,7 @@
 using System.Windows.Forms;
 using System;
 using System.Linq;
+using System.Drawing;
 namespace ns_d_code
 {
     public class cls_Main
@@ -184,14 +185,14 @@ namespace ns_d_code
             }
 
             //ContentAlignment.MiddleCenter
-            //if (btn1.TextAlign == ContentAlignment.MiddleCenter)
-            //{
-            //    cls_output_controller._add_validation_ok("ContentAlignment.MiddleCenter true!", 20);
-            //}
-            // else
-            //{
-            //    cls_output_controller._add_validation_ok("ContentAlignment.MiddleCenter false!", 0);
-            //}
+            if (btn1.TextAlign == ContentAlignment.MiddleCenter)
+            {
+                cls_output_controller._add_validation_ok("ContentAlignment.MiddleCenter true!", 20);
+            }
+             else
+            {
+                cls_output_controller._add_validation_ok("ContentAlignment.MiddleCenter false!", 0);
+            }
             
 
 			//----------------------------------------------->
