@@ -1,5 +1,8 @@
-Form
+﻿Form
 Button
-label
+Label
 TextBox
-ChechBox
+CheckBox
+ComboBox
+
+
