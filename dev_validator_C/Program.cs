@@ -119,7 +119,7 @@ static class mod_main
 
         //calling validation code:
         MethodInfo main1 = program.GetMethod("test");
-        object obj_result = main1.Invoke(null, new object[] { f });
+        object obj_result = main1.Invoke(null, new object[] { f, s_student_app_fnp });
 
         return obj_result;
 

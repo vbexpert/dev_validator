@@ -11,9 +11,16 @@ namespace ns_d_code
 		    //Console.Beep(5000, 1000);
             //Console.WriteLine("Hello, world!");
         }
-        public static string test(Form f) //validation sub:
+        public static string test(Form f, s_app_fnp) //validation sub:
         {
 			cls_output_controller cls_output_controller = new cls_output_controller();
+
+			if (s_app_fnp == "Program1"){
+			    cls_output_controller._add_validation_ok("Назва програми Ок!", 20);
+			}
+			else{
+			    cls_output_controller._add_validation_ok("Назва програми Not Ок!", 20);
+			}
 
 			//validate form existance:
 			if (f is Form){
@@ -22,7 +29,7 @@ namespace ns_d_code
 			else{
 			    cls_output_controller._add_validation_failed("Форма відсутня!", 0);
 			}
-			
+
 			//test box via reflection test:
             Control c = f.Controls.Find("textBox1", true)[0];
             TextBox tbx = (TextBox)c;
