@@ -10,7 +10,7 @@ namespace ns_d_code
 		    //Console.Beep(5000, 1000);
             //Console.WriteLine("Hello, world!");
         }
-        public static string test(Form f) //validation sub:
+        public static string test(Form f, string s_app_fnp) //validation sub:
         {
 			cls_output_controller cls_output_controller = new cls_output_controller();
 		

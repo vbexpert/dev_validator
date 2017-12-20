@@ -1,5 +1,5 @@
-﻿if not exist "web_root\uploadds" mkdir "web_root\uploadds"
-echo 0>"web_root\uploadds\0"
+﻿if not exist "web_root\uploads" mkdir "web_root\uploads"
+echo 0>"web_root\uploads\0"
 if not exist "web_root\tasks" mkdir "web_root\tasks"
 echo 0>"web_root\tasks\0"
 rem deploy main exe to web root:
