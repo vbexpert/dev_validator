@@ -1,8 +1,0 @@
-1. base folder: winforms5.1.1
-2. project fn: winforms5.1.1.csproj
-3. task.php -> <title>Завдання Winforms 5.1.1:</title>
-   task.php -> <title>Завдання Winforms 5.1.1:</title>
-   complete content block + relating images!
-   task id field value: <input type="hidden" name="codefile" value="5.1.1"> <!-- task id -->
-4. buld code in: build_web_root.bat
-5. validation code: code.txt
