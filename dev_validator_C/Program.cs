@@ -6,6 +6,8 @@ using Microsoft.CSharp;
 using System.CodeDom.Compiler;
 using System.Text;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq.Expressions;
 
 static class mod_main
 {
@@ -16,7 +18,7 @@ static class mod_main
         String[] arguments = Environment.GetCommandLineArgs();
         //-------------------------->
         //command line args number:
-        if (arguments.GetLength(0) != 3)
+        if (arguments.GetLength(0) != 4)
         {
             _cl("not enough CLAs!");
             //_cl("press any key to quit...");
@@ -27,9 +29,10 @@ static class mod_main
         //sevae args:
         string s_assembl_fnp = arguments[1];
         string s_vCodeFile = arguments[2];
+        string s_vAppOriginalFT = arguments[3];
         //_cl(Convert.ToString("Loading assembly...")); //+ s_assembl_fnp + " & profile: " + s_profile_fnp);
-                                                      //-------------------------->
-                                                      //lodaing codefile:
+        //-------------------------->
+        //lodaing codefile:
         //-------------------------->
         //check if exists:
         if (File.Exists(s_vCodeFile) == false)
@@ -44,17 +47,27 @@ static class mod_main
         }
         //-------------------------->
         //main call:
-        object r = _compile_run_and_validate(s_vCodeFile, s_assembl_fnp);
+        object r = _compile_run_and_validate(s_vCodeFile, s_assembl_fnp, s_vAppOriginalFT);
         //-------------------------->
         //return result to webpage:
         Console.WriteLine(r); //<div class='val_score'></div>
         //-------------------------->
+        if (1 == 1) {
+        }
     }
 
-    public static object _compile_run_and_validate(string s_code_file_fnp = "", string s_student_app_fnp = "")
+    public static object _compile_run_and_validate(string s_code_file_fnp = "", 
+                                                  string s_student_app_fnp = "", 
+                                                  string s_vAppOrigina_app_ft = "")
     {
         //read code:
         string s_dynamic_code = File.ReadAllText(s_code_file_fnp);
+
+        //get output-class code:
+        string s_output_class_code = global::dev_validator_C.Properties.Resources.output_class;
+
+        //patch:
+        s_dynamic_code = s_dynamic_code.Replace("//[validator-class-placeholder]", s_output_class_code);
 
         //init compiler: https://stackoverflow.com/questions/4063285/missing-assembly-references-in-dynamically-compiled-code
         CSharpCodeProvider obj_CSharpCodeProvider = new CSharpCodeProvider(new Dictionary<String, String> { { "CompilerVersion", "v3.5" } });
@@ -119,12 +132,14 @@ static class mod_main
 
         //calling validation code:
         MethodInfo main1 = program.GetMethod("test");
-        object obj_result = main1.Invoke(null, new object[] { f, s_student_app_fnp });
+        object obj_result = main1.Invoke(null, new object[] { f, s_student_app_fnp, s_vAppOrigina_app_ft });
+
+        //dbg to console:
+        Debug.WriteLine(obj_result);
 
         return obj_result;
 
     }
-
     public static void _cl(string s_msg)
     {
         Console.WriteLine(s_msg);

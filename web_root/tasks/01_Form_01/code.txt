@@ -19,60 +19,13 @@ namespace ns_d_code
 			//----------------------------------------------->
 			// validation code start:
 			//----------------------------------------------->
-
-            //форма:
-            if (f is Form)
-            {
-                cls_output_controller._add_validation_ok("Форма присутня!", 20);
-            }
-            else
-            {
-                cls_output_controller._add_validation_failed("Форма відсутня!", 0);
-            }
-
-            //розміри:
-            if ((f.Width == 400) && (f.Height == 300))
-            {
-                cls_output_controller._add_validation_ok("Розміри форми вірні!", 20);
-            }
-            else
-            {
-                cls_output_controller._add_validation_failed("Розміри форми невірні!", 0);
-            }
-
-            //колір:
-            if (f.BackColor.Name == "Red")
-            {
-                cls_output_controller._add_validation_ok("Колір форми вірний!", 20);
-            }
-            else
-            {
-                cls_output_controller._add_validation_failed("Колір форми невірний!", 0);
-            }
-
-            //заголовок:
-            if (f.Text != "Form1")
-            {
-                cls_output_controller._add_validation_ok("Вірний заголовок форми!", 20);
-            }
-            else
-            {
-                cls_output_controller._add_validation_failed("Невірний заголовок форми!", 0);
-            }
-
-            //положення:
-            if (f.Location.X == 200 && f.Location.Y == 200)
-            {
-                cls_output_controller._add_validation_ok("Вірние розташування форми!", 20);
-            }
-            else
-            {
-                cls_output_controller._add_validation_failed("Невірне розташування форми!", 0);
-            }
-
-
-         
-
+            cls_output_controller._v_form(f);
+            cls_output_controller._vp(f.Width, "400");
+            cls_output_controller._vp(f.Height, "300");
+            cls_output_controller._vp(f.BackColor.Name,"Red");
+            cls_output_controller._vnp(f.Text,"Form1");
+            cls_output_controller._vp(f.Location.X, "200");
+            cls_output_controller._vp(f.Location.Y, "200");
 			//----------------------------------------------->
 			// validation code end:
 			//----------------------------------------------->

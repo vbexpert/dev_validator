@@ -1,0 +1,49 @@
+    public class cls_output_controller
+    {
+        public string s_output_buffer = "";
+        public int i_total_score = 0;
+        public void _v_form(object obj)
+        {
+            if(obj is Form){
+                this._add_validation_ok("Form is Ok!", 20);
+            }
+            else
+            {
+                this._add_validation_failed("Form is Not Ok!", 0);
+            }
+        }
+        public void _v_parm(object obj, string s_obj_name, string s_controled_value)
+        {
+            if(obj.ToString() == s_controled_value){
+                this._add_validation_ok(s_obj_name + " Ok!", 20);
+            }
+            else
+            {
+                this._add_validation_failed(s_obj_name + " Not Ok!", 0);
+            }
+        }
+        public void _v_neg_parm(object obj, string s_obj_name, string s_controled_value)
+        {
+            if(obj.ToString() != s_controled_value){
+                this._add_validation_ok(s_obj_name + " Ok!", 20);
+            }
+            else
+            {
+                this._add_validation_failed(s_obj_name + " Not Ok!", 0);
+            }
+        }
+        public void _add_validation_ok(string s_value, int i_i_score)
+        {
+            i_total_score += i_i_score;
+            s_output_buffer += "<div class='c_correct'>+ " + s_value + " +" + i_i_score + " балів!</div><br>";
+        }
+        public void _add_validation_failed(string s_value, int i_i_score)
+        {
+            i_total_score += i_i_score;
+            //s_output_buffer += "<div class='c_wrong'>- " + s_value + " " + i_i_score + "</div><br>";
+            s_output_buffer += "<div class='c_wrong'>- " + s_value + "</div><br>";
+        }
+        public string _final_result() {
+            return this.s_output_buffer += "<div class='c_correct'>Всього: " + i_total_score + "</div><br>";
+        }
+    }

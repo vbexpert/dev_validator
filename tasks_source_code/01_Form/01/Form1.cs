@@ -1,95 +1,71 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-
 namespace WindowsApplication1
 {
     public partial class Form1 : Form
     {
-        public Form1()
-        {
-            InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           //extBox3.Text = (Int32.Parse(textBox1.Text) + Int32.Parse(textBox2.Text)).ToString();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            _test_validate(this);
-        }
         private void _test_validate(Form f)
         {
             cls_output_controller cls_output_controller = new cls_output_controller();
-
             //------------------------------------------------------------------------>
             //початок коду валідації:
-            //------------------------------------------------------------------------>
-            //форма:
-            if (f is Form)
-            {
-                cls_output_controller._add_validation_ok("Форма присутня!", 20);
-            }
-            else
-            {
-                cls_output_controller._add_validation_failed("Форма відсутня!", 0);
-            }
-
-            //розміри:
-            if ((f.Width == 400) && (f.Height == 300))
-            {
-                cls_output_controller._add_validation_ok("Розміри форми вірні!", 20);
-            }
-            else
-            {
-                cls_output_controller._add_validation_failed("Розміри форми невірні!", 0);
-            }
-
-            //колір:
-            if (f.BackColor.Name == "Red")
-            {
-                cls_output_controller._add_validation_ok("Колір форми вірний!", 20);
-            }
-            else
-            {
-                cls_output_controller._add_validation_ok("Колір форми невірний!", 0);
-            }
-
-            //заголовок:
-            if (f.Text != "Form1")
-            {
-                cls_output_controller._add_validation_ok("Вірний заголовок форми!", 20);
-            }
-            else
-            {
-                cls_output_controller._add_validation_failed("Невірний заголовок форми!", 0);
-            }
-
-            //положення:
-            if (f.Location.X == 200 && f.Location.Y == 200)
-            {
-                cls_output_controller._add_validation_ok("Вірние розташування форми!", 20);
-            }
-            else
-            {
-                cls_output_controller._add_validation_failed("Невірне розташування форми!", 0);
-            }
-            //------------------------------------------------------------------------>
+            cls_output_controller._v_form(f);
+            cls_output_controller._vp(f.Width, "400");
+            cls_output_controller._vp(f.Height, "300");
+            cls_output_controller._vp(f.BackColor.Name,"Red");
+            cls_output_controller._vnp(f.Text, "Form1");
+            cls_output_controller._vp(f.Location.X, "200");
+            cls_output_controller._vp(f.Location.Y, "200");
             //кінець коду валідації:
             //------------------------------------------------------------------------>
         }
+        //-Не чіпайте код нижче:------------------------------------------------------>
+        public Form1()
+        { InitializeComponent(); }
+        private void Form1_Load(object sender, EventArgs e)
+        { _test_validate(this); }
     }
-
     public class cls_output_controller
     {
         public string s_output_buffer = "";
         public int i_total_score = 0;
+        public void _v_form(object obj)
+        {
+            if (obj is Form)
+            {
+                this._add_validation_ok("Form is Ok!", 20);
+            }
+            else
+            {
+                this._add_validation_failed("Form is Not Ok!", 0);
+            }
+        }
+        public void _vp(object obj, string s_controled_value)
+        {
+            if (obj.ToString() == s_controled_value)
+            {
+                this._add_validation_ok(obj.ToString() + " Ok!", 20);
+            }
+            else
+            {
+                this._add_validation_failed(obj.ToString() + " Not Ok!", 0);
+            }
+        }
+        public void _vnp(object obj, string s_controled_value)
+        {
+            if (obj.ToString() != s_controled_value)
+            {
+                this._add_validation_ok(obj.ToString() + " Ok!", 20);
+            }
+            else
+            {
+                this._add_validation_failed(obj.ToString() + " Not Ok!", 0);
+            }
+        }
         public void _add_validation_ok(string s_value, int i_i_score)
         {
             i_total_score += i_i_score;
@@ -101,7 +77,8 @@ namespace WindowsApplication1
             //s_output_buffer += "<div class='c_wrong'>- " + s_value + " " + i_i_score + "</div><br>\r\n";
             s_output_buffer += "<div class='c_wrong'>- " + s_value + "</div><br>\r\n";
         }
-        public string _final_result() {
+        public string _final_result()
+        {
             return this.s_output_buffer += "<div class='c_correct'>Всього: " + i_total_score + "</div><br>\r\n";
         }
     }
