@@ -8,7 +8,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{672F46FC-BD77-4A44-9021-57B96A7583CA}"
 	ProjectSection(SolutionItems) = preProject
 		build_web_root.bat = build_web_root.bat
+		deploy_task.bat = deploy_task.bat
 		deploy_XAMPP_local.bat = deploy_XAMPP_local.bat
+		dev_clear.bat = dev_clear.bat
+		rebuild_and_deploy_XAMPP_local.bat = rebuild_and_deploy_XAMPP_local.bat
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tasks_source_code", "tasks_source_code", "{413FB722-6CC8-4EDC-88CC-DE643CEF879F}"
@@ -38,6 +41,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Form_03", "tasks_source_code\01_Form_03\01_Form_03.csproj", "{1366742E-5CE9-4CD7-9A1A-9A27F8C3C4EB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Form_04", "tasks_source_code\01_Form_04\01_Form_04.csproj", "{32FCCC38-7C10-489C-B481-DE2DD61EF38F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Form_05", "tasks_source_code\01_Form_05\01_Form_05.csproj", "{EFB2ECEE-17AD-4AE7-85E2-908401DC8606}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -94,6 +99,14 @@ Global
 		{32FCCC38-7C10-489C-B481-DE2DD61EF38F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{32FCCC38-7C10-489C-B481-DE2DD61EF38F}.Release|x86.ActiveCfg = Release|Any CPU
 		{32FCCC38-7C10-489C-B481-DE2DD61EF38F}.Release|x86.Build.0 = Release|Any CPU
+		{EFB2ECEE-17AD-4AE7-85E2-908401DC8606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB2ECEE-17AD-4AE7-85E2-908401DC8606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB2ECEE-17AD-4AE7-85E2-908401DC8606}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EFB2ECEE-17AD-4AE7-85E2-908401DC8606}.Debug|x86.Build.0 = Debug|Any CPU
+		{EFB2ECEE-17AD-4AE7-85E2-908401DC8606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB2ECEE-17AD-4AE7-85E2-908401DC8606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFB2ECEE-17AD-4AE7-85E2-908401DC8606}.Release|x86.ActiveCfg = Release|Any CPU
+		{EFB2ECEE-17AD-4AE7-85E2-908401DC8606}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,6 +117,7 @@ Global
 		{6B815622-E677-4F85-A3F9-A595EA79487A} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 		{1366742E-5CE9-4CD7-9A1A-9A27F8C3C4EB} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 		{32FCCC38-7C10-489C-B481-DE2DD61EF38F} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
+		{EFB2ECEE-17AD-4AE7-85E2-908401DC8606} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24A63605-5F2D-439D-81C1-5E775F49DF3C}

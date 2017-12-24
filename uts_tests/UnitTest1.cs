@@ -42,6 +42,14 @@ namespace uts_tests
             string s_result = _get_validation_result(s_task_id, s_task_exe_ft);
             Assert.IsTrue(s_result.ToLower().Contains("not ok") == false, "task validation failed!");
         }
+        [TestMethod]
+        public void tm_01_Form_05()
+        {
+            string s_task_id = "01_Form_05";
+            string s_task_exe_ft = "Form_05.exe";
+            string s_result = _get_validation_result(s_task_id, s_task_exe_ft);
+            Assert.IsTrue(s_result.ToLower().Contains("not ok") == false, "task validation failed!");
+        }
         private string _get_validation_result(string s_task_id, string s_task_exe_ft) {
             Directory.SetCurrentDirectory("..\\..\\..\\");
 
