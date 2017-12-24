@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
 using System.IO;
+using System.Text;
 namespace uts_tests
 {
     [TestClass]
@@ -14,6 +15,22 @@ namespace uts_tests
         {
             string s_task_id = "01_Form_01";
             string s_task_exe_ft = "Form_01.exe";
+            string s_result = _get_validation_result(s_task_id, s_task_exe_ft);
+            Assert.IsTrue(s_result.ToLower().Contains("not ok") == false, "task validation failed!");
+        }
+        [TestMethod]
+        public void tm_01_Form_02()
+        {
+            string s_task_id = "01_Form_02";
+            string s_task_exe_ft = "Form_02.exe";
+            string s_result = _get_validation_result(s_task_id, s_task_exe_ft);
+            Assert.IsTrue(s_result.ToLower().Contains("not ok") == false, "task validation failed!");
+        }
+        [TestMethod]
+        public void tm_01_Form_03()
+        {
+            string s_task_id = "01_Form_03";
+            string s_task_exe_ft = "Form_03.exe";
             string s_result = _get_validation_result(s_task_id, s_task_exe_ft);
             Assert.IsTrue(s_result.ToLower().Contains("not ok") == false, "task validation failed!");
         }
@@ -35,6 +52,7 @@ namespace uts_tests
             processStartInfo.RedirectStandardError = true;
             processStartInfo.WindowStyle = ProcessWindowStyle.Normal;
             processStartInfo.UseShellExecute = false;
+            processStartInfo.StandardOutputEncoding = System.Text.Encoding.UTF8;
 
             Process process = Process.Start(processStartInfo);
             using (StreamReader streamReader = process.StandardOutput)

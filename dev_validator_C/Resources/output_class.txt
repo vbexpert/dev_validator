@@ -35,15 +35,14 @@
         public void _add_validation_ok(string s_value, int i_i_score)
         {
             i_total_score += i_i_score;
-            s_output_buffer += "<div class='c_correct'>+ " + s_value + " +" + i_i_score + " балів!</div><br>\r\n";
+            s_output_buffer += "<div class='c_correct'>+ " + s_value + " +" + i_i_score + " балів!</div>\r\n";
         }
         public void _add_validation_failed(string s_value, int i_i_score)
         {
             i_total_score += i_i_score;
-            //s_output_buffer += "<div class='c_wrong'>- " + s_value + " " + i_i_score + "</div><br>\r\n";
-            s_output_buffer += "<div class='c_wrong'>- " + s_value + "</div><br>";
+            s_output_buffer += "<div class='c_wrong'>- " + s_value + "</div>";
         }
         public string _final_result() {
-            return this.s_output_buffer += "<div class='c_correct'>Всього: " + i_total_score + "</div><br>";
+            return this.s_output_buffer += "<hr><div class='final_result'>Всього: <b>" + i_total_score + "</b> балів!</div>";
         }
     }

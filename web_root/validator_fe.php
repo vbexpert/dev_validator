@@ -7,40 +7,26 @@ include_once("validator_be.php");
   <head>
     <!-- title -->
     <title>Перевірка:</title>
-	
-    <!-- utf8 support: -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<!-- jq CDN (bootsrtrap reqired): -->
-	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
-    <!-- tether	CDN (bootsrtrap reqired): -->
-	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-    <script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>
-	<!-- bootstrap CDN: -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
-    <!-- favicon: -->
-	<link rel="icon" href="favicon.ico?v=2" />
+	<?php
+	  include_once("head_meta_tags.php");
+	?>
 	<!-- external CSS: -->
     <link rel="stylesheet" type="text/css" href="_css/global.css">
  </head>
  <body>
-   <div class="container">
-     <div class="starter-template">
-	
-       <div class="jumbotron">
-       <h2 class=''><a href = "index.php">Назад до Індексу Завдань</a></h2>
-       <hr>
-         <h2 class=''>Перевірка програми:</h2>
-         <br>
-         <p class="lead lead-top-fix">
-		 <!-- validator code start:  -------------------------------------------------------------------------------->
-		 
-		 <?php _validate_uploaded_app(); ?>
-
-         <!-- validator code end:  ---------------------------------------------------------------------------------->
-		 
-		</div>
-      </div>
+  <div class="container">
+    <!-- menu stat: -->
+	<div>
+	 <h4 class='back_to_task'><a onclick="window.history.go(-1); return false;" href="#">&#8592; Повернутися до завдання</a></h4>
+	</div>
+    <!-- menu end: -->
+   <div class="jumbotron task_jumbotron_height_fix">
+    <h2 class=''>Перевірка програми:</h2>
+    <hr>
+    <div class="lead lead-top-fix">
+	 <?php _validate_uploaded_app(); ?>
     </div>
-  </body>
+   </div>
+  </div> 
+ </body>
 </html>

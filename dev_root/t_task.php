@@ -10,33 +10,29 @@ header("Pragma: no-cache");
   <head>
     <!-- title -->
     <title>Завдання '<?php echo($cls_Task->s_title); ?>'</title>
-    <!-- utf8 support: -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<!-- jq CDN (bootsrtrap reqired): -->
-	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
-    <!-- tether	CDN (bootsrtrap reqired): -->
-	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-    <script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>
-	<!-- bootstrap CDN: -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
-    <!-- favicon: -->
-	<link rel="icon" href="favicon.ico?v=2" />
+	<?php
+	  include_once("head_meta_tags.php");
+	?>
 	<!-- external CSS: -->
     <link rel="stylesheet" type="text/css" href="../../_css/global.css">
 </head>
 <body>
+
   <div class="container">
+  
+    <!-- menu stat: -->
+	<?php
+      include_once("../../nav_menu.php");
+    ?>
+    <!-- menu end: -->
+	
     <div class="starter-template">
     <!-- header info block start: -------------------------------------------------------------------------------->
-    <?php
-      //include_once("../../header.php");
-    ?>
     <!-- header info block end: ---------------------------------------------------------------------------------->
     <div class="jumbotron task_jumbotron_height_fix">
       <!-- task info block start --------------------------------------------------------------------------------->
-      <h2 class=''><a href = "../../index.php">Назад до Індексу Завдань</a></h2>
-      <hr>
+      <!-- <h2 class=''><a href = "../../index.php">Назад до Індексу Завдань</a></h2> 
+      <hr> -->
       <h1 class="">Завдання '<?php echo($cls_Task->s_title); ?>':</h1>
       <h3 class=""><?php echo($cls_Task->s_description); ?></h3>
       <hr>
@@ -47,7 +43,7 @@ header("Pragma: no-cache");
 	  ?>
       <hr>
       <table class="table table-striped table-condensed">
-        <caption class='app_specs'>Специфікація програми:</caption>
+        <caption class='app_specs' align="bottom">Специфікація програми:</caption>
           <thead>
             <tr>
               <th>Property:</th>
@@ -68,8 +64,8 @@ header("Pragma: no-cache");
           }
 		  ?>
         </table>
-        <div class="row pic-centered">
-          <img src="target_form.png">
+        <div class="row f_img_holder">
+          <img class='f_img' src="target_form.png" />
         </div>
 		
 		<!-- footer start ------------------------------->
@@ -85,16 +81,15 @@ header("Pragma: no-cache");
 		<hr>
 
         <!-- task validation block start ---------------->
-        <h2 class=''>Перевірка:</h2>
+        <h2>Перевірка:</h2>
+		  <div class="row">
           <!-- uploader start -->
-          <form id='upload_file' action="..\..\validator_fe.php" method="post" enctype="multipart/form-data">
-            Оберіть файл програми, для валідації:
-            <label class="btn btn-success btn-browse" for="fileToUpload">
-            <input id="fileToUpload" name="fileToUpload" type="file" style="display:none;">
-              Обрати файл
-            </label>
-			<!-- uploader end -->
-		 <input type="hidden" name="codefile" value="<?php echo($cls_Task->s_id) ?>"><!-- task id -->
+          <form id='upload_file' class='upload_file' action="..\..\validator_fe.php" method="post" enctype="multipart/form-data">
+			<label class="btn btn-primary btn-md">
+				Оберіть файл програми, для валідації:<input id="fileToUpload" name="fileToUpload" type="file" hidden />
+			</label>
+		    <input type="hidden" name="codefile" value="<?php echo($cls_Task->s_id) ?>"/><!-- task id -->
+		  </div>
         </form>
 		<!-- task validation block end ------------------>
 		

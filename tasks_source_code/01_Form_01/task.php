@@ -8,7 +8,7 @@ $cls_Task->s_id = "01_Form_01"; //_exact_ folder name!
 $cls_Task->s_description = "Створення програми з формою та встановлення її властивостей";
 
 //add steps:
-$cls_Task->_add_step("1. Створити форму відповідно специфікації");
+$cls_Task->_add_step("1. Створити форму відповідно специфікації.");
 $cls_Task->_add_step("2. Завантажити програму у <b>DEV-VALIDATOR</b>.");
 $cls_Task->_add_step("3. Добитися повної валідації програми.");
 $cls_Task->_add_step("4. Зберегти скріншот [Alt+PrintScreen] результатів у папку <b>Production</b>.");

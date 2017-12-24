@@ -30,17 +30,18 @@ function _validate_uploaded_app(){
 	// if everything is ok, try to upload file:
 	} else {
 		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $s_uploaded_exe_fnp)) {
-			echo "Файл ". basename( $_FILES["fileToUpload"]["name"]). " завантажено на сервер Ок! Запускаемо валідатор...";
+			$s_original_app_ft = $_FILES["fileToUpload"]["name"];
+			echo "Файл ". basename( $_FILES["fileToUpload"]["name"]). " завантажено на сервер Ок! Запускаемо валідатор...<br><br>";
 	
 			if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
 			  //windows:
-			  $command = "validator.exe $s_uploaded_exe_fnp $s_codefile_fnp 1.exe";
+			  $command = "validator.exe $s_uploaded_exe_fnp $s_codefile_fnp $s_original_app_ft";
 			  //echo($command);
 			  $out = system($command);
 			} else {
 			  //linux: 
 			  //main command: [working example] $command = "xvfb-run -a mono validator.exe uploads/1.exe tasks/01_Form_01/code.txt 2>&1";
-			  $command = "xvfb-run -a mono validator.exe $s_uploaded_exe_fnp $s_codefile_fnp 1.exe 2>&1";
+			  $command = "xvfb-run -a mono validator.exe $s_uploaded_exe_fnp $s_codefile_fnp $s_original_app_ft 2>&1";
 			  $ret = shell_exec($command);
 			  //clean out rander error:
 			  $out = substr($ret, 55, strlen($ret) - 55);
