@@ -21,7 +21,7 @@ namespace ns_d_code
 			//if object is NOT NULL:
             cls_output_controller._v_obj_exists(f.BackgroundImage, "Form.BackgroundImage");
 			cls_output_controller._v_parm(f.BackgroundImageLayout, "Спосіб відображення фонового малюнку", "Stretch");		
-            cls_output_controller._v_parm(f.Opacity,		"Прозорість вікна",				"0.8");
+            cls_output_controller._v_parm_norm(f.Opacity,	"Прозорість вікна",				"0.8");
             //кінець коду валідації:
 			//---------------------------------------------------->
             return(cls_output_controller._final_result());

@@ -22,6 +22,16 @@
                 this._add_validation_failed(s_obj_name + " Not Ok!", 0);
             }
         }
+		public void _v_parm_norm(object obj, string s_obj_name, string s_controled_value)
+        {
+            if(obj.ToString().Replace(",",".") == s_controled_value.Replace(",",".")){
+                this._add_validation_ok(s_obj_name + " Ok!", 20);
+            }
+            else
+            {
+                this._add_validation_failed(s_obj_name + " Not Ok!", 0);
+            }
+        }
         public void _v_obj_exists(object obj, string s_obj_name)
         {
             if(null == obj){
