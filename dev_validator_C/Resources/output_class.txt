@@ -22,6 +22,16 @@
                 this._add_validation_failed(s_obj_name + " Not Ok!", 0);
             }
         }
+        public void _v_obj_exists(object obj, string s_obj_name)
+        {
+            if(null == obj){
+                this._add_validation_failed(s_obj_name + " Not Ok!", 0);
+            }
+            else
+            {
+			    this._add_validation_ok(s_obj_name + " Ok!", 20);
+            }
+        }
         public void _v_neg_parm(object obj, string s_obj_name, string s_controled_value)
         {
             if(obj.ToString() != s_controled_value){
@@ -40,7 +50,7 @@
         public void _add_validation_failed(string s_value, int i_i_score)
         {
             i_total_score += i_i_score;
-            s_output_buffer += "<div class='c_wrong'>- " + s_value + "</div>";
+            s_output_buffer += "<div class='c_wrong'>- " + s_value + "</div>\r\n";
         }
         public string _final_result() {
             return this.s_output_buffer += "<hr><div class='final_result'>Всього: <b>" + i_total_score + "</b> балів!</div>";

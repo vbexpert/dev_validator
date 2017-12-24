@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Form_02", "tasks_source_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Form_03", "tasks_source_code\01_Form_03\01_Form_03.csproj", "{1366742E-5CE9-4CD7-9A1A-9A27F8C3C4EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Form_04", "tasks_source_code\01_Form_04\01_Form_04.csproj", "{32FCCC38-7C10-489C-B481-DE2DD61EF38F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,6 +86,14 @@ Global
 		{1366742E-5CE9-4CD7-9A1A-9A27F8C3C4EB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1366742E-5CE9-4CD7-9A1A-9A27F8C3C4EB}.Release|x86.ActiveCfg = Release|Any CPU
 		{1366742E-5CE9-4CD7-9A1A-9A27F8C3C4EB}.Release|x86.Build.0 = Release|Any CPU
+		{32FCCC38-7C10-489C-B481-DE2DD61EF38F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32FCCC38-7C10-489C-B481-DE2DD61EF38F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32FCCC38-7C10-489C-B481-DE2DD61EF38F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{32FCCC38-7C10-489C-B481-DE2DD61EF38F}.Debug|x86.Build.0 = Debug|Any CPU
+		{32FCCC38-7C10-489C-B481-DE2DD61EF38F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32FCCC38-7C10-489C-B481-DE2DD61EF38F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32FCCC38-7C10-489C-B481-DE2DD61EF38F}.Release|x86.ActiveCfg = Release|Any CPU
+		{32FCCC38-7C10-489C-B481-DE2DD61EF38F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +103,7 @@ Global
 		{E73411AD-D911-492D-AB7E-018EA0018988} = {6775DFB8-4130-4DF8-8454-D98A21052E13}
 		{6B815622-E677-4F85-A3F9-A595EA79487A} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 		{1366742E-5CE9-4CD7-9A1A-9A27F8C3C4EB} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
+		{32FCCC38-7C10-489C-B481-DE2DD61EF38F} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24A63605-5F2D-439D-81C1-5E775F49DF3C}
