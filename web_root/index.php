@@ -30,28 +30,28 @@ include_once("validator_be.php");
          <hr>
 		 <h3 class=''>Форми WindowsForms:</h2>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/01_Form_01/task.php">Завдання 1</a>
+           <a href="/validator/tasks/01_Form_01/task.php">Завдання 1: Моя перша Пргорама із Windows Forms</a>
          </div>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/01_Form_02/task.php">Завдання 2</a>
+           <a href="/validator/tasks/01_Form_02/task.php">Завдання 2: Програма із прозорою формою</a>
          </div>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/01_Form_03/task.php">Завдання 3</a>
+           <a href="/validator/tasks/01_Form_03/task.php">Завдання 3: Програма з вікном у центрі</a>
          </div>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/01_Form_04/task.php">Завдання 4</a>
+           <a href="/validator/tasks/01_Form_04/task.php">Завдання 4: Програма з Фоновим зображенням - 'Природа'</a>
          </div>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/01_Form_05/task.php">Завдання 5</a>
+           <a href="/validator/tasks/01_Form_05/task.php">Завдання 5: Моя велика программа</a>
          </div>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/01_Form_06/task.php">Завдання 6</a>
+           <a href="/validator/tasks/01_Form_06/task.php">Завдання 6: Програма із вікном без елементі контролю стану</a>
          </div>
 		 <!-- task Winforms info block end --------------------------------------------------------------------------------->
 
 		 <!-- task Controls Button info block start --------------------------------------------------------------------------------->
 			<hr>
-		 <h3 class=''>Елементи керування Controls Button:</h2>
+		 <h3 class=''>Елементи керування Control Buttons:</h2>
 		  <div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/02_Button_01/task.php">Завдання 1</a>
          </div>

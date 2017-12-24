@@ -5,7 +5,7 @@ $cls_Task = new cls_Task();
 //create UI validation webpage:
 $cls_Task->s_title = "Form_06";
 $cls_Task->s_id = "01_Form_06"; //_exact_ folder name!
-$cls_Task->s_description = "Створення програми з прозорою формою та її властивостей";
+$cls_Task->s_description = "Програма із вікном без елементі контролю стану";
 
 //add steps:
 $cls_Task->_add_step("1. Створити форму відповідно специфікації.");
