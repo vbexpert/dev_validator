@@ -15,6 +15,7 @@ namespace TaskCreator
         public Form1()
         {
             InitializeComponent();
+            _load_frequent_classes();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -31,13 +32,20 @@ namespace TaskCreator
         {
             string s_property = this.cb_validation_method.Text;
             s_property = s_property.Replace("s_controled_value", _en(this.cb_master_value.Text));
-            s_property = s_property.Replace("s_obj_name", _en(this.cb_property.Text));
-            s_property = s_property.Replace("obj", _en(this.cb_obj.Text + "." + this.cb_property.Text));
+            s_property = s_property.Replace("s_obj_name", _en(this.cb_p_desc.Text));
+            s_property = s_property.Replace("obj", _en(this.tb_obj_code_name.Text + "." + this.cb_property.Text));
             //
             this.tb_combined_v_line.Text = s_property;
+            this.lb_pvbs.Items.Add(s_property);
         }
-        private string _en(string s_data) {
+        private string _en(string s_data)
+        {
             return ("\"" + s_data + "\"");
         }
+        private void _load_frequent_classes()
+        {
+            Dictionary<string, string> dic_f_classes = new Dictionary<string, string>();
+        }
+
     }
 }
