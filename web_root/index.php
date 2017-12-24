@@ -53,7 +53,7 @@ include_once("validator_be.php");
 			<hr>
 		 <h3 class=''>Елементи керування Control Buttons:</h2>
 		  <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/02_Button_01/task.php">Завдання 1</a>
+           <a href="/validator/tasks/02_Button_01/task.php">Завдання 1: Перша кнопка</a>
          </div>
          <div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/02_Button_02/task.php">Завдання 2</a>

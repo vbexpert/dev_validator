@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{14739C9B-761C-4ADD-85F5-1F19E2C4E063}</ProjectGuid>
+    <ProjectGuid>{AD0E8C10-02ED-4F4A-9654-2E2DE2B6E13D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Button_01</RootNamespace>
-    <AssemblyName>Button_01</AssemblyName>
+    <RootNamespace>Button_02</RootNamespace>
+    <AssemblyName>Button_02</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -73,7 +73,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="code.txt" />
-    <None Include="Resources\nationalGeographic_semantic.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
