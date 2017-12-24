@@ -8,33 +8,18 @@ namespace WindowsApplication1
 {
     public partial class Form1 : Form
     {
-        public void _v_obj_exists(object obj, string s_obj_name)
-        {
-            if (null == obj)
-            {
-                Console.WriteLine(1);
-            }
-            else
-            {
-                Console.WriteLine(2);
-            }
-        }
         private void _test_validate(Form f)
         {
             cls_output_controller cls_output_controller = new cls_output_controller();
             //------------------------------------------------------------------------>
-            this._v_obj_exists(this.BackgroundImage, "asd");
-            Control c = f.Controls.Find("btn_Hello", true)[0];
-            Button btn1 = (Button)c;
-
             //початок коду валідації:
-            //cls_output_controller._v_form(f);
-            //cls_output_controller._vp(f.Width, "400");
-            //cls_output_controller._vp(f.Height, "300");
-            //cls_output_controller._vp(f.BackColor.Name,"Red");
-            //cls_output_controller._vnp(f.Text, "Form1");
-            //cls_output_controller._vp(f.Location.X, "200");
-            //cls_output_controller._vp(f.Location.Y, "200");
+            cls_output_controller._v_form(f);
+            cls_output_controller._vp(f.Width, "400");
+            cls_output_controller._vp(f.Height, "300");
+            cls_output_controller._vp(f.BackColor.Name,"Red");
+            cls_output_controller._vnp(f.Text, "Form1");
+            cls_output_controller._vp(f.Location.X, "200");
+            cls_output_controller._vp(f.Location.Y, "200");
             //кінець коду валідації:
             //------------------------------------------------------------------------>
         }
@@ -43,14 +28,6 @@ namespace WindowsApplication1
         { InitializeComponent(); }
         private void Form1_Load(object sender, EventArgs e)
         { _test_validate(this); }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Control c = this.Controls.Find("button1", true)[0];
-            Button btn1 = (Button)c;
-            Console.WriteLine(btn1.Name);
-
-        }
     }
     public class cls_output_controller
     {

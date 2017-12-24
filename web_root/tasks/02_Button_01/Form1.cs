@@ -46,9 +46,6 @@ namespace WindowsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Control c = this.Controls.Find("button1", true)[0];
-            Button btn1 = (Button)c;
-            Console.WriteLine(btn1.Name);
 
         }
     }

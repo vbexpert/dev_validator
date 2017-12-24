@@ -13,18 +13,14 @@ namespace ns_d_code
             cls_output_controller._v_parm(f.Text,		    "Form.Text",	"");
 			cls_output_controller._v_parm(s_app_ft,			"App name",		"Button_01.exe");
 			
-			Control c1 = f.Controls.Find("button1", true)[0];
-            Button obj_button1 = (Button)c1;
+			Control c = f.Controls.Find("button1", true)[0];
+            Button obj_button1 = (Button)c;
 			cls_output_controller._v_obj_exists(obj_button1,	"button1");
 			cls_output_controller._v_parm(obj_button1.Text,		"button1.Text",	"BigButton");
 
-			//Control c2 = f.Controls.Find("button2", true)[0];
-            //Button obj_button2 = (Button)c2;
-			//cls_output_controller._v_obj_exists(obj_button2,	"button2");
-			//cls_output_controller._v_parm(obj_button2.Text,		"button2.Text",	"BigButton");
-			//cls_output_controller._v_obj_exists(obj_button2.Image,	"");
 
-			//кінець коду валідації:
+
+            //кінець коду валідації:
 			//---------------------------------------------------->
             return(cls_output_controller._final_result());
         }
