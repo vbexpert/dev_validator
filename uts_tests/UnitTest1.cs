@@ -88,6 +88,13 @@ namespace uts_tests
             string s_task_exe_ft = "Form_09.exe";
             string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
+        [TestMethod]
+        public void tm_02_Button_01()
+        {
+            string s_task_id = "02_Button_01";
+            string s_task_exe_ft = "Button_01.exe";
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
+        }
         private string _validate_task(string s_task_id, string s_task_exe_ft) {
             //move validator exe to temp:
             string s_task_exe_fnp = s_tasks_fp + "\\" + s_task_id + "\\bin\\Debug\\" + s_task_exe_ft;
