@@ -21,7 +21,7 @@ namespace ns_d_code
             cls_output_controller._v_parm(f.Location.X,		"Верхній лівий кут екрану",		"0");
             cls_output_controller._v_parm(f.Location.Y,		"Верхній лівий кут екрану",		"0");
 			cls_output_controller._v_parm(f.StartPosition,	"Початкова позиція",			"Manual");
-            cls_output_controller._v_parm(f.Opacity,		"Прозорість вікна",				"0.5");
+            cls_output_controller._v_parm_norm(f.Opacity,	"Прозорість вікна",				"0.5");
             //кінець коду валідації:
 			//---------------------------------------------------->
             return(cls_output_controller._final_result());
