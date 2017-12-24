@@ -8,62 +8,75 @@ namespace uts_tests
     [TestClass]
     public class UnitTest1
     {
-        private string s_tasks_fp = "tasks_source_code";
-        private string s_validator_fnp = "dev_validator_C\\bin\\Debug\\validator.exe";
+        public string s_tasks_fp = "tasks_source_code";
+        public string s_validator_fnp = "dev_validator_C\\bin\\Debug\\validator1.exe";
+
+        [ClassInitialize()]
+        public static void ClassInit(TestContext context)
+        {
+            //this is required as validator.exe is being rebuilt (?) for some reason
+            //and thus prevents multitests from running in parallel:
+            //fix - create a copy:
+            string s_original_validator_fnp = "dev_validator_C\\bin\\Debug\\validator.exe";
+            string s_validator_fnp = "dev_validator_C\\bin\\Debug\\validator1.exe";
+            Directory.SetCurrentDirectory("..\\..\\..\\");
+            if (File.Exists(s_validator_fnp)) {
+                File.Delete(s_validator_fnp);
+            }
+            File.Copy(s_original_validator_fnp, s_validator_fnp);
+        }
         [TestMethod]
         public void tm_01_Form_01()
         {
             string s_task_id = "01_Form_01";
             string s_task_exe_ft = "Form_01.exe";
-            string s_result = _get_validation_result(s_task_id, s_task_exe_ft);
-            Assert.IsTrue(s_result.ToLower().Contains("not ok") == false, "task validation failed!");
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]
         public void tm_01_Form_02()
         {
             string s_task_id = "01_Form_02";
             string s_task_exe_ft = "Form_02.exe";
-            string s_result = _get_validation_result(s_task_id, s_task_exe_ft);
-            Assert.IsTrue(s_result.ToLower().Contains("not ok") == false, "task validation failed!");
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]
         public void tm_01_Form_03()
         {
             string s_task_id = "01_Form_03";
             string s_task_exe_ft = "Form_03.exe";
-            string s_result = _get_validation_result(s_task_id, s_task_exe_ft);
-            Assert.IsTrue(s_result.ToLower().Contains("not ok") == false, "task validation failed!");
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]
         public void tm_01_Form_04()
         {
             string s_task_id = "01_Form_04";
             string s_task_exe_ft = "Form_04.exe";
-            string s_result = _get_validation_result(s_task_id, s_task_exe_ft);
-            Assert.IsTrue(s_result.ToLower().Contains("not ok") == false, "task validation failed!");
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]
         public void tm_01_Form_05()
         {
             string s_task_id = "01_Form_05";
             string s_task_exe_ft = "Form_05.exe";
-            string s_result = _get_validation_result(s_task_id, s_task_exe_ft);
-            Assert.IsTrue(s_result.ToLower().Contains("not ok") == false, "task validation failed!");
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]
         public void tm_01_Form_06()
         {
             string s_task_id = "01_Form_06";
             string s_task_exe_ft = "Form_06.exe";
-            string s_result = _get_validation_result(s_task_id, s_task_exe_ft);
-            Assert.IsTrue(s_result.ToLower().Contains("not ok") == false, "task validation failed!");
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
-        private string _get_validation_result(string s_task_id, string s_task_exe_ft) {
-            Directory.SetCurrentDirectory("..\\..\\..\\");
+        private string _validate_task(string s_task_id, string s_task_exe_ft) {
+            //move validator exe to temp:
+
+
+            //Directory.SetCurrentDirectory("..\\..\\..\\");
 
             string s_task_exe_fnp = s_tasks_fp + "\\" + s_task_id + "\\bin\\Debug\\" + s_task_exe_ft;
             string s_task_code_file = s_tasks_fp + "\\" + s_task_id + "\\code.txt";
             string s_output = this.Run_app(s_validator_fnp, s_task_exe_fnp + " " + s_task_code_file + " " + s_task_exe_ft);
+            Assert.IsTrue(s_output.ToLower().Contains("not ok") == false, "task validation failed!");
             return s_output;
         }
         public string Run_app(string s_app, string s_cla) 

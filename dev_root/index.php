@@ -42,7 +42,7 @@ include_once("validator_be.php");
            <a href="/validator/tasks/01_Form_04/task.php">Завдання 4: Програма з Фоновим зображенням - 'Природа'</a>
          </div>
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/01_Form_05/task.php">Завдання 5: Моя велика программа</a>
+           <a href="/validator/tasks/01_Form_05/task.php">Завдання 5: Моя велика програма</a>
          </div>
          <div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/01_Form_06/task.php">Завдання 6: Програма із вікном без елементі контролю стану</a>

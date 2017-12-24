@@ -5,7 +5,7 @@ $cls_Task = new cls_Task();
 //create UI validation webpage:
 $cls_Task->s_title = "Form_05";
 $cls_Task->s_id = "01_Form_05"; //_exact_ folder name!
-$cls_Task->s_description = "Моя велика программа";
+$cls_Task->s_description = "Моя велика програма";
 
 //add steps:
 $cls_Task->_add_step("1. Створити форму відповідно специфікації.");

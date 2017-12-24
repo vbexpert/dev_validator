@@ -46,6 +46,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Form_05", "tasks_source_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Form_06", "tasks_source_code\01_Form_06\01_Form_06.csproj", "{79618A7A-F01E-4B83-96E3-187165E70DD3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskCreator", "TaskCreator\TaskCreator.csproj", "{D897C39E-1C99-4CF3-BFCE-0DD77A344B16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,14 @@ Global
 		{79618A7A-F01E-4B83-96E3-187165E70DD3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{79618A7A-F01E-4B83-96E3-187165E70DD3}.Release|x86.ActiveCfg = Release|Any CPU
 		{79618A7A-F01E-4B83-96E3-187165E70DD3}.Release|x86.Build.0 = Release|Any CPU
+		{D897C39E-1C99-4CF3-BFCE-0DD77A344B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D897C39E-1C99-4CF3-BFCE-0DD77A344B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D897C39E-1C99-4CF3-BFCE-0DD77A344B16}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D897C39E-1C99-4CF3-BFCE-0DD77A344B16}.Debug|x86.Build.0 = Debug|Any CPU
+		{D897C39E-1C99-4CF3-BFCE-0DD77A344B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D897C39E-1C99-4CF3-BFCE-0DD77A344B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D897C39E-1C99-4CF3-BFCE-0DD77A344B16}.Release|x86.ActiveCfg = Release|Any CPU
+		{D897C39E-1C99-4CF3-BFCE-0DD77A344B16}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
