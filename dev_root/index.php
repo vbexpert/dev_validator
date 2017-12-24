@@ -44,6 +44,9 @@ include_once("validator_be.php");
          <div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/01_Form_05/task.php">Завдання 5</a>
          </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/01_Form_06/task.php">Завдання 6</a>
+         </div>
 		 <!-- task Winforms info block end --------------------------------------------------------------------------------->
 
 		 <!-- task Controls Button info block start --------------------------------------------------------------------------------->

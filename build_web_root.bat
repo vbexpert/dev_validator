@@ -19,4 +19,5 @@ call deploy_task.bat 01_Form_02
 call deploy_task.bat 01_Form_03
 call deploy_task.bat 01_Form_04
 call deploy_task.bat 01_Form_05
+call deploy_task.bat 01_Form_06
 rem ------------------------------------------------------------------------------->
