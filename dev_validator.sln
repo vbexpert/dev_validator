@@ -54,6 +54,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_Button_01", "tasks_sourc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_Button_02", "tasks_source_code\02_Button_02\02_Button_02.csproj", "{AD0E8C10-02ED-4F4A-9654-2E2DE2B6E13D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Label_01", "tasks_source_code\03_Label_01\03_Label_01.csproj", "{EFEAB4BD-6283-4CA7-A806-CEBF3FAB7AAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -157,6 +159,14 @@ Global
 		{AD0E8C10-02ED-4F4A-9654-2E2DE2B6E13D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AD0E8C10-02ED-4F4A-9654-2E2DE2B6E13D}.Release|x86.ActiveCfg = Release|Any CPU
 		{AD0E8C10-02ED-4F4A-9654-2E2DE2B6E13D}.Release|x86.Build.0 = Release|Any CPU
+		{EFEAB4BD-6283-4CA7-A806-CEBF3FAB7AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFEAB4BD-6283-4CA7-A806-CEBF3FAB7AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFEAB4BD-6283-4CA7-A806-CEBF3FAB7AAB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EFEAB4BD-6283-4CA7-A806-CEBF3FAB7AAB}.Debug|x86.Build.0 = Debug|Any CPU
+		{EFEAB4BD-6283-4CA7-A806-CEBF3FAB7AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFEAB4BD-6283-4CA7-A806-CEBF3FAB7AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFEAB4BD-6283-4CA7-A806-CEBF3FAB7AAB}.Release|x86.ActiveCfg = Release|Any CPU
+		{EFEAB4BD-6283-4CA7-A806-CEBF3FAB7AAB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -172,6 +182,7 @@ Global
 		{4D368EF4-2676-4367-BFAE-53F1C4701F5E} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 		{14739C9B-761C-4ADD-85F5-1F19E2C4E063} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 		{AD0E8C10-02ED-4F4A-9654-2E2DE2B6E13D} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
+		{EFEAB4BD-6283-4CA7-A806-CEBF3FAB7AAB} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24A63605-5F2D-439D-81C1-5E775F49DF3C}

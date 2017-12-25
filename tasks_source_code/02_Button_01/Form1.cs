@@ -24,8 +24,7 @@ namespace WindowsApplication1
             cls_output_controller cls_output_controller = new cls_output_controller();
             //------------------------------------------------------------------------>
             this._v_obj_exists(this.BackgroundImage, "asd");
-            Control c = f.Controls.Find("btn_Hello", true)[0];
-            Button btn1 = (Button)c;
+           
 
             //початок коду валідації:
             //cls_output_controller._v_form(f);
