@@ -53,6 +53,10 @@
                 this._add_validation_failed(s_obj_name + " Not Ok!", 0);
             }
         }
+        public object _v_get_obj(Form f, string s_obj_name)
+        {
+            return (f.Controls.Find(s_obj_name, true)[0]);
+        }
         public void _add_validation_ok(string s_value, int i_i_score)
         {
             i_total_score += i_i_score;
