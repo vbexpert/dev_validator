@@ -1,0 +1,21 @@
+using System.Windows.Forms;
+using System;
+namespace ns_d_code
+{
+    public class cls_Main
+    {
+        public static string test(Form f, string s_app_fnp, string s_app_ft)
+        {
+            cls_output_controller cls_output_controller = new cls_output_controller();
+            //---------------------------------------------------->
+            //початок коду валідації:
+               _v_parm(f.Width, "Form.Width", "100");
+            //кінець коду валідації:
+            //---------------------------------------------------->
+            return(cls_output_controller._final_result());
+        }
+        public static void Main() //main entry point:
+        {  }
+    }
+    //[validator-class-placeholder]
+}

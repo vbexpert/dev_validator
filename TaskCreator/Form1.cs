@@ -14,6 +14,7 @@ namespace TaskCreator
         public Form1()
         {
             InitializeComponent();
+            Directory.SetCurrentDirectory("..\\..\\..\\");
             _load_frequent_classes();
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -34,8 +35,8 @@ namespace TaskCreator
             this.tb_combined_v_line.Text = s_property;
             this.lb_cvbs.Items.Add(s_property);
 
-            string s_php_vb_line = "$cls_Task->_add_property(\"Application name\", \"Ім'я програми\", \"Form_01.exe\");";
-            this.lb_php_task_vb.Items.Add(s_php_vb_line);
+            string s_php_vb_line = "$cls_Task->_add_property(\""+ this.cb_obj_type.Text + "\", \"" + this.cb_p_desc_UA.Text + "\", \""  + this.cb_master_value.Text + "\");";
+            this.lb_cvpb_php.Items.Add(s_php_vb_line);
         }
         private string _en(string s_data)
         {
@@ -62,8 +63,9 @@ namespace TaskCreator
         }
         private void _task_preview() {
             //
-            cls_Task.s_fp = "tasks_source_code\\" + cls_Task.s_id;
             cls_Task.s_id = this.tb_task_id.Text;
+            cls_Task.s_fp = "tasks_source_code\\" + cls_Task.s_id;
+           
             cls_Task.s_title = this.tb_task_title.Text;
             cls_Task.s_description = this.tb_task_description.Text;
             //
@@ -86,30 +88,31 @@ namespace TaskCreator
 
             //aggregate properties php:
             sb.Remove(0, sb.Length);
-            int i_ctr2 = 0;
-            foreach (string value in this.lb_cvbs.Items)
+            i_ctr = 0;
+            foreach (string value in this.lb_cvpb_php.Items)
             {
-                i_ctr2++;
-                //string s_line = "//$cls_Task->_add_property(\"" +  +"\", \"Ім'я програми\", \"Form_01.exe\");"
-                //sb.Append();
+                i_ctr++;
+                string s_line = value + "\r\n";
+                sb.Append(s_line);
             }
             cls_Task.s_block_properties_php_code = sb.ToString();
 
             String s_buf = "";
             //read code file:
-            s_buf = File.ReadAllText("..\\..\\..\\tasks_source_code\\00_task_template\\code.txt");
+            s_buf = File.ReadAllText("tasks_source_code\\00_task_template\\code.txt");
             //patch properties sharp:
             s_buf = s_buf.Replace("[properties-validation-block-sharp]", cls_Task.s_block_properties_sharp_code);
             //preview:
             this.tb_sharp_parameters.Text = s_buf;
 
             //read task.php:
-            s_buf = File.ReadAllText("..\\..\\..\\tasks_source_code\\00_task_template\\task.php");
+            s_buf = File.ReadAllText("tasks_source_code\\00_task_template\\task.php");
             //patch php:
             s_buf = s_buf.Replace("[task-title]", this.tb_task_description.Text);
             s_buf = s_buf.Replace("[task-id]", cls_Task.s_id);
             s_buf = s_buf.Replace("[task-description]", cls_Task.s_description);
             s_buf = s_buf.Replace("[step-instructions]", cls_Task.s_block_steps);
+            s_buf = s_buf.Replace("[properties-validation-block-php]", cls_Task.s_block_properties_php_code);
             this.tb_php_task_file.Text = s_buf;
         }
         private void _task_create()
@@ -122,16 +125,23 @@ namespace TaskCreator
             }
             Directory.CreateDirectory(cls_Task.s_fp);
             string s_template_fp = "tasks_source_code\\00_task_template";
+
+            //https://stackoverflow.com/questions/58744/copy-the-entire-contents-of-a-directory-in-c-sharp
+
+            //copy all folders:
+            foreach (string dirPath in Directory.GetDirectories(s_template_fp, "*", SearchOption.AllDirectories))
+                Directory.CreateDirectory(dirPath.Replace(s_template_fp, cls_Task.s_fp));
+
             //copy all files:
-            foreach (var file in Directory.GetFiles(s_template_fp))
-                File.Copy(file, Path.Combine(cls_Task.s_fp, Path.GetFileName(file)));
+            foreach (string newPath in Directory.GetFiles(s_template_fp, "*.*", SearchOption.AllDirectories))
+                File.Copy(newPath, newPath.Replace(s_template_fp, cls_Task.s_fp), true);
 
             //patch project file:
             string s_cs_project_fnp = cls_Task.s_fp + "\\[template-task].csproj";
             string s_buf = File.ReadAllText(s_cs_project_fnp);
             s_buf = s_buf.Replace("[template-task]", cls_Task.s_title);
             File.WriteAllText(cls_Task.s_fp + "\\" + cls_Task.s_id + ".csproj", s_buf);
-            //File.Delete(s_cs_project_fnp);
+            File.Delete(s_cs_project_fnp);
 
             //write code file:
             File.WriteAllText(cls_Task.s_fp + "\\code.txt", this.tb_sharp_parameters.Text);

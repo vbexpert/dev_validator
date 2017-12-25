@@ -66,7 +66,7 @@
             this.cb_add_step = new System.Windows.Forms.Button();
             this.tb_step = new System.Windows.Forms.TextBox();
             this.lbl_step = new System.Windows.Forms.Label();
-            this.lb_php_task_vb = new System.Windows.Forms.ListBox();
+            this.lb_cvpb_php = new System.Windows.Forms.ListBox();
             this.gb_property.SuspendLayout();
             this.gb_code_txt.SuspendLayout();
             this.gb_php_validation_block.SuspendLayout();
@@ -163,6 +163,7 @@
             this.cb_p_desc_UA.Name = "cb_p_desc_UA";
             this.cb_p_desc_UA.Size = new System.Drawing.Size(326, 21);
             this.cb_p_desc_UA.TabIndex = 17;
+            this.cb_p_desc_UA.Text = "Опис параметра валідації українською";
             // 
             // lbl_property_type
             // 
@@ -223,6 +224,7 @@
             this.cb_p_desc_ENG.Name = "cb_p_desc_ENG";
             this.cb_p_desc_ENG.Size = new System.Drawing.Size(326, 21);
             this.cb_p_desc_ENG.TabIndex = 11;
+            this.cb_p_desc_ENG.Text = "Validated Parameter in English";
             // 
             // cb_add_pvb
             // 
@@ -247,9 +249,9 @@
             // 
             this.cb_validation_method.FormattingEnabled = true;
             this.cb_validation_method.Items.AddRange(new object[] {
-            "_v_parm(obj, s_obj_name, s_controled_value)",
-            "_v_obj_exists(obj, s_obj_name)",
-            "_v_neg_parm(obj, s_obj_name, s_controled_value)"});
+            "_v_parm(obj, s_obj_name, s_controled_value);",
+            "_v_obj_exists(obj, s_obj_name);",
+            "_v_neg_parm(obj, s_obj_name, s_controled_value);"});
             this.cb_validation_method.Location = new System.Drawing.Point(12, 19);
             this.cb_validation_method.Name = "cb_validation_method";
             this.cb_validation_method.Size = new System.Drawing.Size(326, 21);
@@ -331,6 +333,7 @@
             this.tb_sharp_parameters.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.tb_sharp_parameters.Size = new System.Drawing.Size(432, 297);
             this.tb_sharp_parameters.TabIndex = 6;
+            this.tb_sharp_parameters.WordWrap = false;
             // 
             // label1
             // 
@@ -390,6 +393,7 @@
             this.tb_php_task_file.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.tb_php_task_file.Size = new System.Drawing.Size(432, 297);
             this.tb_php_task_file.TabIndex = 7;
+            this.tb_php_task_file.WordWrap = false;
             // 
             // cb_preview_task
             // 
@@ -428,6 +432,7 @@
             this.lb_cvbs.FormattingEnabled = true;
             this.lb_cvbs.Location = new System.Drawing.Point(22, 384);
             this.lb_cvbs.Name = "lb_cvbs";
+            this.lb_cvbs.ScrollAlwaysVisible = true;
             this.lb_cvbs.Size = new System.Drawing.Size(432, 108);
             this.lb_cvbs.TabIndex = 17;
             // 
@@ -447,6 +452,7 @@
             this.tb_step.Name = "tb_step";
             this.tb_step.Size = new System.Drawing.Size(427, 20);
             this.tb_step.TabIndex = 17;
+            this.tb_step.Text = "Детальний опис крока - українською!";
             // 
             // lbl_step
             // 
@@ -457,20 +463,21 @@
             this.lbl_step.TabIndex = 18;
             this.lbl_step.Text = "step (no numbers!):";
             // 
-            // lb_php_task_vb
+            // lb_cvpb_php
             // 
-            this.lb_php_task_vb.FormattingEnabled = true;
-            this.lb_php_task_vb.Location = new System.Drawing.Point(480, 384);
-            this.lb_php_task_vb.Name = "lb_php_task_vb";
-            this.lb_php_task_vb.Size = new System.Drawing.Size(432, 108);
-            this.lb_php_task_vb.TabIndex = 18;
+            this.lb_cvpb_php.FormattingEnabled = true;
+            this.lb_cvpb_php.Location = new System.Drawing.Point(480, 384);
+            this.lb_cvpb_php.Name = "lb_cvpb_php";
+            this.lb_cvpb_php.ScrollAlwaysVisible = true;
+            this.lb_cvpb_php.Size = new System.Drawing.Size(432, 108);
+            this.lb_cvpb_php.TabIndex = 18;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(931, 877);
-            this.Controls.Add(this.lb_php_task_vb);
+            this.Controls.Add(this.lb_cvpb_php);
             this.Controls.Add(this.lb_cvbs);
             this.Controls.Add(this.gb_task_php);
             this.Controls.Add(this.cb_preview_task);
@@ -542,7 +549,7 @@
         private System.Windows.Forms.Button cb_add_step;
         private System.Windows.Forms.TextBox tb_step;
         private System.Windows.Forms.Label lbl_step;
-        private System.Windows.Forms.ListBox lb_php_task_vb;
+        private System.Windows.Forms.ListBox lb_cvpb_php;
     }
 }
 
