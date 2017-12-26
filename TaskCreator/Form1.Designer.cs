@@ -121,7 +121,8 @@
             // 
             // gb_property
             // 
-            this.gb_property.Controls.Add(this.cb_InsertCreator);
+            this.gb_property.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.gb_property.Controls.Add(this.lbl_p_desc_UA);
             this.gb_property.Controls.Add(this.cb_p_desc_UA);
             this.gb_property.Controls.Add(this.lbl_property_type);
@@ -328,9 +329,8 @@
             // 
             // tb_sharp_parameters
             // 
-            this.tb_sharp_parameters.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.tb_sharp_parameters.Location = new System.Drawing.Point(10, 125);
+            this.tb_sharp_parameters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tb_sharp_parameters.Location = new System.Drawing.Point(10, 19);
             this.tb_sharp_parameters.Multiline = true;
             this.tb_sharp_parameters.Name = "tb_sharp_parameters";
             this.tb_sharp_parameters.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -350,7 +350,7 @@
             // 
             // gb_code_txt
             // 
-            this.gb_code_txt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.gb_code_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.gb_code_txt.Controls.Add(this.tb_sharp_parameters);
             this.gb_code_txt.Location = new System.Drawing.Point(12, 373);
             this.gb_code_txt.Name = "gb_code_txt";
@@ -378,7 +378,7 @@
             // 
             // gb_php_validation_block
             // 
-            this.gb_php_validation_block.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.gb_php_validation_block.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.gb_php_validation_block.Controls.Add(this.tb_php_task_file);
             this.gb_php_validation_block.Location = new System.Drawing.Point(470, 373);
             this.gb_php_validation_block.Name = "gb_php_validation_block";
@@ -389,9 +389,8 @@
             // 
             // tb_php_task_file
             // 
-            this.tb_php_task_file.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.tb_php_task_file.Location = new System.Drawing.Point(9, 125);
+            this.tb_php_task_file.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tb_php_task_file.Location = new System.Drawing.Point(9, 19);
             this.tb_php_task_file.Multiline = true;
             this.tb_php_task_file.Name = "tb_php_task_file";
             this.tb_php_task_file.ScrollBars = System.Windows.Forms.ScrollBars.Both;
