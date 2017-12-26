@@ -362,7 +362,7 @@
             this.tb_task_description.Name = "tb_task_description";
             this.tb_task_description.Size = new System.Drawing.Size(763, 20);
             this.tb_task_description.TabIndex = 11;
-            this.tb_task_description.Text = "Нове классне завдання із кнопкою!";
+            this.tb_task_description.Text = "[test] Нове классне завдання із кнопкою!";
             // 
             // lbl_task_student_title
             // 
