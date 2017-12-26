@@ -29,10 +29,10 @@ namespace TaskCreator
         }
         private void cb_add_pvb_Click(object sender, EventArgs e)
         {
-            string s_property = this.cb_validation_method.Text;
+            string s_property = this.cb_validation_method.Text; //_v_obj_exists(obj, s_obj_name);
             s_property = s_property.Replace("s_controled_value", _en(this.cb_master_value.Text));
             s_property = s_property.Replace("s_obj_name", _en(this.cb_p_desc_ENG.Text));
-            s_property = s_property.Replace("obj",this.tb_obj_code_name.Text + "." + this.cb_property.Text);
+            s_property = s_property.Replace("[obj]",this.tb_obj_code_name.Text + "." + this.cb_property.Text);
             //
             this.tb_combined_v_line.Text = s_property;
             this.lb_cvbs.Items.Add(s_property);
@@ -48,6 +48,8 @@ namespace TaskCreator
         {
             Dictionary<string, string> dic_f_classes = new Dictionary<string, string>();
             this.cb_obj_type.Items.Add("Form");
+            this.cb_obj_type.Items.Add("Button");
+            this.cb_obj_type.Items.Add("Label");
             this.cb_obj_type.Items.Add("TextBox");
             this.cb_obj_type.Items.Add("PictureBox");
             this.cb_obj_type.Items.Add("ComboBox");
@@ -55,8 +57,7 @@ namespace TaskCreator
             this.cb_obj_type.Items.Add("CheckedListBox");
             this.cb_obj_type.Items.Add("ProgressBar");
             this.cb_obj_type.Items.Add("RadioButton");
-            this.cb_obj_type.Items.Add("DateTimePicker");
-            this.cb_obj_type.Items.Add("Label");
+            this.cb_obj_type.Items.Add("DateTimePicker");            
             this.cb_obj_type.Items.Add("LinkLabel");
             this.cb_obj_type.Items.Add("ListView");
             this.cb_obj_type.Items.Add("MonthCalendar");
@@ -182,9 +183,17 @@ namespace TaskCreator
                 {
                     this.cb_property.Items.Add(controlProperty.Name);
                 }
+                string s_inst_name = FirstCharToLower(this.cb_obj_type.Text + "1");
+                this.tb_obj_code_name.Text = s_inst_name;
+                //just try to refresh properties вообще то сюда надо процедуру cb_property_TextChanged(), но не получается
+                string s_property = cb_obj_type.Text + "." + cb_property.Text;
+                this.cb_p_desc_ENG.Text = s_property;
+                this.cb_p_desc_UA.Text = s_property;
             }
             catch {
             }
+
+
         }
         private void cb_property_TextChanged(object sender, EventArgs e)
         {
@@ -202,6 +211,39 @@ namespace TaskCreator
             if (this.tb_step.Text != "") {
                 this.lb_steps.Items.Add(this.tb_step.Text);
             }
+        }
+
+        private void cb_InsertCreator_Click(object sender, EventArgs e)
+        {
+            //cb_obj_type
+            //lb_cvbs
+            //[TextBox tb1 = (TextBox)cls_output_controller._v_get_obj(f, "textBox1");]
+            string s_inst_name = this.tb_obj_code_name.Text; //FirstCharToLower(this.cb_obj_type.Text + "1");
+            this.lb_cvbs.Items.Add(this.cb_obj_type.Text+" "+ this.tb_obj_code_name.Text + " = (" + this.cb_obj_type.Text + ")cls_output_controller._v_get_obj(f, \"" + s_inst_name + "\");");
+            //add to tast.php
+            string s_obj_type = this.cb_obj_type.Text;
+            string s_php_vb_line = "$cls_Task->_add_property(\"<span class="+@"\"+ "\"btn btn-success"+@"\"+"\"> Додати об'єкт </span>" + "\", \"" + "<h5>" + s_obj_type + "</h5>" + "\", \""  + "\");";
+            this.lb_cvpb_php.Items.Add(s_php_vb_line);
+        }
+
+        public static string FirstCharToLower(string input)
+        {
+            switch (input)
+            {
+                case null: throw new ArgumentNullException(nameof(input));
+                case "": throw new ArgumentException($"{nameof(input)} cannot be empty", nameof(input));
+                default: return input.First().ToString().ToLower() + input.Substring(1);
+            }
+        }
+
+        private void cb_obj_type_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cb_validation_method_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

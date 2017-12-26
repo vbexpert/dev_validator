@@ -17,11 +17,13 @@ $cls_Task->_add_step("5. Зберегти програму у папку <b>Prod
 //add parameters to be validated:
 //template:
 //$cls_Task->_add_property("", "", "");
-$cls_Task->_add_property("Form.BackColor.Name", "Колір Форми", "Sienna");
-$cls_Task->_add_property("Form.Text", "Текст Форми (немаэ)", "");
+$cls_Task->_add_property("Solution name", "Ім'я рішення", "Lesson_02");
 $cls_Task->_add_property("Application name", "Ім'я програми", "Button_01.exe");
+$cls_Task->_add_property("Form.Text", "Текст Форми", "Знайомство з кнопкою");
+$cls_Task->_add_property("", "", "");
 $cls_Task->_add_property("button1", "Додати кнопку", "");
-$cls_Task->_add_property("button1.Text", "Текст кнопки", "BigButton");
+$cls_Task->_add_property("button1.Text", "Текст кнопки", "NewButton");
+
 
 $cls_Task->s_youtube_url = "https://youtu.be/hP0UsFULLuU?list=PLgNmtqlNFVjpYzErepZF2E8Mc4R27yXYf";
 $cls_Task->s_discuss_url = "https://vk.com/club106906794";

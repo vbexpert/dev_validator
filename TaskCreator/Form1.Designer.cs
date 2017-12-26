@@ -67,6 +67,7 @@
             this.lb_steps = new System.Windows.Forms.ListBox();
             this.lb_cvbs = new System.Windows.Forms.ListBox();
             this.lb_cvpb_php = new System.Windows.Forms.ListBox();
+            this.cb_InsertCreator = new System.Windows.Forms.Button();
             this.gb_property.SuspendLayout();
             this.gb_code_txt.SuspendLayout();
             this.gb_php_validation_block.SuspendLayout();
@@ -110,7 +111,7 @@
             // cb_create_task
             // 
             this.cb_create_task.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.cb_create_task.Location = new System.Drawing.Point(470, 833);
+            this.cb_create_task.Location = new System.Drawing.Point(470, 646);
             this.cb_create_task.Name = "cb_create_task";
             this.cb_create_task.Size = new System.Drawing.Size(453, 36);
             this.cb_create_task.TabIndex = 4;
@@ -120,6 +121,7 @@
             // 
             // gb_property
             // 
+            this.gb_property.Controls.Add(this.cb_InsertCreator);
             this.gb_property.Controls.Add(this.lbl_p_desc_UA);
             this.gb_property.Controls.Add(this.cb_p_desc_UA);
             this.gb_property.Controls.Add(this.lbl_property_type);
@@ -148,7 +150,7 @@
             // lbl_p_desc_UA
             // 
             this.lbl_p_desc_UA.AutoSize = true;
-            this.lbl_p_desc_UA.Location = new System.Drawing.Point(344, 147);
+            this.lbl_p_desc_UA.Location = new System.Drawing.Point(344, 166);
             this.lbl_p_desc_UA.Name = "lbl_p_desc_UA";
             this.lbl_p_desc_UA.Size = new System.Drawing.Size(98, 13);
             this.lbl_p_desc_UA.TabIndex = 18;
@@ -157,7 +159,7 @@
             // cb_p_desc_UA
             // 
             this.cb_p_desc_UA.FormattingEnabled = true;
-            this.cb_p_desc_UA.Location = new System.Drawing.Point(12, 144);
+            this.cb_p_desc_UA.Location = new System.Drawing.Point(12, 163);
             this.cb_p_desc_UA.Name = "cb_p_desc_UA";
             this.cb_p_desc_UA.Size = new System.Drawing.Size(326, 21);
             this.cb_p_desc_UA.TabIndex = 17;
@@ -176,7 +178,7 @@
             // lbl_v_object
             // 
             this.lbl_v_object.AutoSize = true;
-            this.lbl_v_object.Location = new System.Drawing.Point(13, 44);
+            this.lbl_v_object.Location = new System.Drawing.Point(13, 63);
             this.lbl_v_object.Name = "lbl_v_object";
             this.lbl_v_object.Size = new System.Drawing.Size(87, 13);
             this.lbl_v_object.TabIndex = 15;
@@ -200,7 +202,7 @@
             // 
             // tb_obj_code_name
             // 
-            this.tb_obj_code_name.Location = new System.Drawing.Point(12, 63);
+            this.tb_obj_code_name.Location = new System.Drawing.Point(12, 82);
             this.tb_obj_code_name.Name = "tb_obj_code_name";
             this.tb_obj_code_name.Size = new System.Drawing.Size(158, 20);
             this.tb_obj_code_name.TabIndex = 13;
@@ -209,7 +211,7 @@
             // lbl_p_desc_ENG
             // 
             this.lbl_p_desc_ENG.AutoSize = true;
-            this.lbl_p_desc_ENG.Location = new System.Drawing.Point(344, 120);
+            this.lbl_p_desc_ENG.Location = new System.Drawing.Point(344, 139);
             this.lbl_p_desc_ENG.Name = "lbl_p_desc_ENG";
             this.lbl_p_desc_ENG.Size = new System.Drawing.Size(106, 13);
             this.lbl_p_desc_ENG.TabIndex = 12;
@@ -218,7 +220,7 @@
             // cb_p_desc_ENG
             // 
             this.cb_p_desc_ENG.FormattingEnabled = true;
-            this.cb_p_desc_ENG.Location = new System.Drawing.Point(12, 117);
+            this.cb_p_desc_ENG.Location = new System.Drawing.Point(12, 136);
             this.cb_p_desc_ENG.Name = "cb_p_desc_ENG";
             this.cb_p_desc_ENG.Size = new System.Drawing.Size(326, 21);
             this.cb_p_desc_ENG.TabIndex = 11;
@@ -237,7 +239,7 @@
             // lbl_validation_method
             // 
             this.lbl_validation_method.AutoSize = true;
-            this.lbl_validation_method.Location = new System.Drawing.Point(344, 22);
+            this.lbl_validation_method.Location = new System.Drawing.Point(344, 23);
             this.lbl_validation_method.Name = "lbl_validation_method";
             this.lbl_validation_method.Size = new System.Drawing.Size(96, 13);
             this.lbl_validation_method.TabIndex = 9;
@@ -247,13 +249,14 @@
             // 
             this.cb_validation_method.FormattingEnabled = true;
             this.cb_validation_method.Items.AddRange(new object[] {
-            "_v_parm(obj, s_obj_name, s_controled_value);",
-            "_v_obj_exists(obj, s_obj_name);",
-            "_v_neg_parm(obj, s_obj_name, s_controled_value);"});
-            this.cb_validation_method.Location = new System.Drawing.Point(12, 19);
+            "_v_parm([obj], s_obj_name, s_controled_value);",
+            "_v_obj_exists([obj], s_obj_name);",
+            "_v_neg_parm([obj], s_obj_name, s_controled_value);"});
+            this.cb_validation_method.Location = new System.Drawing.Point(12, 20);
             this.cb_validation_method.Name = "cb_validation_method";
             this.cb_validation_method.Size = new System.Drawing.Size(326, 21);
             this.cb_validation_method.TabIndex = 8;
+            this.cb_validation_method.SelectedIndexChanged += new System.EventHandler(this.cb_validation_method_SelectedIndexChanged);
             // 
             // lbl_p_master_value
             // 
@@ -267,7 +270,7 @@
             // lbl_p
             // 
             this.lbl_p.AutoSize = true;
-            this.lbl_p.Location = new System.Drawing.Point(344, 93);
+            this.lbl_p.Location = new System.Drawing.Point(344, 112);
             this.lbl_p.Name = "lbl_p";
             this.lbl_p.Size = new System.Drawing.Size(51, 13);
             this.lbl_p.TabIndex = 5;
@@ -294,7 +297,7 @@
             // cb_property
             // 
             this.cb_property.FormattingEnabled = true;
-            this.cb_property.Location = new System.Drawing.Point(12, 90);
+            this.cb_property.Location = new System.Drawing.Point(12, 109);
             this.cb_property.Name = "cb_property";
             this.cb_property.Size = new System.Drawing.Size(326, 21);
             this.cb_property.Sorted = true;
@@ -305,7 +308,7 @@
             // lbl_p_type
             // 
             this.lbl_p_type.AutoSize = true;
-            this.lbl_p_type.Location = new System.Drawing.Point(344, 66);
+            this.lbl_p_type.Location = new System.Drawing.Point(344, 85);
             this.lbl_p_type.Name = "lbl_p_type";
             this.lbl_p_type.Size = new System.Drawing.Size(77, 13);
             this.lbl_p_type.TabIndex = 2;
@@ -314,23 +317,24 @@
             // cb_obj_type
             // 
             this.cb_obj_type.FormattingEnabled = true;
-            this.cb_obj_type.Location = new System.Drawing.Point(176, 63);
+            this.cb_obj_type.Location = new System.Drawing.Point(176, 82);
             this.cb_obj_type.Name = "cb_obj_type";
             this.cb_obj_type.Size = new System.Drawing.Size(162, 21);
             this.cb_obj_type.Sorted = true;
             this.cb_obj_type.TabIndex = 0;
             this.cb_obj_type.Text = "[select]";
+            this.cb_obj_type.SelectedIndexChanged += new System.EventHandler(this.cb_obj_type_SelectedIndexChanged);
             this.cb_obj_type.TextChanged += new System.EventHandler(this.cb_obj_type_TextChanged);
             // 
             // tb_sharp_parameters
             // 
             this.tb_sharp_parameters.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.tb_sharp_parameters.Location = new System.Drawing.Point(10, 19);
+            this.tb_sharp_parameters.Location = new System.Drawing.Point(10, 125);
             this.tb_sharp_parameters.Multiline = true;
             this.tb_sharp_parameters.Name = "tb_sharp_parameters";
             this.tb_sharp_parameters.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.tb_sharp_parameters.Size = new System.Drawing.Size(432, 297);
+            this.tb_sharp_parameters.Size = new System.Drawing.Size(432, 132);
             this.tb_sharp_parameters.TabIndex = 6;
             this.tb_sharp_parameters.WordWrap = false;
             // 
@@ -338,7 +342,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(311, 687);
+            this.label1.Location = new System.Drawing.Point(311, 559);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(10, 13);
             this.label1.TabIndex = 7;
@@ -346,11 +350,11 @@
             // 
             // gb_code_txt
             // 
-            this.gb_code_txt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.gb_code_txt.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.gb_code_txt.Controls.Add(this.tb_sharp_parameters);
-            this.gb_code_txt.Location = new System.Drawing.Point(12, 501);
+            this.gb_code_txt.Location = new System.Drawing.Point(12, 373);
             this.gb_code_txt.Name = "gb_code_txt";
-            this.gb_code_txt.Size = new System.Drawing.Size(452, 326);
+            this.gb_code_txt.Size = new System.Drawing.Size(452, 267);
             this.gb_code_txt.TabIndex = 10;
             this.gb_code_txt.TabStop = false;
             this.gb_code_txt.Text = "code.txt:";
@@ -374,11 +378,11 @@
             // 
             // gb_php_validation_block
             // 
-            this.gb_php_validation_block.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.gb_php_validation_block.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.gb_php_validation_block.Controls.Add(this.tb_php_task_file);
-            this.gb_php_validation_block.Location = new System.Drawing.Point(470, 501);
+            this.gb_php_validation_block.Location = new System.Drawing.Point(470, 373);
             this.gb_php_validation_block.Name = "gb_php_validation_block";
-            this.gb_php_validation_block.Size = new System.Drawing.Size(452, 326);
+            this.gb_php_validation_block.Size = new System.Drawing.Size(452, 267);
             this.gb_php_validation_block.TabIndex = 13;
             this.gb_php_validation_block.TabStop = false;
             this.gb_php_validation_block.Text = "task.php";
@@ -387,18 +391,18 @@
             // 
             this.tb_php_task_file.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.tb_php_task_file.Location = new System.Drawing.Point(9, 19);
+            this.tb_php_task_file.Location = new System.Drawing.Point(9, 125);
             this.tb_php_task_file.Multiline = true;
             this.tb_php_task_file.Name = "tb_php_task_file";
             this.tb_php_task_file.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.tb_php_task_file.Size = new System.Drawing.Size(432, 297);
+            this.tb_php_task_file.Size = new System.Drawing.Size(432, 132);
             this.tb_php_task_file.TabIndex = 7;
             this.tb_php_task_file.WordWrap = false;
             // 
             // cb_preview_task
             // 
             this.cb_preview_task.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.cb_preview_task.Location = new System.Drawing.Point(22, 833);
+            this.cb_preview_task.Location = new System.Drawing.Point(22, 646);
             this.cb_preview_task.Name = "cb_preview_task";
             this.cb_preview_task.Size = new System.Drawing.Size(443, 36);
             this.cb_preview_task.TabIndex = 14;
@@ -472,11 +476,21 @@
             this.lb_cvpb_php.Size = new System.Drawing.Size(432, 108);
             this.lb_cvpb_php.TabIndex = 18;
             // 
+            // cb_InsertCreator
+            // 
+            this.cb_InsertCreator.Location = new System.Drawing.Point(176, 47);
+            this.cb_InsertCreator.Name = "cb_InsertCreator";
+            this.cb_InsertCreator.Size = new System.Drawing.Size(162, 29);
+            this.cb_InsertCreator.TabIndex = 19;
+            this.cb_InsertCreator.Text = "Insert Creator";
+            this.cb_InsertCreator.UseVisualStyleBackColor = true;
+            this.cb_InsertCreator.Click += new System.EventHandler(this.cb_InsertCreator_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(931, 877);
+            this.ClientSize = new System.Drawing.Size(931, 749);
             this.Controls.Add(this.lb_cvpb_php);
             this.Controls.Add(this.lb_cvbs);
             this.Controls.Add(this.gb_task_php);
@@ -550,6 +564,7 @@
         private System.Windows.Forms.TextBox tb_step;
         private System.Windows.Forms.Label lbl_step;
         private System.Windows.Forms.ListBox lb_cvpb_php;
+        private System.Windows.Forms.Button cb_InsertCreator;
     }
 }
 

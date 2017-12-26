@@ -1,0 +1,24 @@
+using System.Windows.Forms;
+using System;
+namespace ns_d_code
+{
+    public class cls_Main
+    {
+        public static string test(Form f, string s_app_fnp, string s_app_ft)
+        {
+            cls_output_controller cls_output_controller = new cls_output_controller();
+            //---------------------------------------------------->
+            //початок коду валідації:
+			TextBox tb1 = (TextBox)cls_output_controller._v_get_obj(f, "textBox1");
+			cls_output_controller._v_parm(tb1.Text, "TextBox.Text", "Привіт");
+
+
+            //кінець коду валідації:
+            //---------------------------------------------------->
+            return(cls_output_controller._final_result());
+        }
+        public static void Main() //main entry point:
+        {  }
+    }
+    //[validator-class-placeholder]
+}

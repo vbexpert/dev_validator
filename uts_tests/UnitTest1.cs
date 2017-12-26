@@ -96,6 +96,27 @@ namespace uts_tests
             string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]
+        public void tm_02_Button_02()
+        {
+            string s_task_id = "02_Button_02";
+            string s_task_exe_ft = "Button_02.exe";
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
+        }
+        [TestMethod]
+        public void tm_03_Label_01()
+        {
+            string s_task_id = "03_Label_01";
+            string s_task_exe_ft = "Label_01.exe";
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
+        }
+        [TestMethod]
+        public void tm_03_Label_02()
+        {
+            string s_task_id = "03_Label_02";
+            string s_task_exe_ft = "Label_02.exe";
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
+        }
+        [TestMethod]
         public void tm_02_test_02_Tech_Showdown()
         {
             string s_task_id = "00_test_02_Tech_Showdown";
