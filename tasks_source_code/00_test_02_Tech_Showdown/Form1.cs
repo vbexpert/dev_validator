@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 namespace WindowsApplication1
@@ -27,16 +28,39 @@ namespace WindowsApplication1
 
         private void _test_validate(Form f)
         {
+           
+
             cls_output_controller cls_output_controller = new cls_output_controller();
             //------------------------------------------------------------------------>
             //початок коду валідації:
             CheckBox chk1 = (CheckBox)_v_get_obj(f, "checkBox1");
             _v_parm(chk1.Checked, "CheckBox.Checked", "true");
+            //https://www.codeproject.com/Articles/34990/Get-Delegate-from-Event-s-Subscription
+            //https://www.codeproject.com/Questions/72040/how-to-get-method-name-of-control-event-handler
+
+            //get all methods:
+
+            //EditorButtonObjectInfoArgs obj = new EditorButtonObjectInfoArgs(button.Properties.Buttons[0], button.Properties.Appearance);
+            //int onButtonClickMethodIndex = 7;
+            //methods[onButtonClickMethodIndex].Invoke(button, new object[] { obj });
+
+
+            //var eventArgs = EventArgs.Empty; //replace with real args
+            //EventInfo miHandler = this.button1.GetType().GetEvent("Click", BindingFlags.FlattenHierarchy | BindingFlags.Instance);
+            //var eventDelegate = (MulticastDelegate)f.GetType().GetField("Click", BindingFlags.Instance | BindingFlags.NonPublic).GetValue(f);
+            //if (eventDelegate != null)
+            //{
+            //    foreach (var handler in eventDelegate.GetInvocationList())
+            //    {
+            //        handler.Method.Invoke(handler.Target, new object[] { this, eventArgs });
+            //    }
+            //}
 
             //string s_today = this.dateTimePicker1. .Text;
             //if (DateTime.Today.ToString() == s_today)
             //{
             //    s_today = "1";
+
             //}
             //else {
             //    s_today = "1";
@@ -52,6 +76,11 @@ namespace WindowsApplication1
         { InitializeComponent(); }
         private void Form1_Load(object sender, EventArgs e)
         { _test_validate(this); }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.textBox1.Text = "function result!";
+        }
     }
     public class cls_output_controller
     {

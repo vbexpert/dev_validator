@@ -20,7 +20,7 @@
             }
             else
             {
-                this._add_validation_failed(s_obj_name + " Not Ok!", 0);
+                this._add_validation_failed(s_obj_name + " Not Ok!" + obj.ToString(), 0);
             }
         }
 		public void _v_parm_norm(object obj, string s_obj_name, string s_controled_value)

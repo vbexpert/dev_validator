@@ -1,5 +1,7 @@
 using System.Windows.Forms;
 using System;
+using System.Threading;
+using System.Reflection;
 namespace ns_d_code
 {
     public class cls_Main
@@ -52,6 +54,29 @@ namespace ns_d_code
 			//textBox1:
 			TextBox tb1 = (TextBox)cls_output_controller._v_get_obj(f, "textBox1");
 			cls_output_controller._v_parm(tb1.Text, "TextBox.Text", "test");
+
+			//perform button click: https://stackoverflow.com/questions/5701666/can-i-click-a-button-programmatically-for-a-predefined-intent
+			//b1.PerformClick(); //(this will set TextBox1 text to "function result!")
+			
+ b1.PerformClick();
+
+ tb1.Refresh();
+
+
+ //b1.SetPressed(True); 
+ //b1.Invalidate(); 
+ //b1.SetPressed(False); 
+ //b1.Invalidate(); 
+
+
+			//force form refresh:
+			//f.Update();
+			//f.Refresh();
+			//Application.DoEvents();
+
+			//validate _new_ text in textbox1:
+			cls_output_controller._v_parm(tb1.Text, "TextBox.Text", "function result!");
+
 
             //кінець коду валідації:
             //---------------------------------------------------->
