@@ -61,11 +61,11 @@
             this.tb_php_task_file = new System.Windows.Forms.TextBox();
             this.cb_preview_task = new System.Windows.Forms.Button();
             this.gb_task_php = new System.Windows.Forms.GroupBox();
+            this.lbl_step = new System.Windows.Forms.Label();
+            this.tb_step = new System.Windows.Forms.TextBox();
+            this.cb_add_step = new System.Windows.Forms.Button();
             this.lb_steps = new System.Windows.Forms.ListBox();
             this.lb_cvbs = new System.Windows.Forms.ListBox();
-            this.cb_add_step = new System.Windows.Forms.Button();
-            this.tb_step = new System.Windows.Forms.TextBox();
-            this.lbl_step = new System.Windows.Forms.Label();
             this.lb_cvpb_php = new System.Windows.Forms.ListBox();
             this.gb_property.SuspendLayout();
             this.gb_code_txt.SuspendLayout();
@@ -291,7 +291,7 @@
             this.cb_master_value.Name = "cb_master_value";
             this.cb_master_value.Size = new System.Drawing.Size(162, 21);
             this.cb_master_value.TabIndex = 4;
-            this.cb_master_value.Text = "100";
+            this.cb_master_value.Text = "400";
             // 
             // cb_property
             // 
@@ -419,6 +419,33 @@
             this.gb_task_php.TabStop = false;
             this.gb_task_php.Text = "task steps:";
             // 
+            // lbl_step
+            // 
+            this.lbl_step.AutoSize = true;
+            this.lbl_step.Location = new System.Drawing.Point(12, 66);
+            this.lbl_step.Name = "lbl_step";
+            this.lbl_step.Size = new System.Drawing.Size(97, 13);
+            this.lbl_step.TabIndex = 18;
+            this.lbl_step.Text = "step (no numbers!):";
+            // 
+            // tb_step
+            // 
+            this.tb_step.Location = new System.Drawing.Point(10, 90);
+            this.tb_step.Name = "tb_step";
+            this.tb_step.Size = new System.Drawing.Size(427, 20);
+            this.tb_step.TabIndex = 17;
+            this.tb_step.Text = "Детальний опис крока - українською!";
+            // 
+            // cb_add_step
+            // 
+            this.cb_add_step.Location = new System.Drawing.Point(9, 247);
+            this.cb_add_step.Name = "cb_add_step";
+            this.cb_add_step.Size = new System.Drawing.Size(430, 30);
+            this.cb_add_step.TabIndex = 0;
+            this.cb_add_step.Text = "Add step";
+            this.cb_add_step.UseVisualStyleBackColor = true;
+            this.cb_add_step.Click += new System.EventHandler(this.cb_add_step_Click);
+            // 
             // lb_steps
             // 
             this.lb_steps.FormattingEnabled = true;
@@ -435,33 +462,6 @@
             this.lb_cvbs.ScrollAlwaysVisible = true;
             this.lb_cvbs.Size = new System.Drawing.Size(432, 108);
             this.lb_cvbs.TabIndex = 17;
-            // 
-            // cb_add_step
-            // 
-            this.cb_add_step.Location = new System.Drawing.Point(9, 247);
-            this.cb_add_step.Name = "cb_add_step";
-            this.cb_add_step.Size = new System.Drawing.Size(430, 30);
-            this.cb_add_step.TabIndex = 0;
-            this.cb_add_step.Text = "Add step";
-            this.cb_add_step.UseVisualStyleBackColor = true;
-            this.cb_add_step.Click += new System.EventHandler(this.cb_add_step_Click);
-            // 
-            // tb_step
-            // 
-            this.tb_step.Location = new System.Drawing.Point(10, 90);
-            this.tb_step.Name = "tb_step";
-            this.tb_step.Size = new System.Drawing.Size(427, 20);
-            this.tb_step.TabIndex = 17;
-            this.tb_step.Text = "Детальний опис крока - українською!";
-            // 
-            // lbl_step
-            // 
-            this.lbl_step.AutoSize = true;
-            this.lbl_step.Location = new System.Drawing.Point(12, 66);
-            this.lbl_step.Name = "lbl_step";
-            this.lbl_step.Size = new System.Drawing.Size(97, 13);
-            this.lbl_step.TabIndex = 18;
-            this.lbl_step.Text = "step (no numbers!):";
             // 
             // lb_cvpb_php
             // 

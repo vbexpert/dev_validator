@@ -29,6 +29,11 @@ include_once("validator_be.php");
          <h2 class=''>Доступні завдання:</h2>
          <hr>
 		 <h3 class=''>Форми WindowsForms:</h2>
+		 
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/00_test_01/task.php">Завдання 0: Тестове</a>
+         </div>		 
+		 
          <div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/01_Form_01/task.php">Завдання 1: Моя перша Пргорама із Windows Forms</a>
          </div>

@@ -16,6 +16,8 @@ namespace TaskCreator
             InitializeComponent();
             Directory.SetCurrentDirectory("..\\..\\..\\");
             _load_frequent_classes();
+            this.cb_obj_type.Text = "Form";
+            this.cb_property.Text = "Width";
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -72,7 +74,7 @@ namespace TaskCreator
             //aggregate properties sharp:
             StringBuilder sb = new StringBuilder();
             foreach (string value in this.lb_cvbs.Items) {
-                sb.Append(value + "\r\n");
+                sb.Append("cls_output_controller." + value + "\r\n");
             }
             cls_Task.s_block_properties_sharp_code = sb.ToString();
 
@@ -141,6 +143,14 @@ namespace TaskCreator
             string s_buf = File.ReadAllText(s_cs_project_fnp);
             s_buf = s_buf.Replace("[template-task]", cls_Task.s_title);
             File.WriteAllText(cls_Task.s_fp + "\\" + cls_Task.s_id + ".csproj", s_buf);
+            File.Delete(s_cs_project_fnp);
+
+            //patch cmd tester:
+            string s_cmd_tester_fnp = cls_Task.s_fp + "\\win_test.bat";
+            s_buf = File.ReadAllText(s_cmd_tester_fnp);
+            s_buf = s_buf.Replace("[task_id]", cls_Task.s_id);
+            s_buf = s_buf.Replace("[task_title]", cls_Task.s_title);
+            File.WriteAllText(s_cmd_tester_fnp, s_buf);
             File.Delete(s_cs_project_fnp);
 
             //write code file:

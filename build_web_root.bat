@@ -21,4 +21,5 @@ call deploy_task.bat 01_Form_04
 call deploy_task.bat 01_Form_05
 call deploy_task.bat 01_Form_06
 call deploy_task.bat 02_Button_01
+call deploy_task.bat 00_test_01
 rem ------------------------------------------------------------------------------->

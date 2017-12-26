@@ -8,36 +8,27 @@ namespace WindowsApplication1
 {
     public partial class Form1 : Form
     {
-        public void _v_obj_exists(object obj, string s_obj_name)
-        {
-            if (null == obj)
-            {
-                Console.WriteLine(1);
-            }
-            else
-            {
-                Console.WriteLine(2);
-            }
-        }
         private void _test_validate(Form f)
         {
-            cls_output_controller cls_output_controller = new cls_output_controller();
             //------------------------------------------------------------------------>
-            this._v_obj_exists(this.BackgroundImage, "asd");
-            Control c = f.Controls.Find("btn_Hello", true)[0];
-            Button btn1 = (Button)c;
+            //testign dynamic object access:
 
-            //початок коду валідації:
-            //cls_output_controller._v_form(f);
-            //cls_output_controller._vp(f.Width, "400");
-            //cls_output_controller._vp(f.Height, "300");
-            //cls_output_controller._vp(f.BackColor.Name,"Red");
-            //cls_output_controller._vnp(f.Text, "Form1");
-            //cls_output_controller._vp(f.Location.X, "200");
-            //cls_output_controller._vp(f.Location.Y, "200");
-            //кінець коду валідації:
+            //this._v_obj_exists(this.BackgroundImage, "asd");
+            //Control c = f.Controls.Find("button1", true)[0];
+            //Button btn1 = (Button)c;
+
+            //working 1-liner:
+            //Button btn1 = (Button)f.Controls.Find("button1", true)[0];
+
+            //workign via lib func:
+            Button btn1 = (Button)this._v_get_obj(this, "button1");
             //------------------------------------------------------------------------>
         }
+        public object _v_get_obj(Form f, string s_obj_name)
+        {
+            return (f.Controls.Find(s_obj_name, true)[0]);
+        }
+
         //-Не чіпайте код нижче:------------------------------------------------------>
         public Form1()
         { InitializeComponent(); }
@@ -46,60 +37,7 @@ namespace WindowsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-    }
-    public class cls_output_controller
-    {
-        public string s_output_buffer = "";
-        public int i_total_score = 0;
-        public void _v_form(object obj)
-        {
-            if (obj is Form)
-            {
-                this._add_validation_ok("Form is Ok!", 20);
-            }
-            else
-            {
-                this._add_validation_failed("Form is Not Ok!", 0);
-            }
-        }
-        public void _vp(object obj, string s_controled_value)
-        {
-            if (obj.ToString() == s_controled_value)
-            {
-                this._add_validation_ok(obj.ToString() + " Ok!", 20);
-            }
-            else
-            {
-                this._add_validation_failed(obj.ToString() + " Not Ok!", 0);
-            }
-        }
-        public void _vnp(object obj, string s_controled_value)
-        {
-            if (obj.ToString() != s_controled_value)
-            {
-                this._add_validation_ok(obj.ToString() + " Ok!", 20);
-            }
-            else
-            {
-                this._add_validation_failed(obj.ToString() + " Not Ok!", 0);
-            }
-        }
-        public void _add_validation_ok(string s_value, int i_i_score)
-        {
-            i_total_score += i_i_score;
-            s_output_buffer += "<div class='c_correct'>+ " + s_value + " +" + i_i_score + " балів!</div><br>\r\n";
-        }
-        public void _add_validation_failed(string s_value, int i_i_score)
-        {
-            i_total_score += i_i_score;
-            //s_output_buffer += "<div class='c_wrong'>- " + s_value + " " + i_i_score + "</div><br>\r\n";
-            s_output_buffer += "<div class='c_wrong'>- " + s_value + "</div><br>\r\n";
-        }
-        public string _final_result()
-        {
-            return this.s_output_buffer += "<div class='c_correct'>Всього: " + i_total_score + "</div><br>\r\n";
+            DialogResult result = MessageBox.Show("test", "caption", MessageBoxButtons.YesNo);
         }
     }
 }
