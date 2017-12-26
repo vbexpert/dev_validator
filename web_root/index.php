@@ -35,7 +35,7 @@ include_once("validator_be.php");
          </div>		 
 		 
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/01_Form_01/task.php">Завдання 1: Моя перша Пргорама із Windows Forms</a>
+           <a href="/validator/tasks/01_Form_01/task.php">Завдання 1: Моя перша Програма із Windows Forms</a>
          </div>
          <div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/01_Form_02/task.php">Завдання 2: Програма із прозорою формою</a>
@@ -73,6 +73,27 @@ include_once("validator_be.php");
            <a href="/validator/tasks/02_Button_05/task.php">Завдання 5</a>
          </div>
 		 <!-- task Controls Button info block end --------------------------------------------------------------------------------->
+		 
+		 <!-- task Controls Label info block start --------------------------------------------------------------------------------->
+		 <hr>
+		 <h3 class=''>Елементи керування Controls Label:</h2>
+		  <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/03_Label_01/task.php">Завдання 1. Наявність напису</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/03_Label_02/task.php">Завдання 2. Напис з текстом</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/03_Label_03/task.php">Завдання 3</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/03_Label_04/task.php">Завдання 4</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/03_Label_05/task.php">Завдання 5</a>
+         </div>
+		 <!-- task Controls Label info block end --------------------------------------------------------------------------------->
+
 
 		 <!-- task Controls Label info block start --------------------------------------------------------------------------------->
 		 <hr>
