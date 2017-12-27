@@ -50,7 +50,15 @@ namespace ns_d_code
 			//progressBar1:
 			ProgressBar pb1 = (ProgressBar)cls_output_controller._v_get_obj(f, "progressBar1");
 			cls_output_controller._v_parm(pb1.Value, "ProgressBar.Value", "30");
+			
+			//
+			TextBox tb1 = (TextBox)cls_output_controller._v_get_obj(f, "textBox1");
+			cls_output_controller._v_parm(tb1.Text, "TextBox.Text", "test");
+			//
 
+			string s_input = "111";
+			tb1.Text = s_input;
+			 
 			//---------------------------------------------------->
 			//<-- bingo start -->
 			//prepare clickMethodInfo:
@@ -60,8 +68,16 @@ namespace ns_d_code
 
 			//validate if text changed:
 			//use accessor if required:
-			TextBox tb1 = (TextBox)cls_output_controller._v_get_obj(f, "textBox1");
-			cls_output_controller._v_parm(tb1.Text, "TextBox.Text", "function result!");
+			//TextBox tb1 = (TextBox)cls_output_controller._v_get_obj(f, "textBox1");
+			
+			//cls_output_controller._v_parm(f.Text, "Form.Text", s_test);
+			
+			int a = Int32.Parse(s_input);
+            a = a * 2;        
+			
+			cls_output_controller._v_parm(tb1.Text, "TextBox.Text", a.ToString());
+
+			
 			//<-- bingo end -->
 			//---------------------------------------------------->
 
