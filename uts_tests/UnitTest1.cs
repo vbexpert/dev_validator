@@ -123,6 +123,7 @@ namespace uts_tests
             string s_task_exe_ft = "TestTask_02.exe";
             string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
+		//[unit-test-insertion-point]
         private string _validate_task(string s_task_id, string s_task_exe_ft) {
             //move validator exe to temp:
             string s_task_exe_fnp = s_tasks_fp + "\\" + s_task_id + "\\bin\\Debug\\" + s_task_exe_ft;
