@@ -9,7 +9,7 @@
             }
             else
             {
-                this._add_validation_failed("Form is Not Ok!", 0);
+                this._add_validation_failed("Form is Not Ok: " + obj.ToString(), 0);
             }
         }
 		
@@ -20,7 +20,7 @@
             }
             else
             {
-                this._add_validation_failed(s_obj_name + " Not Ok!" + obj.ToString(), 0);
+                this._add_validation_failed(s_obj_name + " not Ok: " + obj.ToString(), 0);
             }
         }
 		public void _v_parm_norm(object obj, string s_obj_name, string s_controled_value)
@@ -30,13 +30,13 @@
             }
             else
             {
-                this._add_validation_failed(s_obj_name + " Not Ok!", 0);
+                this._add_validation_failed(s_obj_name + " not Ok: : " + obj.ToString(), 0);
             }
         }
         public void _v_obj_exists(object obj, string s_obj_name)
         {
             if(null == obj){
-                this._add_validation_failed(s_obj_name + " Not Ok!", 0);
+                this._add_validation_failed(s_obj_name + " Not Ok: " + obj.ToString(), 0);
             }
             else
             {
@@ -50,7 +50,7 @@
             }
             else
             {
-                this._add_validation_failed(s_obj_name + " Not Ok!", 0);
+                this._add_validation_failed(s_obj_name + " Not Ok: " + obj.ToString(), 0);
             }
         }
         public object _v_get_obj(Form f, string s_obj_name)
