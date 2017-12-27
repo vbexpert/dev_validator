@@ -124,6 +124,16 @@ static class mod_main
             {
                 //05. создание инстанса формы:
                 f = (Form)Activator.CreateInstance(AllTypesInProjects[i]);
+
+                //adjust linux f width and height:
+
+                //792:388 for original 800:400 deltas 8:12 
+
+                f.AutoScaleMode = AutoScaleMode.None;
+
+                f.Width = f.Width + 8;
+                f.Height = f.Height + 12;
+                //
                 goto _form_detected;
             }
         }

@@ -13,13 +13,15 @@ namespace WindowsApplication1
             cls_output_controller cls_output_controller = new cls_output_controller();
             //------------------------------------------------------------------------>
             //початок коду валідації:
-            cls_output_controller._v_form(f);
-            cls_output_controller._vp(f.Width, "400");
-            cls_output_controller._vp(f.Height, "300");
-            cls_output_controller._vp(f.BackColor.Name,"Red");
-            cls_output_controller._vnp(f.Text, "Form1");
-            cls_output_controller._vp(f.Location.X, "200");
-            cls_output_controller._vp(f.Location.Y, "200");
+            f.Text = f.Width.ToString() + ":" + f.Height.ToString();
+
+            //cls_output_controller._v_form(f);
+            //cls_output_controller._vp(f.Width, "400");
+            //cls_output_controller._vp(f.Height, "300");
+            //cls_output_controller._vp(f.BackColor.Name,"Red");
+            //cls_output_controller._vnp(f.Text, "Form1");
+            //cls_output_controller._vp(f.Location.X, "200");
+            //cls_output_controller._vp(f.Location.Y, "200");
             //кінець коду валідації:
             //------------------------------------------------------------------------>
         }
