@@ -213,19 +213,6 @@ namespace TaskCreator
             }
         }
 
-        private void cb_InsertCreator_Click(object sender, EventArgs e)
-        {
-            //cb_obj_type
-            //lb_cvbs
-            //[TextBox tb1 = (TextBox)cls_output_controller._v_get_obj(f, "textBox1");]
-            string s_inst_name = this.tb_obj_code_name.Text; //FirstCharToLower(this.cb_obj_type.Text + "1");
-            this.lb_cvbs.Items.Add(this.cb_obj_type.Text+" "+ this.tb_obj_code_name.Text + " = (" + this.cb_obj_type.Text + ")cls_output_controller._v_get_obj(f, \"" + s_inst_name + "\");");
-            //add to tast.php
-            string s_obj_type = this.cb_obj_type.Text;
-            string s_php_vb_line = "$cls_Task->_add_property(\"<span class="+@"\"+ "\"btn btn-success"+@"\"+"\"> Додати об'єкт </span>" + "\", \"" + "<h5>" + s_obj_type + "</h5>" + "\", \""  + "\");";
-            this.lb_cvpb_php.Items.Add(s_php_vb_line);
-        }
-
         public static string FirstCharToLower(string input)
         {
             switch (input)
@@ -244,6 +231,19 @@ namespace TaskCreator
         private void cb_validation_method_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cb_InsertCreator_Click(object sender, EventArgs e)
+        {
+            //cb_obj_type
+            //lb_cvbs
+            //[TextBox tb1 = (TextBox)cls_output_controller._v_get_obj(f, "textBox1");]
+            string s_inst_name = this.tb_obj_code_name.Text; //FirstCharToLower(this.cb_obj_type.Text + "1");
+            this.lb_cvbs.Items.Add(this.cb_obj_type.Text + " " + this.tb_obj_code_name.Text + " = (" + this.cb_obj_type.Text + ")cls_output_controller._v_get_obj(f, \"" + s_inst_name + "\");");
+            //add to tast.php
+            string s_obj_type = this.cb_obj_type.Text;
+            string s_php_vb_line = "$cls_Task->_add_property(\"<span class=" + @"\" + "\"btn btn-success" + @"\" + "\"> Додати об'єкт </span>" + "\", \"" + "<h5>" + s_obj_type + "</h5>" + "\", \"" + "\");";
+            this.lb_cvpb_php.Items.Add(s_php_vb_line);
         }
     }
 }
