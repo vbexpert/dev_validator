@@ -124,16 +124,12 @@ static class mod_main
             {
                 //05. создание инстанса формы:
                 f = (Form)Activator.CreateInstance(AllTypesInProjects[i]);
-
-                //adjust linux f width and height:
-
-                //792:388 for original 800:400 deltas 8:12 
-
-                f.AutoScaleMode = AutoScaleMode.None;
-
-                f.Width = f.Width + 8;
-                f.Height = f.Height + 12;
                 //
+                if (_is_mono()) { //adjust Form deltas for Linux:
+                    //adjusts:
+                    f.Width = f.Width + 8;
+                    f.Height = f.Height + 12;
+                }
                 goto _form_detected;
             }
         }
@@ -153,5 +149,11 @@ static class mod_main
     public static void _cl(string s_msg)
     {
         Console.WriteLine(s_msg);
+    }
+    private static bool _is_mono()
+    {
+        Type t = Type.GetType("Mono.Runtime");
+        if (null != t) return true;
+        return false;
     }
 }

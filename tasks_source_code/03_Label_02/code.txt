@@ -10,6 +10,7 @@ namespace ns_d_code
             //---------------------------------------------------->
             //початок коду валідації:
 			
+			cls_output_controller._v_parm(f.AutoScaleMode,	"Form.AutoScaleMode",	"None");
 
 			Label label1 = (Label)cls_output_controller._v_get_obj(f, "label1");
 			cls_output_controller._v_parm(label1.Text, "Label.Text", "Привіт!");
