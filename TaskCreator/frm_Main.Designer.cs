@@ -535,7 +535,7 @@
             this.MinimumSize = new System.Drawing.Size(949, 650);
             this.Name = "frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Task Creator v. 02";
+            this.Text = "Task Creator v. 03";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.gb_php_validation_block.ResumeLayout(false);
             this.gb_php_validation_block.PerformLayout();
