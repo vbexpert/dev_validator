@@ -17,13 +17,20 @@ include_once("validator_be.php");
  <body>
    <div class="container">
      <div class="starter-template">
-        <!-- header info block start: -------------------------------------------------------------------------------->
+       <div class="jumbotron task_jumbotron_height_fix">
+	   
+       <!-- menu stat: -->
+	    <?php
+            include_once("nav_menu.php");
+        ?>
+       <!-- menu end: -->
+	   
+       <!-- header info block start: -------------------------------------------------------------------------------->
 		<?php
 			include_once("header.php");
 		?>
        <!-- header info block end: -------------------------------------------------------------------------------->
-	
-       <div class="jumbotron">
+	   
 	   
 		 <!-- task Winforms info block start --------------------------------------------------------------------------------->
          <h2 class=''>Доступні завдання:</h2>
@@ -134,9 +141,28 @@ include_once("validator_be.php");
          <div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/50_Click_01/task.php">Завдання 5</a>
          </div>
-		 
          <!-- task Events info block end --------------------------------------------------------------------------------->
 
+		 <!-- task 2D Graphics block start --------------------------------------------------------------------------------->
+         <hr>
+		 <h3 class=''>Події Events Click:</h2>
+		  <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/06_2d_graphics_01/task.php">Завдання 1: Моя перша лінія!</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/50_Click_01/task.php">Завдання 2</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/50_Click_01/task.php">Завдання 3</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/50_Click_01/task.php">Завдання 4</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/50_Click_01/task.php">Завдання 5</a>
+         </div>
+         <!-- task Events info block end --------------------------------------------------------------------------------->
+		 
 		 
 		</div>
 		

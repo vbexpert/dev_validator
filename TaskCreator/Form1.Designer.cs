@@ -147,6 +147,7 @@
             this.cb_create_task.TabIndex = 8;
             this.cb_create_task.Text = "Create Task";
             this.cb_create_task.UseVisualStyleBackColor = true;
+            this.cb_create_task.Click += new System.EventHandler(this.cb_create_task_Click_1);
             // 
             // lb_cvpb_php
             // 
@@ -189,6 +190,7 @@
             this.lb_cvbs.ScrollAlwaysVisible = true;
             this.lb_cvbs.Size = new System.Drawing.Size(432, 108);
             this.lb_cvbs.TabIndex = 17;
+            this.lb_cvbs.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lb_cvbs_KeyDown);
             // 
             // tb_sharp_parameters
             // 
@@ -211,6 +213,7 @@
             this.cb_preview_task.TabIndex = 18;
             this.cb_preview_task.Text = "Preview Task";
             this.cb_preview_task.UseVisualStyleBackColor = true;
+            this.cb_preview_task.Click += new System.EventHandler(this.cb_preview_task_Click_1);
             // 
             // gb_code_txt
             // 
@@ -283,7 +286,6 @@
             this.cb_obj_type.Sorted = true;
             this.cb_obj_type.TabIndex = 0;
             this.cb_obj_type.Text = "[select]";
-            this.cb_obj_type.SelectedIndexChanged += new System.EventHandler(this.cb_obj_type_SelectedIndexChanged);
             this.cb_obj_type.TextChanged += new System.EventHandler(this.cb_obj_type_TextChanged);
             // 
             // lbl_p_type
@@ -353,7 +355,6 @@
             this.cb_validation_method.Name = "cb_validation_method";
             this.cb_validation_method.Size = new System.Drawing.Size(326, 21);
             this.cb_validation_method.TabIndex = 8;
-            this.cb_validation_method.SelectedIndexChanged += new System.EventHandler(this.cb_validation_method_SelectedIndexChanged);
             // 
             // lbl_validation_method
             // 

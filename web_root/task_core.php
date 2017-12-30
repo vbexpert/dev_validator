@@ -13,6 +13,15 @@ class cls_Task{
 	$cls_NewP->s_name = $s_p_name;
 	$cls_NewP->s_title = $s_p_title;
 	$cls_NewP->s_master_value = $s_p_master_value;
+	$cls_NewP->s_type = "";	
+	array_push($this->oa_properties, $cls_NewP);
+  }
+  function _add_code($s_instruction, $s_code){
+    $cls_NewP = new cls_Property();
+	$cls_NewP->s_name = $s_instruction;
+	$cls_NewP->s_title = "<pre><code class='csharp'>" . $s_code . "</code></pre>";
+	$cls_NewP->s_master_value = "";
+	$cls_NewP->s_type = "code";	
 	array_push($this->oa_properties, $cls_NewP);
   }
   function _add_step($s_step_desc){
@@ -23,5 +32,11 @@ class cls_Property{
   public $s_name = "";
   public $s_title = "";
   public $s_master_value = "";
+  public $b_status = "false";
+  public $s_type = "";
+  //syntax:
+  //empty  = property (3 args)
+  //code   = C# code  (2 args = instruction + code)
+  //can be extended!
 }
 ?>

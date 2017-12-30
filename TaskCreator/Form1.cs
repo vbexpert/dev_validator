@@ -223,16 +223,6 @@ namespace TaskCreator
             }
         }
 
-        private void cb_obj_type_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cb_validation_method_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void cb_InsertCreator_Click(object sender, EventArgs e)
         {
             //cb_obj_type
@@ -244,6 +234,24 @@ namespace TaskCreator
             string s_obj_type = this.cb_obj_type.Text;
             string s_php_vb_line = "$cls_Task->_add_property(\"<span class=" + @"\" + "\"btn btn-success" + @"\" + "\"> Додати об'єкт </span>" + "\", \"" + "<h5>" + s_obj_type + "</h5>" + "\", \"" + "\");";
             this.lb_cvpb_php.Items.Add(s_php_vb_line);
+        }
+
+        private void cb_preview_task_Click_1(object sender, EventArgs e)
+        {
+            _task_preview();
+        }
+        private void cb_create_task_Click_1(object sender, EventArgs e)
+        {
+            _task_create();
+        }
+        private void lb_cvbs_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                int i_selected = this.lb_cvbs.SelectedIndex;
+                this.lb_cvbs.Items.RemoveAt(i_selected);
+                this.lb_cvpb_php.Items.RemoveAt(i_selected);
+            }
         }
     }
 }

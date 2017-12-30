@@ -19,20 +19,21 @@ header("Pragma: no-cache");
 <body>
 
   <div class="container">
-  
-    <!-- menu stat: -->
-	<?php
-      include_once("../../nav_menu.php");
-    ?>
-    <!-- menu end: -->
-	
     <div class="starter-template">
+
     <!-- header info block start: -------------------------------------------------------------------------------->
     <!-- header info block end: ---------------------------------------------------------------------------------->
     <div class="jumbotron task_jumbotron_height_fix">
       <!-- task info block start --------------------------------------------------------------------------------->
       <!-- <h2 class=''><a href = "../../index.php">Назад до Індексу Завдань</a></h2> 
       <hr> -->
+	  
+    <!-- menu stat: -->
+	<?php
+      include_once("../../nav_menu.php");
+    ?>
+    <!-- menu end: -->
+	  
       <h1 class="">Завдання '<?php echo($cls_Task->s_title); ?>':</h1>
       <h3 class=""><?php echo($cls_Task->s_description); ?></h3>
       <hr>
@@ -59,7 +60,14 @@ header("Pragma: no-cache");
 			  echo("<td>".$cls_property->s_name."</td>");
 			  echo("<td>".$cls_property->s_title."</td>");
 			  echo("<td>".$cls_property->s_master_value."</td>");
-			  echo("<td><input type='checkbox' class='form-check-input'></td>");
+			  switch ($cls_property->s_type) {
+				case "":
+					echo("<td><input type='checkbox' class='form-check-input big-checkbox'></td>");
+					break;
+				case "code":
+					echo("<td></td>");
+					break;
+			  }
 			echo("</tr>");
           }
 		  ?>
@@ -98,10 +106,14 @@ header("Pragma: no-cache");
 		</div>
       </div>
     </div>
+	
     <script>
 	$('#fileToUpload').change(function(){ 
 		$('#upload_file').submit();
 	});
+	<!-- Initialize highlight -->
+	hljs.initHighlightingOnLoad();
 	</script>
+	
   </body>
 </html>

@@ -10,11 +10,6 @@
 .c-dropdown {
     margin-top: 10px;
 }
-.h1_main {
-    padding: 0px;
-    text-align: center;
-    font-size: 45px;
-}
 .lead-top-fix {
     padding-top: 0px;
 }
@@ -74,4 +69,22 @@
 .back_to_task{
 	padding:5px;
 	padding-top:10px;
+}
+.navbar-nav{
+	font-size:20px;
+}
+.note{
+	font-size:25px;
+}
+.big-checkbox {
+	width: 30px; 
+	height: 30px;
+}
+.h1_main {
+    padding: 0px;
+    text-align: center;
+    font-size: 40px !important;
+}
+.h1{
+    font-size: 40px !important;
 }

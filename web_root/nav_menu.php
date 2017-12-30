@@ -1,16 +1,23 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <!-- <a class="navbar-brand" href="#">Dev-Validator:</a> -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Головна</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/validator/index.php">Всі завдання</a>
-      </li>
-    </ul>
+<div class="navbar navbar-default " role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Відкрити навігатор</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">С# Валідатор</a>
+    </div>
+	
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Головна</a>
+        </li>
+        <li><a href="/validator/index.php">Всі завдання</a>
+        </li>
+      </ul>
+    </div>
+
   </div>
-</nav>
+</div>
