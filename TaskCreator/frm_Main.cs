@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -8,16 +9,17 @@ using System.Text;
 using System.Windows.Forms;
 namespace TaskCreator
 {
-    public partial class Form1 : Form
+    public partial class frm_Main : Form
     {
         cls_Task cls_Task = new cls_Task();
-        public Form1()
+        public frm_Main()
         {
             InitializeComponent();
             Directory.SetCurrentDirectory("..\\..\\..\\");
             _load_frequent_classes();
             this.cb_obj_type.Text = "Form";
             this.cb_property.Text = "Width";
+            _add_standard_steps();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -34,7 +36,7 @@ namespace TaskCreator
             s_property = s_property.Replace("s_obj_name", _en(this.cb_p_desc_ENG.Text));
             s_property = s_property.Replace("[obj]",this.tb_obj_code_name.Text + "." + this.cb_property.Text);
             //
-            this.tb_combined_v_line.Text = s_property;
+            //this.tb_combined_v_line.Text = s_property;
             this.lb_cvbs.Items.Add(s_property);
 
             string s_php_vb_line = "$cls_Task->_add_property(\""+ this.cb_obj_type.Text + "\", \"" + this.cb_p_desc_UA.Text + "\", \""  + this.cb_master_value.Text + "\");";
@@ -223,7 +225,7 @@ namespace TaskCreator
             }
         }
 
-        private void cb_InsertCreator_Click(object sender, EventArgs e)
+        private void cb_obj_accessor_Click(object sender, EventArgs e)
         {
             //cb_obj_type
             //lb_cvbs
@@ -232,7 +234,7 @@ namespace TaskCreator
             this.lb_cvbs.Items.Add(this.cb_obj_type.Text + " " + this.tb_obj_code_name.Text + " = (" + this.cb_obj_type.Text + ")cls_output_controller._v_get_obj(f, \"" + s_inst_name + "\");");
             //add to tast.php
             string s_obj_type = this.cb_obj_type.Text;
-            string s_php_vb_line = "$cls_Task->_add_property(\"<span class=" + @"\" + "\"btn btn-success" + @"\" + "\"> Додати об'єкт </span>" + "\", \"" + "<h5>" + s_obj_type + "</h5>" + "\", \"" + "\");";
+            string s_php_vb_line = "$cls_Task->_add_object_creator(\"Додати об'єкт: " + s_obj_type + "\");";
             this.lb_cvpb_php.Items.Add(s_php_vb_line);
         }
 
@@ -244,6 +246,7 @@ namespace TaskCreator
         {
             _task_create();
         }
+        //drag-and-drop start:
         private void lb_cvbs_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Delete)
@@ -251,6 +254,81 @@ namespace TaskCreator
                 int i_selected = this.lb_cvbs.SelectedIndex;
                 this.lb_cvbs.Items.RemoveAt(i_selected);
                 this.lb_cvpb_php.Items.RemoveAt(i_selected);
+            }
+            if (e.KeyCode == Keys.F4)
+            {
+
+                frm_PEditor frm_PEditor1 = new frm_PEditor();
+                frm_PEditor1.Show();
+                frm_PEditor1.lb = lb_cvbs;
+                frm_PEditor1.i_p_idx = lb_cvbs.SelectedIndex;
+                frm_PEditor1.tb_property.Text = lb_cvbs.SelectedItem.ToString();
+            }
+        }
+        private void lb_cvbs_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (this.lb_cvbs.SelectedItem == null) return;
+            this.lb_cvbs.DoDragDrop(this.lb_cvbs.SelectedItem, DragDropEffects.Move);
+        }
+        private void lb_cvbs_DragOver(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Move;
+        }
+        private void lb_cvbs_DragDrop(object sender, DragEventArgs e)
+        {
+            System.Drawing.Point point = lb_cvbs.PointToClient(new Point(e.X, e.Y));
+            int index = this.lb_cvbs.IndexFromPoint(point);
+            if (index < 0) index = this.lb_cvbs.Items.Count - 1;
+            object data = e.Data.GetData(typeof(string));
+            this.lb_cvbs.Items.Remove(data);
+            this.lb_cvbs.Items.Insert(index, data);
+        }
+        private void cb_add_standard_steps_Click(object sender, EventArgs e)
+        {
+            _add_standard_steps();
+        }
+        //drag-and-drop end:
+        private void _add_standard_steps()
+        {
+            lb_steps.Items.Add("Створити форму відповідно специфікації.");
+            lb_steps.Items.Add("Завантажити програму у DEV-VALIDATOR.");
+            lb_steps.Items.Add("Добитися повної валідації програми.");
+            lb_steps.Items.Add("Зберегти скріншот [Alt+PrintScreen] результатів у папку Production.");
+            lb_steps.Items.Add("Зберегти програму у папку Production.");
+
+            this.lb_cvbs.Items.Add("_v_parm(f.AutoScaleMode, \"Form.AutoScaleMode\", \"None\"));");
+            this.lb_cvpb_php.Items.Add("$cls_Task->_add_property(\"Form.AutoScaleMode\", \"Режим перерахунку форми\", \"None\");");
+        }
+
+        private void lb_steps_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                int i_selected = this.lb_steps.SelectedIndex;
+                this.lb_steps.Items.RemoveAt(i_selected);
+            }
+            if (e.KeyCode == Keys.F4)
+            {
+                frm_PEditor frm_PEditor1 = new frm_PEditor();
+                frm_PEditor1.Show();
+                frm_PEditor1.lb = lb_steps;
+                frm_PEditor1.i_p_idx = lb_steps.SelectedIndex;
+                frm_PEditor1.tb_property.Text = lb_steps.SelectedItem.ToString();
+            }
+        }
+        private void cb_insert_image_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void lb_cvpb_php_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F4)
+            {
+                frm_PEditor frm_PEditor1 = new frm_PEditor();
+                frm_PEditor1.Show();
+                frm_PEditor1.lb = lb_cvpb_php;
+                frm_PEditor1.i_p_idx = lb_cvpb_php.SelectedIndex;
+                frm_PEditor1.tb_property.Text = lb_cvpb_php.SelectedItem.ToString();
             }
         }
     }

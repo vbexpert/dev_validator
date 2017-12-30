@@ -64,6 +64,9 @@ header("Pragma: no-cache");
 				case "":
 					echo("<td><input type='checkbox' class='form-check-input big-checkbox'></td>");
 					break;
+				case "obj_creator":
+					echo("<td></td>");
+					break;					
 				case "code":
 					echo("<td></td>");
 					break;

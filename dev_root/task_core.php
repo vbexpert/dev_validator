@@ -16,6 +16,14 @@ class cls_Task{
 	$cls_NewP->s_type = "";	
 	array_push($this->oa_properties, $cls_NewP);
   }
+  function _add_object_creator($s_instruction){
+    $cls_NewP = new cls_Property();
+	$cls_NewP->s_name = $s_instruction;
+	$cls_NewP->s_title = "<div class='obj_creator'>$s_instruction</div>";
+	$cls_NewP->s_master_value = "";
+	$cls_NewP->s_type = "obj_creator";	
+	array_push($this->oa_properties, $cls_NewP);
+  }
   function _add_code($s_instruction, $s_code){
     $cls_NewP = new cls_Property();
 	$cls_NewP->s_name = $s_instruction;
