@@ -35,7 +35,7 @@
             // 
             // cb_save
             // 
-            this.cb_save.Location = new System.Drawing.Point(183, 43);
+            this.cb_save.Location = new System.Drawing.Point(184, 429);
             this.cb_save.Name = "cb_save";
             this.cb_save.Size = new System.Drawing.Size(170, 31);
             this.cb_save.TabIndex = 0;
@@ -46,15 +46,16 @@
             // tb_property
             // 
             this.tb_property.Location = new System.Drawing.Point(12, 12);
+            this.tb_property.Multiline = true;
             this.tb_property.Name = "tb_property";
-            this.tb_property.Size = new System.Drawing.Size(515, 20);
+            this.tb_property.Size = new System.Drawing.Size(515, 411);
             this.tb_property.TabIndex = 1;
             // 
             // frm_PEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 86);
+            this.ClientSize = new System.Drawing.Size(539, 472);
             this.Controls.Add(this.tb_property);
             this.Controls.Add(this.cb_save);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

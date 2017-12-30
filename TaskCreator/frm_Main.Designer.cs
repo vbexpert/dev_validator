@@ -61,15 +61,18 @@
             this.cb_add_pvb = new System.Windows.Forms.Button();
             this.cb_p_desc_ENG = new System.Windows.Forms.ComboBox();
             this.lbl_p_desc_ENG = new System.Windows.Forms.Label();
-            this.tb_obj_code_name = new System.Windows.Forms.TextBox();
+            this.tb_obj_instance = new System.Windows.Forms.TextBox();
             this.lbl_v_object = new System.Windows.Forms.Label();
             this.cb_p_desc_UA = new System.Windows.Forms.ComboBox();
             this.lbl_p_desc_UA = new System.Windows.Forms.Label();
             this.gb_property = new System.Windows.Forms.GroupBox();
+            this.cb_obj_events = new System.Windows.Forms.ComboBox();
+            this.cb_code = new System.Windows.Forms.Button();
             this.cb_insert_image = new System.Windows.Forms.Button();
             this.cb_insert_obj_event = new System.Windows.Forms.Button();
             this.cb_insert_obj_accessor = new System.Windows.Forms.Button();
-            this.cb_code = new System.Windows.Forms.Button();
+            this.tb_image = new System.Windows.Forms.TextBox();
+            this.tb_code = new System.Windows.Forms.TextBox();
             this.gb_php_validation_block.SuspendLayout();
             this.gb_code_txt.SuspendLayout();
             this.gb_task_php.SuspendLayout();
@@ -414,14 +417,14 @@
             this.lbl_p_desc_ENG.TabIndex = 12;
             this.lbl_p_desc_ENG.Text = "- property desc. ENG";
             // 
-            // tb_obj_code_name
+            // tb_obj_instance
             // 
-            this.tb_obj_code_name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.tb_obj_code_name.Location = new System.Drawing.Point(109, 60);
-            this.tb_obj_code_name.Name = "tb_obj_code_name";
-            this.tb_obj_code_name.Size = new System.Drawing.Size(88, 20);
-            this.tb_obj_code_name.TabIndex = 13;
-            this.tb_obj_code_name.Text = "f";
+            this.tb_obj_instance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.tb_obj_instance.Location = new System.Drawing.Point(109, 60);
+            this.tb_obj_instance.Name = "tb_obj_instance";
+            this.tb_obj_instance.Size = new System.Drawing.Size(88, 20);
+            this.tb_obj_instance.TabIndex = 13;
+            this.tb_obj_instance.Text = "f";
             // 
             // lbl_v_object
             // 
@@ -452,6 +455,9 @@
             // 
             // gb_property
             // 
+            this.gb_property.Controls.Add(this.tb_code);
+            this.gb_property.Controls.Add(this.tb_image);
+            this.gb_property.Controls.Add(this.cb_obj_events);
             this.gb_property.Controls.Add(this.cb_code);
             this.gb_property.Controls.Add(this.cb_insert_image);
             this.gb_property.Controls.Add(this.cb_insert_obj_event);
@@ -459,7 +465,7 @@
             this.gb_property.Controls.Add(this.lbl_p_desc_UA);
             this.gb_property.Controls.Add(this.cb_p_desc_UA);
             this.gb_property.Controls.Add(this.lbl_v_object);
-            this.gb_property.Controls.Add(this.tb_obj_code_name);
+            this.gb_property.Controls.Add(this.tb_obj_instance);
             this.gb_property.Controls.Add(this.lbl_p_desc_ENG);
             this.gb_property.Controls.Add(this.cb_p_desc_ENG);
             this.gb_property.Controls.Add(this.cb_add_pvb);
@@ -478,6 +484,26 @@
             this.gb_property.TabStop = false;
             this.gb_property.Text = "+ image line";
             // 
+            // cb_obj_events
+            // 
+            this.cb_obj_events.FormattingEnabled = true;
+            this.cb_obj_events.Location = new System.Drawing.Point(12, 163);
+            this.cb_obj_events.Name = "cb_obj_events";
+            this.cb_obj_events.Size = new System.Drawing.Size(192, 21);
+            this.cb_obj_events.Sorted = true;
+            this.cb_obj_events.TabIndex = 23;
+            this.cb_obj_events.Text = "[will autopop]";
+            // 
+            // cb_code
+            // 
+            this.cb_code.Location = new System.Drawing.Point(210, 213);
+            this.cb_code.Name = "cb_code";
+            this.cb_code.Size = new System.Drawing.Size(128, 25);
+            this.cb_code.TabIndex = 22;
+            this.cb_code.Text = "+ highlighted code";
+            this.cb_code.UseVisualStyleBackColor = true;
+            this.cb_code.Click += new System.EventHandler(this.cb_code_Click);
+            // 
             // cb_insert_image
             // 
             this.cb_insert_image.Location = new System.Drawing.Point(210, 187);
@@ -494,8 +520,9 @@
             this.cb_insert_obj_event.Name = "cb_insert_obj_event";
             this.cb_insert_obj_event.Size = new System.Drawing.Size(128, 25);
             this.cb_insert_obj_event.TabIndex = 20;
-            this.cb_insert_obj_event.Text = "+ obj. event";
+            this.cb_insert_obj_event.Text = "+ obj. event caller";
             this.cb_insert_obj_event.UseVisualStyleBackColor = true;
+            this.cb_insert_obj_event.Click += new System.EventHandler(this.cb_insert_obj_event_Click);
             // 
             // cb_insert_obj_accessor
             // 
@@ -507,14 +534,20 @@
             this.cb_insert_obj_accessor.UseVisualStyleBackColor = true;
             this.cb_insert_obj_accessor.Click += new System.EventHandler(this.cb_obj_accessor_Click);
             // 
-            // cb_code
+            // tb_image
             // 
-            this.cb_code.Location = new System.Drawing.Point(210, 213);
-            this.cb_code.Name = "cb_code";
-            this.cb_code.Size = new System.Drawing.Size(128, 25);
-            this.cb_code.TabIndex = 22;
-            this.cb_code.Text = "+ highlighted code";
-            this.cb_code.UseVisualStyleBackColor = true;
+            this.tb_image.Location = new System.Drawing.Point(12, 190);
+            this.tb_image.Name = "tb_image";
+            this.tb_image.Size = new System.Drawing.Size(192, 20);
+            this.tb_image.TabIndex = 24;
+            // 
+            // tb_code
+            // 
+            this.tb_code.Location = new System.Drawing.Point(12, 216);
+            this.tb_code.Multiline = true;
+            this.tb_code.Name = "tb_code";
+            this.tb_code.Size = new System.Drawing.Size(192, 20);
+            this.tb_code.TabIndex = 25;
             // 
             // frm_Main
             // 
@@ -535,7 +568,7 @@
             this.MinimumSize = new System.Drawing.Size(949, 650);
             this.Name = "frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Task Creator v. 03";
+            this.Text = "Task Creator v. 04";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.gb_php_validation_block.ResumeLayout(false);
             this.gb_php_validation_block.PerformLayout();
@@ -581,7 +614,7 @@
         private System.Windows.Forms.Button cb_add_pvb;
         private System.Windows.Forms.ComboBox cb_p_desc_ENG;
         private System.Windows.Forms.Label lbl_p_desc_ENG;
-        private System.Windows.Forms.TextBox tb_obj_code_name;
+        private System.Windows.Forms.TextBox tb_obj_instance;
         private System.Windows.Forms.Label lbl_v_object;
         private System.Windows.Forms.ComboBox cb_p_desc_UA;
         private System.Windows.Forms.Label lbl_p_desc_UA;
@@ -592,6 +625,9 @@
         private System.Windows.Forms.Label lbl_step;
         private System.Windows.Forms.Button cb_insert_image;
         private System.Windows.Forms.Button cb_code;
+        private System.Windows.Forms.ComboBox cb_obj_events;
+        private System.Windows.Forms.TextBox tb_image;
+        private System.Windows.Forms.TextBox tb_code;
     }
 }
 

@@ -8,12 +8,10 @@ namespace ns_d_code
         {
             cls_output_controller cls_output_controller = new cls_output_controller();
             //початок коду валідації:
-			//---------------------------------------------------->
-            
+//---------------------------------------------------->
 [properties-validation-block-sharp]
-            
-            //---------------------------------------------------->
-			//кінець коду валідації:
+//---------------------------------------------------->
+           //кінець коду валідації:
             return(cls_output_controller._final_result());
         }
         public static void Main() //main entry point:

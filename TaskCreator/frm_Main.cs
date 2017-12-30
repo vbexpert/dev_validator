@@ -34,7 +34,7 @@ namespace TaskCreator
             string s_property = this.cb_validation_method.Text; //_v_obj_exists(obj, s_obj_name);
             s_property = s_property.Replace("s_controled_value", _en(this.cb_master_value.Text));
             s_property = s_property.Replace("s_obj_name", _en(this.cb_p_desc_ENG.Text));
-            s_property = s_property.Replace("[obj]",this.tb_obj_code_name.Text + "." + this.cb_property.Text);
+            s_property = s_property.Replace("[obj]",this.tb_obj_instance.Text + "." + this.cb_property.Text);
             //
             //this.tb_combined_v_line.Text = s_property;
             this.lb_cvbs.Items.Add(s_property);
@@ -186,16 +186,31 @@ namespace TaskCreator
                     this.cb_property.Items.Add(controlProperty.Name);
                 }
                 string s_inst_name = FirstCharToLower(this.cb_obj_type.Text + "1");
-                this.tb_obj_code_name.Text = s_inst_name;
+                this.tb_obj_instance.Text = s_inst_name;
                 //just try to refresh properties вообще то сюда надо процедуру cb_property_TextChanged(), но не получается
                 string s_property = cb_obj_type.Text + "." + cb_property.Text;
                 this.cb_p_desc_ENG.Text = s_property;
                 this.cb_p_desc_UA.Text = s_property;
+
+                //populate events list: https://stackoverflow.com/questions/15108786/typeof-how-to-get-type-from-string
+                this.cb_obj_events.Items.Clear();
+                String s_ClassType = this.cb_obj_type.Text;
+                BindingFlags myBindingFlags = BindingFlags.Instance | BindingFlags.Public;
+                Type myTypeEvent = typeof(Control).Assembly.GetType("System.Windows.Forms." + s_ClassType, true);
+                EventInfo[] oa_EventInfos = myTypeEvent.GetEvents(myBindingFlags);
+                //Console.WriteLine("\nThe events on the Button class with the specified BindingFlags are : ");
+                for (int index = 0; index < oa_EventInfos.Length; index++)
+                {
+                    //Console.WriteLine(myEventsBindingFlags[index].ToString());
+                    EventInfo EventInfo = oa_EventInfos[index];
+                    //oa_EventInfos[index].ToString()
+                    this.cb_obj_events.Items.Add(EventInfo.Name);
+                }
+                this.cb_obj_events.SelectedIndex = 0;
             }
             catch {
+                //suppress
             }
-
-
         }
         private void cb_property_TextChanged(object sender, EventArgs e)
         {
@@ -214,7 +229,6 @@ namespace TaskCreator
                 this.lb_steps.Items.Add(this.tb_step.Text);
             }
         }
-
         public static string FirstCharToLower(string input)
         {
             switch (input)
@@ -224,14 +238,13 @@ namespace TaskCreator
                 default: return input.First().ToString().ToLower() + input.Substring(1);
             }
         }
-
         private void cb_obj_accessor_Click(object sender, EventArgs e)
         {
             //cb_obj_type
             //lb_cvbs
             //[TextBox tb1 = (TextBox)cls_output_controller._v_get_obj(f, "textBox1");]
-            string s_inst_name = this.tb_obj_code_name.Text; //FirstCharToLower(this.cb_obj_type.Text + "1");
-            this.lb_cvbs.Items.Add(this.cb_obj_type.Text + " " + this.tb_obj_code_name.Text + " = (" + this.cb_obj_type.Text + ")cls_output_controller._v_get_obj(f, \"" + s_inst_name + "\");");
+            string s_inst_name = this.tb_obj_instance.Text; //FirstCharToLower(this.cb_obj_type.Text + "1");
+            this.lb_cvbs.Items.Add(this.cb_obj_type.Text + " " + this.tb_obj_instance.Text + " = (" + this.cb_obj_type.Text + ")cls_output_controller._v_get_obj(f, \"" + s_inst_name + "\");");
             //add to tast.php
             string s_obj_type = this.cb_obj_type.Text;
             string s_php_vb_line = "$cls_Task->_add_object_creator(\"Додати об'єкт: " + s_obj_type + "\");";
@@ -299,7 +312,6 @@ namespace TaskCreator
             this.lb_cvbs.Items.Add("_v_parm(f.AutoScaleMode, \"Form.AutoScaleMode\", \"None\"));");
             this.lb_cvpb_php.Items.Add("$cls_Task->_add_property(\"Form.AutoScaleMode\", \"Режим перерахунку форми\", \"None\");");
         }
-
         private void lb_steps_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Delete)
@@ -318,7 +330,10 @@ namespace TaskCreator
         }
         private void cb_insert_image_Click(object sender, EventArgs e)
         {
-
+            //add image:
+            //<div class="row f_img_holder"><img class='f_img' src="target_form.png" /></div>
+            this.lb_cvbs.Items.Add(""); //stub
+            this.lb_cvpb_php.Items.Add("<div class='row f_img_holder'><img class='f_img' src='" + this.tb_image.Text + "' /></div>");
         }
         private void lb_cvpb_php_KeyDown(object sender, KeyEventArgs e)
         {
@@ -330,6 +345,27 @@ namespace TaskCreator
                 frm_PEditor1.i_p_idx = lb_cvpb_php.SelectedIndex;
                 frm_PEditor1.tb_property.Text = lb_cvpb_php.SelectedItem.ToString();
             }
+        }
+
+        private void cb_insert_obj_event_Click(object sender, EventArgs e)
+        {
+            //--> syntax start:
+            //MethodInfo clickMethodInfo = f.GetType().GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
+            //invoke event:
+            //clickMethodInfo.Invoke(b1, new object[] { EventArgs.Empty });
+            //<-- syntax end:
+            this.lb_cvbs.Items.Add("MethodInfo mi1 = f.GetType().GetMethod(" + this.cb_obj_events.Text + ", BindingFlags.NonPublic | BindingFlags.Instance);");
+            this.lb_cvbs.Items.Add("clickMethodInfo.Invoke(\"" + this.tb_obj_instance.Text + "\", new object[] { EventArgs.Empty });");
+            //add stubs:
+            this.lb_cvpb_php.Items.Add("");
+            this.lb_cvpb_php.Items.Add("");
+        }
+        private void cb_code_Click(object sender, EventArgs e)
+        {
+            //add C# highlighted code:
+            //
+            this.lb_cvbs.Items.Add(""); //stub
+            this.lb_cvpb_php.Items.Add("$cls_Task->_add_code(\"Написати код: \",\"" + this.tb_code.Text + "\");");
         }
     }
 }
