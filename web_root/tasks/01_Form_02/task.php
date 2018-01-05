@@ -12,10 +12,11 @@ $cls_Task->_add_step("3. Добитися повної валідації про
 $cls_Task->_add_step("4. Зберегти скріншот [Alt+PrintScreen] результатів у папку <b>Production</b>.");
 $cls_Task->_add_step("5. Зберегти програму у папку <b>Production</b>.");
 
+$cls_Task->_add_property("Solution name", "Ім'я рішення", "Lesson_01.exe");
 $cls_Task->_add_property("Application name", "Ім'я програми", "Form_02.exe");
 $cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
-$cls_Task->_add_property("Form.width", "Довжина Форми (в пікселях)", "500");
-$cls_Task->_add_property("Form.height", "Висота Форми (в пікселях)", "500");
+$cls_Task->_add_property("Form.Width", "Довжина Форми (в пікселях)", "500");
+$cls_Task->_add_property("Form.Height", "Висота Форми (в пікселях)", "500");
 $cls_Task->_add_property("Form.BackColor.Name", "Колір Форми", "CadetBlue");
 $cls_Task->_add_property("Form.Text", "Текст Форми", "Програма 2");
 $cls_Task->_add_property("Form.Location.X", "Верхній лівий кут екрану - Х", "0");

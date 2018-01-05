@@ -13,12 +13,12 @@ $cls_Task->s_description = "[test] Test Code Samples";
 
 //add parameters to be validated:
 //template:
-//$cls_Task->_add_property("Application name", "Ім'я програми", "Form_01.exe");
-//$cls_Task->_add_property("Form", "Form.Width", "400");
+$cls_Task->_add_property("Application name", "Ім'я програми", "TestTask_02.exe");
+$cls_Task->_add_property("Form", "Form.Width", "673");
 
-
-$cls_Task->s_youtube_url = "[url-yutube]";
-$cls_Task->s_discuss_url = "[url-discussion]";
+$cls_Task->s_learn_url = "https://learn.ztu.edu.ua/course/view.php?id=1852";
+$cls_Task->s_youtube_url = "https://www.youtube.com/watch?v=hP0UsFULLuU&list=PLgNmtqlNFVjpYzErepZF2E8Mc4R27yXYf";
+$cls_Task->s_discuss_url = "https://www.facebook.com/groups/1487277621317029/";
 //-------------------------------------------------->
 //run:
 include("../../t_task.php");

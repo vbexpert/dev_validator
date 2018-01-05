@@ -46,9 +46,11 @@ $cls_Task->_add_code("Написати код:", "class Child
     }
 }", "");
 
-$cls_Task->s_youtube_url = "[url-yutube]";
-$cls_Task->s_discuss_url = "[url-discussion]";
+$cls_Task->s_learn_url = "https://learn.ztu.edu.ua/course/view.php?id=1852";
+$cls_Task->s_youtube_url = "https://www.youtube.com/watch?v=hP0UsFULLuU&list=PLgNmtqlNFVjpYzErepZF2E8Mc4R27yXYf";
+$cls_Task->s_discuss_url = "https://www.facebook.com/groups/1487277621317029/";
 //-------------------------------------------------->
 //run:
 include("../../t_task.php");
 ?>
+

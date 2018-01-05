@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev_validator_C", "dev_validator_C\dev_validator_C.csproj", "{89E53C47-5189-4FAE-AE59-C48C31477783}"
 EndProject
@@ -64,6 +64,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Label_02", "tasks_source_code\03_Label_02\03_Label_02.csproj", "{175255C4-A2C7-48C6-AFBB-F3A1480032CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_2d_graphics_01", "tasks_source_code\06_2d_graphics_01\06_2d_graphics_01.csproj", "{37A7075F-78CA-4CAE-8137-46B4146F7D0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Form_00", "tasks_source_code\01_Form_00\01_Form_00.csproj", "{8A35F3B4-E52B-4FBB-8D75-49C78F884573}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -208,6 +210,14 @@ Global
 		{37A7075F-78CA-4CAE-8137-46B4146F7D0F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{37A7075F-78CA-4CAE-8137-46B4146F7D0F}.Release|x86.ActiveCfg = Release|Any CPU
 		{37A7075F-78CA-4CAE-8137-46B4146F7D0F}.Release|x86.Build.0 = Release|Any CPU
+		{8A35F3B4-E52B-4FBB-8D75-49C78F884573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A35F3B4-E52B-4FBB-8D75-49C78F884573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A35F3B4-E52B-4FBB-8D75-49C78F884573}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8A35F3B4-E52B-4FBB-8D75-49C78F884573}.Debug|x86.Build.0 = Debug|Any CPU
+		{8A35F3B4-E52B-4FBB-8D75-49C78F884573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A35F3B4-E52B-4FBB-8D75-49C78F884573}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A35F3B4-E52B-4FBB-8D75-49C78F884573}.Release|x86.ActiveCfg = Release|Any CPU
+		{8A35F3B4-E52B-4FBB-8D75-49C78F884573}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -228,6 +238,7 @@ Global
 		{EFEAB4BD-6283-4CA7-A806-CEBF3FAB7AAB} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 		{175255C4-A2C7-48C6-AFBB-F3A1480032CE} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 		{37A7075F-78CA-4CAE-8137-46B4146F7D0F} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
+		{8A35F3B4-E52B-4FBB-8D75-49C78F884573} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24A63605-5F2D-439D-81C1-5E775F49DF3C}
