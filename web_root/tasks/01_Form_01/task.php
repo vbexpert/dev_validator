@@ -11,7 +11,8 @@ $cls_Task->_add_step("2. Створити Windows форму відповідн�
 $cls_Task->_add_step("3. Завантажити програму у <b>DEV-VALIDATOR</b>.");
 $cls_Task->_add_step("4. Добитися повної валідації програми.");
 $cls_Task->_add_step("5. Зберегти скріншот <b>[Alt+PrintScreen]</b> результатів у папку <b>Production</b>.");
-$cls_Task->_add_step("6. Зберегти програму у папку <b>Production</b>.");
+$cls_Task->_add_step("6. Скопіювати програму у папку <b>Production</b>.");
+$cls_Task->_add_step("7. Зберегти проект та закрити рішення.");
 
 $cls_Task->_add_property("Solution name", "Ім'я рішення", "Lesson_01.exe");
 $cls_Task->_add_property("Application name", "Ім'я програми", "Form_01.exe");
@@ -19,7 +20,7 @@ $cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунк�
 $cls_Task->_add_property("Form.Text", "Текст Форми", "Прізвище Ім'я");
 
 $cls_Task->s_learn_url = "https://learn.ztu.edu.ua/mod/page/view.php?id=9976";
-$cls_Task->s_youtube_url = "https://youtu.be/hP0UsFULLuU?list=PLgNmtqlNFVjpYzErepZF2E8Mc4R27yXYf";
+$cls_Task->s_youtube_url = "https://youtu.be/hP0UsFULLuU?t=4m51s";
 $cls_Task->s_discuss_url = "https://www.facebook.com/groups/1487277621317029/";
 //-------------------------------------------------->
 //run:
