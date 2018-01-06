@@ -37,9 +37,7 @@
             this.ClientSize = new System.Drawing.Size(684, 261);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
-            this.Opacity = 0.5D;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Програма 3";
+            this.Text = "Зміна розмірів вікна";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
