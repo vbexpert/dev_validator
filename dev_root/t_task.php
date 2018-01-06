@@ -43,10 +43,10 @@ header("Pragma: no-cache");
 		}
 	  ?>
       <hr>
-      <table class="table table-striped table-condensed">
-        <caption class='app_specs' align="bottom">Специфікація програми:</caption>
-          <thead>
-            <tr>
+      <table class="table table-striped table-bordered">
+        <caption class='app_specs' align="top">Специфікація програми:</caption>
+          <thead >
+            <tr >
               <th>Property:</th>
               <th>Властивість:</th>
               <th>Значення:</th>

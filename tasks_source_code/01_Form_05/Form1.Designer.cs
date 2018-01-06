@@ -34,15 +34,12 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(584, 361);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Вікно на весь екран";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Manual - Ручне розміщення вікна";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
