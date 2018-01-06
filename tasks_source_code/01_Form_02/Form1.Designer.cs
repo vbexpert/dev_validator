@@ -39,7 +39,7 @@
             this.Name = "Form1";
             this.Opacity = 0.5D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Програма 2";
+            this.Text = "Розфарбуйте свою Windows форму";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
