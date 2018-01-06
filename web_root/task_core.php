@@ -4,6 +4,7 @@ class cls_Task{
   public $s_title = '';
   public $s_id = '';
   public $s_description = '';
+  public $s_learn_url = "";
   public $s_youtube_url = "";
   public $s_discuss_url = "";
   public $oa_properties = array();

@@ -12,10 +12,10 @@ $cls_Task->_add_step("3. Добитися повної валідації про
 $cls_Task->_add_step("4. Зберегти скріншот [Alt+PrintScreen] результатів у папку <b>Production</b>.");
 $cls_Task->_add_step("5. Зберегти програму у папку <b>Production</b>.");
 
-$cls_Task->_add_property("Form.BackColor.Name", "Колір Форми", "Sienna");
-$cls_Task->_add_property("Form.Text", "Текст Форми (немаэ)", "");
-$cls_Task->_add_property("Application name", "Ім'я програми", "Form_06.exe");
 $cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
+$cls_Task->_add_property("Application name", "Ім'я програми", "Form_06.exe");
+$cls_Task->_add_property("Form.BackColor.Name", "Колір Форми", "Sienna");
+$cls_Task->_add_property("Form.Text", "Заголовок Форми відсутній", "");
 $cls_Task->_add_property("Form.MinimizeBox", "Кнопка Згорнути", "Відключена");
 $cls_Task->_add_property("Form.WindowState", "Стартове положення вікна програми", "Розгорнуте на весь екран");
 $cls_Task->_add_property("Form.ShowInTaskbar", "Не відображати іконку програми", "False");

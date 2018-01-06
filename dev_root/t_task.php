@@ -9,7 +9,7 @@ header("Pragma: no-cache");
 <html>
   <head>
     <!-- title -->
-    <title>Завдання '<?php echo($cls_Task->s_title); ?>'</title>
+    <title><?php echo($cls_Task->s_title); ?></title>
 	<?php
 	  include_once("head_meta_tags.php");
 	?>
@@ -34,7 +34,7 @@ header("Pragma: no-cache");
     ?>
     <!-- menu end: -->
 	  
-      <h1 class="">Завдання '<?php echo($cls_Task->s_title); ?>':</h1>
+      <h1 class=""><?php echo($cls_Task->s_title); ?></h1>
       <h3 class=""><?php echo($cls_Task->s_description); ?></h3>
       <hr>
 	  <?php
@@ -83,7 +83,7 @@ header("Pragma: no-cache");
 		
 	    <!-- help block start -->
          <div style="text-align: center;"> 
-           <a class="btn btn-info " href="https://learn.ztu.edu.ua" role="button" target="_blank">Почитати на порталі ЖДТУ</a>
+           <a class="btn btn-info " href="<?php echo($cls_Task->s_learn_url); ?>" role="button" target="_blank">Почитати навчальний матеріал</a>
            <a class="btn btn-danger" href="<?php echo($cls_Task->s_youtube_url); ?>" role="button" target="_blank">Подивитись відеоурок</a>
            <a class="btn btn-warning" href="<?php echo($cls_Task->s_discuss_url) ?>" role="button" target="_blank">Обговорити у спільноті</a>
          </div>
