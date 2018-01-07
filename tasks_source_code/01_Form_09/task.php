@@ -18,6 +18,7 @@ $cls_Task->_add_step("8. Зберегти проект та закрити рі�
 $cls_Task->_add_step("<hr>");
 $cls_Task->_add_step("Для коректної валідації програми встановіть властивості <b>AutoScaleMode</b> значення <b>None</b>");
 
+$cls_Task->_add_property("Solution name", "Ім'я рішення", "Lesson_01");
 $cls_Task->_add_property("Application name", "Ім'я програми", "Form_09.exe");
 $cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
 $cls_Task->_add_property("Form.Text", "Текст Форми", "Програма без іконки у рядку заголовку");
@@ -26,7 +27,7 @@ $cls_Task->_add_property("Form.StartPosition", "Початкова позиці�
 $cls_Task->_add_property("Form.ShowIcon", "Не відображати іконку програму у заголовку", "False");	
 
 
-$cls_Task->s_learn_url = "https://msdn.microsoft.com/ru-ru/library/system.windows.forms.form.windowstate(v=vs.110).aspx";
+$cls_Task->s_learn_url = "https://msdn.microsoft.com/ru-ru/library/system.windows.forms.form.showicon(v=vs.110).aspx";
 $cls_Task->s_youtube_url = "";
 $cls_Task->s_discuss_url = "https://www.facebook.com/groups/1487277621317029/";
 //-------------------------------------------------->

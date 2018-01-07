@@ -19,6 +19,7 @@ $cls_Task->_add_step("8. Зберегти проект та закрити рі�
 $cls_Task->_add_step("<hr>");
 $cls_Task->_add_step("Для коректної валідації програми встановіть властивості <b>AutoScaleMode</b> значення <b>None</b>");
 
+$cls_Task->_add_property("Solution name", "Ім'я рішення", "Lesson_01");
 $cls_Task->_add_property("Application name", "Ім'я програми", "Form_08.exe");
 $cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
 $cls_Task->_add_property("Form.BackColor.Name", "Колір Форми", "MediumAquamarine");
