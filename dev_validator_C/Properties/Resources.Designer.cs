@@ -61,23 +61,19 @@ namespace dev_validator_C.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to     public class cls_output_controller
+        ///   Looks up a localized string similar to    // https://stackoverflow.com/questions/4063285/missing-assembly-references-in-dynamically-compiled-code
+        ///   //--------------------------------------------------&gt;
+        ///    //validation embedded classes:
+        ///    public class cls_output_controller
         ///    {
-        ///        public string s_output_buffer = &quot;&quot;;
-        ///        public int i_total_score = 0;
+        ///        public List&lt;cls_VResult&gt; ilst_validated_parms = new List&lt;cls_VResult&gt;();
+        ///        //core validation methods:
         ///        public void _v_form(object obj)
         ///        {
-        ///            if(obj is Form){
-        ///                this._add_validation_ok(&quot;Form is Ok!&quot;, 20);
-        ///            }
-        ///            else
+        ///            if (obj is Form)
         ///            {
-        ///                this._add_validation_failed(&quot;Form is Not Ok!&quot;, 0);
-        ///            }
-        ///        }
-        ///        public void _v_parm(object obj, string s_controled_value)
-        ///        {
-        ///            if(obj [rest of string was truncated]&quot;;.
+        ///                _add_v_result(20, true, &quot;&quot;);
+        ///   [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string output_class {
             get {

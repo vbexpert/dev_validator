@@ -40,7 +40,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Location = new System.Drawing.Point(200, 200);
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "[under construction - test task!]";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

@@ -26,6 +26,13 @@ namespace uts_tests
             File.Copy(s_original_validator_fnp, s_validator_fnp);
         }
         [TestMethod]
+        public void tm_00_test_01()
+        {
+            string s_task_id = "00_test_01";
+            string s_task_exe_ft = "test_01.exe";
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
+        }
+        [TestMethod]
         public void tm_01_Form_00()
         {
             string s_task_id = "01_Form_00";
