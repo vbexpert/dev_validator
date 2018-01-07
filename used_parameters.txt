@@ -12,16 +12,16 @@ cls_output_controller._v_parm(f.StartPosition,	"Початкова позиці�
 cls_output_controller._v_parm(f.WindowState,    "Form.WindowState",			"Maximized");
 cls_output_controller._v_parm(f.ShowIcon,       "Form.ShowIcon",			"False");
 cls_output_controller._v_parm(f.ShowInTaskbar,  "Form.ShowInTaskbar",			"False");
+cls_output_controller._v_parm_norm(f.Opacity,	"Прозорість вікна",			"0.5");
+cls_output_controller._v_obj_exists(f.BackgroundImage, "Form.BackgroundImage");
+cls_output_controller._v_parm(f.BackgroundImageLayout, "Спосіб відображення фонового малюнку", "Stretch");
+
 
 cls_output_controller._v_parm(f.MaximizeBox,    "Form.MinimizeBox",			"False");
-cls_output_controller._v_parm_norm(f.Opacity,	"Прозорість вікна",			"0.5");
-cls_output_controller._v_parm(f.ShowInTaskbar,  "Form.ShowInTaskbar",			"False");
-cls_output_controller._v_parm(f.ShowIcon,       "Form.ShowIcon",			    "False");
-cls_output_controller._v_obj_exists(f.BackgroundImage, "Form.BackgroundImage");
-cls_output_controller._v_parm(f.BackgroundImageLayout, "Спосіб відображення фонового малюнку", "Stretch");		
 cls_output_controller._v_parm(f.MaximizeBox,    "Form.MaximizeBox",				"False");
-cls_output_controller._v_parm(f.MaximizeBox,    "Form.MinimizeBox",				"False");
-cls_output_controller._v_parm(f.WindowState,    "Form.WindowState",				"Maximized");
+cls_output_controller._v_parm(f.WindowState,    "Form.WindowState",				"Minimized");
+
+-------------------------------------------------------------------------------------------------------------------
 			
 $cls_Task->_add_property("Form.Width", "Довжина Форми (в пікселях)", "500");
 $cls_Task->_add_property("Form.Height", "Висота Форми (в пікселях)", "500");
