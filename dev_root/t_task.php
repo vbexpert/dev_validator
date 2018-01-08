@@ -130,7 +130,7 @@ header("Pragma: no-cache");
 			<div class="col-md-4">
 			<form id='upload_file' class='upload_file' action="..\..\validator_fe.php" method="post" enctype="multipart/form-data">
 			  <label class="btn btn-primary regular_button">
-				Вибрати файл <input type="file" hidden id="fileToUpload" name="fileToUpload">
+				Вибрати файл програми<input type="file" hidden id="fileToUpload" name="fileToUpload">
 			  </label>
 			  <input type="hidden" name="codefile" value="<?php echo($cls_Task->s_id) ?>"/><!-- task id -->
 			</form>
