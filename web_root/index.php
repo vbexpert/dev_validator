@@ -1,4 +1,5 @@
 ﻿<?php
+session_start();
 //utf8 support:
 header('Content-Type: text/html; charset=utf-8');
 include_once("validator_be.php");
@@ -99,7 +100,7 @@ include_once("validator_be.php");
 		<div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/01_Form_12/task.php">Завдання 12: Вікно з повторюваною текстурою на весь екран</a>
          </div>
-		 <div class="">
+		 <div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/01_Form_13/task.php">Завдання 13: Розтягнення фонового малюнку</a>
          </div>
 		 <div class="">
@@ -137,7 +138,7 @@ include_once("validator_be.php");
 		 <!-- task Controls Label info block start --------------------------------------------------------------------------------->
 		 <hr>
 		 <h3 class=''>Елементи керування Controls Label:</h2>
-		  <div class="row pic-centered task_desc_row">
+		  <div class="">
            <a href="/validator/tasks/03_Label_01/task.php">Завдання 1. Наявність напису</a>
          </div>
          <div class="">
@@ -179,19 +180,19 @@ include_once("validator_be.php");
 		 <!-- task Events info block start --------------------------------------------------------------------------------->
          <hr>
 		 <h3 class=''>Події Events Click:</h2>
-		  <div class="row pic-centered task_desc_row">
+		  <div class="">
            <a href="/validator/tasks/50_Click_01/task.php">Завдання 1</a>
          </div>
-         <div class="row pic-centered task_desc_row">
+         <div class="">
            <a href="/validator/tasks/50_Click_01/task.php">Завдання 2</a>
          </div>
-         <div class="row pic-centered task_desc_row">
+         <div class="">
            <a href="/validator/tasks/50_Click_01/task.php">Завдання 3</a>
          </div>
-         <div class="row pic-centered task_desc_row">
+         <div class="">
            <a href="/validator/tasks/50_Click_01/task.php">Завдання 4</a>
          </div>
-         <div class="row pic-centered task_desc_row">
+         <div class="">
            <a href="/validator/tasks/50_Click_01/task.php">Завдання 5</a>
          </div>
          <!-- task Events info block end --------------------------------------------------------------------------------->

@@ -50,19 +50,32 @@ header("Pragma: no-cache");
               <th>Property:</th>
               <th>Властивість:</th>
               <th>Значення:</th>
-              <th>Стан:</th>
+              <th>Валідація:</th>
             </tr>
           </thead>
 		  <?php
 		  //var_dump($cls_Task->oa_properties);
+		  $i_ctr = 0;
 		  foreach ($cls_Task->oa_properties as $cls_property){
+			//---> pacth with session vars:
+			if(isset($_SESSION["vr_percent"])){
+			  $s_s_title="vr".$i_ctr."_reslt";
+			  $cls_property->b_validated = $_SESSION[$s_s_title];
+			  //destroy session var:
+			  $_SESSION[$s_s_title] = "";
+			}
+			//<--
 			echo("<tr>");
 			  echo("<td>".$cls_property->s_name."</td>");
 			  echo("<td>".$cls_property->s_title."</td>");
 			  echo("<td>".$cls_property->s_master_value."</td>");
 			  switch ($cls_property->s_type) {
 				case "":
-					echo("<td><input type='checkbox' class='form-check-input big-checkbox'></td>");
+					$s_checked = "";
+					if($cls_property->b_validated == true){
+					  $s_checked = "checked";
+					}
+					echo("<td><input type='checkbox' $s_checked data-off-icon-cls=\"gluphicon-thumbs-down\" data-on-icon-cls=\"gluphicon-thumbs-up\"></input></td>");
 					break;
 				case "obj_creator":
 					echo("<td></td>");
@@ -72,9 +85,19 @@ header("Pragma: no-cache");
 					break;
 			  }
 			echo("</tr>");
+			$i_ctr++;
           }
 		  ?>
         </table>
+		
+	    <div class="progress">
+		  <div class="progress-bar progress-bar-success progress-bar-striped pb-v-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo($_SESSION["vr_percent"]); ?>%">
+			<div class='pb-v-text'>
+			  <?php echo($_SESSION["vr_percent"]); ?> % вірно!
+			</div>
+		  </div>
+		</div>
+		
         <div class="row f_img_holder">
           <img class='f_img' src="target_form.png" />
         </div>
@@ -110,13 +133,28 @@ header("Pragma: no-cache");
       </div>
     </div>
 	
-    <script>
+<script>
+$(function() {
 	$('#fileToUpload').change(function(){ 
 		$('#upload_file').submit();
 	});
 	<!-- Initialize highlight -->
 	hljs.initHighlightingOnLoad();
-	</script>
+	$(':checkbox').checkboxpicker();
+});
+</script>
 	
-  </body>
+</body>
+  
+<?php
+//destory session vars with validation results:
+$_SESSION["vr_percent"] = "0";
+
+if($b_do_debug){
+  echo("<pre>");
+  var_dump($_SESSION);
+  echo("</pre>");
+}
+?>
+
 </html>

@@ -92,3 +92,13 @@
 .obj_creator{
 	font-weight: bold !important;
 }
+.pb-v-progress{
+    height:70px;
+	font-size:30px;
+}
+.progress {height: 60px;}
+.pb-v-text{
+	padding-top:21px;
+	color:black;
+	width:230px;
+}

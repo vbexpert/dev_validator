@@ -1,5 +1,4 @@
 <?php
-
 function _validate_uploaded_app(){
 	
 	//!using DIRECTORY_SEPARATOR - for linux and windows:
@@ -37,7 +36,7 @@ function _validate_uploaded_app(){
 			  //windows:
 			  $command = "validator.exe $s_uploaded_exe_fnp $s_codefile_fnp $s_original_app_ft";
 			  //echo($command);
-			  $out = system($command);
+			  $s_v_output = shell_exec($command);
 			} else {
 			  //linux: 
 			  //main command: [working example] $command = "xvfb-run -a mono validator.exe uploads/1.exe tasks/01_Form_01/code.txt 2>&1";
@@ -45,12 +44,21 @@ function _validate_uploaded_app(){
 			  $command = "xvfb-run -a --server-args='-screen 0 1024x768x24 -dpi 90' mono validator.exe $s_uploaded_exe_fnp $s_codefile_fnp $s_original_app_ft 2>&1";
 			  $ret = shell_exec($command);
 			  //clean out rander error:
-			  $out = substr($ret, 55, strlen($ret) - 55);
-			  //display:
-			  echo($out);
+			  $s_v_output = substr($ret, 55, strlen($ret) - 55);
 			}
+			//display:
+			//echo($s_v_output);
+			
+			//run v-core php output evaluation:
+			eval($s_v_output);
+			//at this point session vars are set.
+			
 			//delete file:
 			unlink($s_uploaded_exe_fnp);
+			
+			//redirect to task page:
+			echo("<script>history.go(-1);</script>");
+
 		} else {
 			echo "Вибачте, завантажити файл не вдалося!";
 		}

@@ -1,6 +1,8 @@
 ﻿<?php
+session_start();
 //utf8 support:
 header('Content-Type: text/html; charset=utf-8');
+include_once("task_core.php");
 include_once("validator_be.php");
 ?>
 <html>
@@ -27,13 +29,16 @@ include_once("validator_be.php");
 	 <?php _validate_uploaded_app(); ?>
     </div>
 	
-	<div class="progress">
-	  <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:10%">
-		40%!
-	  </div>
-	</div>
-	
    </div>
   </div> 
+  
+<?php
+if($b_do_debug){
+  echo("<pre>");
+  var_dump($_SESSION);
+  echo("</pre>");
+}
+?>
+  
  </body>
 </html>

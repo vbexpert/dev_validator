@@ -1,4 +1,5 @@
 ﻿<?php
+session_start();
 //utf8 support:
 header('Content-Type: text/html; charset=utf-8');
 include_once("validator_be.php");
