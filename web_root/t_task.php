@@ -93,7 +93,14 @@ header("Pragma: no-cache");
 	    <div class="progress">
 		  <div class="progress-bar progress-bar-success progress-bar-striped pb-v-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo($_SESSION["vr_percent"]); ?>%">
 			<div class='pb-v-text'>
-			  <?php echo($_SESSION["vr_percent"]); ?> % вірно!
+			  <?php 
+			    if(isset($_SESSION["vr_percent"])){
+			      echo($_SESSION["vr_percent"]); 
+				}
+			    else{
+				  echo(0);
+				}
+			  ?> % вірно!
 			</div>
 		  </div>
 		</div>
@@ -106,25 +113,33 @@ header("Pragma: no-cache");
 		
 	    <!-- help block start -->
          <div style="text-align: center;"> 
-           <a class="btn btn-info " href="<?php echo($cls_Task->s_learn_url); ?>" role="button" target="_blank">Почитати навчальний матеріал</a>
-           <a class="btn btn-danger" href="<?php echo($cls_Task->s_youtube_url); ?>" role="button" target="_blank">Подивитись відеоурок</a>
-           <a class="btn btn-warning" href="<?php echo($cls_Task->s_discuss_url) ?>" role="button" target="_blank">Обговорити у спільноті</a>
+           <a class="btn btn-info regular_button" href="<?php echo($cls_Task->s_learn_url); ?>" role="button" target="_blank">Почитати навчальний матеріал</a>
+           <a class="btn btn-danger regular_button" href="<?php echo($cls_Task->s_youtube_url); ?>" role="button" target="_blank">Подивитись відеоурок</a>
+           <a class="btn btn-warning regular_button" href="<?php echo($cls_Task->s_discuss_url) ?>" role="button" target="_blank">Обговорити у спільноті</a>
          </div>
 	    <!-- help block end -->
 		
 		<hr>
 
         <!-- task validation block start ---------------->
-        <h2>Перевірка:</h2>
+		<div class="container">
 		  <div class="row">
-          <!-- uploader start -->
-          <form id='upload_file' class='upload_file' action="..\..\validator_fe.php" method="post" enctype="multipart/form-data">
-			<label class="btn btn-primary btn-md">
-				Оберіть файл програми, для валідації:<input id="fileToUpload" name="fileToUpload" type="file" hidden />
-			</label>
-		    <input type="hidden" name="codefile" value="<?php echo($cls_Task->s_id) ?>"/><!-- task id -->
+			<div class="col-md-4">
+			  <div class='check_btn_label'>Перевірка:</div>
+			</div>
+			<div class="col-md-4">
+			<form id='upload_file' class='upload_file' action="..\..\validator_fe.php" method="post" enctype="multipart/form-data">
+			  <label class="btn btn-primary regular_button">
+				Вибрати файл <input type="file" hidden id="fileToUpload" name="fileToUpload">
+			  </label>
+			  <input type="hidden" name="codefile" value="<?php echo($cls_Task->s_id) ?>"/><!-- task id -->
+			</form>
+			</div>
+			<div class="col-md-4">
+			  
+			</div>
 		  </div>
-        </form>
+		</div>
 		<!-- task validation block end ------------------>
 		
 		<!-- footer end --------------------------------->

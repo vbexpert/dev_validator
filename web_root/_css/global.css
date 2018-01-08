@@ -102,3 +102,16 @@
 	color:black;
 	width:230px;
 }
+/* hotfix: https://stackoverflow.com/questions/11235206/twitter-bootstrap-form-file-element-upload-button */
+[hidden] {
+  display: none !important;
+}
+.upload_file{
+	text-align:center;
+}
+.regular_button{
+	width:230px;
+}
+.check_btn_label{
+	font-size:23px;
+}
