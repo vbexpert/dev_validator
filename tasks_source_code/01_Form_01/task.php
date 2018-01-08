@@ -9,7 +9,7 @@ $cls_Task->s_description = "Моя власна програма із Windows ф
 
 $cls_Task->_add_step("1. Додати новий проект <b>Form_01</b> у створене рішення <b>Lesson_01</b>.");
 $cls_Task->_add_step("2. Створити Windows форму відповідно специфікації.");
-$cls_Task->_add_step("3. Вибрати зі списку потрібну для компіляції програму. <a href='https://learn.ztu.edu.ua/mod/lesson/view.php?id=9977&pageid=5' target='_blank'><img src='../../img/information.png'></a>");
+$cls_Task->_add_step("3. Вибрати зі списку потрібну для компіляції програму: <a href='https://learn.ztu.edu.ua/mod/lesson/view.php?id=9977&pageid=5' target='_blank'><img src='../../_img/info.png'></a>");
 $cls_Task->_add_step("4. Скомпілювати Windows форму, натиснувши зелений трикутник.");
 $cls_Task->_add_step("5. Завантажити програму у <b>DEV-VALIDATOR</b>.");
 $cls_Task->_add_step("6. Добитися повної валідації програми.");
