@@ -81,6 +81,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Form_13", "tasks_source_
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_img", "_img", "{55A8EC5C-BF88-4B6A-8FFA-813CD91E324B}"
 	ProjectSection(SolutionItems) = preProject
+		dev_root\_img\c-sharp-logo1.png = dev_root\_img\c-sharp-logo1.png
+		dev_root\_img\c-sharp-logo2.png = dev_root\_img\c-sharp-logo2.png
+		dev_root\_img\c-sharp-logo3.png = dev_root\_img\c-sharp-logo3.png
 		dev_root\_img\info.png = dev_root\_img\info.png
 	EndProjectSection
 EndProject
