@@ -14,6 +14,8 @@ namespace WindowsApplication1
             cls_output_controller._v_form(f);
             cls_output_controller._v_parm(f.Width, "Form.Width", "400");
 
+            cls_output_controller._v_obj_exists(f.BackgroundImage, "Form.BackgroundImage");
+
             string s_vr = cls_output_controller._final_result();
             //кінець коду валідації:
             //------------------------------------------------------------------------>
