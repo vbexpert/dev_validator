@@ -148,6 +148,36 @@ header("Pragma: no-cache");
       </div>
     </div>
 	
+<!-- modal msg start ------------------------------------>
+<div class="container">
+  <!-- test rigger -->
+  <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+  
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Вітаємо із маленькою перемогою!</h4>
+        </div>
+        <div class="modal-body modal-task-complete">
+		  <div class='task-completed-img'><img src='../../_img/task-completed.png' /></div>
+          <div>Завдання виконано на 100%!</div>
+		  <div>Програмуй наступне!</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" onclick='history.go(-1);'>Закрити</button>
+        </div>
+      </div>
+   
+    </div>
+  </div>
+  
+</div>
+<!-- modal msg end -------------------------------------->
+
 <script>
 $(function() {
 	$('#fileToUpload').change(function(){ 
@@ -155,13 +185,21 @@ $(function() {
 	});
 	<!-- Initialize highlight -->
 	hljs.initHighlightingOnLoad();
+	<!-- Initialize checkboxpicker -->
 	$(':checkbox').checkboxpicker();
 });
+
 </script>
 	
 </body>
   
 <?php
+
+//show completed window on 100%:
+if($_SESSION["vr_percent"] == 100){
+  echo("<script>$('#myModal').modal('show');</script>");
+}
+
 //destory session vars with validation results:
 $_SESSION["vr_percent"] = "0";
 

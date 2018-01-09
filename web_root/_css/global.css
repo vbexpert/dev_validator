@@ -131,3 +131,10 @@
 .chkbox-v-value{
 	width:100px;
 }
+.modal-task-complete{
+	font-size:20px;
+	text-align:center;
+}
+.task-completed-img{
+	padding:20px;
+}
