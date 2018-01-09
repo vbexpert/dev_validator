@@ -123,3 +123,11 @@
 .check_btn_label{
 	font-size:23px;
 }
+.nav-logo{
+    padding-top:7px;
+	padding-right:10px;
+	float:left;
+}
+.chkbox-v-value{
+	width:100px;
+}

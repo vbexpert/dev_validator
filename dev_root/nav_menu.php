@@ -1,3 +1,13 @@
+<?php
+$cur_dir_fp = explode('\\', getcwd());
+$cur_dir_title = $cur_dir_fp[count($cur_dir_fp)-1];
+if($cur_dir_title == "validator"){
+  $s_rip = "_img/c-sharp-logo4.png";
+}
+else{
+  $s_rip = "../../_img/c-sharp-logo4.png";
+}
+?>
 <div class="navbar navbar-default " role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -12,6 +22,7 @@
 	
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
+	    <img class='nav-logo' src='<?php echo($s_rip); ?>' />
         <li><a href="/">Головна</a>
         </li>
         <li><a href="/validator/index.php">Всі завдання</a>

@@ -75,7 +75,7 @@ header("Pragma: no-cache");
 					if($cls_property->b_validated == true){
 					  $s_checked = "checked";
 					}
-					echo("<td><input type='checkbox' $s_checked data-off-icon-cls=\"gluphicon-thumbs-down\" data-on-icon-cls=\"gluphicon-thumbs-up\"></input></td>");
+					echo("<td><div class='chkbox-v-value'><input type='checkbox' $s_checked data-off-icon-cls=\"gluphicon-thumbs-down\" data-on-icon-cls=\"gluphicon-thumbs-up\"></input></div></td>");
 					break;
 				case "obj_creator":
 					echo("<td></td>");
