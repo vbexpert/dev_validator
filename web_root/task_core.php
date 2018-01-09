@@ -1,5 +1,4 @@
 ﻿<?php
-$b_do_debug = false;
 //https://stackoverflow.com/questions/8612190/array-of-php-objects
 class cls_Task{
   public $s_title = '';

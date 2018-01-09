@@ -21,9 +21,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Form_01", "tasks_source_
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dev_root", "dev_root", "{6775DFB8-4130-4DF8-8454-D98A21052E13}"
 	ProjectSection(SolutionItems) = preProject
+		dev_root\1.php = dev_root\1.php
+		dev_root\2.php = dev_root\2.php
+		dev_root\access_wall.php = dev_root\access_wall.php
 		dev_root\favicon.ico = dev_root\favicon.ico
+		dev_root\head_meta_tags.php = dev_root\head_meta_tags.php
 		dev_root\header.php = dev_root\header.php
 		dev_root\index.php = dev_root\index.php
+		dev_root\main_config.php = dev_root\main_config.php
+		dev_root\nav_menu.php = dev_root\nav_menu.php
 		dev_root\t_task.php = dev_root\t_task.php
 		dev_root\task_core.php = dev_root\task_core.php
 		dev_root\validator_be.php = dev_root\validator_be.php
