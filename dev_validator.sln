@@ -95,6 +95,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_img", "_img", "{55A8EC5C-B
 		dev_root\_img\c-sharp-logo2.png = dev_root\_img\c-sharp-logo2.png
 		dev_root\_img\c-sharp-logo3.png = dev_root\_img\c-sharp-logo3.png
 		dev_root\_img\c-sharp-logo4.png = dev_root\_img\c-sharp-logo4.png
+		dev_root\db_connect.php = dev_root\db_connect.php
 		dev_root\_img\info.png = dev_root\_img\info.png
 		dev_root\_img\task-completed.png = dev_root\_img\task-completed.png
 	EndProjectSection
