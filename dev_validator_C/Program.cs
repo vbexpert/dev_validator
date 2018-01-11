@@ -7,7 +7,6 @@ using System.CodeDom.Compiler;
 using System.Text;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq.Expressions;
 
 static class mod_main
 {
@@ -70,29 +69,35 @@ static class mod_main
         s_dynamic_code = s_dynamic_code.Replace("//[validator-class-placeholder]", s_output_class_code);
 
         //init compiler: https://stackoverflow.com/questions/4063285/missing-assembly-references-in-dynamically-compiled-code
-        CSharpCodeProvider obj_CSharpCodeProvider = new CSharpCodeProvider(new Dictionary<String, String> { { "CompilerVersion", "v3.5" } });
+        CSharpCodeProvider obj_CSharpCodeProvider = new CSharpCodeProvider(new Dictionary<String, String> { { "CompilerVersion", "v4.0" } });
 
         CodeDomProvider obj_CodeDomProvider = CodeDomProvider.CreateProvider("CSharp");
 
         //init parms:
-        System.CodeDom.Compiler.CompilerParameters _CompilerParameters = new System.CodeDom.Compiler.CompilerParameters();
+        System.CodeDom.Compiler.CompilerParameters obj_CompilerParameters = new System.CodeDom.Compiler.CompilerParameters();
 
         //init:
-        _CompilerParameters.GenerateExecutable = true;
-        _CompilerParameters.GenerateInMemory = false;
-        _CompilerParameters.WarningLevel = 3;
-        _CompilerParameters.TreatWarningsAsErrors = true;
-        _CompilerParameters.CompilerOptions = "/target:exe";
+        obj_CompilerParameters.GenerateExecutable = true;
+        obj_CompilerParameters.GenerateInMemory = false;
+        obj_CompilerParameters.WarningLevel = 3;
+        obj_CompilerParameters.TreatWarningsAsErrors = true;
+        obj_CompilerParameters.CompilerOptions = "/target:exe";
         //add refs:
-        _CompilerParameters.ReferencedAssemblies.Add("System.Windows.Forms.dll");
-        _CompilerParameters.ReferencedAssemblies.Add("System.Drawing.dll");
-        _CompilerParameters.ReferencedAssemblies.Add("System.Data.dll");
-        _CompilerParameters.ReferencedAssemblies.Add("System.Xml.dll");
-        _CompilerParameters.ReferencedAssemblies.Add("System.dll");
-        _CompilerParameters.ReferencedAssemblies.Add("System.Core.dll");
-        
+        obj_CompilerParameters.ReferencedAssemblies.Add("mscorlib.dll");
+        obj_CompilerParameters.ReferencedAssemblies.Add("System.dll");
+        obj_CompilerParameters.ReferencedAssemblies.Add("System.Core.dll");
+        obj_CompilerParameters.ReferencedAssemblies.Add("System.Windows.Forms.dll");
+        obj_CompilerParameters.ReferencedAssemblies.Add("System.Drawing.dll");
+
+        //obj_CompilerParameters.ReferencedAssemblies.Add("System.Core.dll");
+        //obj_CompilerParameters.ReferencedAssemblies.Add("System.dll");
+        //obj_CompilerParameters.ReferencedAssemblies.Add("System.Data.dll");
+        //obj_CompilerParameters.ReferencedAssemblies.Add("System.Xml.dll");
+
+        //https://stackoverflow.com/questions/23755422/powershell-with-c-sharp-system-collections-generic-dll-could-not-be-found
+
         //main compile call:
-        CompilerResults obj_results = obj_CSharpCodeProvider.CompileAssemblyFromSource(_CompilerParameters, s_dynamic_code);
+        CompilerResults obj_results = obj_CSharpCodeProvider.CompileAssemblyFromSource(obj_CompilerParameters, s_dynamic_code);
 
         //error handling:
         if (obj_results.Errors.HasErrors == true)

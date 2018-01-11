@@ -1,5 +1,6 @@
 using System.Windows.Forms;
 using System;
+using System.Collections.Generic;
 namespace ns_d_code
 {
     public class cls_Main
@@ -19,9 +20,6 @@ namespace ns_d_code
 			cls_output_controller._v_parm(f.StartPosition,	"Початкова позиція",			"Manual");
 			cls_output_controller._v_parm(f.Location.X,		"Верхній лівий кут екрану",		"0");
 			cls_output_controller._v_parm(f.Location.Y,		"Верхній лівий кут екрану",		"0"); 
-
-
-
             //кінець коду валідації:
 			//---------------------------------------------------->
             return(cls_output_controller._final_result());

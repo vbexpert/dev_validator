@@ -64,6 +64,11 @@
 .nav-link{
     font-size: 30px !important;
 }
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: black;
+    color: white;
+}
+
 .upload_file{
 	margin:auto;
 }
@@ -73,6 +78,9 @@
 }
 .navbar-nav{
 	font-size:20px;
+}
+.navbar{
+    margin-bottom:0px;
 }
 .note{
 	font-size:25px;
@@ -91,4 +99,42 @@
 }
 .obj_creator{
 	font-weight: bold !important;
+}
+.pb-v-progress{
+    height:70px;
+	font-size:30px;
+}
+.progress {height: 60px;}
+.pb-v-text{
+	padding-top:21px;
+	color:black;
+	width:230px;
+}
+/* hotfix: https://stackoverflow.com/questions/11235206/twitter-bootstrap-form-file-element-upload-button */
+[hidden] {
+  display: none !important;
+}
+.upload_file{
+	text-align:center;
+}
+.regular_button{
+	width:230px;
+}
+.check_btn_label{
+	font-size:23px;
+}
+.nav-logo{
+    padding-top:7px;
+	padding-right:10px;
+	float:left;
+}
+.chkbox-v-value{
+	width:100px;
+}
+.modal-task-complete{
+	font-size:20px;
+	text-align:center;
+}
+.task-completed-img{
+	padding:20px;
 }

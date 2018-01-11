@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev_validator_C", "dev_validator_C\dev_validator_C.csproj", "{89E53C47-5189-4FAE-AE59-C48C31477783}"
 EndProject
@@ -21,9 +21,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Form_01", "tasks_source_
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dev_root", "dev_root", "{6775DFB8-4130-4DF8-8454-D98A21052E13}"
 	ProjectSection(SolutionItems) = preProject
+		dev_root\1.php = dev_root\1.php
+		dev_root\2.php = dev_root\2.php
+		dev_root\access_wall.php = dev_root\access_wall.php
 		dev_root\favicon.ico = dev_root\favicon.ico
+		dev_root\head_meta_tags.php = dev_root\head_meta_tags.php
 		dev_root\header.php = dev_root\header.php
 		dev_root\index.php = dev_root\index.php
+		dev_root\main_config.php = dev_root\main_config.php
+		dev_root\nav_menu.php = dev_root\nav_menu.php
 		dev_root\t_task.php = dev_root\t_task.php
 		dev_root\task_core.php = dev_root\task_core.php
 		dev_root\validator_be.php = dev_root\validator_be.php
@@ -78,6 +84,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Form_12", "tasks_source_code\01_Form_12\01_Form_12.csproj", "{31295CA3-F02B-4520-8F4D-B6A68D1E0894}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Form_13", "tasks_source_code\01_Form_13\01_Form_13.csproj", "{48C8C074-9057-48FE-8511-70D74E7099DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_img", "_img", "{55A8EC5C-BF88-4B6A-8FFA-813CD91E324B}"
+	ProjectSection(SolutionItems) = preProject
+		dev_root\_img\c-sharp-logo1.png = dev_root\_img\c-sharp-logo1.png
+		dev_root\_img\c-sharp-logo2.png = dev_root\_img\c-sharp-logo2.png
+		dev_root\_img\c-sharp-logo3.png = dev_root\_img\c-sharp-logo3.png
+		dev_root\_img\c-sharp-logo4.png = dev_root\_img\c-sharp-logo4.png
+		dev_root\_img\info.png = dev_root\_img\info.png
+		dev_root\_img\task-completed.png = dev_root\_img\task-completed.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -305,6 +321,7 @@ Global
 		{E648EF0D-D026-4D8E-B95A-58456D285D6D} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 		{31295CA3-F02B-4520-8F4D-B6A68D1E0894} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 		{48C8C074-9057-48FE-8511-70D74E7099DB} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
+		{55A8EC5C-BF88-4B6A-8FFA-813CD91E324B} = {6775DFB8-4130-4DF8-8454-D98A21052E13}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24A63605-5F2D-439D-81C1-5E775F49DF3C}

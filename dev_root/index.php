@@ -1,4 +1,5 @@
 ﻿<?php
+session_start();
 //utf8 support:
 header('Content-Type: text/html; charset=utf-8');
 include_once("validator_be.php");
@@ -25,18 +26,16 @@ include_once("validator_be.php");
         ?>
        <!-- menu end: -->
 	   
-       <!-- header info block start: -------------------------------------------------------------------------------->
-		<?php
-			include_once("header.php");
-		?>
-       <!-- header info block end: -------------------------------------------------------------------------------->
-         <h2 class=''>Доступні завдання:</h2>
-         <hr>	   
-	   <!-- task Test info block start --------------------------------------------------------------------------------->
-			
+         <!-- header info block start: -------------------------------------------------------------------------------->
+		 <?php
+		    include_once("header.php");
+		 ?>
+         <!-- header info block end: -------------------------------------------------------------------------------->
+         <hr>
+		 <h2 class=''>Доступні завдання:</h2>	
+		 
+		 <!-- Test task block end --------------------------------------------------------------------------------------------
 		 <h3 class=''>Тестові завдання:</h2>
-		 
-		 
 		 <div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/00_test_01/task.php">Завдання 01: Тестове</a>
          </div>	
@@ -52,13 +51,11 @@ include_once("validator_be.php");
 		 <div class="">
            <a href="/validator/tasks/00_test_05/task.php">Завдання 05: Тестове</a>
          </div>	
-		 <!-- task Test info block end --------------------------------------------------------------------------------->
+		 <!-- Test task block end -------------------------------------------------------------------------------------------->
 		 
 	   
 		 <!-- task Winforms info block start --------------------------------------------------------------------------------->
-
-		 <h3 class=''>Форми WindowsForms:</h2>
-		 
+		 <h3 class=''>Форми WindowsForms</h2>
          <hr>	 
          <div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/01_Form_00/task.php">Завдання 0: Створення простої Windows форми</a>
@@ -96,7 +93,7 @@ include_once("validator_be.php");
 		 <div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/01_Form_11/task.php">Завдання 11: Форма з фоновим малюнком</a>
          </div>
-		<div class="row pic-centered task_desc_row">
+		 <div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/01_Form_12/task.php">Завдання 12: Вікно з повторюваною текстурою на весь екран</a>
          </div>
 		 <div class="row pic-centered task_desc_row">

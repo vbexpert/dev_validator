@@ -1,5 +1,6 @@
 using System.Windows.Forms;
 using System;
+using System.Collections.Generic;
 namespace ns_d_code
 {
     public class cls_Main
@@ -16,9 +17,6 @@ namespace ns_d_code
             cls_output_controller._v_parm(f.BackColor.Name, "Form.BackColor.Name",			"Sienna");
 			cls_output_controller._v_parm(f.WindowState,    "Form.WindowState",				"Maximized");
 			cls_output_controller._v_parm_norm(f.Opacity,	"Прозорість вікна",				"0.5");
-
-
-
             //кінець коду валідації:
 			//---------------------------------------------------->
             return(cls_output_controller._final_result());

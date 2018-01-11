@@ -1,4 +1,5 @@
 ﻿<?php
+session_start();
 include("../../task_core.php");
 $cls_Task = new cls_Task();
 //-------------------------------------------------->
@@ -13,7 +14,7 @@ $cls_Task->_add_step("4. Завантажити програму у <b>DEV-VALID
 $cls_Task->_add_step("5. Добитися повної валідації програми.");
 $cls_Task->_add_step("6. Зберегти скріншот [Alt+PrintScreen] результатів у папку <b>Production</b>.");
 $cls_Task->_add_step("7. Скопіювати програму у папку <b>Production</b>.");
-$cls_Task->_add_step("8. Спробувати встановити інші розміри вікна");
+$cls_Task->_add_step("8. Спробувати встановити інші розміри вікна.");
 $cls_Task->_add_step("9. Зберегти проект та закрити рішення.");
 
 $cls_Task->_add_step("<hr>");

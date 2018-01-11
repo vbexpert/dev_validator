@@ -1,7 +1,7 @@
 ﻿<!-- header info block start: -------------------------------------------------------------------------------->
-<h1 class='h1_main'>
-  С# - це просто<sup>*</sup>!
-</h1>
+<div class='h1_main'>
+  <img src='_img/c-sharp-logo3.png' /> - це просто<sup>*</sup>!
+</div>
 <div class='note'>
   <sup>* якщо попрацюєш :-)</sup>
 </div>

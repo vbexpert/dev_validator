@@ -43,6 +43,7 @@ class cls_Property{
   public $s_master_value = "";
   public $b_status = "false";
   public $s_type = "";
+  public $b_validated = false;
   //syntax:
   //empty  = property (3 args)
   //code   = C# code  (2 args = instruction + code)

@@ -37,7 +37,6 @@
             this.ClientSize = new System.Drawing.Size(484, 461);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
-            this.Opacity = 0.5D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Розфарбуйте свою Windows форму";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -26,6 +26,13 @@ namespace uts_tests
             File.Copy(s_original_validator_fnp, s_validator_fnp);
         }
         [TestMethod]
+        public void tm_00_test_01()
+        {
+            string s_task_id = "00_test_01";
+            string s_task_exe_ft = "test_01.exe";
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
+        }
+        [TestMethod]
         public void tm_01_Form_00()
         {
             string s_task_id = "01_Form_00";
@@ -171,8 +178,15 @@ namespace uts_tests
             string s_task_exe_fnp = s_tasks_fp + "\\" + s_task_id + "\\bin\\Debug\\" + s_task_exe_ft;
             string s_task_code_file = s_tasks_fp + "\\" + s_task_id + "\\code.txt";
             string s_output = this.Run_app(s_validator_fnp, s_task_exe_fnp + " " + s_task_code_file + " " + s_task_exe_ft);
-            Assert.IsTrue(s_output.ToLower().Contains("not ok") == false, "task validation failed!");
-            Assert.IsTrue(s_output.ToLower().Contains("ok"), "validator failed!");
+
+            string[] stringSeparators = new string[] { "\r\n" };
+            string[] sa_lines = s_output.Split(stringSeparators, StringSplitOptions.None);
+            foreach (string s_line in sa_lines)
+            {
+                if (s_line.Contains("reslt")) {
+                    Assert.IsTrue(s_line.ToLower().Contains("false") == false, "task validation failed!");
+                }
+            }
             return s_output;
         }
         public string Run_app(string s_app, string s_cla) 

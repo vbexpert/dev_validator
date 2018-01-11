@@ -66,13 +66,13 @@
             this.cb_p_desc_UA = new System.Windows.Forms.ComboBox();
             this.lbl_p_desc_UA = new System.Windows.Forms.Label();
             this.gb_property = new System.Windows.Forms.GroupBox();
+            this.tb_code = new System.Windows.Forms.TextBox();
+            this.tb_image = new System.Windows.Forms.TextBox();
             this.cb_obj_events = new System.Windows.Forms.ComboBox();
             this.cb_code = new System.Windows.Forms.Button();
             this.cb_insert_image = new System.Windows.Forms.Button();
             this.cb_insert_obj_event = new System.Windows.Forms.Button();
             this.cb_insert_obj_accessor = new System.Windows.Forms.Button();
-            this.tb_image = new System.Windows.Forms.TextBox();
-            this.tb_code = new System.Windows.Forms.TextBox();
             this.gb_php_validation_block.SuspendLayout();
             this.gb_code_txt.SuspendLayout();
             this.gb_task_php.SuspendLayout();
@@ -482,7 +482,22 @@
             this.gb_property.Size = new System.Drawing.Size(452, 288);
             this.gb_property.TabIndex = 5;
             this.gb_property.TabStop = false;
-            this.gb_property.Text = "+ image line";
+            this.gb_property.Text = "PVBP Property Validation B";
+            // 
+            // tb_code
+            // 
+            this.tb_code.Location = new System.Drawing.Point(12, 216);
+            this.tb_code.Multiline = true;
+            this.tb_code.Name = "tb_code";
+            this.tb_code.Size = new System.Drawing.Size(192, 20);
+            this.tb_code.TabIndex = 25;
+            // 
+            // tb_image
+            // 
+            this.tb_image.Location = new System.Drawing.Point(12, 190);
+            this.tb_image.Name = "tb_image";
+            this.tb_image.Size = new System.Drawing.Size(192, 20);
+            this.tb_image.TabIndex = 24;
             // 
             // cb_obj_events
             // 
@@ -533,21 +548,6 @@
             this.cb_insert_obj_accessor.Text = "+ obj. accessor";
             this.cb_insert_obj_accessor.UseVisualStyleBackColor = true;
             this.cb_insert_obj_accessor.Click += new System.EventHandler(this.cb_obj_accessor_Click);
-            // 
-            // tb_image
-            // 
-            this.tb_image.Location = new System.Drawing.Point(12, 190);
-            this.tb_image.Name = "tb_image";
-            this.tb_image.Size = new System.Drawing.Size(192, 20);
-            this.tb_image.TabIndex = 24;
-            // 
-            // tb_code
-            // 
-            this.tb_code.Location = new System.Drawing.Point(12, 216);
-            this.tb_code.Multiline = true;
-            this.tb_code.Name = "tb_code";
-            this.tb_code.Size = new System.Drawing.Size(192, 20);
-            this.tb_code.TabIndex = 25;
             // 
             // frm_Main
             // 

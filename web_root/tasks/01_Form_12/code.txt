@@ -1,5 +1,6 @@
 using System.Windows.Forms;
 using System;
+using System.Collections.Generic;
 namespace ns_d_code
 {
     public class cls_Main
@@ -16,10 +17,8 @@ namespace ns_d_code
 			cls_output_controller._v_parm(f.FormBorderStyle,	"Form.FormBorderStyle",		"None");
 			cls_output_controller._v_obj_exists(f.BackgroundImage, "Form.BackgroundImage");
 			cls_output_controller._v_parm(f.BackgroundImageLayout, "Спосіб відображення фонового малюнку", "Tile");
-
-
 			//---------------------------------------------------->
-           //кінець коду валідації:
+            //кінець коду валідації:
             return(cls_output_controller._final_result());
         }
         public static void Main() //main entry point:

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Form_01.Properties {
+namespace test_01.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

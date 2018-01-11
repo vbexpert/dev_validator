@@ -1,5 +1,6 @@
 using System.Windows.Forms;
 using System;
+using System.Collections.Generic;
 namespace ns_d_code
 {
     public class cls_Main
@@ -14,6 +15,7 @@ namespace ns_d_code
 			cls_output_controller._v_parm(f.AutoScaleMode,	"Form.AutoScaleMode",		"None");
 			cls_output_controller._v_parm(f.Text,			"Form.Text",				"Maximized - Вікно на весь екран");
 			cls_output_controller._v_parm(f.WindowState,    "Form.WindowState",			"Maximized");
+			cls_output_controller._v_neg_parm(f.BackColor.Name, "Form.BackColor.Name",			"Control");
             //кінець коду валідації:
 			//---------------------------------------------------->
             return(cls_output_controller._final_result());

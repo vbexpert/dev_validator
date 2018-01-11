@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../../task_core.php");
 $cls_Task = new cls_Task();
 //-------------------------------------------------->

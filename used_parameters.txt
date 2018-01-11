@@ -21,6 +21,11 @@ cls_output_controller._v_parm(f.MaximizeBox,    "Form.MinimizeBox",			"False");
 cls_output_controller._v_parm(f.MaximizeBox,    "Form.MaximizeBox",				"False");
 cls_output_controller._v_parm(f.WindowState,    "Form.WindowState",				"Minimized");
 
+
+cls_output_controller.Button button1 = (Button)cls_output_controller._v_get_obj(f, "button1");
+cls_output_controller._v_obj_exists(obj_button1,	"button1");
+cls_output_controller._v_parm(obj_button1.Name,		"button1.Name",	"button1");
+cls_output_controller._v_parm(obj_button1.Text,		"button1.Text",	"NewButton");
 -------------------------------------------------------------------------------------------------------------------
 			
 $cls_Task->_add_property("Form.Width", "Довжина Форми (в пікселях)", "500");
