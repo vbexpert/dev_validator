@@ -24,6 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dev_root", "dev_root", "{67
 		dev_root\1.php = dev_root\1.php
 		dev_root\2.php = dev_root\2.php
 		dev_root\access_wall.php = dev_root\access_wall.php
+		dev_root\db_connect.php = dev_root\db_connect.php
 		dev_root\favicon.ico = dev_root\favicon.ico
 		dev_root\head_meta_tags.php = dev_root\head_meta_tags.php
 		dev_root\header.php = dev_root\header.php

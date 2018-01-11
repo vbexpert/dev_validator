@@ -2,6 +2,7 @@
 session_start();
 //utf8 support:
 header('Content-Type: text/html; charset=utf-8');
+include_once("main_config.php");
 include_once("task_core.php");
 include_once("validator_be.php");
 ?>
