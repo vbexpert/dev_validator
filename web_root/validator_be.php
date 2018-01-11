@@ -1,5 +1,10 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 function _validate_uploaded_app(){
+	
+	require("main_config.php");
 	
 	//!using DIRECTORY_SEPARATOR - for linux and windows:
 	$s_codefile_fnp = "tasks" . DIRECTORY_SEPARATOR . $_POST["codefile"] . DIRECTORY_SEPARATOR . "code.txt";
@@ -42,19 +47,37 @@ function _validate_uploaded_app(){
 			  //main command: [working example] $command = "xvfb-run -a mono validator.exe uploads/1.exe tasks/01_Form_01/code.txt 2>&1";
 			  //$command = "xvfb-run -a mono validator.exe $s_uploaded_exe_fnp $s_codefile_fnp $s_original_app_ft 2>&1";
 			  $command = "xvfb-run -a --server-args='-screen 0 1024x768x24 -dpi 90' mono validator.exe $s_uploaded_exe_fnp $s_codefile_fnp $s_original_app_ft 2>&1";
+			  
 			  $ret = shell_exec($command);
 			  //clean out rander error:
-			  $s_v_output = substr($ret, 55, strlen($ret) - 55);
+			  $s_v_output = substr($ret, 57, strlen($ret) - 57);
 			}
-			//display:
-			//echo($s_v_output);
+			
+			//save to file for debug:
+			$fh = 'v-output.txt';
+			file_put_contents($fh, $s_v_output);
+			
+			//first - delete the uploaded file, then - eval (son on eval fail, file is deleted anyway):
+			unlink($s_uploaded_exe_fnp);
 			
 			//run v-core php output evaluation:
 			eval($s_v_output);
+			
 			//at this point session vars are set.
 			
-			//delete file:
-			unlink($s_uploaded_exe_fnp);
+		    //send validation stats:
+			$i_v_percent = $_SESSION["vr_percent"];
+			$s_un = $_SESSION["s_user_name"];
+			$s_email = $_SESSION["s_user_email"];
+			$s_task_id = $_SESSION["s_task_id"];
+			
+			if($b_is_local == false){
+			  //send stats to the DB:
+		      require($s_v_app_root."db_connect.php");
+			  
+		      $sql = "INSERT INTO v_stats (dt_datetime,s_user_email,i_score,s_task_id,s_user_name) VALUES(NOW(), '$s_email', $i_v_percent, '$s_task_id','$s_un');";
+		      $result = $obj_connection->query($sql);
+			}
 			
 			//redirect to task page:
 			echo("<script>history.go(-1);</script>");

@@ -8,8 +8,9 @@ header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 //access wall:
 if($b_use_access_wall){
-  require("access_wall.php");
+  include($s_v_app_root."access_wall.php");
 }
+$_SESSION["s_task_id"] = $cls_Task->s_id;
 ?>
 <html>
   <head>
@@ -202,6 +203,7 @@ $(function() {
 
 //show completed window on 100%:
 if($_SESSION["vr_percent"] == 100){
+  //show completed screen:
   echo("<script>$('#myModal').modal('show');</script>");
 }
 

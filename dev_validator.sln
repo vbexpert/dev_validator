@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev_validator_C", "dev_validator_C\dev_validator_C.csproj", "{89E53C47-5189-4FAE-AE59-C48C31477783}"
 EndProject
@@ -24,12 +24,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dev_root", "dev_root", "{67
 		dev_root\1.php = dev_root\1.php
 		dev_root\2.php = dev_root\2.php
 		dev_root\access_wall.php = dev_root\access_wall.php
+		dev_root\db_connect.php = dev_root\db_connect.php
 		dev_root\favicon.ico = dev_root\favicon.ico
 		dev_root\head_meta_tags.php = dev_root\head_meta_tags.php
 		dev_root\header.php = dev_root\header.php
 		dev_root\index.php = dev_root\index.php
+		dev_root\index_dev.php = dev_root\index_dev.php
+		dev_root\logout.php = dev_root\logout.php
 		dev_root\main_config.php = dev_root\main_config.php
 		dev_root\nav_menu.php = dev_root\nav_menu.php
+		dev_root\progress_chart.php = dev_root\progress_chart.php
 		dev_root\t_task.php = dev_root\t_task.php
 		dev_root\task_core.php = dev_root\task_core.php
 		dev_root\validator_be.php = dev_root\validator_be.php
@@ -91,6 +95,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_img", "_img", "{55A8EC5C-B
 		dev_root\_img\c-sharp-logo2.png = dev_root\_img\c-sharp-logo2.png
 		dev_root\_img\c-sharp-logo3.png = dev_root\_img\c-sharp-logo3.png
 		dev_root\_img\c-sharp-logo4.png = dev_root\_img\c-sharp-logo4.png
+		dev_root\db_connect.php = dev_root\db_connect.php
 		dev_root\_img\info.png = dev_root\_img\info.png
 		dev_root\_img\task-completed.png = dev_root\_img\task-completed.png
 	EndProjectSection
