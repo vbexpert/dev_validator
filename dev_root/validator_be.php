@@ -75,12 +75,34 @@ function _validate_uploaded_app(){
 			  //send stats to the DB:
 		      require($s_v_app_root."db_connect.php");
 			  
-		      $sql = "INSERT INTO v_stats (dt_datetime,s_user_email,i_score,s_task_id,s_user_name) VALUES(NOW(), '$s_email', $i_v_percent, '$s_task_id','$s_un');";
+		      $sql = "INSERT INTO v_tasks (dt_datetime,s_user_email,i_score,s_task_id,s_user_name) VALUES(NOW(), '$s_email', $i_v_percent, '$s_task_id','$s_un');";
 		      $result = $obj_connection->query($sql);
+			  
+			  //-->
+			  //plan: update max task score:
+			  //01. check if task record for such user exists.
+			  //a) if exists - update max score
+			  //b) if not - create and update the score
+			  $sql = "SELECT id FROM v_tasks WHERE s_user_email = '$s_email'";
+			  $result = $obj_connection->query($sql);
+			  $s_task_max_score = 0;
+			  if ($result->num_rows > 0){
+			    $row = $result->fetch_assoc();
+				$i_id = $row["i_id"];
+				$i_db_max_score = $row["i_max_score"];
+				if($i_db_max_score < $i_v_percent){
+				  //update:
+				  $sql = "UPDATE v_tasks SET i_max_score = '$i_v_percent' WHERE i_id = $i_id";
+				  $result = $obj_connection->query($sql);
+				}
+			  }else{
+			    //create 
+			  }
+			  
 			}
 			
 			//redirect to task page:
-			echo("<script>history.go(-1);</script>");
+			//echo("<script>history.go(-1);</script>");
 
 		} else {
 			echo "Вибачте, завантажити файл не вдалося!";

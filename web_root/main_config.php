@@ -6,6 +6,9 @@ $b_use_access_wall = true;   //login required
 if($b_is_local == true){
   $s_domain = "127.0.0.1";
   $b_use_access_wall = false;
+  
+  $_SESSION["s_user_name"] = "anonymous";
+  $_SESSION["s_user_email"] = "anonymous";
 }
 
 $s_web_root = $_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR;
