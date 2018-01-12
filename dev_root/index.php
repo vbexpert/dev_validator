@@ -2,7 +2,7 @@
 session_start();
 //utf8 support:
 header('Content-Type: text/html; charset=utf-8');
-include_once("main_config.php");
+include("main_config.php");
 ?>
 <html>
   <head>
@@ -10,7 +10,7 @@ include_once("main_config.php");
     <title>Перевірка:</title>
     <!-- utf8 support: -->
 	<?php
-	  include_once("head_meta_tags.php");
+	  include("head_meta_tags.php");
 	?>
 	<!-- external CSS: -->
     <link rel="stylesheet" type="text/css" href="_css/global.css">
@@ -22,13 +22,13 @@ include_once("main_config.php");
 	   
        <!-- menu stat: -->
 	    <?php
-            include_once("nav_menu.php");
+            include("nav_menu.php");
         ?>
        <!-- menu end: -->
 	   
          <!-- header info block start: -------------------------------------------------------------------------------->
 		 <?php
-		    include_once("header.php");
+		    include("header.php");
 		 ?>
          <!-- header info block end: -------------------------------------------------------------------------------->
          <hr>
@@ -79,6 +79,14 @@ include_once("main_config.php");
 		 <div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/01_Form_13/task.php">Завдання 13: Розтягнення фонового малюнку</a>
          </div>
+		 
+		 <!-- task Controls Button info block start --------------------------------------------------------------------------------->
+		 <hr>
+		 <h3 class=''>Елементи керування Control Buttons:</h2>
+		  <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/02_Button_01/task.php">Завдання 1: Перша кнопка</a>
+         </div>
+		 <!-- task Controls Button info block end --------------------------------------------------------------------------------->
 
 		</div>
 		

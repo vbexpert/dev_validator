@@ -1,6 +1,7 @@
 <?php
 session_start();
-include("../../task_core.php");
+require("../../main_config.php");
+require($s_v_app_root."task_core.php");
 $cls_Task = new cls_Task();
 //-------------------------------------------------->
 $cls_Task->s_title = "Form_13";
@@ -34,5 +35,5 @@ $cls_Task->s_youtube_url = "";
 $cls_Task->s_discuss_url = "https://www.facebook.com/groups/1487277621317029/";
 //-------------------------------------------------->
 //run:
-include("../../t_task.php");
+include($s_v_app_root."t_task.php");
 ?>

@@ -1,11 +1,19 @@
 ﻿<?php
-require("main_config.php");
+//debug:
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 //utf8 support:
 header('Content-Type: text/html; charset=utf-8');
-header('Content-Type: text/html; charset=utf-8');
+
+//no cache:
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
+
+$s_task_page = $_SERVER["REQUEST_URI"];
+$_SESSION['s_task_page'] = $s_task_page;
+
 //access wall:
 if($b_use_access_wall){
   include($s_v_app_root."access_wall.php");
@@ -63,12 +71,19 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 		  //var_dump($cls_Task->oa_properties);
 		  $i_ctr = 0;
 		  foreach ($cls_Task->oa_properties as $cls_property){
-			//---> pacth with session vars:
+			//---> patch with session vars:
 			if(isset($_SESSION["vr_percent"])){
 			  $s_s_title="vr".$i_ctr."_reslt";
-			  $cls_property->b_validated = $_SESSION[$s_s_title];
-			  //destroy session var:
-			  $_SESSION[$s_s_title] = "";
+			  if(isset($_SESSION[$s_s_title]) && $_SESSION[$s_s_title] != ""){
+				
+			    $cls_property->b_validated = true;
+			    //delete session var:
+			    $_SESSION[$s_s_title] = "";
+				unset($_SESSION[$s_s_title]);
+			  }
+			  else{
+				$cls_property->b_validated = false;
+			  }
 			}
 			//<--
 			echo("<tr>");
@@ -79,7 +94,7 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 				case "":
 					$s_checked = "";
 					if($cls_property->b_validated == true){
-					  $s_checked = "checked";
+					  $s_checked = "checked=\"checked\"";
 					}
 					echo("<td><div class='chkbox-v-value'><input type='checkbox' $s_checked data-off-icon-cls=\"gluphicon-thumbs-down\" data-on-icon-cls=\"gluphicon-thumbs-up\"></input></div></td>");
 					break;

@@ -1,6 +1,7 @@
 ﻿<?php
 session_start();
-include("../../task_core.php");
+require("../../main_config.php");
+require($s_v_app_root."task_core.php");
 $cls_Task = new cls_Task();
 //-------------------------------------------------->
 $cls_Task->s_title = "Button_01";
@@ -13,10 +14,11 @@ $cls_Task->_add_step("3. Добитися повної валідації про
 $cls_Task->_add_step("4. Зберегти скріншот [Alt+PrintScreen] результатів у папку <b>Production</b>.");
 $cls_Task->_add_step("5. Зберегти програму у папку <b>Production</b>.");
 
-$cls_Task->_add_property("Solution name", "Ім'я рішення", "Lesson_02");
-$cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
+$cls_Task->_add_property("Form1", "Додати форму", "Form1");
 $cls_Task->_add_property("Application name", "Ім'я програми", "Button_01.exe");
-$cls_Task->_add_property("Form.Text", "Текст Форми", "Знайомство з кнопкою");
+$cls_Task->_add_property("Form.Text", "Текст Форми", "Знайомство із кнопкою");
+$cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
+
 $cls_Task->_add_property("button1", "Додати кнопку", "");
 $cls_Task->_add_property("button1.Text", "Текст кнопки", "NewButton");
 
@@ -24,5 +26,5 @@ $cls_Task->s_youtube_url = "https://youtu.be/hP0UsFULLuU?list=PLgNmtqlNFVjpYzEre
 $cls_Task->s_discuss_url = "https://vk.com/club106906794";
 //-------------------------------------------------->
 //run:
-include("../../t_task.php");
+include($s_v_app_root."t_task.php");
 ?>

@@ -25,7 +25,7 @@ $s_rip = $s_domain."/validator/_img/c-sharp-logo4.png";
         </li>
       </ul>
 	  
-	  <?php if(isset($_SESSION["s_user_fn"])) : ?>
+	  <?php if(isset($_SESSION["s_user_email"])) : ?>
       <ul class="nav navbar-nav navbar-right">
 	    <li><a href="<?php echo($s_domain."/validator/logout.php"); ?>">
 	      Вийти
@@ -35,12 +35,11 @@ $s_rip = $s_domain."/validator/_img/c-sharp-logo4.png";
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">
 		<?php 
-		  echo("Вітаємо, ".$_SESSION["s_user_fn"]."!");
+		  echo("Вітаємо, ".$_SESSION["s_user_name"]."!");
 		?>
 		</a></li>
       </ul>
 	  <?php endif; ?>
-
 	  
     </div>
 

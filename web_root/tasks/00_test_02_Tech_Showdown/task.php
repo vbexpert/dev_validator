@@ -1,5 +1,6 @@
 <?php
-include("../../task_core.php");
+require("../../main_config.php");
+require($s_v_app_root."task_core.php");
 $cls_Task = new cls_Task();
 //-------------------------------------------------->
 //create UI validation webpage:
@@ -21,5 +22,5 @@ $cls_Task->s_youtube_url = "https://www.youtube.com/watch?v=hP0UsFULLuU&list=PLg
 $cls_Task->s_discuss_url = "https://www.facebook.com/groups/1487277621317029/";
 //-------------------------------------------------->
 //run:
-include("../../t_task.php");
+include($s_v_app_root."t_task.php");
 ?>

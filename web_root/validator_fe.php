@@ -2,16 +2,21 @@
 session_start();
 //utf8 support:
 header('Content-Type: text/html; charset=utf-8');
-include_once("main_config.php");
-include_once("task_core.php");
-include_once("validator_be.php");
+
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
+require("main_config.php");
+require("task_core.php");
+require("validator_be.php");
 ?>
 <html>
   <head>
     <!-- title -->
     <title>Перевірка:</title>
 	<?php
-	  include_once("head_meta_tags.php");
+	  require("head_meta_tags.php");
 	?>
 	<!-- external CSS: -->
     <link rel="stylesheet" type="text/css" href="_css/global.css">

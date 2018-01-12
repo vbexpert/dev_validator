@@ -1,6 +1,7 @@
 ﻿<?php
 session_start();
-include("../../task_core.php");
+require("../../main_config.php");
+require($s_v_app_root."task_core.php");
 $cls_Task = new cls_Task();
 //-------------------------------------------------->
 $cls_Task->s_title = "Button_01";
@@ -24,5 +25,5 @@ $cls_Task->s_youtube_url = "https://youtu.be/hP0UsFULLuU?list=PLgNmtqlNFVjpYzEre
 $cls_Task->s_discuss_url = "https://vk.com/club106906794";
 //-------------------------------------------------->
 //run:
-include("../../t_task.php");
+include($s_v_app_root."t_task.php");
 ?>

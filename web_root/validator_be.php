@@ -2,6 +2,10 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
 function _validate_uploaded_app(){
 	
 	require("main_config.php");
@@ -42,20 +46,23 @@ function _validate_uploaded_app(){
 			  $command = "validator.exe $s_uploaded_exe_fnp $s_codefile_fnp $s_original_app_ft";
 			  //echo($command);
 			  $s_v_output = shell_exec($command);
+			  file_put_contents("v-output-windows-raw.txt", $s_v_output);
 			} else {
 			  //linux: 
 			  //main command: [working example] $command = "xvfb-run -a mono validator.exe uploads/1.exe tasks/01_Form_01/code.txt 2>&1";
 			  //$command = "xvfb-run -a mono validator.exe $s_uploaded_exe_fnp $s_codefile_fnp $s_original_app_ft 2>&1";
 			  $command = "xvfb-run -a --server-args='-screen 0 1024x768x24 -dpi 90' mono validator.exe $s_uploaded_exe_fnp $s_codefile_fnp $s_original_app_ft 2>&1";
-			  
-			  $ret = shell_exec($command);
+
+			  $s_v_output = shell_exec($command);
+			  file_put_contents("v-output-linux-raw.txt", $s_v_output);
+
 			  //clean out rander error:
-			  $s_v_output = substr($ret, 57, strlen($ret) - 57);
+			  $i_pos = strpos($s_v_output, ":99\".") + 6;
+			  $s_v_output = substr($s_v_output, $i_pos, strlen($s_v_output) - $i_pos);
 			}
 			
 			//save to file for debug:
-			$fh = 'v-output.txt';
-			file_put_contents($fh, $s_v_output);
+			file_put_contents("v-output-clean.txt", $s_v_output);
 			
 			//first - delete the uploaded file, then - eval (son on eval fail, file is deleted anyway):
 			unlink($s_uploaded_exe_fnp);
@@ -83,31 +90,41 @@ function _validate_uploaded_app(){
 			  //01. check if task record for such user exists.
 			  //a) if exists - update max score
 			  //b) if not - create and update the score
-			  $sql = "SELECT id FROM v_tasks WHERE s_user_email = '$s_email'";
-			  $result = $obj_connection->query($sql);
-			  $s_task_max_score = 0;
-			  if ($result->num_rows > 0){
-			    $row = $result->fetch_assoc();
-				$i_id = $row["i_id"];
-				$i_db_max_score = $row["i_max_score"];
-				if($i_db_max_score < $i_v_percent){
+			  
+			  //$sql = "SELECT id FROM v_tasks WHERE s_user_email = '$s_email'";
+			  //$result = $obj_connection->query($sql);
+			  //$s_task_max_score = 0;
+			  //if ($result->num_rows > 0){
+			  //  $row = $result->fetch_assoc();
+			  //  $i_id = $row["i_id"];
+		      //$i_db_max_score = $row["i_max_score"];
+			  //if($i_db_max_score < $i_v_percent){
 				  //update:
-				  $sql = "UPDATE v_tasks SET i_max_score = '$i_v_percent' WHERE i_id = $i_id";
-				  $result = $obj_connection->query($sql);
-				}
-			  }else{
+				  //$sql = "UPDATE v_tasks SET i_max_score = '$i_v_percent' WHERE i_id = $i_id";
+				  //$result = $obj_connection->query($sql);
+				//}
+			  //}else{
 			    //create 
-			  }
+			  //}
 			  
 			}
 			
-			//redirect to task page:
+			//redirect to task page: does not work for Chrome and Opera:
 			//echo("<script>history.go(-1);</script>");
+			
+			//universal:
+			echo("<script>window.location = \"".$_SESSION['s_task_page']."\";</script>");
+			
 
 		} else {
 			echo "Вибачте, завантажити файл не вдалося!";
 		}
+		
+		if($b_do_debug){
+		  echo("<pre>");
+		  var_dump($_SESSION);
+		  echo("</pre>");
+		}
 	}
 }
-
 ?>

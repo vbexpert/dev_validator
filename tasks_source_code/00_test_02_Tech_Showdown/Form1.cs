@@ -20,18 +20,10 @@ namespace WindowsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            _v_obj_exists(this.BackgroundImage, "pictureBox1.Image");
         }
-        public void _v_obj_exists(object obj, string s_obj_name)
+        public object _v_get_obj(Form f, string s_obj_name)
         {
-            if (null == obj)
-            {
-                //_add_v_result(20, true, "");
-            }
-            else
-            {
-                //_add_v_result(20, false, obj.ToString());
-            }
+            return (f.Controls.Find(s_obj_name, true)[0]);
         }
     }
 }
