@@ -5,7 +5,7 @@ $cls_Task = new cls_Task();
 //-------------------------------------------------->
 $cls_Task->s_title = "Button_01";
 $cls_Task->s_id = "02_Button_01";
-$cls_Task->s_description = "Програма з кнопкою";
+$cls_Task->s_description = "Знайомство з кнопкою";
 
 $cls_Task->_add_step("1. Створити форму відповідно специфікації.");
 $cls_Task->_add_step("2. Завантажити програму у <b>DEV-VALIDATOR</b>.");
@@ -13,15 +13,14 @@ $cls_Task->_add_step("3. Добитися повної валідації про
 $cls_Task->_add_step("4. Зберегти скріншот [Alt+PrintScreen] результатів у папку <b>Production</b>.");
 $cls_Task->_add_step("5. Зберегти програму у папку <b>Production</b>.");
 
-$cls_Task->_add_property("Solution name", "Ім'я рішення", "Lesson_02");
+//$cls_Task->_add_property("Solution name", "Ім'я рішення", "Lesson_02");
+$cls_Task->_add_property("Availability of Form", "Наявність форми", "");
 $cls_Task->_add_property("Application name", "Ім'я програми", "Button_01.exe");
 $cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
-$cls_Task->_add_property("Form.StartPosition", "Початкова позиція", "CenterScreen");
 $cls_Task->_add_property("Form.Text", "Текст Форми", "Знайомство з кнопкою");
-$cls_Task->_add_object_creator("Додати об'єкт: Button");
+$cls_Task->_add_property("Form.StartPosition", "Початкова позиція", "CenterScreen");
 $cls_Task->_add_property("button1.Name", "Ім'я кнопки", "button1");
 $cls_Task->_add_property("button1.Text", "Текст кнопки", "NewButton");
-
 
 $cls_Task->s_learn_url = "https://learn.ztu.edu.ua/mod/page/view.php?id=10041";
 $cls_Task->s_youtube_url = "https://youtu.be/hP0UsFULLuU";

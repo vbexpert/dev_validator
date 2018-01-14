@@ -79,6 +79,23 @@ include_once("main_config.php");
 		 <div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/01_Form_13/task.php">Завдання 13: Розтягнення фонового малюнку</a>
          </div>
+		 <!-- task Winforms info block end --------------------------------------------------------------------------------->
+
+		 <!-- task Controls Button info block start --------------------------------------------------------------------------------->
+		<hr>
+		<h3 class=''>Елементи керування Control Buttons:</h2>
+		 <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/02_Button_00/task.php">Завдання 0: Додавання кнопки на форму</a>
+         </div>
+		 <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/02_Button_01/task.php">Завдання 1: Знайомство з кнопкою</a>
+         </div>
+		 <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/02_Button_02/task.php">Завдання 2: Розміщення кнопки</a>
+         </div>
+         
+		 <!-- task Controls Button info block end --------------------------------------------------------------------------------->
+		 
 
 		</div>
 		

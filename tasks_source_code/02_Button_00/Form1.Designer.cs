@@ -28,36 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Close = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btn_Close
+            // button1
             // 
-            this.btn_Close.Location = new System.Drawing.Point(40, 100);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(300, 100);
-            this.btn_Close.TabIndex = 0;
-            this.btn_Close.Text = "Close";
-            this.btn_Close.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(56, 49);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(484, 461);
-            this.Controls.Add(this.btn_Close);
+            this.ClientSize = new System.Drawing.Size(384, 261);
+            this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Location = new System.Drawing.Point(400, 400);
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Розміщення кнопки";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Додавання кнопки на форму";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btn_Close;
+        private System.Windows.Forms.Button button1;
     }
 }
 
