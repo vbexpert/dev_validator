@@ -9,7 +9,7 @@ namespace TaskCreator
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application. 1
+        /// The main entry point for the application. 12
         /// </summary>
         [STAThread]
         static void Main()
