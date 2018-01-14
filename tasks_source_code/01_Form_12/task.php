@@ -22,7 +22,7 @@ $cls_Task->_add_step("11. Зберегти проект та закрити рі
 $cls_Task->_add_step("<hr>");
 $cls_Task->_add_step("Для коректної валідації програми встановіть властивості <b>AutoScaleMode</b> значення <b>None</b>");
 
-$cls_Task->_add_property("Solution name", "Ім'я рішення", "Lesson_01");
+$cls_Task->_add_property("Availability of Form", "Наявність форми", "");
 $cls_Task->_add_property("Application name", "Ім'я програми", "Form_12.exe");
 $cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
 $cls_Task->_add_property("Form.WindowState", "Стартове положення вікна програми", "Розгорнуте на весь екран");

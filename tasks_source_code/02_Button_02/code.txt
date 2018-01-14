@@ -24,20 +24,13 @@ namespace ns_d_code
             cls_output_controller._v_parm(f.StartPosition,	"StartPosition",		"Manual");
 
 			//кнопка-------------------------------------------->
-			Control c1 = f.Controls.Find("button1", true)[0];
-            Button obj_button1 = (Button)c1;
-			cls_output_controller._v_obj_exists(obj_button1,	"button1");
-			cls_output_controller._v_parm(obj_button1.Text,		"button1.Text",	"Close");
-			cls_output_controller._v_parm(obj_button1.Width,	"button1.Width",	"300");
-			cls_output_controller._v_parm(obj_button1.Height,	"button1.Height",	"100");
-			cls_output_controller._v_parm(obj_button1.Location.X,"button1.Location.X",	"40");
-			cls_output_controller._v_parm(obj_button1.Location.Y,"button1.Location.Y",	"100");
 
-			//Control c2 = f.Controls.Find("button2", true)[0];
-            //Button obj_button2 = (Button)c2;
-			//cls_output_controller._v_obj_exists(obj_button2,	"button2");
-			//cls_output_controller._v_parm(obj_button2.Text,		"button2.Text",	"BigButton");
-			//cls_output_controller._v_obj_exists(obj_button2.Image,	"");
+			cls_output_controller.Button button1 = (Button)cls_output_controller._v_get_obj(f, "button1");
+			cls_output_controller._v_obj_exists(obj_button1,	"button1");
+			cls_output_controller._v_parm(obj_button1.Name,		"button1.Name",	"button1");
+			cls_output_controller._v_parm(obj_button1.Text,		"button1.Text",	"NewButton");
+		
+			
 
 			//кінець коду валідації:
 			//---------------------------------------------------->

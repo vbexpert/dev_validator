@@ -35,7 +35,7 @@ $cls_Task->_add_step("16. Добитися повної валідації пр�
 $cls_Task->_add_step("17. Зберегти скріншот <b>[Alt+PrintScreen]</b> результатів у папку <b>Production</b>.");
 $cls_Task->_add_step("18. Скопіювати програму <b>Form_00.exe</b> у папку <b>Production</b>.");
 
-$cls_Task->_add_property("Solution name", "Ім'я рішення", "Lesson_01");
+$cls_Task->_add_property("Availability of Form", "Наявність форми", "");
 $cls_Task->_add_property("Application name", "Ім'я програми", "Form_00.exe");
 $cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
 
