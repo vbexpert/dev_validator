@@ -108,6 +108,8 @@ static class mod_main
                 sb.AppendLine(String.Format("Error ({0}): {1}", error.ErrorNumber, error.ErrorText));
             }
             Console.WriteLine(sb.ToString());
+
+            return "Фатальна помилка сборки програми: " + sb.ToString();
         }
 
         //get main method:

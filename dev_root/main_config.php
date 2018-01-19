@@ -1,5 +1,5 @@
 <?php
-$b_is_local = false;
+$b_is_local = true;
 $s_domain = "https://c-validator.com/";
 $b_use_access_wall = true;   //login required
 $b_do_debug = false;		     //do debug global
