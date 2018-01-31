@@ -84,7 +84,16 @@ include("main_config.php");
 		 <hr>
 		 <h3 class=''>Елементи керування Control Buttons:</h2>
 		  <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/02_Button_01/task.php">Завдання 1: Перша кнопка</a>
+           <a href="/validator/tasks/02_Button_00/task.php">Завдання 0: Додавання кнопки на форму</a>
+         </div>
+		 <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/02_Button_01/task.php">Завдання 1: Зміна напису кнопки</a>
+         </div>
+		 <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/02_Button_02/task.php">Завдання 2: Зміна імені кнопки</a>
+         </div>
+		 <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/02_Button_03/task.php">Завдання 3: Розміщення кнопки на формі</a>
          </div>
 		 <!-- task Controls Button info block end --------------------------------------------------------------------------------->
 

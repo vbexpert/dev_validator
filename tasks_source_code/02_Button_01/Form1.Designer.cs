@@ -28,36 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button12 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button12
+            // button1
             // 
-            this.button12.Location = new System.Drawing.Point(105, 36);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(106, 37);
-            this.button12.TabIndex = 0;
-            this.button12.Text = "NewButton";
-            this.button12.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(123, 87);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "NewButton";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(331, 219);
-            this.Controls.Add(this.button12);
+            this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Знайомство із кнопкою";
-            this.Load += new System.EventHandler(this.Form1_Load_1);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Знайомство з кнопкою";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button1;
     }
 }
 

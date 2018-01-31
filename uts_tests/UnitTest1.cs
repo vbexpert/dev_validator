@@ -131,6 +131,13 @@ namespace uts_tests
             string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]
+        public void tm_02_Button_00()
+        {
+            string s_task_id = "02_Button_00";
+            string s_task_exe_ft = "Button_00.exe";
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
+        }
+        [TestMethod]
         public void tm_02_Button_01()
         {
             string s_task_id = "02_Button_01";

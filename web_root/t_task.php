@@ -189,7 +189,8 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 		  <div>Програмуй наступне!</div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal" onclick='history.go(-1);'>Закрити</button>
+		  <button type="button" class="btn btn-info" data-dismiss="modal" onclick="location.href='../../index.php';">Всі завдання</button>
+		  <button type="button" class="btn btn-danger" data-dismiss="modal" onclick='history.go(1);'>Закрити</button>
         </div>
       </div>
    
