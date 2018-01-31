@@ -49,7 +49,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Знайомство з кнопкою";
+            this.Text = "Зміна напису кнопки";
             this.ResumeLayout(false);
 
         }
