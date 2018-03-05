@@ -33,7 +33,7 @@
             // 
             // btn_Close
             // 
-            this.btn_Close.Location = new System.Drawing.Point(40, 100);
+            this.btn_Close.Location = new System.Drawing.Point(88, 87);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(300, 100);
             this.btn_Close.TabIndex = 0;
@@ -43,13 +43,13 @@
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(484, 461);
+            this.ClientSize = new System.Drawing.Size(484, 286);
             this.Controls.Add(this.btn_Close);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Location = new System.Drawing.Point(400, 400);
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Розміщення кнопки";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Зміна імені кнопки";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 

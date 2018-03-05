@@ -7,8 +7,8 @@
     <ProjectGuid>{54404CC1-70D3-47E4-81B5-581F0586E1B1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Button_03</RootNamespace>
-    <AssemblyName>Button_03</AssemblyName>
+    <RootNamespace>Button_04</RootNamespace>
+    <AssemblyName>Button_04</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

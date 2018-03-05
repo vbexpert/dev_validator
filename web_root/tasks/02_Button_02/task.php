@@ -17,12 +17,8 @@ $cls_Task->_add_step("5. Зберегти програму у папку <b>Prod
 $cls_Task->_add_property("Availability of Form", "Наявність форми", "");
 $cls_Task->_add_property("Application name", "Ім'я програми", "Button_02.exe");
 $cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
-$cls_Task->_add_property("Form.Text", "Текст Форми", "Зміна імені кнопки");
-$cls_Task->_add_property("Form.Width", "Довжина Форми (в пікселях)", "500");
-$cls_Task->_add_property("Form.height", "Висота Форми (в пікселях)", "500");
-$cls_Task->_add_property("Form.StartPosition", "Початкова позиція", "Manual");
-$cls_Task->_add_property("Form.Location.X", "Розміщення форми - Х", "400");
-$cls_Task->_add_property("Form.Location.Y", "Розміщення форми - Y", "400");
+
+
 $cls_Task->_add_object_creator("Додати об'єкт: Button");
 $cls_Task->_add_property("Name", "Ім'я кнопки", "btn_Close");
 $cls_Task->_add_property("btn_Close.Text", "Текст кнопки", "Close");
