@@ -20,10 +20,11 @@ $cls_Task->_add_step("8. Зберегти проект та закрити рі�
 $cls_Task->_add_step("<hr>");
 $cls_Task->_add_step("Для коректної валідації програми встановіть властивості <b>AutoScaleMode</b> значення <b>None</b>");
 
-$cls_Task->_add_property("Solution name", "Ім'я рішення", "Lesson_01");
+$cls_Task->_add_property("Availability of Form", "Наявність форми", "");
 $cls_Task->_add_property("Application name", "Ім'я програми", "Form_06.exe");
 $cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
 $cls_Task->_add_property("Form.Text", "Текст Форми", "Maximized - Вікно на весь екран");
+$cls_Task->_add_property("Form.BackColor.Name", "Колір Форми", "Відмінний від стандартного");
 $cls_Task->_add_property("Form.WindowState", "Стартове положення вікна програми", "Розгорнуте на весь екран");
 
 $cls_Task->s_learn_url = "https://msdn.microsoft.com/ru-ru/library/system.windows.forms.form.windowstate(v=vs.110).aspx";

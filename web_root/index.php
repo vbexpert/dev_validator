@@ -34,7 +34,7 @@ include("main_config.php");
          <hr>
 		 <h2 class=''>Доступні завдання:</h2>
 	   
-		 <!-- task Winforms info block start --------------------------------------------------------------------------------->
+		 <!-- task Winforms info block start ------------------------------------------------------------------------>
 		 <h3 class=''>Форми WindowsForms</h2>
          <hr>	 
          <div class="row pic-centered task_desc_row">
@@ -80,14 +80,25 @@ include("main_config.php");
            <a href="/validator/tasks/01_Form_13/task.php">Завдання 13: Розтягнення фонового малюнку</a>
          </div>
 		 
-		 <!-- task Controls Button info block start --------------------------------------------------------------------------------->
-		 <hr>
-		 <h3 class=''>Елементи керування Control Buttons:</h2>
-		  <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/02_Button_01/task.php">Завдання 1: Перша кнопка</a>
-         </div>
-		 <!-- task Controls Button info block end --------------------------------------------------------------------------------->
+		 <!-- task Winforms info block end ------------------------------------------------------------------------->
 
+		<!-- task Button block start ------------------------------------------------------------------------>
+		 <h3 class=''>Об'єкт Кнопка Button</h2>
+         <hr>	 
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/02_Button_00/task.php">Завдання 0: Додавання кнопки на форму</a>
+         </div>		 
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/02_Button_01/task.php">Завдання 1: Зміна напису кнопки</a>
+         </div>
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/02_Button_02/task.php">Завдання 2: Зміна імені кнопки</a>
+         </div>
+		<div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/02_Button_03/task.php">Завдання 3: Розміщення кнопки на формі</a>
+         </div>
+		 
+		 <!-- task Button block end ------------------------------------------------------------------------->
 		</div>
 		
       </div>

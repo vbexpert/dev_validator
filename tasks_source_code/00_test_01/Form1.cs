@@ -65,17 +65,15 @@ namespace WindowsApplication1
                 _add_v_result(20, false, s_obj_name + "=" + obj.ToString() + " master value: " + s_controled_value);
             }
         }
-        public bool _v_obj_exists(object obj, string s_obj_name)
+        public void _v_obj_exists(object obj, string s_obj_name)
         {
-            if (null != obj)
+            if (null == obj)
             {
                 _add_v_result(20, true, "");
-                return true;
             }
             else
             {
                 _add_v_result(20, false, obj.ToString());
-                return false;
             }
         }
         public void _v_neg_parm(object obj, string s_obj_name, string s_controled_value)
