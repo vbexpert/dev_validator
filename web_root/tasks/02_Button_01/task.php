@@ -20,7 +20,7 @@ $cls_Task->_add_property("Application name", "Ім'я програми", "Button
 $cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
 $cls_Task->_add_property("Form.Text", "Текст Форми", "Зміна напису кнопки");
 $cls_Task->_add_property("Form.StartPosition", "Початкова позиція", "CenterScreen");
-$cls_Task->_add_object_creator("Додати об'єкт: Button");
+$cls_Task->_add_object_creator("Додати об'єкт:", "Button");
 $cls_Task->_add_property("button1.Name", "Ім'я кнопки", "button1");
 $cls_Task->_add_property("button1.Text", "Текст кнопки", "NewButton");
 

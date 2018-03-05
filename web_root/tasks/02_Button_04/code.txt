@@ -75,7 +75,7 @@ namespace ns_d_code
 			//---------------------------------------------------->
 			//<-- bingo start -->
 			
-				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+			cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
 				
 			//<-- bingo end -->
 			//---------------------------------------------------->

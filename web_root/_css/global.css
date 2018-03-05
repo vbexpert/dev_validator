@@ -81,6 +81,7 @@
 }
 .navbar{
     margin-bottom:0px;
+	position: fixed;
 }
 .note{
 	font-size:25px;

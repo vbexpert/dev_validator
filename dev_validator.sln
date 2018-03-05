@@ -104,6 +104,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_Button_00", "tasks_sourc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_Button_03", "tasks_source_code\02_Button_03\02_Button_03.csproj", "{54404CC1-70D3-47E4-81B5-581F0586E1B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_Button_04", "tasks_source_code\02_Button_04\02_Button_04.csproj", "{5EC581DE-4351-4D74-95BB-A478148D6E94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -319,6 +321,14 @@ Global
 		{54404CC1-70D3-47E4-81B5-581F0586E1B1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{54404CC1-70D3-47E4-81B5-581F0586E1B1}.Release|x86.ActiveCfg = Release|Any CPU
 		{54404CC1-70D3-47E4-81B5-581F0586E1B1}.Release|x86.Build.0 = Release|Any CPU
+		{5EC581DE-4351-4D74-95BB-A478148D6E94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EC581DE-4351-4D74-95BB-A478148D6E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EC581DE-4351-4D74-95BB-A478148D6E94}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5EC581DE-4351-4D74-95BB-A478148D6E94}.Debug|x86.Build.0 = Debug|Any CPU
+		{5EC581DE-4351-4D74-95BB-A478148D6E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EC581DE-4351-4D74-95BB-A478148D6E94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EC581DE-4351-4D74-95BB-A478148D6E94}.Release|x86.ActiveCfg = Release|Any CPU
+		{5EC581DE-4351-4D74-95BB-A478148D6E94}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -349,6 +359,7 @@ Global
 		{55A8EC5C-BF88-4B6A-8FFA-813CD91E324B} = {6775DFB8-4130-4DF8-8454-D98A21052E13}
 		{296C1774-BEB4-481F-B4C7-568914B8E9B0} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 		{54404CC1-70D3-47E4-81B5-581F0586E1B1} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
+		{5EC581DE-4351-4D74-95BB-A478148D6E94} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24A63605-5F2D-439D-81C1-5E775F49DF3C}

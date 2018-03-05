@@ -20,7 +20,7 @@ $cls_Task->_add_step("3. Детальний опис крока - українс
 //template:
 //$cls_Task->_add_property("Application name", "Ім'я програми", "Form_01.exe");
 //$cls_Task->_add_property("Form", "Form.Width", "400");
-$cls_Task->_add_property("Form", "Form.Width", "400");
+
 $cls_Task->_add_property("Form", "Form.Width", "400");
 
 $cls_Task->_add_code("Написати код:", "class Child

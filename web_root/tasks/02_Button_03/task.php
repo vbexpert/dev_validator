@@ -21,7 +21,7 @@ $cls_Task->_add_property("Form.Text", "Текст Форми", "Розміщен
 $cls_Task->_add_property("Form.Width", "Ширина форми (в пікселях)", "700");
 $cls_Task->_add_property("Form.Height", "Висота форми (в пікселях)", "500");
 $cls_Task->_add_property("Form.StartPosition", "Початкова позиція", "По центру екрана");
-$cls_Task->_add_object_creator("Додати об'єкт: Button");
+$cls_Task->_add_object_creator("Додати об'єкт:","Button");
 $cls_Task->_add_property("Name", "Ім'я кнопки", "btn_Close");
 $cls_Task->_add_property("btn_Close.Text", "Текст кнопки", "Close");
 $cls_Task->_add_property("btn_Close.Width", "Ширина кнопки", "300");

@@ -97,6 +97,9 @@ include("main_config.php");
 		<div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/02_Button_03/task.php">Завдання 3: Розміщення кнопки на формі</a>
          </div>
+		 <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/02_Button_04/task.php">Завдання 4: Подія на кнопці</a>
+         </div>
 		 
 		 <!-- task Button block end ------------------------------------------------------------------------->
 		</div>

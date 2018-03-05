@@ -19,7 +19,7 @@ $cls_Task->_add_property("Application name", "Ім'я програми", "Button
 $cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
 
 
-$cls_Task->_add_object_creator("Додати об'єкт: Button");
+$cls_Task->_add_object_creator("Додати об'єкт:", "Button");
 $cls_Task->_add_property("Name", "Ім'я кнопки", "btn_Close");
 $cls_Task->_add_property("btn_Close.Text", "Текст кнопки", "Close");
 

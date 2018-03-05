@@ -44,7 +44,7 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 	  
     <!-- menu stat: -->
 	<?php
-      include_once("../../nav_menu.php");
+      include("../../nav_menu.php");
     ?>
     <!-- menu end: -->
 	  
@@ -165,6 +165,13 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 		
 		<!-- footer end --------------------------------->
 		
+		    <!-- menu stat: -->
+			<div>
+			<?php
+				include("../../nav_menu.php");
+			?>
+			</div>
+			<!-- menu end: -->
 		</div>
       </div>
     </div>

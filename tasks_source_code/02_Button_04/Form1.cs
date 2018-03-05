@@ -10,5 +10,15 @@ namespace WindowsApplication1
         {
             //
         }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_ChangeText_Click(object sender, EventArgs e)
+        {
+            btn_ChangeText.Text = "Напис на кнопці змінено!!!";
+        }
     }
 }
