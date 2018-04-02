@@ -33,7 +33,7 @@ $cls_Task->_add_property("btn_ChangeText.ForeColor", "Колір тексту", 
 $cls_Task->_add_property("btn_ChangeText.Font.Bold", "Жирний текст", "True");
 $cls_Task->_add_property("btn_ChangeText.Font.Size", "Розмір шрифту", "22");
 
-$cls_Task->_add_object_creator("Створити подію для кнопки: ","btn_ChangeText");
+$cls_Task->_add_object_creator("Створити подію для: ","btn_ChangeText");
 $cls_Task->_add_code("Написати код:", "private void btn_ChangeText_Click(object sender, EventArgs e)
 {
        btn_ChangeText.Text = \"Напис на кнопці змінено!!!\";

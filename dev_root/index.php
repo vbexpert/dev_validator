@@ -100,6 +100,15 @@ include("main_config.php");
 		 <div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/02_Button_04/task.php">Завдання 4: Подія на кнопці</a>
          </div>
+		 <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/02_Button_08/task.php">Завдання 8: Умовні оператори: Перевірка на введення цифр</a>
+         </div>
+		 <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/02_Button_09/task.php">Завдання 9: Умовні оператори: Перевірка числа на рівність нулю </a>
+         </div>
+		 <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/02_Button_10/task.php">Завдання 10: Умовні оператори: Математичний калькулятор </a>
+         </div>
 		 
 		 <!-- task Button block end ------------------------------------------------------------------------->
 		</div>

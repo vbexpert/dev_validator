@@ -28,7 +28,7 @@ class cls_Task{
   function _add_code($s_instruction, $s_code){
     $cls_NewP = new cls_Property();
 	$cls_NewP->s_name = $s_instruction;
-	$cls_NewP->s_title = "<pre><code class='csharp'>" . $s_code . "</code></pre>";
+	$cls_NewP->s_title = "<div onselectstart='return false'><pre><code class='csharp'>" . $s_code . "</code></pre></div>";
 	$cls_NewP->s_master_value = "";
 	$cls_NewP->s_type = "code";	
 	array_push($this->oa_properties, $cls_NewP);
