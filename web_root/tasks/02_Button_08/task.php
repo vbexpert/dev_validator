@@ -54,8 +54,6 @@ $cls_Task->_add_code("Обробник події Click:", "
 ", "");
 
 
-$cls_Task->_add_property("btn_ChangeText.Text", "Текст кнопки", "Напис на кнопці змінено!!!");
-
 $cls_Task->s_learn_url = "https://learn.ztu.edu.ua/mod/page/view.php?id=10041";
 $cls_Task->s_youtube_url = "https://youtu.be/hP0UsFULLuU";
 $cls_Task->s_discuss_url = "https://www.facebook.com/groups/1487277621317029/";

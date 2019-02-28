@@ -56,6 +56,10 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 		  echo("<p class='lead lead-top-fix'>".$s_step."</p>");
 		}
 	  ?>
+		<hr>
+				<div class="row f_img_holder">
+          <img class='f_img' src="target_form.png" />
+        </div>
       <hr>
       <table class="table table-striped table-bordered">
         <caption class='app_specs' align="top">Специфікація програми:</caption>

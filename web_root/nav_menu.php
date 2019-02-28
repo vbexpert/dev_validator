@@ -1,7 +1,8 @@
 <?php
 $cur_dir_fp = explode('\\', getcwd());
 $cur_dir_title = $cur_dir_fp[count($cur_dir_fp)-1];
-$s_rip = $s_domain."/validator/_img/c-sharp-logo4.png";
+$s_rip = "/validator/_img/c-sharp-logo4.png";
+//$s_rip = $s_domain."/validator/_img/c-sharp-logo4.png";
 ?>
 <div class="navbar navbar-default " role="navigation">
   <div class="container">

@@ -193,6 +193,13 @@ namespace uts_tests
             string s_task_exe_ft = "drawing01.exe";
             string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
+        [TestMethod]
+        public void tm_06_2d_Black_White()
+        {
+            string s_task_id = "06_2D_Black_White";
+            string s_task_exe_ft = "Black_White.exe";
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
+        }
         //[unit-test-insertion-point]
         private string _validate_task(string s_task_id, string s_task_exe_ft) {
             //move validator exe to temp:

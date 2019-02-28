@@ -100,7 +100,13 @@ include("main_config.php");
 		 <div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/02_Button_04/task.php">Завдання 4: Подія на кнопці</a>
          </div>
-		 <div class="row pic-centered task_desc_row">
+     <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/02_Button_05/task.php">Завдання 5: Робота з текстом</a>
+         </div>
+     <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/02_Button_06/task.php">Завдання 6: Робота з 2 полями для вводу</a>
+         </div>
+     <div class="row pic-centered task_desc_row">
            <a href="/validator/tasks/02_Button_08/task.php">Завдання 8: Умовні оператори: Перевірка на введення цифр</a>
          </div>
 		 <div class="row pic-centered task_desc_row">
@@ -111,6 +117,19 @@ include("main_config.php");
          </div>
 		 
 		 <!-- task Button block end ------------------------------------------------------------------------->
+
+     <!-- task Graphic block start ------------------------------------------------------------------------>
+		 <h3 class=''>Робота з графікою Graphic</h2>
+         <hr>	 
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/06_2D_Graphics_01/task.php">Завдання 0: </a>
+         </div>		 
+         <div class="row pic-centered task_desc_row">
+           <a href="/validator/tasks/06_2D_Graphics_01/task.php">Завдання 1: </a>
+         </div>
+         
+		 
+		 <!-- task Graphic block end ------------------------------------------------------------------------->
 		</div>
 		
       </div>
