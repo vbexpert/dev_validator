@@ -8,7 +8,7 @@ $cls_Task->s_title = "Button_04";
 $cls_Task->s_id = "02_Button_04";
 $cls_Task->s_description = "Розміщення кнопки на формі";
 
-$cls_Task->_add_step("1. Створити форму відповідно специфікації.");
+$cls_Task->_add_step("1. Створити проект <b>Button_01</b> відповідно специфікації у рішенні <b>Button</b>.");
 $cls_Task->_add_step("2. Завантажити програму у <b>DEV-VALIDATOR</b>.");
 $cls_Task->_add_step("3. Добитися повної валідації програми.");
 $cls_Task->_add_step("4. Зберегти скріншот [Alt+PrintScreen] результатів у папку <b>Production</b>.");
@@ -16,22 +16,22 @@ $cls_Task->_add_step("5. Зберегти програму у папку <b>Prod
 
 $cls_Task->_add_property("Availability of Form", "Наявність форми", "");
 $cls_Task->_add_property("Application name", "Ім'я програми", "Button_04.exe");
-$cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
-$cls_Task->_add_property("Form.Text", "Текст Форми", "Подія на кнопці");
-$cls_Task->_add_property("Form.Width", "Ширина форми (в пікселях)", "700");
-$cls_Task->_add_property("Form.Height", "Висота форми (в пікселях)", "500");
-$cls_Task->_add_property("Form.StartPosition", "Початкова позиція", "По центру екрана");
+$cls_Task->_add_property("AutoScaleMode", "Режим перерахунку форми", "None");
+$cls_Task->_add_property("Text", "Текст Форми", "Подія на кнопці");
+$cls_Task->_add_property("Width", "Ширина форми (в пікселях)", "700");
+$cls_Task->_add_property("Height", "Висота форми (в пікселях)", "500");
+$cls_Task->_add_property("StartPosition", "Початкова позиція", "По центру екрана");
 
 $cls_Task->_add_object_creator("Додати об'єкт: ", "Button");
 $cls_Task->_add_property("Name", "Ім'я кнопки", "btn_ChangeText");
-$cls_Task->_add_property("btn_ChangeText.Text", "Текст кнопки", "Змінити напис кнопки");
-$cls_Task->_add_property("btn_ChangeText.Width", "Ширина кнопки", "500");
-$cls_Task->_add_property("btn_ChangeText.Height", "Висота кнопки", "100");
-$cls_Task->_add_property("btn_ChangeText.Location.X", "Ордината кнопки", "100");
-$cls_Task->_add_property("btn_ChangeText.Location.Y", "Абсциса кнопки", "200");
-$cls_Task->_add_property("btn_ChangeText.ForeColor", "Колір тексту", "Crimson");
-$cls_Task->_add_property("btn_ChangeText.Font.Bold", "Жирний текст", "True");
-$cls_Task->_add_property("btn_ChangeText.Font.Size", "Розмір шрифту", "22");
+$cls_Task->_add_property("Text", "Текст кнопки", "Змінити напис кнопки");
+$cls_Task->_add_property("Size.Width", "Ширина кнопки", "500");
+$cls_Task->_add_property("Size.Height", "Висота кнопки", "100");
+$cls_Task->_add_property("Location.X", "Ордината кнопки", "100");
+$cls_Task->_add_property("Location.Y", "Абсциса кнопки", "200");
+$cls_Task->_add_property("ForeColor", "Колір тексту", "Crimson");
+$cls_Task->_add_property("Font.Bold", "Жирний текст", "True");
+$cls_Task->_add_property("Font.Size", "Розмір шрифту", "22");
 
 $cls_Task->_add_object_creator("Створити подію для: ","btn_ChangeText");
 $cls_Task->_add_code("Написати код:", "private void btn_ChangeText_Click(object sender, EventArgs e)

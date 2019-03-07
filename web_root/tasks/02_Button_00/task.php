@@ -8,7 +8,7 @@ $cls_Task->s_title = "Button_00";
 $cls_Task->s_id = "02_Button_00";
 $cls_Task->s_description = "Додавання кнопки на форму";
 
-$cls_Task->_add_step("1. Створити рішення <b>Lesson_02</b> і проект <b>Button_00</b>.");
+$cls_Task->_add_step("1. Створити рішення <b>Button</b> і проект <b>Button_00</b>.");
 $cls_Task->_add_step("2. Створити форму відповідно специфікації.");
 $cls_Task->_add_step("3. Додати на форму кнопку з <b>Панелі елементів</b>.");
 $cls_Task->_add_step("4. Завантажити програму у <b>DEV-VALIDATOR</b>.");
@@ -21,8 +21,8 @@ $cls_Task->_add_property("Application name", "Ім'я програми", "Button
 $cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
 $cls_Task->_add_property("Form.Text", "Текст Форми", "Додавання кнопки на форму");
 $cls_Task->_add_object_creator("Додати об'єкт:","Button");
-$cls_Task->_add_property("button1.Name", "Ім'я кнопки", "button1");
-$cls_Task->_add_property("button1.Text", "Текст кнопки", "button1");
+$cls_Task->_add_property("Name", "Ім'я кнопки", "button1");
+$cls_Task->_add_property("Text", "Текст кнопки", "button1");
 
 
 

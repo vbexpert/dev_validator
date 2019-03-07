@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7BCDB0C8-6059-4E02-AD0A-702E0E0AA821}</ProjectGuid>
+    <ProjectGuid>{E4A7EFFD-FA83-47E8-820C-8FF8C7FE6BFD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Black _White</RootNamespace>
-    <AssemblyName>Black _White</AssemblyName>
+    <RootNamespace>Black_White</RootNamespace>
+    <AssemblyName>Black_White</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

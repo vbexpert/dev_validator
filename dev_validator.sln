@@ -28,6 +28,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dev_root", "dev_root", "{67
 		dev_root\favicon.ico = dev_root\favicon.ico
 		dev_root\head_meta_tags.php = dev_root\head_meta_tags.php
 		dev_root\header.php = dev_root\header.php
+		dev_root\index.html = dev_root\index.html
 		dev_root\index.php = dev_root\index.php
 		dev_root\index_dev.php = dev_root\index_dev.php
 		dev_root\logout.php = dev_root\logout.php
@@ -96,6 +97,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_img", "_img", "{55A8EC5C-B
 		dev_root\_img\c-sharp-logo3.png = dev_root\_img\c-sharp-logo3.png
 		dev_root\_img\c-sharp-logo4.png = dev_root\_img\c-sharp-logo4.png
 		dev_root\db_connect.php = dev_root\db_connect.php
+		dev_root\index.html = dev_root\index.html
 		dev_root\_img\info.png = dev_root\_img\info.png
 		dev_root\_img\task-completed.png = dev_root\_img\task-completed.png
 	EndProjectSection
@@ -118,7 +120,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00", "00", "{1B9E9C38-6021-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06", "06", "{42D34025-E5B6-4BAD-8069-3ADC8CD05899}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_2D_Black _White", "tasks_source_code\06_2D_Black _White\06_2D_Black _White.csproj", "{7BCDB0C8-6059-4E02-AD0A-702E0E0AA821}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_2D_Black_White", "tasks_source_code\06_2D_Black_White\06_2D_Black_White.csproj", "{E4A7EFFD-FA83-47E8-820C-8FF8C7FE6BFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -351,14 +353,14 @@ Global
 		{B9E28BBB-4797-43B4-9589-5FAFCFE16008}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B9E28BBB-4797-43B4-9589-5FAFCFE16008}.Release|x86.ActiveCfg = Release|Any CPU
 		{B9E28BBB-4797-43B4-9589-5FAFCFE16008}.Release|x86.Build.0 = Release|Any CPU
-		{7BCDB0C8-6059-4E02-AD0A-702E0E0AA821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7BCDB0C8-6059-4E02-AD0A-702E0E0AA821}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7BCDB0C8-6059-4E02-AD0A-702E0E0AA821}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{7BCDB0C8-6059-4E02-AD0A-702E0E0AA821}.Debug|x86.Build.0 = Debug|Any CPU
-		{7BCDB0C8-6059-4E02-AD0A-702E0E0AA821}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7BCDB0C8-6059-4E02-AD0A-702E0E0AA821}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7BCDB0C8-6059-4E02-AD0A-702E0E0AA821}.Release|x86.ActiveCfg = Release|Any CPU
-		{7BCDB0C8-6059-4E02-AD0A-702E0E0AA821}.Release|x86.Build.0 = Release|Any CPU
+		{E4A7EFFD-FA83-47E8-820C-8FF8C7FE6BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4A7EFFD-FA83-47E8-820C-8FF8C7FE6BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4A7EFFD-FA83-47E8-820C-8FF8C7FE6BFD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E4A7EFFD-FA83-47E8-820C-8FF8C7FE6BFD}.Debug|x86.Build.0 = Debug|Any CPU
+		{E4A7EFFD-FA83-47E8-820C-8FF8C7FE6BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4A7EFFD-FA83-47E8-820C-8FF8C7FE6BFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4A7EFFD-FA83-47E8-820C-8FF8C7FE6BFD}.Release|x86.ActiveCfg = Release|Any CPU
+		{E4A7EFFD-FA83-47E8-820C-8FF8C7FE6BFD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -396,7 +398,7 @@ Global
 		{79472789-F42E-4C51-9FDC-F1862AF3C8EE} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 		{1B9E9C38-6021-4021-A58C-953E4B875C46} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 		{42D34025-E5B6-4BAD-8069-3ADC8CD05899} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
-		{7BCDB0C8-6059-4E02-AD0A-702E0E0AA821} = {42D34025-E5B6-4BAD-8069-3ADC8CD05899}
+		{E4A7EFFD-FA83-47E8-820C-8FF8C7FE6BFD} = {42D34025-E5B6-4BAD-8069-3ADC8CD05899}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24A63605-5F2D-439D-81C1-5E775F49DF3C}

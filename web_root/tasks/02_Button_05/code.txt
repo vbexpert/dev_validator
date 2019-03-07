@@ -53,7 +53,7 @@ namespace ns_d_code
 			//validate if text changed:
 			//use accessor if required:
  			
-			//cls_output_controller._v_parm(b1.Text, "btn_ChangeText.Text", "Напис на кнопці змінено!!!");
+			cls_output_controller._v_parm(b1.Text, "btn_ChangeText.Text", "Напис на кнопці змінено!!!");
 
 			//<-- bingo end -->
 			//---------------------------------------------------->

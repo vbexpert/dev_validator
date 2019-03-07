@@ -13,7 +13,7 @@ namespace WindowsApplication1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Black_White());
+            Application.Run(new Form1());
         }
     }
 }

@@ -129,7 +129,26 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 			</div>
 		  </div>
 		</div>
-		
+		        <!-- task validation block start ---------------->
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-2">
+			  <div class='check_btn_label'>Перевірка:</div>
+			</div>
+			<div class="col-md-8">
+			<form id='upload_file' class='upload_file' action="..\..\validator_fe.php" method="post" enctype="multipart/form-data">
+			  <label class="btn btn-success btn-block btn-lg">
+				Вибрати файл програми для валідації<input type="file" hidden id="fileToUpload" name="fileToUpload">
+			  </label>
+			  <input type="hidden" name="codefile" value="<?php echo($cls_Task->s_id) ?>"/><!-- task id -->
+			</form>
+			</div>
+			<div class="col-md-4">
+			  
+			</div>
+		  </div>
+		</div>
+		<!-- task validation block end ------------------>
         <div class="row f_img_holder">
           <img class='f_img' src="target_form.png" />
         </div>
@@ -143,39 +162,11 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
            <a class="btn btn-warning regular_button" href="<?php echo($cls_Task->s_discuss_url) ?>" role="button" target="_blank">Обговорити у спільноті</a>
          </div>
 	    <!-- help block end -->
-		
 		<hr>
-
-        <!-- task validation block start ---------------->
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-4">
-			  <div class='check_btn_label'>Перевірка:</div>
-			</div>
-			<div class="col-md-4">
-			<form id='upload_file' class='upload_file' action="..\..\validator_fe.php" method="post" enctype="multipart/form-data">
-			  <label class="btn btn-primary regular_button">
-				Вибрати файл програми<input type="file" hidden id="fileToUpload" name="fileToUpload">
-			  </label>
-			  <input type="hidden" name="codefile" value="<?php echo($cls_Task->s_id) ?>"/><!-- task id -->
-			</form>
-			</div>
-			<div class="col-md-4">
-			  
-			</div>
-		  </div>
-		</div>
-		<!-- task validation block end ------------------>
 		
 		<!-- footer end --------------------------------->
 		
-		    <!-- menu stat: -->
-			<div>
-			<?php
-				include("../../nav_menu.php");
-			?>
-			</div>
-			<!-- menu end: -->
+		    
 		</div>
       </div>
     </div>

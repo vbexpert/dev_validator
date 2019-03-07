@@ -8,7 +8,7 @@ $cls_Task->s_title = "Form_13";
 $cls_Task->s_id = "01_Form_13"; //_exact_ folder name!
 $cls_Task->s_description = "Розтягнення фонового малюнку";
 
-$cls_Task->_add_step("1. Відкрити створене рішення <b>Lesson_01</b>.");
+$cls_Task->_add_step("1. Відкрити створене рішення <b>WindowsForms</b>.");
 $cls_Task->_add_step("2. Додати у рішення новий проект <b>Form_13</b>.");
 $cls_Task->_add_step("3. Знайти та зберегти у папку з проектом зображення <b>Космос</b>.");
 $cls_Task->_add_step("4. Фоновий малюнок імпортувати в <b>Resourses</b>.");
@@ -24,11 +24,11 @@ $cls_Task->_add_step("<hr>");
 $cls_Task->_add_step("Для коректної валідації програми встановіть властивості <b>AutoScaleMode</b> значення <b>None</b>");
 
 $cls_Task->_add_property("Availability of Form", "Наявність форми", "");
-$cls_Task->_add_property("Application name", "Ім'я програми", "Form_13.exe");
-$cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
-$cls_Task->_add_property("Form", "Form.Text", "Stretch - Розтягнення фонового малюнку");
-$cls_Task->_add_property("Form.BackgroundImage", "Фонове зображення", "Космос");
-$cls_Task->_add_property("Form.BackgroundImageLayout", "Спосіб відображення фонового малюнку", "Stretch");
+$cls_Task->_add_property("Application name", "Ім'я програми", "Form_13");
+$cls_Task->_add_property("AutoScaleMode", "Режим перерахунку форми", "None");
+$cls_Task->_add_property("Text", "Заголовок форми", "Stretch - Розтягнення фонового малюнку");
+$cls_Task->_add_property("BackgroundImage", "Фонове зображення", "завантажити в Resoures зображення космосу");
+$cls_Task->_add_property("BackgroundImageLayout", "Спосіб відображення фонового малюнку", "Stretch");
 
 $cls_Task->s_learn_url = "https://msdn.microsoft.com/ru-ru/library/system.windows.forms.imagelayout(v=vs.110).aspx";
 $cls_Task->s_youtube_url = "";

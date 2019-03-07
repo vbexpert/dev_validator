@@ -1,4 +1,4 @@
-﻿namespace Black__White
+﻿namespace WindowsApplication1
 {
     partial class Form1
     {
@@ -28,52 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Black = new System.Windows.Forms.Button();
-            this.btn_White = new System.Windows.Forms.Button();
             this.pb_Target = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Target)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_Black
-            // 
-            this.btn_Black.BackColor = System.Drawing.Color.Black;
-            this.btn_Black.FlatAppearance.BorderSize = 0;
-            this.btn_Black.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Black.Location = new System.Drawing.Point(0, 0);
-            this.btn_Black.Name = "btn_Black";
-            this.btn_Black.Size = new System.Drawing.Size(250, 50);
-            this.btn_Black.TabIndex = 0;
-            this.btn_Black.UseVisualStyleBackColor = false;
-            this.btn_Black.Click += new System.EventHandler(this.btn_Black_Click);
-            // 
-            // btn_White
-            // 
-            this.btn_White.BackColor = System.Drawing.Color.White;
-            this.btn_White.FlatAppearance.BorderSize = 0;
-            this.btn_White.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_White.Location = new System.Drawing.Point(250, 0);
-            this.btn_White.Name = "btn_White";
-            this.btn_White.Size = new System.Drawing.Size(250, 50);
-            this.btn_White.TabIndex = 1;
-            this.btn_White.UseVisualStyleBackColor = false;
-            this.btn_White.Click += new System.EventHandler(this.btn_White_Click);
-            // 
             // pb_Target
             // 
+            this.pb_Target.BackColor = System.Drawing.Color.White;
             this.pb_Target.Location = new System.Drawing.Point(0, 50);
             this.pb_Target.Name = "pb_Target";
-            this.pb_Target.Size = new System.Drawing.Size(500, 300);
-            this.pb_Target.TabIndex = 2;
+            this.pb_Target.Size = new System.Drawing.Size(400, 312);
+            this.pb_Target.TabIndex = 0;
             this.pb_Target.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 50);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(200, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 50);
+            this.button2.TabIndex = 2;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(499, 351);
+            this.ClientSize = new System.Drawing.Size(402, 361);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pb_Target);
-            this.Controls.Add(this.btn_White);
-            this.Controls.Add(this.btn_Black);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Location = new System.Drawing.Point(200, 200);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Black_White";
@@ -84,9 +85,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_Black;
-        private System.Windows.Forms.Button btn_White;
         private System.Windows.Forms.PictureBox pb_Target;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

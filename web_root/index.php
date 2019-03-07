@@ -125,7 +125,7 @@ include("main_config.php");
            <a href="/validator/tasks/06_2D_Graphics_01/task.php">Завдання 0: </a>
          </div>		 
          <div class="row pic-centered task_desc_row">
-           <a href="/validator/tasks/06_2D_Graphics_01/task.php">Завдання 1: </a>
+           <a href="/validator/tasks/06_2D_Black_White/task.php">Завдання 1: Black_White</a>
          </div>
          
 		 
