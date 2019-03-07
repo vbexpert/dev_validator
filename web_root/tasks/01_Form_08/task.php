@@ -8,7 +8,7 @@ $cls_Task->s_title = "Form_08";
 $cls_Task->s_id = "01_Form_08"; //_exact_ folder name!
 $cls_Task->s_description = "Вікно на весь екран";
 
-$cls_Task->_add_step("1. Відкрити створене рішення <b>Lesson_01</b>.");
+$cls_Task->_add_step("1. Відкрити створене рішення <b>WindowsForms</b>.");
 $cls_Task->_add_step("2. Додати у рішення новий проект <b>Form_08</b>.");
 $cls_Task->_add_step("3. Створити форму відповідно специфікації.");
 $cls_Task->_add_step(" Для закриття вікна використовуйте <b>Alt + F4</b>");
@@ -21,12 +21,12 @@ $cls_Task->_add_step("8. Зберегти проект та закрити рі�
 $cls_Task->_add_step("<hr>");
 $cls_Task->_add_step("Для коректної валідації програми встановіть властивості <b>AutoScaleMode</b> значення <b>None</b>");
 
-$cls_Task->_add_property("Solution name", "Ім'я рішення", "Lesson_01");
-$cls_Task->_add_property("Application name", "Ім'я програми", "Form_08.exe");
-$cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
-$cls_Task->_add_property("Form.BackColor.Name", "Колір Форми", "MediumAquamarine");
-$cls_Task->_add_property("Form.WindowState", "Стартове положення вікна програми", "Розгорнуте на весь екран");
-$cls_Task->_add_property("Form.FormBorderStyle", "Пареметри границь вікна", "None");
+$cls_Task->_add_property("Availability of Form", "Наявність форми", "");
+$cls_Task->_add_property("Application name", "Ім'я програми", "Form_08");
+$cls_Task->_add_property("AutoScaleMode", "Режим перерахунку форми", "None");
+$cls_Task->_add_property("BackColor.Name", "Колір Форми", "MediumAquamarine");
+$cls_Task->_add_property("WindowState", "Стартове положення вікна програми", "Розгорнуте на весь екран");
+$cls_Task->_add_property("FormBorderStyle", "Пареметри границь вікна", "None");
 
 $cls_Task->s_learn_url = "https://social.msdn.microsoft.com/Forums/ru-RU/cf54d896-3c7b-4f69-8e60-1ab022b0c9bf/-?forum=fordesktopru";
 $cls_Task->s_youtube_url = "";

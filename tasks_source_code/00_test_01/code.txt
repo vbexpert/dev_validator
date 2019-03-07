@@ -10,9 +10,8 @@ namespace ns_d_code
             cls_output_controller cls_output_controller = new cls_output_controller();
             //---------------------------------------------------->
             //початок коду валідації:
-cls_output_controller._v_parm(f.Width, "Form.Width", "400");
-cls_output_controller._v_parm(f.Width, "Form.Width", "400");
-cls_output_controller._v_parm(f.Width, "Form.Width", "400");
+			cls_output_controller._v_parm(f.Width, "Width", "800");
+
 
             //кінець коду валідації:
             //---------------------------------------------------->

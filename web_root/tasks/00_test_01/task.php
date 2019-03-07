@@ -3,7 +3,7 @@ session_start();
 require("../../main_config.php");
 require($s_v_app_root."task_core.php");
 $cls_Task = new cls_Task();
-//-------------------------------------------------->
+//--------------------------------------->
 //create UI validation webpage:
 $cls_Task->s_title = "Test Task 00";
 $cls_Task->s_id = "00_test_01"; //_exact_ folder name!
@@ -20,8 +20,8 @@ $cls_Task->_add_step("3. Детальний опис крока - українс
 //template:
 //$cls_Task->_add_property("Application name", "Ім'я програми", "Form_01.exe");
 //$cls_Task->_add_property("Form", "Form.Width", "400");
-$cls_Task->_add_property("Form", "Form.Width", "400");
-$cls_Task->_add_property("Form", "Form.Width", "400");
+
+$cls_Task->_add_property("Form", "Form.Width", "800");
 
 $cls_Task->_add_code("Написати код:", "class Child
 {

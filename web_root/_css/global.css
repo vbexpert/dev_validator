@@ -1,3 +1,13 @@
+html {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .btn-browse {
     width: 200px !important;
     margin-left: 46px;
@@ -59,7 +69,10 @@
 	
 }
 .f_img{
-	padding:10px;
+    padding:10px;
+    width: auto;
+    height: auto;
+    max-width: 100%;
 }
 .nav-link{
     font-size: 30px !important;
@@ -81,6 +94,7 @@
 }
 .navbar{
     margin-bottom:0px;
+	
 }
 .note{
 	font-size:25px;
@@ -99,6 +113,9 @@
 }
 .obj_creator{
 	font-weight: bold !important;
+	text-align: center;
+	font-size: 20px !important;
+	color: green !important;
 }
 .pb-v-progress{
     height:70px;
@@ -144,3 +161,5 @@ position:absolute;
 right:0;
 	width:120px;
 }
+
+
