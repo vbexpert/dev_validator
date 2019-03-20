@@ -23,7 +23,7 @@ namespace ns_d_code
             cls_output_controller._v_parm(f.Location.X,		"Form.Location.X",		"200");
             cls_output_controller._v_parm(f.Location.Y,		"Form.Location.Y",		"200");
             //кінець коду валідації:
-			//---------------------------------------------------->
+			//----------------------------------------------------> 1
             return(cls_output_controller._final_result());
         }
         public static void Main() //main entry point:
