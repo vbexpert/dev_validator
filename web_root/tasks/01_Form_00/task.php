@@ -37,11 +37,9 @@ $cls_Task->_add_step("15. Завантажити програму у <b>DEV-VALI
 $cls_Task->_add_step("16. Добитися повної валідації програми.");
 $cls_Task->_add_step("17. Зберегти скріншот <b>[Alt+PrintScreen]</b> результатів у папку <b>Production</b>.");
 $cls_Task->_add_step("18. Скопіювати програму <b>Form_00.exe</b> у папку <b>Production</b>.");
-
 $cls_Task->_add_property("Availability of Form", "Наявність форми", "");
 $cls_Task->_add_property("Application name", "Ім'я програми", "Form_00");
 $cls_Task->_add_property("AutoScaleMode", "Режим перерахунку форми", "None");
-
 $cls_Task->s_learn_url = "https://learn.ztu.edu.ua/mod/page/view.php?id=9976";
 $cls_Task->s_youtube_url = "https://youtu.be/8uyRd-aKlSI";
 $cls_Task->s_discuss_url = "https://www.facebook.com/groups/1487277621317029/";

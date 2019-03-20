@@ -27,7 +27,7 @@ $cls_Task->_add_property("Text", "Текст кнопки", "Close");
 $cls_Task->_add_property("Width", "Ширина кнопки", "300");
 $cls_Task->_add_property("Height", "Висота кнопки", "100");
 $cls_Task->_add_property("Location.X", "Ордината кнопки", "200");
-$cls_Task->_add_property("Location.Y", "Абсциса кнопки", "250");
+$cls_Task->_add_property("Location.Y", "Абсциса кнопки", "200");
 $cls_Task->_add_property("ForeColor", "Колір тексту", "Crimson");
 $cls_Task->_add_property("Font.Bold", "Жирний текст", "True");
 $cls_Task->_add_property("Font.Size", "Розмір шрифту", "22");
