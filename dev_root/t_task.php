@@ -89,25 +89,34 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 				$cls_property->b_validated = false;
 			  }
 			}
-			//<--
+			
+			//<-- Creating specification table 
 			echo("<tr>");
-			  echo("<td>".$cls_property->s_name."</td>");
-			  echo("<td>".$cls_property->s_title."</td>");
-			  echo("<td>".$cls_property->s_master_value."</td>");
-			  switch ($cls_property->s_type) {
-				case "":
-					$s_checked = "";
-					if($cls_property->b_validated == true){
-					  $s_checked = "checked=\"checked\"";
-					}
-					echo("<td><div class='chkbox-v-value'><input type='checkbox' $s_checked data-off-icon-cls=\"gluphicon-thumbs-down\" data-on-icon-cls=\"gluphicon-thumbs-up\"></input></div></td>");
-					break;
-				case "obj_creator":
-					echo("<td></td>");
-					break;					
-				case "code":
-					echo("<td></td>");
-					break;
+			  if($cls_property->s_type == "code"){
+				//============================>
+				//code only:
+				echo("<td>".$cls_property->s_name."</td>");
+				echo("<td colspan='3'>".$cls_property->s_title."</td>");
+				//============================>
+			  }else{
+				//============================>
+				//not code:
+			    echo("<td>".$cls_property->s_name."</td>");
+			    echo("<td>".$cls_property->s_title."</td>");
+			    echo("<td>".$cls_property->s_master_value."</td>");
+			    switch ($cls_property->s_type) {
+				  case "":
+					  $s_checked = "";
+					  if($cls_property->b_validated == true){
+					    $s_checked = "checked=\"checked\"";
+					  }
+					  echo("<td><div class='chkbox-v-value'><input type='checkbox' $s_checked data-off-icon-cls=\"gluphicon-thumbs-down\" data-on-icon-cls=\"gluphicon-thumbs-up\"></input></div></td>");
+					  break;
+				  case "obj_creator":
+					  echo("<td></td>");
+					  break;					
+			    }
+				//============================>
 			  }
 			echo("</tr>");
 			$i_ctr++;

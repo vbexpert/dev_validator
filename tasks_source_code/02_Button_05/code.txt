@@ -1,6 +1,8 @@
 ﻿using System.Windows.Forms;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
+
 namespace ns_d_code
 {
     public class cls_Main
@@ -53,7 +55,91 @@ namespace ns_d_code
 			}
 			//кінець перевірки текстового поля tb_Input -------------------------------->
 
+			//перевірка lb_Target:
+			//---------------------------------------------------->
+			//спроба отримати інстанс обєкта:
+			object obj2 = cls_output_controller._v_get_obj(f, "lb_Target");
+			//перевіряємо чи об'єкт існує (де-факто):
+			if(obj2!= null)
+			{
+			    //об'єкт існує - приводимо до типу напис:
+			    Label lb_Target = (Label)obj2;
+			    
+				//валідуємо обєкт для відображення у валідаторі:
+				cls_output_controller._v_obj_exists(lb_Target,	"lb_Target");
+
+				//об'єкт існує - валідуємо властивості:			
+				
+				cls_output_controller._v_parm(lb_Target.Name,			"Name",			"lb_Target");
+				cls_output_controller._v_parm(lb_Target.Text,			"Text",			"Тут з'явиться текст при натисканні на кнопку");
+				//cls_output_controller._v_parm(lb_Target.Font.Bold,		"FontStyle",	"Bold");		
+			}
+			else
+			{
+			    //об'єкт не існує (3 параметри треба будо звалідувати, тому 3 і зафейлити):
+			    cls_output_controller._add_fail_msg("Об'єкт не знайдено!");
+				cls_output_controller._add_fail_msg("Об'єкт не знайдено!");		
+				//cls_output_controller._add_fail_msg("Об'єкт не знайдено!");						
+			//---------------------------------------------------->
+			//<-- bingo start -->
 			
+				cls_output_controller._add_fail_msg("Об'єкт не знайдено!");
+				
+			//<-- bingo end -->
+			//---------------------------------------------------->
+			}
+			//кінець перевірки lb_Target -------------------------------->
+			
+			//перевірка btn_CopyText
+			//---------------------------------------------------->
+			//спроба отримати інстанс обєкта:
+			object obj3 = cls_output_controller._v_get_obj(f, "btn_CopyText");
+			//перевіряємо чи об'єкт існує (де-факто):
+			if(obj3 != null)
+			{
+			    //об'єкт існує - приводимо до типу кнопки:
+			    Button btn1 = (Button)obj3;
+			    
+				//валідуємо обєкт для відображення у валідаторі:
+				cls_output_controller._v_obj_exists(btn1,	"btn_CopyText");
+
+				//об'єкт існує - валідуємо властивості:			
+				
+				cls_output_controller._v_parm(btn1.Name,				"Name",			"btn_CopyText");
+				cls_output_controller._v_parm(btn1.Text,				"Text",			"Скопіювати текст");
+			
+			//Перевірка події на кнопці
+			//---------------------------------------------------->
+			//<-- bingo start -->
+			//prepare clickMethodInfo:
+			MethodInfo clickMethodInfo = f.GetType().GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
+			//invoke event:
+			clickMethodInfo.Invoke(btn1, new object[] { EventArgs.Empty });
+
+			//validate if text changed:
+			//use accessor if required:
+
+ 			//cls_output_controller._v_parm(btn1.Text,		"Text",					btn1.Text);
+			//cls_output_controller._v_parm(btn1.Text,		"btn_ChangeText.Text",	"Напис на кнопці змінено!!!");
+
+			//<-- bingo end -->
+			//---------------------------------------------------->
+			//Завершення перевірки події на кнопці			
+			}
+			else
+			{
+			    //об'єкт не існує (2 параметри треба будо звалідувати, тому 2 і зафейлити):
+			    cls_output_controller._add_fail_msg("Об'єкт не знайдено!");
+				cls_output_controller._add_fail_msg("Об'єкт не знайдено!");							
+			//---------------------------------------------------->
+			//<-- bingo start -->
+			
+				cls_output_controller._add_fail_msg("Об'єкт не знайдено!");
+				
+			//<-- bingo end -->
+			//---------------------------------------------------->
+			}
+			//кінець перевірки btn_CopyText -------------------------------->
 			
 
 

@@ -30,28 +30,14 @@ $cls_Task->_add_property("Text", "Текст ", "");
 $cls_Task->_add_object_creator("Додати об'єкт: ", "Label");
 $cls_Task->_add_property("Name", "Ім'я напису", "lb_Result");
 $cls_Task->_add_property("Text", "Текст ", "Тут з'явиться текст при натисканні на кнопку");
-$cls_Task->_add_property("Font.Bold", "Жирний текст", "True");
+//$cls_Task->_add_property("Font.Bold", "Жирний текст", "True");
 
 $cls_Task->_add_object_creator("Додати об'єкт: ", "Button");
 $cls_Task->_add_property("Name", "Ім'я кнопки", "btn_CopyText");
 $cls_Task->_add_property("Text", "Текст кнопки", "Скопіювати текст");
-$cls_Task->_add_property("Width", "Ширина кнопки", "300");
-$cls_Task->_add_property("Height", "Висота кнопки", "120");
-$cls_Task->_add_property("BackColor", "Колір кнопки", "PaleGreen");
-$cls_Task->_add_property("Font.Size", "Розмір шрифту", "36");
-$cls_Task->_add_object_creator("Створити подію: ","btn_CopyText_Click");
-$cls_Task->_add_code("Написати код:", " lb_Target.Text = tb_Input.Text;", "");
 
-$cls_Task->_add_object_creator("Додати об'єкт: ", "Button");
-$cls_Task->_add_property("Name", "Ім'я кнопки", "btn_Close");
-$cls_Task->_add_property("Text", "Текст кнопки", "Закрити");
-$cls_Task->_add_property("Width", "Ширина кнопки", "300");
-$cls_Task->_add_property("Height", "Висота кнопки", "120");
-$cls_Task->_add_property("BackColor", "Колір кнопки", "LightCoral");
-$cls_Task->_add_property("Font.Size", "Розмір шрифту", "36");
-$cls_Task->_add_property("btn_Close_Click", "При натисканні на кнопку", "Закрити форму");
-$cls_Task->_add_object_creator("Створити подію Click: ","btn_Close_Click");
-$cls_Task->_add_code("Написати код:", "Close();", "");
+
+
 
 $cls_Task->s_learn_url = "http://informatics.in.ua/programming_csharp/part_02.php";
 $cls_Task->s_youtube_url = "https://youtu.be/hP0UsFULLuU";
