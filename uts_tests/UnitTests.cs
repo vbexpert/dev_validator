@@ -6,7 +6,7 @@ using System.Text;
 namespace uts_tests
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTests
     {
         public string s_tasks_fp = "tasks_source_code";
         public string s_validator_fnp = "dev_validator_C\\bin\\Debug\\validator1.exe";

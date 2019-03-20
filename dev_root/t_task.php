@@ -237,10 +237,12 @@ if($_SESSION["vr_percent"] == 100){
 //destory session vars with validation results:
 $_SESSION["vr_percent"] = "0";
 
-if($b_do_debug){
-  echo("<pre>");
-  var_dump($_SESSION);
-  echo("</pre>");
+if(isset($_SESSION["vr_percent"])){
+  if($b_do_debug){
+    echo("<pre>");
+    var_dump($_SESSION);
+    echo("</pre>");
+  }
 }
 ?>
 
