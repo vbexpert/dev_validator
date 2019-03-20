@@ -1,0 +1,103 @@
+
+//перевірка напису lb_Result:
+			//---------------------------------------------------->
+			//спроба отримати інстанс обєкта:
+			object obj1 = cls_output_controller._v_get_obj(f, "lb_Result");
+			//перевіряємо чи об'єкт існує (де-факто):
+			if(obj1 != null)
+			{
+			    //об'єкт існує - приводимо до типу кнопки:
+			    Label lb1 = (Label)obj1;
+			    
+				//валідуємо обєкт для відображення у валідаторі:
+				cls_output_controller._v_obj_exists(lb1,	"lb_Result");
+
+				//об'єкт існує - валідуємо властивості:			
+				
+				cls_output_controller._v_parm(lb1.Name,				"Name",			"lb_Result");
+				cls_output_controller._v_parm(lb1.Text,				"Text",			"Тут з'явиться текст при натисканні на кнопку");
+				cls_output_controller._v_parm(lb1.Font.Bold,		"Bold",			"true");
+						
+			}
+			else
+			{
+			    //об'єкт не існує (3 параметри треба будо звалідувати, тому 3 і зафейлити):
+			    cls_output_controller._add_fail_msg("Об'єкт не знайдено!");
+				cls_output_controller._add_fail_msg("Об'єкт не знайдено!");
+				cls_output_controller._add_fail_msg("Об'єкт не знайдено!");
+				
+				
+			//---------------------------------------------------->
+			//<-- bingo start -->
+			
+				cls_output_controller._add_fail_msg("Об'єкт не знайдено!");
+				
+			//<-- bingo end -->
+			//---------------------------------------------------->
+
+			}
+			//кінець перевірки lb_Result -------------------------------->
+
+
+
+			
+			//перевірка кнопки 1:
+			//---------------------------------------------------->
+			//спроба отримати інстанс обєкта:
+			object obj1 = cls_output_controller._v_get_obj(f, "btn_Close");
+			//перевіряємо чи об'єкт існує (де-факто):
+			if(obj1 != null)
+			{
+			    //об'єкт існує - приводимо до типу кнопки:
+			    Button b1 = (Button)obj1;
+			    
+				//валідуємо обєкт для відображення у валідаторі:
+				cls_output_controller._v_obj_exists(b1,	"btn_Close");
+
+				//об'єкт існує - валідуємо текст кнопки:			
+				
+				cls_output_controller._v_parm(b1.Name,				"Name",			"btn_Close");
+				cls_output_controller._v_parm(b1.Text,				"Text",			"Закрити");
+				cls_output_controller._v_parm(b1.Width,				"Width",		"3000");
+				cls_output_controller._v_parm(b1.Height,			"Height",		"120");				
+				cls_output_controller._v_parm(b1.ForeColor.Name,	"ForeColor",	"LightCoral");				
+				cls_output_controller._v_parm(b1.FontSize,			"Font.Size",	"36");
+				cls_output_controller._v_parm(b1.Font.Bold,			"Font.Bold",	"true");
+				
+
+			//---------------------------------------------------->
+			//<-- bingo start -->
+			//prepare clickMethodInfo:
+			//MethodInfo clickMethodInfo = f.GetType().GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
+			//invoke event:
+			//clickMethodInfo.Invoke(b1, new object[] { EventArgs.Empty });
+
+			//validate if text changed:
+			//use accessor if required:
+ 			
+			//cls_output_controller._v_parm(b1.Text, "btn_ChangeText.Text", "Напис на кнопці змінено!!!");
+
+			//<-- bingo end -->
+			//---------------------------------------------------->
+			}
+			else
+			{
+			    
+			    cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+				
+			//---------------------------------------------------->
+			//<-- bingo start -->
+			
+				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+				
+			//<-- bingo end -->
+			//---------------------------------------------------->
+
+			}
+			//кінець перевірки кнопки 1 -------------------------------->

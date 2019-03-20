@@ -8,7 +8,7 @@ $cls_Task->s_title = "Button_04";
 $cls_Task->s_id = "02_Button_04";
 $cls_Task->s_description = "Розміщення кнопки на формі";
 
-$cls_Task->_add_step("1. Створити проект <b>Button_01</b> відповідно специфікації у рішенні <b>Button</b>.");
+$cls_Task->_add_step("1. Створити проект <b>Button_04</b> відповідно специфікації у рішенні <b>Button</b>.");
 $cls_Task->_add_step("2. Завантажити програму у <b>DEV-VALIDATOR</b>.");
 $cls_Task->_add_step("3. Добитися повної валідації програми.");
 $cls_Task->_add_step("4. Зберегти скріншот [Alt+PrintScreen] результатів у папку <b>Production</b>.");

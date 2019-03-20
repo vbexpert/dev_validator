@@ -15,7 +15,7 @@ $cls_Task->_add_step("4. Зберегти скріншот [Alt+PrintScreen] р�
 $cls_Task->_add_step("5. Зберегти програму у папку <b>Production</b>.");
 
 $cls_Task->_add_property("Availability of Form", "Наявність форми", "");
-$cls_Task->_add_property("Application name", "Ім'я програми", "Button_06.exe");
+$cls_Task->_add_property("Application name", "Ім'я програми", "Button_06");
 $cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
 $cls_Task->_add_property("Form.Text", "Текст Форми", "Робота з 2 полями для вводу");
 $cls_Task->_add_property("Form.Width", "Ширина форми (в пікселях)", "1000");

@@ -8,7 +8,8 @@ $cls_Task->s_title = "Button_08";
 $cls_Task->s_id = "02_Button_08";
 $cls_Task->s_description = "Перевірка на введення цифр";
 
-$cls_Task->_add_step("1. Створити форму відповідно специфікації.");
+$cls_Task->_add_step("<b>Опис:</b> <i>даний проект дозволить при введенні даних </i>");
+$cls_Task->_add_step("1. Створити або додати проект <b>Number</b> відповідно специфікації у рішенні <b>Button</b>");
 $cls_Task->_add_step("2. Завантажити програму у <b>DEV-VALIDATOR</b>.");
 $cls_Task->_add_step("3. Добитися повної валідації програми.");
 $cls_Task->_add_step("4. Зберегти скріншот [Alt+PrintScreen] результатів у папку <b>Production</b>.");
@@ -25,7 +26,7 @@ $cls_Task->_add_property("Form.Font.Size", "Розмір шрифту", "20");
 
 $cls_Task->_add_object_creator("Додати об'єкт: ", "Label");
 $cls_Task->_add_property("Name", "Ім'я ", "label1");
-$cls_Task->_add_property("label1.Text", "Текст кнопки", "Введіть ціле число");
+$cls_Task->_add_property("label1.Text", "Текст напису", "Введіть ціле число");
 $cls_Task->_add_property("label1.Font.Bold", "Жирний текст", "True");
 
 $cls_Task->_add_object_creator("Додати об'єкт: ", "TextBox");

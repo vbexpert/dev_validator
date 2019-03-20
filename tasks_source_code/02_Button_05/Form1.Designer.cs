@@ -60,12 +60,13 @@
             // lb_Target
             // 
             this.lb_Target.AutoSize = true;
-            this.lb_Target.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lb_Target.Location = new System.Drawing.Point(17, 117);
+            this.lb_Target.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lb_Target.Location = new System.Drawing.Point(-6, 121);
             this.lb_Target.Name = "lb_Target";
-            this.lb_Target.Size = new System.Drawing.Size(652, 37);
+            this.lb_Target.Size = new System.Drawing.Size(696, 37);
             this.lb_Target.TabIndex = 2;
             this.lb_Target.Text = "Тут з\'явиться текст при натисканні на кнопку";
+            this.lb_Target.Click += new System.EventHandler(this.lb_Target_Click);
             // 
             // tb_Input
             // 
@@ -77,6 +78,7 @@
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(684, 461);
             this.Controls.Add(this.tb_Input);
             this.Controls.Add(this.lb_Target);

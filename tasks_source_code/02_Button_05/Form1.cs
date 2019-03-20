@@ -20,5 +20,10 @@ namespace WindowsApplication1
         {
             lb_Target.Text = tb_Input.Text;
         }
+
+        private void lb_Target_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

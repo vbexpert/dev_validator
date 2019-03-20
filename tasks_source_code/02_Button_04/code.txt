@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 namespace ns_d_code
 {
     public class cls_Main
@@ -18,8 +19,7 @@ namespace ns_d_code
             cls_output_controller._v_parm(f.Height,			"Form.Height",			"500");
             cls_output_controller._v_parm(f.StartPosition,	"StartPosition",		"CenterScreen");
 
-			
-			
+						
 			//кнопка 1 (існує):
 			//---------------------------------------------------->
 			//спроба отримати інстанс обєкта:
@@ -33,7 +33,7 @@ namespace ns_d_code
 				//валідуємо обєкт для відображення у валідаторі:
 				cls_output_controller._v_obj_exists(b1,	"btn_ChangeText");
 
-				//об'єкт існує - валідуємо текст кнопки:			
+				//об'єкт існує - валідуємо властивості кнопки:			
 				
 				cls_output_controller._v_parm(b1.Name,		"btn_ChangeText.Name",	"btn_ChangeText");
 				cls_output_controller._v_parm(b1.Text,		"btn_ChangeText.Text",	"Змінити напис кнопки");
@@ -45,6 +45,7 @@ namespace ns_d_code
 				cls_output_controller._v_parm(b1.Font.Bold,	"btn_ChangeText.Font.Bold",	"True");
 				cls_output_controller._v_parm(b1.Font.Size,	"btn_ChangeText.Font.Size",	"22");
 
+			//Перевірка події на кнопці
 			//---------------------------------------------------->
 			//<-- bingo start -->
 			//prepare clickMethodInfo:
@@ -59,10 +60,11 @@ namespace ns_d_code
 
 			//<-- bingo end -->
 			//---------------------------------------------------->
+			//Завершення перевірки події на кнопці
 			}
 			else
 			{
-			    //об'єкт не існує (2 параметри треба будо звалідувати, тому 2 і зафейлити):
+			    //об'єкт не існує (9 параметри треба будо звалідувати, тому 9 і зафейлити):
 			    cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
 				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
 				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
