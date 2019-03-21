@@ -6,7 +6,7 @@ using System.Text;
 namespace uts_tests
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTests
     {
         public string s_tasks_fp = "tasks_source_code";
         public string s_validator_fnp = "dev_validator_C\\bin\\Debug\\validator1.exe";
@@ -214,12 +214,20 @@ namespace uts_tests
             string s_task_code_file = s_tasks_fp + "\\" + s_task_id + "\\code.txt";
             string s_output = this.Run_app(s_validator_fnp, s_task_exe_fnp + " " + s_task_code_file + " " + s_task_exe_ft);
 
+            if (s_output.Contains("Фатальна")) {
+                Debug.Print(s_output);
+                Assert.IsTrue(false, "compile failed!");
+            }
+
             string[] stringSeparators = new string[] { "\r\n" };
             string[] sa_lines = s_output.Split(stringSeparators, StringSplitOptions.None);
             foreach (string s_line in sa_lines)
             {
                 if (s_line.Contains("reslt")) {
-                    Assert.IsTrue(s_line.ToLower().Contains("false") == false, "task validation failed!");
+                    if (s_line.ToLower().Contains("false")) {
+                        Debug.Print("v failed: " + s_line);
+                        Assert.IsTrue(false, "validation failed");
+                    }    
                 }
             }
             return s_output;

@@ -157,9 +157,10 @@ html {
 }
 .welcome-msg{
 	padding-top:12px;
-position:absolute;
-right:0;
+    position:absolute;
+    right:0;
 	width:120px;
 }
-
-
+.cs{
+    font-size:18px !important;
+}

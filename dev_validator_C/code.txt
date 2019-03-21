@@ -9,7 +9,7 @@ namespace ns_d_code
         public static string test(Form f, string s_app_fnp, string s_app_ft) //validation sub:
         {
 			cls_output_controller cls_output_controller = new cls_output_controller();
-            //---------------------------------------------------->
+            //----------------------------------------------------> 1
             //початок коду валідації:
 			//чи існує форма:
             cls_output_controller._v_form(f);
@@ -23,7 +23,7 @@ namespace ns_d_code
             cls_output_controller._v_parm(f.Location.X,		"Form.Location.X",		"200");
             cls_output_controller._v_parm(f.Location.Y,		"Form.Location.Y",		"200");
             //кінець коду валідації:
-			//---------------------------------------------------->
+			//----------------------------------------------------> 1
             return(cls_output_controller._final_result());
         }
         public static void Main() //main entry point:

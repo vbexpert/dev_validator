@@ -66,7 +66,6 @@
             this.lb_Target.Size = new System.Drawing.Size(696, 37);
             this.lb_Target.TabIndex = 2;
             this.lb_Target.Text = "Тут з\'явиться текст при натисканні на кнопку";
-            this.lb_Target.Click += new System.EventHandler(this.lb_Target_Click);
             // 
             // tb_Input
             // 
@@ -79,7 +78,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(684, 461);
+            this.ClientSize = new System.Drawing.Size(684, 462);
             this.Controls.Add(this.tb_Input);
             this.Controls.Add(this.lb_Target);
             this.Controls.Add(this.btn_CopyText);
@@ -90,7 +89,6 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Робота з полем для вводу тексту";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

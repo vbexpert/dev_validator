@@ -6,10 +6,6 @@ namespace WindowsApplication1
     {
         public Form1()
         { InitializeComponent(); }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            //
-        }
 
         private void btn_Close_Click(object sender, EventArgs e)
         {
@@ -18,12 +14,8 @@ namespace WindowsApplication1
 
         private void btn_CopyText_Click(object sender, EventArgs e)
         {
+            //lb_Target.Text = tb_Input.Text + 1;
             lb_Target.Text = tb_Input.Text;
-        }
-
-        private void lb_Target_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
