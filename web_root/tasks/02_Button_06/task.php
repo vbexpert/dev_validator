@@ -22,15 +22,11 @@ $cls_Task->_add_property("Form.Width", "Ширина форми (в піксел
 $cls_Task->_add_property("Form.Height", "Висота форми (в пікселях)", "500");
 $cls_Task->_add_property("Form.StartPosition", "Початкова позиція", "По центру екрана");
 
-
-
 $cls_Task->_add_object_creator("Створити подію для: ","btn_ChangeText");
 $cls_Task->_add_code("Написати код:", "private void btn_ChangeText_Click(object sender, EventArgs e)
 {
        
 }", "");
-
-
 
 $cls_Task->s_learn_url = "";
 $cls_Task->s_youtube_url = "https://youtu.be/hP0UsFULLuU";
