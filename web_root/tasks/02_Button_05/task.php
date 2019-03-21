@@ -36,9 +36,6 @@ $cls_Task->_add_object_creator("Додати об'єкт: ", "Button");
 $cls_Task->_add_property("Name", "Ім'я кнопки", "btn_CopyText");
 $cls_Task->_add_property("Text", "Текст кнопки", "Скопіювати текст");
 
-
-
-
 $cls_Task->s_learn_url = "http://informatics.in.ua/programming_csharp/part_02.php";
 $cls_Task->s_youtube_url = "https://youtu.be/hP0UsFULLuU";
 $cls_Task->s_discuss_url = "https://www.facebook.com/groups/1487277621317029/";
