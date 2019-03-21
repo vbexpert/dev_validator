@@ -216,11 +216,12 @@ $(function() {
 	$('#fileToUpload').change(function(){ 
 		$('#upload_file').submit();
 	});
-	<!-- Initialize highlight -->
-	hljs.initHighlightingOnLoad();
 	<!-- Initialize checkboxpicker -->
 	$(':checkbox').checkboxpicker();
 });
+
+  <!-- Initialize highlight -->
+  hljs.initHighlightingOnLoad();
 
 </script>
 	

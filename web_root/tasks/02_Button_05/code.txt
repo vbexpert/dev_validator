@@ -62,20 +62,18 @@ namespace ns_d_code
 				cls_output_controller._v_parm(btn1.Name, "Name", "btn_CopyText");
 				cls_output_controller._v_parm(btn1.Text, "Text", "Скопіювати текст");
 			
-			    //Перевірка події на кнопці -->
-			    //підготовка аксессора метода - clickMethodInfo:
-			    MethodInfo clickMethodInfo = f.GetType().GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
-
-				//cls_output_controller._v_parm(tb1,	"Text",	"1");
-
-				//головна перевірка:
+			    //Перевірка події на кнопці =======================>
+				//встановлюємо невідомий учню контрольний маркер:
 				tb1.Text = "test-value-012345";
 
-				//виклик події:
+			    //підготовка аксессора метода - clickMethodInfo:
+			    MethodInfo clickMethodInfo = f.GetType().GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
+				//виклик події - емуляція натискання на кнопку:
 			    clickMethodInfo.Invoke(btn1, new object[] { EventArgs.Empty });
 
-				//перевірка копіювання:
+				//перевірка копіювання (порівнюємо lb_Target.Text із маркером):
 				cls_output_controller._v_parm(lb_Target.Text, "Text", "test-value-012345");
+				// ================================================>
 
 				//дбаг:
 				//MessageBox.Show(lb_Target.Text);
