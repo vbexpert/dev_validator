@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 require("../../main_config.php");
 require($s_v_app_root."task_core.php");

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 error_reporting(E_ALL); //debug:
 ini_set('display_errors', 1);
 header('Content-Type: text/html; charset=utf-8'); //utf8 support:
@@ -15,11 +15,9 @@ if($b_use_access_wall){
 $_SESSION["s_task_id"] = $cls_Task->s_id;
 ?>
 <html>
-  <head>
-    <title>
-	  <?php echo($cls_Task->s_title); ?>
-	</title>
-	<?php include_once("head_includes.php"); ?>
+<head>
+  <title><?php echo($cls_Task->s_title); ?></title>
+  <?php include_once("head_includes.php"); ?>
 </head>
 <body>
   <div class="container">
