@@ -72,8 +72,8 @@
     <None Include="task.php" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="1_5254fddece4285254fddece467.jpg" />
     <Content Include="code.txt" />
+    <None Include="Resources\landscape.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

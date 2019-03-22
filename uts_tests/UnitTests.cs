@@ -187,26 +187,6 @@ namespace uts_tests
             string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]
-        public void tm_02_test_02_Tech_Showdown()
-        {
-            string s_task_id = "00_test_02_Tech_Showdown";
-            string s_task_exe_ft = "TestTask_02.exe";
-            string s_result = _validate_task(s_task_id, s_task_exe_ft);
-        }
-        [TestMethod]
-        public void tm_06_2d_graphics_01()
-        {
-            string s_task_id = "06_2d_graphics_01";
-            string s_task_exe_ft = "drawing01.exe";
-            string s_result = _validate_task(s_task_id, s_task_exe_ft);
-        }
-        [TestMethod]
-        public void tm_06_2D_Black_White()
-        {
-            string s_task_id = "06_2D_Black_White";
-            string s_task_exe_ft = "Black_White.exe";
-            string s_result = _validate_task(s_task_id, s_task_exe_ft);
-        }
         //[unit-test-insertion-point]
         private string _validate_task(string s_task_id, string s_task_exe_ft) {
             //move validator exe to temp:

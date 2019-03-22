@@ -14,6 +14,7 @@ $cls_Task->_add_step("3. Добитися повної валідації про
 $cls_Task->_add_step("4. Зберегти скріншот [Alt+PrintScreen] результатів у папку <b>Production</b>.");
 $cls_Task->_add_step("5. Зберегти програму у папку <b>Production</b>.");
 
+$cls_Task->_block_start("Добитися валідації головної форми:", "_form.png");
 $cls_Task->_add_property("Availability of Form", "Наявність форми", "");
 $cls_Task->_add_property("Application name", "Ім'я програми", "Button_06");
 $cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
@@ -21,12 +22,19 @@ $cls_Task->_add_property("Form.Text", "Текст Форми", "Робота з 
 $cls_Task->_add_property("Form.Width", "Ширина форми (в пікселях)", "1000");
 $cls_Task->_add_property("Form.Height", "Висота форми (в пікселях)", "500");
 $cls_Task->_add_property("Form.StartPosition", "Початкова позиція", "По центру екрана");
+$cls_Task->_block_end();
 
-$cls_Task->_add_object_creator("Створити подію для: ","btn_ChangeText");
-$cls_Task->_add_code("Написати код:", "private void btn_ChangeText_Click(object sender, EventArgs e)
+$cls_Task->_block_start("Додати новий компонент: TextBox", "_add_object.png");
+$cls_Task->_add_property("Name", "Ім'я поля для вводу", "tb_Input");
+$cls_Task->_add_property("Text", "Текст ", "");
+$cls_Task->_block_end();
+
+$cls_Task->_block_start("Сгенерувати подію <b>_Click</b> для кнопки: <b>btn_ChangeText</b>", "_add_object.png");
+$cls_Task->_add_code("Код події:", "private void btn_ChangeText_Click(object sender, EventArgs e)
 {
-       
+    
 }", "");
+$cls_Task->_block_end();
 
 $cls_Task->s_learn_url = "";
 $cls_Task->s_youtube_url = "https://youtu.be/hP0UsFULLuU";

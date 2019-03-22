@@ -17,9 +17,7 @@ $cls_Task->_add_step("6. Зберегти скріншот <b>[Alt+PrintScreen]<
 $cls_Task->_add_step("7. Скопіювати програму у папку <b>Production</b>.");
 $cls_Task->_add_step("8. Зберегти проект та закрити рішення.");
 
-$cls_Task->_add_step("<hr>");
-$cls_Task->_add_step("Для коректної валідації програми встановіть властивості <b>AutoScaleMode</b> значення <b>None</b>");
-
+$cls_Task->_block_start("Добитися валідації головної форми:", "_form.png");
 $cls_Task->_add_property("Availability of Form", "Наявність форми", "");
 $cls_Task->_add_property("Application name", "Ім'я програми", "Form_04");
 $cls_Task->_add_property("AutoScaleMode", "Режим перерахунку форми", "None");
@@ -28,6 +26,8 @@ $cls_Task->_add_property("BackColor", "Колір Форми", "InactiveCaption"
 $cls_Task->_add_property("Size.Width", "Довжина Форми (в пікселях)", "600");
 $cls_Task->_add_property("Size.Height", "Висота Форми (в пікселях)", "400");
 $cls_Task->_add_property("StartPosition", "Початкова позиція", "CenterScreen");
+
+$cls_Task->_add_screen("Кінцевий вигляд Форми:", "target_form.png");
 
 $cls_Task->s_learn_url = "https://learn.ztu.edu.ua/mod/lesson/view.php?id=9977&pageid=8";
 $cls_Task->s_youtube_url = "";

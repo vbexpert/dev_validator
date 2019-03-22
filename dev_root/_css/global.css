@@ -164,3 +164,18 @@ html {
 .cs{
     font-size:18px !important;
 }
+.property_type_img{
+    padding:3px;
+	padding-right:9px;
+}
+.app_specs_text{
+    padding-left:9px;
+	color:black;
+	font-size:18px;
+}
+.centered{
+    text-align:center;
+}
+.footer_spacer{
+    height:50px;
+}

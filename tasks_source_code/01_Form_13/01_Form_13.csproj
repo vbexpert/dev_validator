@@ -73,8 +73,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="code.txt" />
+    <None Include="Resources\space.bmp" />
     <None Include="space.jpg" />
-    <None Include="pic-00892.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

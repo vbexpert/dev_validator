@@ -33,7 +33,7 @@
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackgroundImage = global::Form_12.Properties.Resources._1369680232;
+            this.BackgroundImage = global::Form_12.Properties.Resources.texture;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

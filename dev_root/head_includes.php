@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
 	<!-- checkbox cdn: -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-checkbox/1.4.0/bootstrap-checkbox.min.js"></script>
-	<!-- krajee fileinput cdn: -->
-	
 	<!-- favicon: -->
 	<link rel="icon" href="favicon.ico?v=2" />
+	<!-- main css -->
+	<link rel="stylesheet" type="text/css" href="../../_css/global.css">

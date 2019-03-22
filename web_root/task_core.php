@@ -19,8 +19,8 @@ class cls_Task{
   }
   function _add_object_creator($s_instruction, $s_type_obj){
     $cls_NewP = new cls_Property();
-	$cls_NewP->s_name = "<div class='obj_creator'>$s_instruction</div>";
-	$cls_NewP->s_title = "<div class='obj_creator'>$s_type_obj</div>";
+	$cls_NewP->s_name = $s_instruction;
+	$cls_NewP->s_title = $s_type_obj;
 	$cls_NewP->s_master_value = "";
 	$cls_NewP->s_type = "obj_creator";	
 	array_push($this->oa_properties, $cls_NewP);
@@ -28,13 +28,39 @@ class cls_Task{
   function _add_code($s_instruction, $s_code){
     $cls_NewP = new cls_Property();
 	$cls_NewP->s_name = $s_instruction;
-	$cls_NewP->s_title = "<div onselectstart='return false'><pre><code class='cs hljs'>" . $s_code . "</code></pre></div>";
-	$cls_NewP->s_master_value = "";
+	$cls_NewP->s_title = "";
+	$cls_NewP->s_master_value = $s_code;
 	$cls_NewP->s_type = "code";	
 	array_push($this->oa_properties, $cls_NewP);
   }
   function _add_step($s_step_desc){
 	array_push($this->oa_steps, $s_step_desc);
+  }
+  function _add_screen($s_title,$s_img_ft){
+    $cls_NewP = new cls_Property();
+	$cls_NewP->s_type = "screen";	
+	$cls_NewP->s_title = $s_title;
+	$cls_NewP->s_master_value = $s_img_ft;
+	array_push($this->oa_properties, $cls_NewP);
+  }
+  function _add_youtube_link($s_text,$s_url){
+    $cls_NewP = new cls_Property();
+	$cls_NewP->s_type = "youtube";
+	$cls_NewP->s_title = $s_text;
+	$cls_NewP->s_master_value = $s_url;
+	array_push($this->oa_properties, $cls_NewP);
+  }
+  function _block_end(){
+    $cls_NewP = new cls_Property();
+	$cls_NewP->s_type = "block_end";
+	array_push($this->oa_properties, $cls_NewP);
+  }
+  function _block_start($s_block_title, $img_name){
+    $cls_NewP = new cls_Property();
+	$cls_NewP->s_type = "block_start";
+	$cls_NewP->s_title = $img_name;
+	$cls_NewP->s_master_value = $s_block_title;
+	array_push($this->oa_properties, $cls_NewP);
   }
 }
 class cls_Property{

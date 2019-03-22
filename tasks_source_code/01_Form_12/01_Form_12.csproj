@@ -72,11 +72,8 @@
     <None Include="task.php" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="1369680232.jpg" />
     <Content Include="code.txt" />
-    <None Include="silver-metal-plate-seamless-texture.jpg" />
-    <None Include="seamless-texture-1874513_960_720.jpg" />
-    <None Include="pic-00892.jpg" />
+    <None Include="Resources\texture.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

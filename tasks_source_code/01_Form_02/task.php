@@ -21,11 +21,15 @@ $cls_Task->_add_step("9. Зберегти проект та закрити рі�
 $cls_Task->_add_step("<hr>");
 $cls_Task->_add_step("Для коректної валідації програми встановіть властивості <b>AutoScaleMode</b> значення <b>None</b>");
 
+$cls_Task->_block_start("Добитися валідації головної форми:", "_form.png");
 $cls_Task->_add_property("Availability of Form", "Наявність форми", "");
 $cls_Task->_add_property("Application name", "Ім'я програми", "Form_02");
 $cls_Task->_add_property("AutoScaleMode", "Режим перерахунку форми", "None");
 $cls_Task->_add_property("Text", "Текст Форми", "Розфарбуйте свою Windows форму");
 $cls_Task->_add_property("BackColor.Name", "Колір Форми", "CadetBlue");
+
+//f screen:
+$cls_Task->_add_screen("Кінцевий вигляд Форми:", "target_form.png");
 
 $cls_Task->s_learn_url = "https://learn.ztu.edu.ua/mod/page/view.php?id=9978";
 $cls_Task->s_youtube_url = "https://youtu.be/hP0UsFULLuU?t=4m51s";

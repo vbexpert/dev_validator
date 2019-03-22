@@ -16,18 +16,17 @@ $cls_Task->_add_step("5. Добитися повної валідації про
 $cls_Task->_add_step("6. Зберегти скріншот [Alt+PrintScreen] результатів у папку <b>Production</b>.");
 $cls_Task->_add_step("7. Зберегти програму у папку <b>Production</b>.");
 
+$cls_Task->_block_start("Добитися валідації головної форми:", "_form.png");
 $cls_Task->_add_property("Availability of Form", "Наявність форми", "");
 $cls_Task->_add_property("Application name", "Ім'я програми", "Button_00.exe");
 $cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
 $cls_Task->_add_property("Form.Text", "Текст Форми", "Додавання кнопки на форму");
-$cls_Task->_add_object_creator("Додати об'єкт:","Button");
+$cls_Task->_block_end();
+
+$cls_Task->_block_start("Додати об'єкт: Button", "_add_object.png");
 $cls_Task->_add_property("Name", "Ім'я кнопки", "button1");
 $cls_Task->_add_property("Text", "Текст кнопки", "button1");
-
-
-
-
-
+$cls_Task->_add_screen("Кінцевий вигляд Форми:", "target_form.png");
 
 $cls_Task->s_learn_url = "https://learn.ztu.edu.ua/mod/page/view.php?id=10041";
 $cls_Task->s_youtube_url = "https://youtu.be/hP0UsFULLuU";

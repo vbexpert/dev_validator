@@ -73,7 +73,6 @@ include("main_config.php");
               </div>
               <div id="Button" class="panel-collapse collapse">                
                 <div class="panel-body">  
-                  <div class ="row pic-centered task_desc_row"><a class="" href="/validator/tasks/02_Button_00/task.php">Завдання 0: Додавання кнопки на форму</a></div>
                   <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_00/task.php">Завдання 0: Додавання кнопки на форму</a></div>
                   <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_01/task.php">Завдання 1: Зміна напису кнопки</a></div>
                   <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_02/task.php">Завдання 2: Зміна імені кнопки</a></div>
