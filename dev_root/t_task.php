@@ -63,6 +63,18 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 		<?php
 		  $i_ctr = 0;
 		  foreach ($cls_Task->oa_properties as $cls_property){
+			//--------------------------------------------------------->
+			// [!main validation feedback from V-Core!] patch with session vars:
+			if(isset($_SESSION["vr_percent"])){
+			  $s_s_title="vr".$i_ctr."_reslt";
+			  if($_SESSION[$s_s_title] != ""){
+			    $cls_property->b_validated = true;
+			  }
+			  else{
+				$cls_property->b_validated = false;
+			  }
+			} 
+			//--------------------------------------------------------->
 			echo("<tr>");
 			  switch($cls_property->s_type){
 			    case "": //default
