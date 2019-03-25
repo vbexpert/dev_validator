@@ -32,13 +32,14 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 	    <?php include("../../nav_menu.php"); ?>
 		<!-- task display code start ---------------------------------------->
 		
-		<!-- suare btn 
+		<!-- square btn - main uploader --> 
 		<div class='upload_square_btn'>
-		  <img src='../../_img/upload-square.png'>
-		    
+		  <div class='upload_square_btn_upper'>Завантажити</div>
+		  <img class='hvr-pulse-grow' src='../../_img/upload-square.png' onclick="$('#fileToUpload').trigger('click');">
 		  </img>
+		  <div class='upload_square_btn_lower'>програму:</div>
 		</div>
-		-->
+		<!-- square btn - main uploader --> 
 		
 		<!-- headers -------------------------------------------------------->
         <h2 class="centered"><?php echo($cls_Task->s_title) . ": " . $cls_Task->s_description; ?></h2>
@@ -191,7 +192,8 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 		  _table_end();
 		  echo("</div>")
 		?>
-		<div class="container">
+		
+		<div class="container hidden">
 		  <div class="row">
 			<div class="col-md-2">
 			  <div class='check_btn_label'>Перевірка:</div>
@@ -209,8 +211,11 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 			</div>
 		  </div>
 		</div>
-		<div class='footer_spacer'></div>
-		<!-- -------------------------------------------------------------->
+		
+		<!--
+		  <div class='footer_spacer'></div>
+		-->
+
     </div>
   </div>
 </div>
