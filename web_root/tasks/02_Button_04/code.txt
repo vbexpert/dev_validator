@@ -34,7 +34,6 @@ namespace ns_d_code
 				cls_output_controller._v_obj_exists(b1,	"btn_ChangeText");
 
 				//об'єкт існує - валідуємо властивості кнопки:			
-				
 				cls_output_controller._v_parm(b1.Name,		"btn_ChangeText.Name",	"btn_ChangeText");
 				cls_output_controller._v_parm(b1.Text,		"btn_ChangeText.Text",	"Змінити напис кнопки");
 				cls_output_controller._v_parm(b1.Width,		"btn_ChangeText.Width",	"500");

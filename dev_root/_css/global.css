@@ -119,13 +119,20 @@ html {
 }
 .pb-v-progress{
     height:70px;
-	font-size:30px;
+	font-size:20px;
 }
-.progress {height: 60px;}
+.progress{
+  height: 60px;
+  margin: 25px;
+}
 .pb-v-text{
 	padding-top:21px;
 	color:black;
-	width:230px;
+	float:left;
+	padding-left:80px;
+	text-align:left;
+	width:400px;
+	
 }
 /* hotfix: https://stackoverflow.com/questions/11235206/twitter-bootstrap-form-file-element-upload-button */
 [hidden] {
@@ -181,4 +188,14 @@ html {
 }
 .starter-template{
 	padding-top:20px;
+}
+.rocket{
+  width:100px;
+  padding:4px;
+  padding-top:10px;
+}
+.upload_square_btn{
+  position:fixed;
+  top:150px;
+  left:10px;
 }

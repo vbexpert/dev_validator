@@ -20,15 +20,54 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
   <?php include_once("head_includes.php"); ?>
 </head>
 <body>
+
+<?php 
+//var_dump($cls_Task);
+//exit;
+?>
+
   <div class="container">
     <div class="starter-template">
       <div class="jumbotron task_jumbotron_height_fix">
 	    <?php include("../../nav_menu.php"); ?>
 		<!-- task display code start ---------------------------------------->
 		
+		<!-- suare btn 
+		<div class='upload_square_btn'>
+		  <img src='../../_img/upload-square.png'>
+		    
+		  </img>
+		</div>
+		-->
+		
 		<!-- headers -------------------------------------------------------->
         <h2 class="centered"><?php echo($cls_Task->s_title) . ": " . $cls_Task->s_description; ?></h2>
+		
+		<!-- progress ----------------------------------------------------->
+        <div class="progress">
+		  <span class='rocket'>
+		    <img src='../../_img/rocket.png'>
+		    </img>
+		  </span>
+		  <div class="progress-bar progress-bar-success progress-bar-striped pb-v-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo($_SESSION["vr_percent"]); ?>%">
+			<div class='pb-v-text'>
+			  Твій прогрес: <?php 
+			    if(isset($_SESSION["vr_percent"])){
+			      echo($_SESSION["vr_percent"]); 
+				}
+			    else{
+				  echo(0);
+				}
+			  ?> % вірно!
+			</div>
+		  </div>
+		</div>
+		<!-- validation upload -------------------------------------------->
+		
 		<hr>
+        <h2 class="centered">Теорія (план дій, покроково):</h2>
+		<br>
+		
 		<!-- steps ---------------------------------------------------------->
 	    <?php
 	      foreach ($cls_Task->oa_steps as $s_step){
@@ -44,7 +83,7 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 			}
 		  }
 	    ?>
-		<hr>
+		<br>
 		<!-- help links --------------------------------------------------->
         <div style="text-align: center;"> 
            <a class="btn btn-info regular_button" href="<?php echo($cls_Task->s_learn_url); ?>" role="button" target="_blank">Читати навчальний матеріал</a>
@@ -52,43 +91,42 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
            <a class="btn btn-warning regular_button" href="<?php echo($cls_Task->s_discuss_url) ?>" role="button" target="_blank">Обговорити у спільноті</a>
         </div>
 		<hr>
-		<!-- image ---------------------------------------------------------->
-		<!--
-        <div class="row f_img_holder">
-          <img class='f_img' src="target_form.png" />
-        </div>
-        <hr>
-		-->
+        <h2 class="centered">Практика (покрокова валідація):</h2>
+		
 		<!-- properties ----------------------------------------------------->
 		<?php
 		  $i_ctr = 0;
 		  foreach ($cls_Task->oa_properties as $cls_property){
-			//--------------------------------------------------------->
-			// [!main validation feedback from V-Core!] patch with session vars:
-			if(isset($_SESSION["vr_percent"])){
-			  $s_s_title="vr".$i_ctr."_reslt";
-			  if($_SESSION[$s_s_title] != ""){
-			    $cls_property->b_validated = true;
-			  }
-			  else{
-				$cls_property->b_validated = false;
-			  }
-			} 
-			//--------------------------------------------------------->
 			echo("<tr>");
 			  switch($cls_property->s_type){
 			    case "": //default
-				  //--------------------------------------------------------->
+					//--------------------------------------------------------->
+					// [!main validation feedback from V-Core!] patch with session vars:
+					if(isset($_SESSION["vr_percent"])){
+					  $s_s_title="vr".$i_ctr."_reslt";
+					  if($_SESSION[$s_s_title] == true){
+						  $cls_property->b_validated = true;
+					  }
+					  else{
+						  $cls_property->b_validated = false;
+					  }
+						  //reset value:
+						  $_SESSION[$s_s_title] = "";
+					} 
+					//debug:
+					//_dbg($cls_property->s_type.":".addslashes($cls_property->s_title).":".addslashes($s_s_title).":".addslashes($_SESSION[$s_s_title]));
+					//--------------------------------------------------------->
+					$i_ctr++;
 			      echo("<td>".$cls_property->s_name."</td>");
 			      echo("<td>".$cls_property->s_title."</td>");
 			      echo("<td>".$cls_property->s_master_value."</td>");
                   $s_checked = "";
                   if($cls_property->b_validated == true){
-                    $s_checked = "checked=\"checked\"";
+                    $s_checked = "checked";
 				  }
 	              echo("<td>
 				          <div class='chkbox-v-value'>
-						    <input type='checkbox' $s_checked data-off-icon-cls=\"gluphicon-thumbs-down\" data-on-icon-cls=\"gluphicon-thumbs-up\">
+						    <input type='checkbox' $s_checked data-off-icon-cls='gluphicon-thumbs-down' data-on-icon-cls='gluphicon-thumbs-up'>
 							</input>
 						  </div>
 						</td>");
@@ -149,27 +187,10 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 				  //--------------------------------------------------------->
 			  }
 			echo("</tr>");
-			$i_ctr++;
           }
 		  _table_end();
 		  echo("</div>")
 		?>
-		<!-- progress ----------------------------------------------------->
-        <div class="progress">
-		  <div class="progress-bar progress-bar-success progress-bar-striped pb-v-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo($_SESSION["vr_percent"]); ?>%">
-			<div class='pb-v-text'>
-			  <?php 
-			    if(isset($_SESSION["vr_percent"])){
-			      echo($_SESSION["vr_percent"]); 
-				}
-			    else{
-				  echo(0);
-				}
-			  ?> % вірно!
-			</div>
-		  </div>
-		</div>
-		<!-- validation upload -------------------------------------------->
 		<div class="container">
 		  <div class="row">
 			<div class="col-md-2">
@@ -194,11 +215,11 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
   </div>
 </div>
 	
+<!-- test trigger -->
+<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+
 <!-- modal msg start ------------------------------------>
 <div class="container">
-  <!-- test rigger -->
-  <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
-  
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
@@ -227,37 +248,42 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 
 <!-- js ------------------------------------------------->
 <script>
-  $('#fileToUpload').change(function(){ 
+  $('#fileToUpload').change(function(){
     $('#upload_file').submit();
+	exit;
   });
   <!-- Initialize checkboxpicker -->
   $(':checkbox').checkboxpicker();
   <!-- Initialize highlight -->
   hljs.initHighlightingOnLoad();
+  
+<?php
+//show completed window on 100%:
+if(isset($_SESSION["vr_percent"])){
+  if($_SESSION["vr_percent"] == 100){
+    //destory session vars with validation results:
+    //show completed screen:
+    echo("$('#myModal').modal('show');");
+  }
+  //zero the score to prevent new modal screen:
+  $_SESSION["vr_percent"] = "0";
+}
+?>
+  
 </script>
 <!-- js ------------------------------------------------->
+
+<?php
+if($_SESSION["b_debug"] == true){
+  echo("<pre>");
+  var_dump($_SESSION);
+  echo("</pre>");
+}
+?>
 
 </body>
   
 <?php
-
-//show completed window on 100%:
-if($_SESSION["vr_percent"] == 100){
-  //show completed screen:
-  echo("<script>$('#myModal').modal('show');</script>");
-}
-
-//destory session vars with validation results:
-$_SESSION["vr_percent"] = "0";
-
-if(isset($_SESSION["vr_percent"])){
-  if($b_do_debug){
-    echo("<pre>");
-    var_dump($_SESSION);
-    echo("</pre>");
-  }
-}
-
 function _table_start($tbl_title){
   $s_data = "<table class='table table-striped table-bordered'>
         <caption class='app_specs' align='top'>$tbl_title</caption>
@@ -280,6 +306,12 @@ function _table_start($tbl_title){
 function _table_end(){
   $s_data = "</table>";
   echo("$s_data");
+}
+function _dbg($data){
+  $output = $data;
+  if ( is_array( $output ) )
+    $output = implode( ',', $output);
+  echo "<script>console.log( 'Debug Objects:" . $output . "' );</script>";
 }
 
 ?>

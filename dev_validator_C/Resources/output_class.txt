@@ -50,7 +50,7 @@
             }
             else
             {
-                _add_v_result(20, false, obj.ToString());
+                _add_v_result(20, false, "not-detected!");
                 return false;
             }
         }
