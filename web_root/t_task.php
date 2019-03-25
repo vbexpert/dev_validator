@@ -59,7 +59,7 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 			    else{
 				  echo(0);
 				}
-			  ?> % вірно!
+			  ?>% вірно!
 			</div>
 		  </div>
 		</div>
@@ -106,15 +106,17 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 					// [!main validation feedback from V-Core!] patch with session vars:
 					if(isset($_SESSION["vr_percent"])){
 					  $s_s_title="vr".$i_ctr."_reslt";
-					  if($_SESSION[$s_s_title] == true){
+					  if(isset($_SESSION[$s_s_title])){
+					    if($_SESSION[$s_s_title] == true){
 						  $cls_property->b_validated = true;
+					    }
+						//reset value:
+					    $_SESSION[$s_s_title] = "";
 					  }
 					  else{
 						  $cls_property->b_validated = false;
 					  }
-						  //reset value:
-						  $_SESSION[$s_s_title] = "";
-					} 
+					}
 					//debug:
 					//_dbg($cls_property->s_type.":".addslashes($cls_property->s_title).":".addslashes($s_s_title).":".addslashes($_SESSION[$s_s_title]));
 					//--------------------------------------------------------->
@@ -202,7 +204,7 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 			<div class="col-md-8">
 			<form id='upload_file' class='upload_file' action="..\..\validator_fe.php" method="post" enctype="multipart/form-data">
 			  <label class="btn btn-success btn-block btn-lg">
-				Вибрати файл програми для валідації<input type="file" hidden id="fileToUpload" name="fileToUpload">
+				Вибрати файл програми для валідації<input type="file" hidden id="fileToUpload" accept=".exe" name="fileToUpload">
 			  </label>
 			  <input type="hidden" name="codefile" value="<?php echo($cls_Task->s_id) ?>"/><!-- task id -->
 			</form>
