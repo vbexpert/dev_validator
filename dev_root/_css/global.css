@@ -297,13 +297,13 @@ html {
     background-repeat:no-repeat;
 }
 .btn_img_watch{
-    background-color:gray;
+    background-color:bfbfbf;
 }
 .btn_img_read{
-    background-color:gray;
+    background-color:bfbfbf;
 }
 .btn_img_discuss{
-    background-color:gray;
+    background-color:bfbfbf;
 }
 
 .btn_img_watch:before{
@@ -326,6 +326,7 @@ html {
 }
 .btn_help:hover{
     background-color:#bf00ff;
+	border-color:white;
 }
 .help_btn_text{
 	padding-top:4px;
