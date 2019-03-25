@@ -87,9 +87,10 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 		<br>
 		<!-- help links --------------------------------------------------->
         <div style="text-align: center;"> 
-           <a class="btn btn-info regular_button" href="<?php echo($cls_Task->s_learn_url); ?>" role="button" target="_blank">Читати навчальний матеріал</a>
-           <a class="btn btn-danger regular_button" href="<?php echo($cls_Task->s_youtube_url); ?>" role="button" target="_blank">Дивитись відеоурок</a>
-           <a class="btn btn-warning regular_button" href="<?php echo($cls_Task->s_discuss_url) ?>" role="button" target="_blank">Обговорити у спільноті</a>
+		   <a class="btn btn-info regular_button btn_img1 btn_img_watch btn_help hvr-pulse-shrink" href="<?php echo($cls_Task->s_youtube_url); ?>" role="button" target="_blank"><div class='help_btn_text'>Відеоурок YouTube</div></a>
+           <a class="btn btn-info regular_button btn_img1 btn_img_read btn_help hvr-pulse-shrink" href="<?php echo($cls_Task->s_learn_url); ?>" role="button" target="_blank"><div class='help_btn_text'>Читати підручник</div></a>
+           
+           <a class="btn btn-info regular_button btn_img1 btn_img_discuss btn_help hvr-pulse-shrink" href="<?php echo($cls_Task->s_discuss_url) ?>" role="button" target="_blank"><div class='help_btn_text'>Обговорити</div></a>
         </div>
 		<hr>
         <h2 class="centered">Практика (покрокова валідація):</h2>

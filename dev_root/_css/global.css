@@ -250,3 +250,83 @@ html {
   animation-direction: alternate;
 }
 /* Pulse Grow -------------------------------------> */
+
+/* Pulse Shrink -----------------------------------> */
+@-webkit-keyframes hvr-pulse-shrink {
+  to {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes hvr-pulse-shrink {
+  to {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+.hvr-pulse-shrink {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-pulse-shrink:hover, .hvr-pulse-shrink:focus, .hvr-pulse-shrink:active {
+  -webkit-animation-name: hvr-pulse-shrink;
+  animation-name: hvr-pulse-shrink;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+/* Pulse Shrink -----------------------------------> */
+
+.btn_img1:before {
+    content: "";
+    width: 60px;
+    height: 36px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: text-top;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat:no-repeat;
+}
+.btn_img_watch{
+    background-color:gray;
+}
+.btn_img_read{
+    background-color:gray;
+}
+.btn_img_discuss{
+    background-color:gray;
+}
+
+.btn_img_watch:before{
+    background-image : url('../../validator/_img/watch-on-youtube-btn.png');
+	float:left;
+}
+.btn_img_read:before{
+    background-image : url('../../validator/_img/read-online-btn.png');
+	float:left;
+}
+.btn_img_discuss:before{
+    background-image : url('../../validator/_img/discuss-community-btn.png');
+	float:left;
+}
+.btn_help{
+    width:290px;
+	font-size:19px;
+	text-align:left;
+	border-color:white;
+}
+.btn_help:hover{
+    background-color:#bf00ff;
+}
+.help_btn_text{
+	padding-top:4px;
+}
