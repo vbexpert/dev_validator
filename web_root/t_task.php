@@ -13,6 +13,14 @@ if($b_use_access_wall){
   include($s_v_app_root."access_wall.php");
 }
 $_SESSION["s_task_id"] = $cls_Task->s_id;
+
+//fix rocket flying too far:
+if(isset($_SESSION["vr_percent"])){
+  if($_SESSION["vr_percent"] >= 90){
+	$s_rocket_css = "hidden";
+  }
+}
+
 ?>
 <html>
 <head>
@@ -20,11 +28,6 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
   <?php include_once("head_includes.php"); ?>
 </head>
 <body>
-
-<?php 
-//var_dump($cls_Task);
-//exit;
-?>
 
   <div class="container">
     <div class="starter-template">
@@ -46,7 +49,7 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 		
 		<!-- progress ----------------------------------------------------->
         <div class="progress">
-		  <span class='rocket'>
+		  <span class='rocket <?php echo($s_rocket_css); ?>'>
 		    <img src='../../_img/rocket.png'>
 		    </img>
 		  </span>
@@ -64,7 +67,7 @@ $_SESSION["s_task_id"] = $cls_Task->s_id;
 		  </div>
 		</div>
 		<!-- validation upload -------------------------------------------->
-		
+
 		<hr>
         <h2 class="centered">Теорія (план дій, покроково):</h2>
 		<br>
