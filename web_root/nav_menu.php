@@ -22,10 +22,13 @@ $s_rip = "/validator/_img/c-sharp-logo4.png";
         <li><a href="/">Головна</a>
         </li>
         <li><a href="/validator/index.php">Всі завдання</a>
+		<!-- 
 		<li><a href="/validator/progress_chart.php">Графік успіху</a>
+		-->
         </li>
       </ul>
 	  
+	  <!--
 	  <?php if(isset($_SESSION["s_user_email"])) : ?>
       <ul class="nav navbar-nav navbar-right">
 	    <li><a href="<?php echo($s_domain."/validator/logout.php"); ?>">
@@ -41,6 +44,7 @@ $s_rip = "/validator/_img/c-sharp-logo4.png";
 		</a></li>
       </ul>
 	  <?php endif; ?>
+	  -->
 	  
     </div>
 

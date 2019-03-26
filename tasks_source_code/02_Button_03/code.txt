@@ -18,8 +18,6 @@ namespace ns_d_code
             cls_output_controller._v_parm(f.Height,			"Form.Height",			"500");
             cls_output_controller._v_parm(f.StartPosition,	"StartPosition",		"CenterScreen");
 
-			
-			
 			//кнопка 1 (існує):
 			//---------------------------------------------------->
 			//спроба отримати інстанс обєкта:

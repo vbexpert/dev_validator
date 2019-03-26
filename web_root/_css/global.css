@@ -119,13 +119,20 @@ html {
 }
 .pb-v-progress{
     height:70px;
-	font-size:30px;
+	font-size:20px;
 }
-.progress {height: 60px;}
+.progress{
+  height: 60px;
+  margin: 25px;
+}
 .pb-v-text{
 	padding-top:21px;
 	color:black;
-	width:230px;
+	float:left;
+	padding-left:80px;
+	text-align:left;
+	width:400px;
+	
 }
 /* hotfix: https://stackoverflow.com/questions/11235206/twitter-bootstrap-form-file-element-upload-button */
 [hidden] {
@@ -163,4 +170,164 @@ html {
 }
 .cs{
     font-size:18px !important;
+}
+.property_type_img{
+    padding:3px;
+	padding-right:9px;
+}
+.app_specs_text{
+    padding-left:9px;
+	color:black;
+	font-size:18px;
+}
+.centered{
+    text-align:center;
+}
+.footer_spacer{
+    height:50px;
+}
+.starter-template{
+	padding-top:20px;
+}
+.rocket{
+  width:100px;
+  padding:4px;
+  padding-top:10px;
+}
+.upload_square_btn{
+  position:fixed;
+  top:130px;
+  left:10px;
+}
+.progress-bar-striped {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 5rem 5rem;
+}
+.progress-bar {
+    background-color: #C260F0;
+}
+.upload_square_btn_upper{
+	text-align:center;
+	padding:4px;
+	color:#7E11B0;
+}
+.upload_square_btn_lower{
+	text-align:center;
+	padding:4px;
+	color:#7E11B0;
+}
+
+/* Pulse Grow -------------------------------------> */
+@-webkit-keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+@keyframes hvr-pulse-grow {
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+.hvr-pulse-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-pulse-grow:hover, .hvr-pulse-grow:focus, .hvr-pulse-grow:active {
+  -webkit-animation-name: hvr-pulse-grow;
+  animation-name: hvr-pulse-grow;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+/* Pulse Grow -------------------------------------> */
+
+/* Pulse Shrink -----------------------------------> */
+@-webkit-keyframes hvr-pulse-shrink {
+  to {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes hvr-pulse-shrink {
+  to {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+.hvr-pulse-shrink {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-pulse-shrink:hover, .hvr-pulse-shrink:focus, .hvr-pulse-shrink:active {
+  -webkit-animation-name: hvr-pulse-shrink;
+  animation-name: hvr-pulse-shrink;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+/* Pulse Shrink -----------------------------------> */
+
+.btn_img1:before {
+    content: "";
+    width: 60px;
+    height: 36px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: text-top;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat:no-repeat;
+}
+.btn_img_watch{
+    background-color:bfbfbf;
+}
+.btn_img_read{
+    background-color:bfbfbf;
+}
+.btn_img_discuss{
+    background-color:bfbfbf;
+}
+
+.btn_img_watch:before{
+    background-image : url('../../validator/_img/watch-on-youtube-btn.png');
+	float:left;
+}
+.btn_img_read:before{
+    background-image : url('../../validator/_img/read-online-btn.png');
+	float:left;
+}
+.btn_img_discuss:before{
+    background-image : url('../../validator/_img/discuss-community-btn.png');
+	float:left;
+}
+.btn_help{
+    width:290px;
+	font-size:19px;
+	text-align:left;
+	border-color:white;
+}
+.btn_help:hover{
+    background-color:#bf00ff;
+	border-color:white;
+}
+.help_btn_text{
+	padding-top:4px;
 }

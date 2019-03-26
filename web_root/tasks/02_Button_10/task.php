@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 require("../../main_config.php");
 require($s_v_app_root."task_core.php");
@@ -14,6 +14,7 @@ $cls_Task->_add_step("3. Добитися повної валідації про
 $cls_Task->_add_step("4. Зберегти скріншот [Alt+PrintScreen] результатів у папку <b>Production</b>.");
 $cls_Task->_add_step("5. Зберегти програму у папку <b>Production</b>.");
 
+$cls_Task->_block_start("Добитися валідації головної форми:", "_form.png");
 $cls_Task->_add_property("Solution name", "Назва рішення", "Exam");
 $cls_Task->_add_property("Application name", "Ім'я програми", "Math_Calc.exe");
 $cls_Task->_add_property("Form.AutoScaleMode", "Режим перерахунку форми", "None");
@@ -22,31 +23,31 @@ $cls_Task->_add_property("Form.Width", "Ширина форми (в піксел
 $cls_Task->_add_property("Form.Height", "Висота форми (в пікселях)", "");
 $cls_Task->_add_property("Form.StartPosition", "Початкова позиція", "По центру екрана");
 
-$cls_Task->_add_object_creator("Додати об'єкт: ", "label");
+$cls_Task->_block_start("Додати компонент: Label (напис)", "_add_object.png");
 $cls_Task->_add_property("Name", "Ім'я", "label1");
 $cls_Task->_add_property("label1.Text", "Текст ", "Арифметичні операції");
 
-$cls_Task->_add_object_creator("Додати об'єкт: ", "label");
+$cls_Task->_block_start("Додати компонент: Label (напис)", "_add_object.png");
 $cls_Task->_add_property("Name", "Ім'я", "label2");
 $cls_Task->_add_property("label2.Text", "Текст ", "Число a:");
 
-$cls_Task->_add_object_creator("Додати об'єкт: ", "label");
+$cls_Task->_block_start("Додати компонент: Label (напис)", "_add_object.png");
 $cls_Task->_add_property("Name", "Ім'я", "label3");
 $cls_Task->_add_property("label3.Text", "Текст ", "Число b:");
 
-$cls_Task->_add_object_creator("Додати об'єкт: ", "TextBox");
+$cls_Task->_block_start("Додати компонент: TextBox (текстове поле)", "_add_object.png");
 $cls_Task->_add_property("Name", "Ім'я", "tb_Input_a");
 $cls_Task->_add_property("tb_Input_a", "Текст ", "");
 
-$cls_Task->_add_object_creator("Додати об'єкт: ", "TextBox");
+$cls_Task->_block_start("Додати компонент: TextBox (текстове поле)", "_add_object.png");
 $cls_Task->_add_property("Name", "Ім'я кнопки", "tb_Input_b");
 $cls_Task->_add_property("tb_Input_b", "Текст ", "");
 
-$cls_Task->_add_object_creator("Додати об'єкт: ", "label");
+$cls_Task->_block_start("Додати компонент: Label (напис)", "_add_object.png");
 $cls_Task->_add_property("Name", "Ім'я", "label4");
 $cls_Task->_add_property("label4.Text", "Текст ", "Результат:");
 
-$cls_Task->_add_object_creator("Додати об'єкт: ", "RichTextBox");
+$cls_Task->_block_start("Додати компонент: RichTextBox (редактор тексту)", "_add_object.png");
 $cls_Task->_add_property("Name", "Ім'я", "rtb_Result");
 $cls_Task->_add_property("rtb_Result.Text", "Текст ", "");
 

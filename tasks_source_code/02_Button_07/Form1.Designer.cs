@@ -37,7 +37,7 @@
             // 
             this.btn_Multiply2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btn_Multiply2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.btn_Multiply2.Location = new System.Drawing.Point(117, 174);
+            this.btn_Multiply2.Location = new System.Drawing.Point(-24, 69);
             this.btn_Multiply2.Name = "btn_Multiply2";
             this.btn_Multiply2.Size = new System.Drawing.Size(250, 50);
             this.btn_Multiply2.TabIndex = 0;
@@ -56,7 +56,7 @@
             // 
             // tb_Input
             // 
-            this.tb_Input.Location = new System.Drawing.Point(174, 94);
+            this.tb_Input.Location = new System.Drawing.Point(277, 69);
             this.tb_Input.Name = "tb_Input";
             this.tb_Input.Size = new System.Drawing.Size(137, 38);
             this.tb_Input.TabIndex = 2;
