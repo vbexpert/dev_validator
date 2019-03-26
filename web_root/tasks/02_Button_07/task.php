@@ -47,8 +47,6 @@ $cls_Task->_add_code("Обробник події:", "private void btn_Multiply_
             lb_Result.Text = b.ToString();
         }", "");
 
-
-
 $cls_Task->s_learn_url = "";
 $cls_Task->s_youtube_url = "";
 $cls_Task->s_discuss_url = "";

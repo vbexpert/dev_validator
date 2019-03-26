@@ -78,7 +78,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(684, 462);
+            this.ClientSize = new System.Drawing.Size(684, 461);
             this.Controls.Add(this.tb_Input);
             this.Controls.Add(this.lb_Target);
             this.Controls.Add(this.btn_CopyText);

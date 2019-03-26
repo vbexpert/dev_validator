@@ -46,7 +46,7 @@
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(684, 462);
+            this.ClientSize = new System.Drawing.Size(684, 461);
             this.Controls.Add(this.btn_ChangeText);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Location = new System.Drawing.Point(400, 400);
