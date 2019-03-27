@@ -4,6 +4,38 @@
     {
         public List<cls_VResult> ilst_validated_parms = new List<cls_VResult>();
         //core validation methods:
+		private bool HasEventHandler(Control control, string eventName)
+        {
+            try
+            {
+                EventHandlerList events = (EventHandlerList)typeof(Component)
+                    .GetProperty("Events", BindingFlags.NonPublic | BindingFlags.Instance)
+                    .GetValue(control, null);
+
+                object key = typeof(Control)
+                    .GetField(eventName, BindingFlags.NonPublic | BindingFlags.Static)
+                    .GetValue(null);
+
+                Delegate handlers = events[key];
+
+                return handlers != null && (handlers.GetInvocationList().Length > 0);
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public void _v_HasEventHandler(Control control, string eventName)
+        {
+            if (HasEventHandler(control, eventName))
+            {
+                _add_v_result(20, true, "");
+            }
+            else
+            {
+                _add_v_result(20, false, "From not detected!");
+            }
+        }
         public void _v_form(object obj)
         {
             if (obj is Form)
@@ -15,6 +47,7 @@
                 _add_v_result(20, false, "From not detected!");
             }
         }
+
 		public void _add_fail_msg(string s_msg)
         {
             _add_v_result(20, false, s_msg);
@@ -45,7 +78,7 @@
         {
             if (null != obj_value)
             {
-                if (obj_value.ToString() == "true")
+                if (obj_value.ToString() == "True")
                 {
                     _add_v_result(20, true, "");
                     return;

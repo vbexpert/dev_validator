@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using System.ComponentModel;
+
 namespace ns_d_code
 {
     public class cls_Main
@@ -10,22 +12,21 @@ namespace ns_d_code
         {
 			cls_output_controller cls_output_controller = new cls_output_controller();
             //---------------------------------------------------->
-			    
-			object obj1 = cls_output_controller._v_get_obj(f, "btn_ChangeText");
-			Button b1 = (Button)obj1; //explicit convert:
-			//cls_output_controller._v_obj_exists(b1,	"btn_ChangeText"); //вывод значения в валидатор - привязка к Yes\No
-
-		    //получаем аксессор метода:
-			MethodInfo clickMethodInfo = f.GetType().GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
-
-			//валидируем существование ивента - привязка к Yes\No:
-			cls_output_controller._v_obj_exists(clickMethodInfo, "");
-
-			//invoke event:
-			clickMethodInfo.Invoke(b1, new object[] { EventArgs.Empty });
-
+			//1. подключаемся к инстансу кнопки:
+			Button b1 = (Button)cls_output_controller._v_get_obj(f, "btn_ChangeText");
+			//2. валидация: или существует кнопка btn_ChangeText:
+			cls_output_controller._v_obj_exists(b1,	"btn_ChangeText");
 			//---------------------------------------------------->
-			//кінець коду валідації:
+			//3. валидация: или есть ивент ("EventClick") у данного инстанса контрола (b1):
+		    cls_output_controller._v_HasEventHandler(b1, "EventClick");
+			//---------------------------------------------------->
+			//4. подключаемся к инстансу ивента:
+			MethodInfo clickMethodInfo = f.GetType().GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
+			//5. вызываем EventClick у кнопки:
+			clickMethodInfo.Invoke(b1, new object[] { EventArgs.Empty });
+			//---------------------------------------------------->
+			//6. валидируем изменение состояния:
+			cls_output_controller._v_true(b1.Text == "Test");
 			//---------------------------------------------------->
             return(cls_output_controller._final_result());
         }

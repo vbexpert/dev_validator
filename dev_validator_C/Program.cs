@@ -12,47 +12,57 @@ static class mod_main
 {
     private static void Main()
     {
-        Console.OutputEncoding = System.Text.Encoding.UTF8;
-        //-------------------------->
-        String[] arguments = Environment.GetCommandLineArgs();
-        //-------------------------->
-        //command line args number:
-        if (arguments.GetLength(0) != 4)
+        try
         {
-            _cl("not enough CLAs!");
-            //_cl("press any key to quit...");
-            //Console.ReadKey();
-            Environment.Exit(0);
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            //-------------------------->
+            String[] arguments = Environment.GetCommandLineArgs();
+            //-------------------------->
+            //command line args number:
+            if (arguments.GetLength(0) != 4)
+            {
+                _cl("not enough CLAs!");
+                //_cl("press any key to quit...");
+                //Console.ReadKey();
+                Environment.Exit(0);
+            }
+            //-------------------------->
+            //sevae args:
+            string s_assembl_fnp = arguments[1];
+            string s_vCodeFile = arguments[2];
+            string s_vAppOriginalFT = arguments[3];
+            //_cl(Convert.ToString("Loading assembly...")); //+ s_assembl_fnp + " & profile: " + s_profile_fnp);
+            //-------------------------->
+            //lodaing codefile:
+            //-------------------------->
+            //check if exists:
+            if (File.Exists(s_vCodeFile) == false)
+            {
+                _cl("code file not found! " + s_vCodeFile);
+                Environment.Exit(0);
+            }
+            if (File.Exists(s_assembl_fnp) == false)
+            {
+                _cl("assembly not found! " + s_assembl_fnp);
+                Environment.Exit(0);
+            }
+            //-------------------------->
+            //main call:
+            object r = _compile_run_and_validate(s_vCodeFile, s_assembl_fnp, s_vAppOriginalFT);
+            //-------------------------->
+            //return result to webpage:
+            Console.WriteLine(r); //<div class='val_score'></div>
+                                  //-------------------------->
+            if (1 == 1)
+            {
+            }
         }
-        //-------------------------->
-        //sevae args:
-        string s_assembl_fnp = arguments[1];
-        string s_vCodeFile = arguments[2];
-        string s_vAppOriginalFT = arguments[3];
-        //_cl(Convert.ToString("Loading assembly...")); //+ s_assembl_fnp + " & profile: " + s_profile_fnp);
-        //-------------------------->
-        //lodaing codefile:
-        //-------------------------->
-        //check if exists:
-        if (File.Exists(s_vCodeFile) == false)
+        catch (Exception ex)
         {
-            _cl("code file not found! " + s_vCodeFile);
-            Environment.Exit(0);
+            Console.WriteLine("fatal error: " + ex.Message);
         }
-        if (File.Exists(s_assembl_fnp) == false)
-        {
-            _cl("assembly not found! " + s_assembl_fnp);
-            Environment.Exit(0);
-        }
-        //-------------------------->
-        //main call:
-        object r = _compile_run_and_validate(s_vCodeFile, s_assembl_fnp, s_vAppOriginalFT);
-        //-------------------------->
-        //return result to webpage:
-        Console.WriteLine(r); //<div class='val_score'></div>
-        //-------------------------->
-        if (1 == 1) {
-        }
+
+
     }
 
     public static object _compile_run_and_validate(string s_code_file_fnp = "", 
@@ -81,18 +91,15 @@ static class mod_main
         obj_CompilerParameters.GenerateInMemory = false;
         obj_CompilerParameters.WarningLevel = 3;
         obj_CompilerParameters.TreatWarningsAsErrors = true;
+
         obj_CompilerParameters.CompilerOptions = "/target:exe";
+
         //add refs:
         obj_CompilerParameters.ReferencedAssemblies.Add("mscorlib.dll");
-        obj_CompilerParameters.ReferencedAssemblies.Add("System.dll");
         obj_CompilerParameters.ReferencedAssemblies.Add("System.Core.dll");
         obj_CompilerParameters.ReferencedAssemblies.Add("System.Windows.Forms.dll");
         obj_CompilerParameters.ReferencedAssemblies.Add("System.Drawing.dll");
-
-        //obj_CompilerParameters.ReferencedAssemblies.Add("System.Core.dll");
-        //obj_CompilerParameters.ReferencedAssemblies.Add("System.dll");
-        //obj_CompilerParameters.ReferencedAssemblies.Add("System.Data.dll");
-        //obj_CompilerParameters.ReferencedAssemblies.Add("System.Xml.dll");
+        obj_CompilerParameters.ReferencedAssemblies.Add(typeof(System.ComponentModel.TypeConverter).Assembly.Location);
 
         //https://stackoverflow.com/questions/23755422/powershell-with-c-sharp-system-collections-generic-dll-could-not-be-found
 

@@ -15,6 +15,10 @@ $cls_Task->_add_step("4. Зберегти скріншот [Alt+PrintScreen] р�
 $cls_Task->_add_step("5. Зберегти програму у папку <b>Production</b>.");
 
 //---------------------------------------->
+$cls_Task->_block_start("Додати об'єкт: Button", "_add_object.png");
+$cls_Task->_add_property("Name", "Ім'я кнопки", "btn_ChangeText");
+$cls_Task->_block_end();
+//---------------------------------------->
 $cls_Task->_block_start("Сгенерувати подію <b>_Click</b> для кнопки: <b>btn_ChangeText</b>", "_add_event.png");
 $cls_Task->_add_code_validated("Код події:", "private void btn_ChangeText_Click(object sender, EventArgs e)
 {
@@ -22,7 +26,12 @@ $cls_Task->_add_code_validated("Код події:", "private void btn_ChangeTex
 }", "");
 $cls_Task->_block_end();
 //---------------------------------------->
-
+$cls_Task->_block_start("Написати код події <b>btn_ChangeText_click</b>:", "_add_code.png");
+$cls_Task->_add_code_validated("Вписати код:", "private void btn_ChangeText_Click(object sender, EventArgs e)
+{
+    btn_ChangeText.Text = \"Напис на кнопці змінено!!!\";
+}", "");
+//---------------------------------------->
 $cls_Task->s_learn_url = "https://learn.ztu.edu.ua/mod/page/view.php?id=10041";
 $cls_Task->s_youtube_url = "https://youtu.be/hP0UsFULLuU";
 $cls_Task->s_discuss_url = "https://www.facebook.com/groups/1487277621317029/";
