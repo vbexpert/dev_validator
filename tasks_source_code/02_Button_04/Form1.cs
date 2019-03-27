@@ -6,19 +6,10 @@ namespace WindowsApplication1
     {
         public Form1()
         { InitializeComponent(); }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            //
-        }
-
-        private void btn_Close_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void btn_ChangeText_Click(object sender, EventArgs e)
         {
-            btn_ChangeText.Text = "Напис на кнопці змінено!!!";
+            btn_ChangeText.Text = "Напис на кнопці змінено!!!1";
         }
     }
 }

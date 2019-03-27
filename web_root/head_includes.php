@@ -1,3 +1,4 @@
+<?php if(true){ ?>
     <!-- utf8 support: -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<!-- jq CDN (bootsrtrap reqired): -->
@@ -16,3 +17,4 @@
 	<link rel="icon" href="<?php echo($_SESSION["s_project_url"]); ?>favicon.ico?v=2" />
 	<!-- main css -->
 	<link rel="stylesheet" type="text/css" href="<?php echo($_SESSION["s_project_url"]); ?>_css/global.css">
+<?php } ?>

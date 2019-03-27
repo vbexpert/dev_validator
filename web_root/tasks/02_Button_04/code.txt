@@ -19,47 +19,35 @@ namespace ns_d_code
             cls_output_controller._v_parm(f.Height,			"Form.Height",			"500");
             cls_output_controller._v_parm(f.StartPosition,	"StartPosition",		"CenterScreen");
 
-						
-			//кнопка 1 (існує):
-			//---------------------------------------------------->
-			//спроба отримати інстанс обєкта:
+			//btn_ChangeText:
 			object obj1 = cls_output_controller._v_get_obj(f, "btn_ChangeText");
-			//перевіряємо чи об'єкт існує (де-факто):
 			if(obj1 != null)
 			{
-			    //об'єкт існує - приводимо до типу кнопки:
-			    Button b1 = (Button)obj1;
-			    
-				//валідуємо обєкт для відображення у валідаторі:
-				cls_output_controller._v_obj_exists(b1,	"btn_ChangeText");
+			    Button b1 = (Button)obj1; //explicit convert:
+				cls_output_controller._v_obj_exists(b1,	"btn_ChangeText"); //вывод значения в валидатор - привязка к Yes\No
 
-				//об'єкт існує - валідуємо властивості кнопки:			
-				cls_output_controller._v_parm(b1.Name,		"btn_ChangeText.Name",	"btn_ChangeText");
-				cls_output_controller._v_parm(b1.Text,		"btn_ChangeText.Text",	"Змінити напис кнопки");
-				cls_output_controller._v_parm(b1.Width,		"btn_ChangeText.Width",	"500");
-				cls_output_controller._v_parm(b1.Height,	"btn_ChangeText.Height",	"100");
+				//валідуємо властивості кнопки:			
+				cls_output_controller._v_parm(b1.Name,				"btn_ChangeText.Name",			"btn_ChangeText");
+				cls_output_controller._v_parm(b1.Text,				"btn_ChangeText.Text",			"Змінити напис кнопки");
+				cls_output_controller._v_parm(b1.Width,				"btn_ChangeText.Width",			"500");
+				cls_output_controller._v_parm(b1.Height,			"btn_ChangeText.Height",		"100");
 				cls_output_controller._v_parm(b1.Location.X,		"btn_ChangeText.Location.X",	"100");
 				cls_output_controller._v_parm(b1.Location.Y,		"btn_ChangeText.Location.Y",	"200");
-				cls_output_controller._v_parm(b1.ForeColor.Name,	"btn_ChangeText.ForeColor",	"Crimson");
-				cls_output_controller._v_parm(b1.Font.Bold,	"btn_ChangeText.Font.Bold",	"True");
-				cls_output_controller._v_parm(b1.Font.Size,	"btn_ChangeText.Font.Size",	"22");
+				cls_output_controller._v_parm(b1.ForeColor.Name,	"btn_ChangeText.ForeColor",		"Crimson");
+				cls_output_controller._v_parm(b1.Font.Bold,			"btn_ChangeText.Font.Bold",		"True");
+				cls_output_controller._v_parm(b1.Font.Size,			"btn_ChangeText.Font.Size",		"22");
 
-			//Перевірка події на кнопці
-			//---------------------------------------------------->
-			//<-- bingo start -->
-			//prepare clickMethodInfo:
-			MethodInfo clickMethodInfo = f.GetType().GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
-			//invoke event:
-			clickMethodInfo.Invoke(b1, new object[] { EventArgs.Empty });
+			    //получаем аксессор метода:
+			    MethodInfo clickMethodInfo = f.GetType().GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
 
-			//validate if text changed:
-			//use accessor if required:
- 			
-			cls_output_controller._v_parm(b1.Text, "btn_ChangeText.Text", "Напис на кнопці змінено!!!");
+				//валидируем существование ивента - привязка к Yes\No:
+				cls_output_controller._v_obj_exists(clickMethodInfo, "");
 
-			//<-- bingo end -->
-			//---------------------------------------------------->
-			//Завершення перевірки події на кнопці
+			    //invoke event:
+			    clickMethodInfo.Invoke(b1, new object[] { EventArgs.Empty });
+
+				//валидация по контрольному значению:
+			    cls_output_controller._v_parm(b1.Text, "btn_ChangeText.Text", "Напис на кнопці змінено!!!");
 			}
 			else
 			{
@@ -73,19 +61,9 @@ namespace ns_d_code
 				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
 				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
 				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
-			//---------------------------------------------------->
-			//<-- bingo start -->
-			
 				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
-				
-			//<-- bingo end -->
-			//---------------------------------------------------->
-
 			}
 			//---------------------------------------------------->
-			
-
-
 			//кінець коду валідації:
 			//---------------------------------------------------->
             return(cls_output_controller._final_result());

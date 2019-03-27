@@ -331,3 +331,6 @@ html {
 .help_btn_text{
 	padding-top:4px;
 }
+.td_va{
+    vertical-align: middle;
+}

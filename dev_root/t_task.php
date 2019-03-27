@@ -103,28 +103,29 @@ if(isset($_SESSION["vr_percent"])){
 		  $i_ctr = 0;
 		  foreach ($cls_Task->oa_properties as $cls_property){
 			echo("<tr>");
-			  switch($cls_property->s_type){
-			    case "": //default
+
 					//--------------------------------------------------------->
 					// [!main validation feedback from V-Core!] patch with session vars:
 					if(isset($_SESSION["vr_percent"])){
 					  $s_s_title="vr".$i_ctr."_reslt";
 					  if(isset($_SESSION[$s_s_title])){
-					    if($_SESSION[$s_s_title] == true){
-						  $cls_property->b_validated = true;
-					    }
-						//reset value:
-					    $_SESSION[$s_s_title] = "";
-					  }
-					  else{
-						  $cls_property->b_validated = false;
+						if($_SESSION[$s_s_title] == true){
+						  if($cls_property->b_must_validate == true){
+					        $cls_property->b_validated = true;
+						    $i_ctr++;
+						    
+							$_SESSION[$s_s_title] = "";
+						  }
+						}
 					  }
 					}
-					//debug:
-					//_dbg($cls_property->s_type.":".addslashes($cls_property->s_title).":".addslashes($s_s_title).":".addslashes($_SESSION[$s_s_title]));
+					//_dbg($cls_property->s_type.":".addslashes($cls_property->s_title).":".addslashes($cls_property->s_master_value).":".$cls_property->b_validated);
 					//--------------------------------------------------------->
-					$i_ctr++;
-			      echo("<td>".$cls_property->s_name."</td>");
+			
+			  switch($cls_property->s_type){
+			    case "property": //default
+
+			      echo("<td><div class='td_va'>".$cls_property->s_name."</div></td>");
 			      echo("<td>".$cls_property->s_title."</td>");
 			      echo("<td>".$cls_property->s_master_value."</td>");
                   $s_checked = "";
@@ -139,7 +140,7 @@ if(isset($_SESSION["vr_percent"])){
 						</td>");
 				  break;
 				  //--------------------------------------------------------->
-			    case "code":
+			    case "code_non_validated":
 				  echo("<td>$cls_property->s_name</td>");
 				  echo("<td colspan='3'>
 				          <div onselectstart='return false'>
@@ -148,6 +149,24 @@ if(isset($_SESSION["vr_percent"])){
 							  </code>
 							</pre>
 					      </div>
+						</td>");
+				  break;
+				  //--------------------------------------------------------->
+			    case "code_validated":
+				  echo("<td>$cls_property->s_name</td>");
+				  echo("<td colspan='2'>
+				          <div onselectstart='return false'>
+						    <pre>
+							  <code class='cs hljs'>$cls_property->s_master_value
+							  </code>
+							</pre>
+					      </div>
+						</td>");
+	              echo("<td>
+				          <div class='chkbox-v-value'>
+						    <input type='checkbox' $s_checked data-off-icon-cls='gluphicon-thumbs-down' data-on-icon-cls='gluphicon-thumbs-up'>
+							</input>
+						  </div>
 						</td>");
 				  break;
 				  //--------------------------------------------------------->
@@ -193,6 +212,10 @@ if(isset($_SESSION["vr_percent"])){
 				  break;
 				  //--------------------------------------------------------->
 			  }
+			  //zero:
+			  $cls_property->s_master_value = "";
+			  $cls_property->b_validated = false;
+			  
 			echo("</tr>");
           }
 		  _table_end();
@@ -317,12 +340,6 @@ function _table_start($tbl_title){
 function _table_end(){
   $s_data = "</table>";
   echo("$s_data");
-}
-function _dbg($data){
-  $output = $data;
-  if ( is_array( $output ) )
-    $output = implode( ',', $output);
-  echo "<script>console.log( 'Debug Objects:" . $output . "' );</script>";
 }
 
 ?>

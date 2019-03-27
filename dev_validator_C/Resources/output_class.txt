@@ -41,6 +41,18 @@
             }
             _add_v_result(20, false, s_obj_name + "=" + obj.ToString() + " master value: " + s_controled_value);
         }
+        public void _v_true(object obj_value)
+        {
+            if (null != obj_value)
+            {
+                if (obj_value.ToString() == "true")
+                {
+                    _add_v_result(20, true, "");
+                    return;
+                }
+            }
+            _add_v_result(20, false, "_v_true faied!");
+        }
         public bool _v_obj_exists(object obj, string s_obj_name)
         {
             if (null != obj)
