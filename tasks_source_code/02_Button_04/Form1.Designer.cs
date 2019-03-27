@@ -41,7 +41,6 @@
             this.btn_ChangeText.TabIndex = 0;
             this.btn_ChangeText.Text = "Змінити напис кнопки";
             this.btn_ChangeText.UseVisualStyleBackColor = true;
-            this.btn_ChangeText.Click += new System.EventHandler(this.btn_ChangeText_Click);
             // 
             // Form1
             // 

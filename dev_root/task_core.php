@@ -75,7 +75,7 @@ class cls_Property{
   public $s_name = "";
   public $s_title = "";
   public $s_master_value = "";
-  public $b_status = "false";
+  public $b_status = false;
   public $s_type = "";
   public $b_validated = false;
   public $b_must_validate = false;

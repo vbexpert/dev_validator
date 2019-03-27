@@ -63,7 +63,7 @@ function _validate_uploaded_app(){
 			}
 			
 			//save to file for debug:
-			file_put_contents("v-output-clean.txt", $s_v_output);
+			//file_put_contents("v-output-clean.txt", $s_v_output);
 			
 			//first - delete the uploaded file, then - eval (son on eval fail, file is deleted anyway):
 			unlink($s_uploaded_exe_fnp);

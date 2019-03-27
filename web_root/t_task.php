@@ -102,36 +102,36 @@ if(isset($_SESSION["vr_percent"])){
 		<?php
 		  $i_ctr = 0;
 		  foreach ($cls_Task->oa_properties as $cls_property){
-			echo("<tr>");
-
-					//--------------------------------------------------------->
-					// [!main validation feedback from V-Core!] patch with session vars:
-					if(isset($_SESSION["vr_percent"])){
-					  $s_s_title="vr".$i_ctr."_reslt";
-					  if(isset($_SESSION[$s_s_title])){
-						if($_SESSION[$s_s_title] == true){
-						  if($cls_property->b_must_validate == true){
-					        $cls_property->b_validated = true;
-						    $i_ctr++;
-						    
-							$_SESSION[$s_s_title] = "";
-						  }
-						}
-					  }
-					}
-					//_dbg($cls_property->s_type.":".addslashes($cls_property->s_title).":".addslashes($cls_property->s_master_value).":".$cls_property->b_validated);
-					//--------------------------------------------------------->
-			
+		    echo("<tr>");
+			//--------------------------------------------------------->
+		    // [!main validation feedback from V-Core!] patch with session vars:
+			$s_checked = "";
+			if(isset($_SESSION["vr_percent"])){
+			  $s_s_title="vr".$i_ctr."_reslt";
+			  if(isset($_SESSION[$s_s_title])){
+				if($_SESSION[$s_s_title] == true){
+				  if($cls_property->b_must_validate == true){
+					$cls_property->b_validated = true;
+					$s_checked = "checked";
+				    $i_ctr++;	    
+					$_SESSION[$s_s_title] = "";
+				  }
+				}
+			  }
+			}
+			//_dbg($cls_property->s_type.":".addslashes($cls_property->s_title).":".addslashes($cls_property->s_master_value).":".$cls_property->b_validated);
+			_dbg($cls_property->s_type.":".$cls_property->s_title.":".$cls_property->b_validated);
+			//--------------------------------------------------------->
+				  
 			  switch($cls_property->s_type){
+                //--------------------------------------------------------->
 			    case "property": //default
-
+                 
 			      echo("<td><div class='td_va'>".$cls_property->s_name."</div></td>");
 			      echo("<td>".$cls_property->s_title."</td>");
 			      echo("<td>".$cls_property->s_master_value."</td>");
-                  $s_checked = "";
-                  if($cls_property->b_validated == true){
-                    $s_checked = "checked";
-				  }
+                  
+
 	              echo("<td>
 				          <div class='chkbox-v-value'>
 						    <input type='checkbox' $s_checked data-off-icon-cls='gluphicon-thumbs-down' data-on-icon-cls='gluphicon-thumbs-up'>
