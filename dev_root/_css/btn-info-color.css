@@ -1,0 +1,19 @@
+.btn-info{
+
+    background-color: blueviolet;
+    
+    color: white;
+    
+    }
+    
+    .btn-primaru:hover,
+    
+    .btn-primary:focus,
+    
+    .btn-primary:visited{
+    
+    background-color: green;
+    
+    color: white;
+    
+    }
