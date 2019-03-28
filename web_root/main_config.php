@@ -26,4 +26,10 @@ if($b_do_debug){
 function _get_task_url(){
   return $_SESSION["s_domain"] . $_SESSION["s_task_page"];
 }
+function _dbg($data){
+  $output = $data;
+  if ( is_array( $output ) )
+    $output = implode( ',', $output);
+  echo "<script>console.log('" . addslashes($output) . "');</script>";
+}
 ?>

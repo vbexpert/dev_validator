@@ -53,7 +53,7 @@
             this.btn_CopyText.Name = "btn_CopyText";
             this.btn_CopyText.Size = new System.Drawing.Size(300, 120);
             this.btn_CopyText.TabIndex = 1;
-            this.btn_CopyText.Text = "Скопіювати текст";
+            this.btn_CopyText.Text = "Скопіювати текст1";
             this.btn_CopyText.UseVisualStyleBackColor = false;
             this.btn_CopyText.Click += new System.EventHandler(this.btn_CopyText_Click);
             // 

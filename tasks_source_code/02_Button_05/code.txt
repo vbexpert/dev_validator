@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using System.ComponentModel;
 
 namespace ns_d_code
 {
@@ -23,67 +24,40 @@ namespace ns_d_code
 			cls_output_controller._v_parm(f.Font.Size,		"Font.Size",			"36");
             cls_output_controller._v_parm(f.StartPosition,	"StartPosition",		"CenterScreen");
 
-			TextBox tb1 = new TextBox();
-			Label lb_Target = new Label();
+			//подключаемся к инстансу TextBox:
+			TextBox tb1 = (TextBox)cls_output_controller._v_get_obj(f, "tb_Input");
 
-			//tb_Input -------------------------------------------->
-			object obj1 = cls_output_controller._v_get_obj(f, "tb_Input"); //try to get control accessor obj
-			//check if not null
-			if(obj1 != null){
-			    tb1 = (TextBox)obj1; //explicit convert to button type
-				cls_output_controller._v_obj_exists(tb1, "tb_Input");
-				//v properties:
-				cls_output_controller._v_parm(tb1.Name,	"Name",	"tb_Input");
-				cls_output_controller._v_parm(tb1.Text,	"Text",	"");	
-			}else{
-			    //f properties:
-			    cls_output_controller._add_fail_msg("Об'єкт не знайдено!");
-				cls_output_controller._add_fail_msg("Об'єкт не знайдено!");							
-			    cls_output_controller._add_fail_msg("Об'єкт не знайдено!");
-			}
-			//lb_Target: ------------------------------------------>
-			object obj2 = cls_output_controller._v_get_obj(f, "lb_Target");
-			if(obj2!= null){
-			    lb_Target = (Label)obj2;
-				cls_output_controller._v_obj_exists(lb_Target,	"lb_Target");
-				//v properties:
-				cls_output_controller._v_parm(lb_Target.Name, "Name", "lb_Target");
-				cls_output_controller._v_parm(lb_Target.Text, "Text", "Тут з'явиться текст при натисканні на кнопку");	
-			}else{
-			    cls_output_controller._add_fail_msg("Об'єкт не знайдено!");
-				cls_output_controller._add_fail_msg("Об'єкт не знайдено!");						
-				cls_output_controller._add_fail_msg("Об'єкт не знайдено!");
-			}
-			//btn_CopyText ---------------------------------------->
-			object obj3 = cls_output_controller._v_get_obj(f, "btn_CopyText");
-			if(obj3 != null){
-			    Button btn1 = (Button)obj3;
-				cls_output_controller._v_obj_exists(btn1,	"btn_CopyText");
-				cls_output_controller._v_parm(btn1.Name, "Name", "btn_CopyText");
-				cls_output_controller._v_parm(btn1.Text, "Text", "Скопіювати текст");
+			//2. валидация: или существует TextBox:
+			cls_output_controller._v_obj_exists(tb1, "tb_Input");
+
+			//properties:
+			cls_output_controller._v_parm(tb1.Name,	"Name",	"tb_Input");
+			cls_output_controller._v_parm(tb1.Text,	"Text",	"");	
+
+			//подключаемся к инстансу Label1:
+			Label lb1 = (Label)cls_output_controller._v_get_obj(f, "lb_Target");
+
+			//v properties:
+			cls_output_controller._v_parm(lb1.Name, "Name", "lb_Target");
+			cls_output_controller._v_parm(lb1.Text, "Text", "Тут з'явиться текст при натисканні на кнопку");	
+
+			//подключаемся к инстансу Label2:
+			Button btn1 = (Button)cls_output_controller._v_get_obj(f, "btn_CopyText");        
 			
-			    //Перевірка події на кнопці =======================>
-				//встановлюємо невідомий учню контрольний маркер:
-				tb1.Text = "test-value-012345";
-
-			    //підготовка аксессора метода - clickMethodInfo:
-			    MethodInfo clickMethodInfo = f.GetType().GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
-				//виклик події - емуляція натискання на кнопку:
-			    clickMethodInfo.Invoke(btn1, new object[] { EventArgs.Empty });
-
-				//перевірка копіювання (порівнюємо lb_Target.Text із маркером):
-				cls_output_controller._v_parm(lb_Target.Text, "Text", "test-value-012345");
-				// ================================================>
-
-				//дбаг:
-				//MessageBox.Show(lb_Target.Text);
-			}else{
-			    cls_output_controller._add_fail_msg("Об'єкт не знайдено!");
-				cls_output_controller._add_fail_msg("Об'єкт не знайдено!");							
-				cls_output_controller._add_fail_msg("Об'єкт не знайдено!");
-			}
 			//---------------------------------------------------->
-			//кінець коду валідації:
+			//Перевірка події на кнопці:
+		    //встановлюємо невідомий учню контрольний маркер:
+			tb1.Text = "test-value-012345";
+
+			//підготовка аксессора метода - clickMethodInfo:
+			MethodInfo clickMethodInfo = f.GetType().GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
+		    //виклик події - емуляція натискання на кнопку:
+			clickMethodInfo.Invoke(btn1, new object[] { EventArgs.Empty });
+
+		    //перевірка копіювання (порівнюємо lb_Target.Text із маркером):
+		    cls_output_controller._v_parm(lb1.Text, "Text", "test-value-012345");
+
+			//---------------------------------------------------->
             return(cls_output_controller._final_result());
         }
         public static void Main() //main entry point:

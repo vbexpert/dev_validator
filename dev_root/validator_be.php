@@ -35,7 +35,7 @@ function _validate_uploaded_app(){
 	// Check if $uploadOk is set to 0 by an error:
 	if ($uploadOk == 0) {
 		echo "Sorry, your file was not uploaded.";
-
+		
 	// if everything is ok, try to upload file:
 	} else {
 		if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $s_uploaded_exe_fnp)) {
@@ -63,7 +63,7 @@ function _validate_uploaded_app(){
 			}
 			
 			//save to file for debug:
-			file_put_contents("v-output-clean.txt", $s_v_output);
+			//file_put_contents("v-output-clean.txt", $s_v_output);
 			
 			//first - delete the uploaded file, then - eval (son on eval fail, file is deleted anyway):
 			unlink($s_uploaded_exe_fnp);

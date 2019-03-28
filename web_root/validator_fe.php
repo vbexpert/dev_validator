@@ -7,21 +7,16 @@ header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 
-echo 1;
-
 require_once("main_config.php");
 require_once("task_core.php");
 require_once("validator_be.php");
+
 ?>
 <html>
   <head>
     <!-- title -->
     <title>Перевірка:</title>
-	<?php
-	  require("head_meta_tags.php");
-	?>
-	<!-- external CSS: -->
-    <link rel="stylesheet" type="text/css" href="_css/global.css">
+    <?php include_once("head_includes.php"); ?>
  </head>
  <body>
   <div class="container">
@@ -34,7 +29,9 @@ require_once("validator_be.php");
     <h2 class=''>Перевірка програми:</h2>
     <hr>
     <div class="lead lead-top-fix">
-	  <?php _validate_uploaded_app(); ?>
+	  <?php 
+	    _validate_uploaded_app(); 
+	  ?>
     </div>
 	
    </div>

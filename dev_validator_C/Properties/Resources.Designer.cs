@@ -19,7 +19,7 @@ namespace dev_validator_C.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -61,19 +61,18 @@ namespace dev_validator_C.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to    // https://stackoverflow.com/questions/4063285/missing-assembly-references-in-dynamically-compiled-code
-        ///   //--------------------------------------------------&gt;
+        ///   Looks up a localized string similar to     //--------------------------------------------------&gt;
         ///    //validation embedded classes:
         ///    public class cls_output_controller
         ///    {
         ///        public List&lt;cls_VResult&gt; ilst_validated_parms = new List&lt;cls_VResult&gt;();
         ///        //core validation methods:
-        ///        public void _v_form(object obj)
+        ///		private bool HasEventHandler(Control control, string eventName)
         ///        {
-        ///            if (obj is Form)
+        ///            try
         ///            {
-        ///                _add_v_result(20, true, &quot;&quot;);
-        ///   [rest of string was truncated]&quot;;.
+        ///                EventHandlerList events = (EventHandlerList)typeof(Component)
+        ///                    .GetProperty(&quot;Events&quot;, BindingFlags.NonPubl [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string output_class {
             get {
