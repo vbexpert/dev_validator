@@ -1,6 +1,9 @@
 using System.Windows.Forms;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
+using System.ComponentModel;
+
 namespace ns_d_code
 {
     public class cls_Main
