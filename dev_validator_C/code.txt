@@ -12,7 +12,7 @@ namespace ns_d_code
         {
 			cls_output_controller cls_output_controller = new cls_output_controller();
 
-			//початок коду валідації 1:			
+			//початок коду валідації:			
             //---------------------------------------------------->
             //v global properties:
             cls_output_controller._v_form(f);
