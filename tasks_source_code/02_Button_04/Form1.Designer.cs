@@ -28,25 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_ChangeText = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btn_ChangeText
-            // 
-            this.btn_ChangeText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btn_ChangeText.ForeColor = System.Drawing.Color.Crimson;
-            this.btn_ChangeText.Location = new System.Drawing.Point(91, 169);
-            this.btn_ChangeText.Name = "btn_ChangeText";
-            this.btn_ChangeText.Size = new System.Drawing.Size(500, 100);
-            this.btn_ChangeText.TabIndex = 0;
-            this.btn_ChangeText.Text = "Змінити напис кнопки";
-            this.btn_ChangeText.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(684, 461);
-            this.Controls.Add(this.btn_ChangeText);
+            this.ClientSize = new System.Drawing.Size(684, 462);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Location = new System.Drawing.Point(400, 400);
             this.Name = "Form1";
@@ -57,8 +44,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_ChangeText;
     }
 }
 

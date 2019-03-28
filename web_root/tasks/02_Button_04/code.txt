@@ -11,23 +11,30 @@ namespace ns_d_code
         public static string test(Form f, string s_app_fnp, string s_app_ft) //validation sub:
         {
 			cls_output_controller cls_output_controller = new cls_output_controller();
-            //---------------------------------------------------->
-			//1. подключаемся к инстансу кнопки:
-			Button b1 = (Button)cls_output_controller._v_get_obj(f, "btn_ChangeText");
-			//2. валидация: или существует кнопка btn_ChangeText:
-			cls_output_controller._v_obj_exists(b1,	"btn_ChangeText");
-			//---------------------------------------------------->
-			//3. валидация: или есть ивент ("EventClick") у данного инстанса контрола (b1):
-		    cls_output_controller._v_HasEventHandler(b1, "EventClick");
-			//---------------------------------------------------->
-			//4. подключаемся к инстансу ивента:
-			MethodInfo clickMethodInfo = f.GetType().GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
-			//5. вызываем EventClick у кнопки:
-			clickMethodInfo.Invoke(b1, new object[] { EventArgs.Empty });
-			//---------------------------------------------------->
-			//6. валидируем изменение состояния:
-			cls_output_controller._v_true(b1.Text == "Test1");
-			//---------------------------------------------------->
+			try
+			{
+				//---------------------------------------------------->
+				//1. подключаемся к инстансу кнопки:
+				Button b1 = (Button)cls_output_controller._v_get_obj(f, "btn_ChangeText");
+				//2. валидация: или существует кнопка btn_ChangeText:
+				cls_output_controller._v_obj_exists(b1,	"btn_ChangeText");
+				//---------------------------------------------------->
+				//3. валидация: или есть ивент ("EventClick") у данного инстанса контрола (b1):
+				cls_output_controller._v_HasEventHandler(b1, "EventClick");
+				//---------------------------------------------------->
+				//4. подключаемся к инстансу ивента:
+				MethodInfo clickMethodInfo = f.GetType().GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
+				//5. вызываем EventClick у кнопки:
+				clickMethodInfo.Invoke(b1, new object[] { EventArgs.Empty });
+				//---------------------------------------------------->
+				//6. валидируем изменение состояния:
+				cls_output_controller._v_true(b1.Text == "Test");
+				//---------------------------------------------------->
+			}
+			catch
+			{
+                //
+			}
             return(cls_output_controller._final_result());
         }
         public static void Main() //main entry point:

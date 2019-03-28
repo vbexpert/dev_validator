@@ -7,7 +7,5 @@ namespace WindowsApplication1
     {
         public Form1()
         { InitializeComponent(); }
-
-        
     }
 }
