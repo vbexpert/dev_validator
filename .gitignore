@@ -40,6 +40,10 @@ TestResult.xml
 [Rr]eleasePS/
 dlldata.c
 
+# ignore tasks:
+tasks_source_code/
+*.exe
+
 # DNX
 project.lock.json
 artifacts/
