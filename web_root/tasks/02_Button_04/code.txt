@@ -26,7 +26,7 @@ namespace ns_d_code
 			clickMethodInfo.Invoke(b1, new object[] { EventArgs.Empty });
 			//---------------------------------------------------->
 			//6. валидируем изменение состояния:
-			cls_output_controller._v_true(b1.Text == "Test");
+			cls_output_controller._v_true(b1.Text == "Test1");
 			//---------------------------------------------------->
             return(cls_output_controller._final_result());
         }
