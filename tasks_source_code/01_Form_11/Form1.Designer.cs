@@ -35,7 +35,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::Form_11.Properties.Resources.landscape;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1008, 730);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
             this.Text = "BackgroundImage - Форма з фоновим малюнком";

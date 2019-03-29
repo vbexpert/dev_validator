@@ -32,6 +32,30 @@ $cls_Task->_add_code_validated("Вписати код:", "private void btn_Chang
     btn_ChangeText.Text = \"Напис на кнопці змінено!!!\";
 }", "");
 //---------------------------------------->
+$cls_Task->_block_start("Додати об'єкт: CheckBox", "_add_object.png");
+$cls_Task->_add_property("Name", "Ім'я", "checkBox1");
+$cls_Task->_block_end();
+//---------------------------------------->
+$cls_Task->_block_start("Сгенерувати подію <b>CheckedChanged</b> для cb: <b>1111</b>", "_add_event.png");
+$cls_Task->_add_code_validated("Код події:", "private void checkBox1_CheckedChanged(object sender, EventArgs e)
+{
+    
+}", "");
+$cls_Task->_block_end();
+//---------------------------------------->
+
+$cls_Task->_block_start("Додати об'єкт: RadioButton", "_add_object.png");
+$cls_Task->_add_property("Name", "Ім'я", "radioButton1");
+$cls_Task->_block_end();
+//---------------------------------------->
+$cls_Task->_block_start("Сгенерувати подію <b>CheckedChanged</b> для rb: <b>1111</b>", "_add_event.png");
+$cls_Task->_add_code_validated("Код події:", "private void radioButton1_CheckedChanged(object sender, EventArgs e)
+{
+    
+}", "");
+$cls_Task->_block_end();
+
+//---------------------------------------->
 $cls_Task->s_learn_url = "https://learn.ztu.edu.ua/mod/page/view.php?id=10041";
 $cls_Task->s_youtube_url = "https://youtu.be/hP0UsFULLuU";
 $cls_Task->s_discuss_url = "https://www.facebook.com/groups/1487277621317029/";

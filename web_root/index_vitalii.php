@@ -14,6 +14,8 @@ include("main_config.php");
 	?>
 	<!-- external CSS: -->
     <link rel="stylesheet" type="text/css" href="_css/global.css">
+    <link rel="stylesheet" type="text/css" href="_css/btn-info-color.css">
+
   </head>
   <body>
     <div class="container">
@@ -36,14 +38,14 @@ include("main_config.php");
           <h2>Доступні завдання:</h2>
 
           <div class="panel-group" id="collapse-group">
-            <!-- task Winforms block start ------------------>
+            <!-- task Forms block start ------------------>
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#collapse-group" href="#WindowsForms">WindowsForms</a>
+                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Form">Form</a>
                 </h4>
               </div>
-              <div id="WindowsForms" class="panel-collapse collapse">                
+              <div id="Form" class="panel-collapse collapse">                
                 <div class="panel-body">                                    	 
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/01_Form_00/task.php">Завдання 0: Створення простої Windows форми</a></div>		 
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/01_Form_01/task.php">Завдання 1: Моя власна програма із Windows Forms</a></div>
@@ -62,7 +64,23 @@ include("main_config.php");
                 </div>                
               </div>
             </div>
-            <!-- task Winforms block end ------------------->
+            <!-- task Forms block end ------------------->
+
+            <!-- task Event block start -------------------->
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Event">Event</a>
+                </h4>
+              </div>
+              <div id="Event" class="panel-collapse collapse">                
+                <div class="panel-body">                                    	 
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/01_Form_00/task.php">Завдання 0: Створення простої Windows форми</a></div>		                                     
+                </div>                
+              </div>
+            </div>
+            <!-- task Event block end ---------------------->
+
 
             <!-- task Button block start ------------------->
             <div class="panel panel-default">
@@ -90,6 +108,21 @@ include("main_config.php");
             </div>
             <!-- task Button block end --------------------->
 
+            <!-- task Label block start -------------------->
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Label">Label</a>
+                </h4>
+              </div>
+              <div id="Label" class="panel-collapse collapse">                
+                <div class="panel-body">                                    	 
+                                    
+                </div>                
+              </div>
+            </div>
+            <!-- task Label block end ---------------------->
+
             <!-- task TextBox block start ------------------>
             <div class="panel panel-default">
               <div class="panel-heading">
@@ -105,20 +138,6 @@ include("main_config.php");
             </div>
             <!-- task TextBox block end -------------------->
 
-            <!-- task Label block start -------------------->
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Label">Label</a>
-                </h4>
-              </div>
-              <div id="Label" class="panel-collapse collapse">                
-                <div class="panel-body">                                    	 
-                                    
-                </div>                
-              </div>
-            </div>
-            <!-- task Label block end ---------------------->
 
             <!-- task PictureBox block start --------------->
             <div class="panel panel-default">
@@ -153,12 +172,10 @@ include("main_config.php");
           </div> 
           <!-- help block start ---------------------------->  
           <a class="btn btn-info btn-lg btn-block" href="https://docs.google.com/document/d/1ZZgKuX8jBzROxZpQMF0xoWBmxvjeD0nIIPz5oVXdhso/edit?usp=sharing" role="button" target="_blank">Читати навчальний матеріал</a>
-          <a class="btn btn-danger btn-lg btn-block" href="https://www.youtube.com/playlist?list=PLgNmtqlNFVjpYzErepZF2E8Mc4R27yXYf" role="button" target="_blank">Переглянути відеоуроки</a>
-          <a class="btn btn-warning btn-lg btn-block" href="http://informatics.in.ua/" role="button" target="_blank">Сайт Інформатика в школі</a>
+          <a class="btn btn-info btn-lg btn-block" href="https://www.youtube.com/playlist?list=PLgNmtqlNFVjpYzErepZF2E8Mc4R27yXYf" role="button" target="_blank">Переглянути відеоуроки</a>
+          <a class="btn btn-info btn-lg btn-block" href="http://informatics.in.ua/" role="button" target="_blank">Сайт Інформатика в школі</a>
           <!-- help block end ------------------------------>          
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/pmEmg_AU4Lw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
+          
         </div>
       </div>
     </div>  
