@@ -67,7 +67,7 @@ include_once("main_config.php");
 		 <div class="task_desc_row"><a href="/validator/tasks/02_Button_09/task.php">Завдання 9: Умовні оператори: Перевірка числа на рівність нулю</a></div>
 		 <div class="task_desc_row"><a href="/validator/tasks/02_Button_10/task.php">Завдання 10: Умовні оператори: Математичний калькулятор</a></div>
 		 <div class="task_desc_row"><a href="/validator/tasks/02_Button_11/task.php">Завдання 11: Квадрат</a></div>
-		 <div class="task_desc_row"><a href="/validator/tasks/App_Control/task.php">Завдання 12: Підсумковий урок</a></div>
+		 <div class="task_desc_row"><a href="/validator/tasks/07_App_Control/task.php">Завдання 12: Підсумковий урок</a></div>
 		 <!-- task Controls Button info block end --------------------------------------------------------------------------------->
 		
       </div>

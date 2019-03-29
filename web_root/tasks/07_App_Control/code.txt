@@ -27,25 +27,27 @@ namespace ns_d_code
 				cls_output_controller._v_parm(f.Height,			"Form.Height",			"400");
 				cls_output_controller._v_parm(f.StartPosition,	"StartPosition",		"CenterScreen");
 				cls_output_controller._v_parm(f.BackColor.Name, "Form.BackColor.Name",	"White");
-				cls_output_controller._v_parm(f.ControlBox,		"ControlBox",		"False");
+				cls_output_controller._v_parm(f.ControlBox,		"ControlBox",			"False");
 				//---------------------------------------------------->
 				//1. подключаемся к инстансу:
 				Label label1 = (Label)cls_output_controller._v_get_obj(f, "label1");
 				//2. валидируем на существование объекта:
 				cls_output_controller._v_obj_exists(label1,	"label1");				
-				cls_output_controller._v_parm(label1.Name,		"label1.Name",	"label1");
-				cls_output_controller._v_parm(label1.Text,		"label1.Text",	"Обчислення значення функції");							
+				cls_output_controller._v_parm(label1.Name,				"label1.Name",				"label1");
+				cls_output_controller._v_parm(label1.Text,				"label1.Text",				"Обчислення значення функції");							
 				cls_output_controller._v_parm(label1.ForeColor.Name,	"label1.ForeColor.Name",	"Black");				
-				cls_output_controller._v_parm(label1.Font.Size,	"label1.Font.Size",	"16");
-				cls_output_controller._v_parm(label1.Font.Bold,	"label1.Font.Bold",	"True");
+				cls_output_controller._v_parm(label1.Font.Size,			"label1.Font.Size",			"16");
+				cls_output_controller._v_parm(label1.Font.Bold,			"label1.Font.Bold",			"True");
 				//---------------------------------------------------->
 				//1. подключаемся к инстансу:
-				PictureBox pictureBox1 = (PictureBox)cls_output_controller._v_get_obj(f, "pictureBox1");
+				//PictureBox pictureBox1 = (PictureBox)cls_output_controller._v_get_obj(f, "pictureBox1");
 				//2. валидируем на существование объекта:
-				cls_output_controller._v_obj_exists(pictureBox1,	"pictureBox1");
-				cls_output_controller._v_parm(pictureBox1.Name,						"pictureBox1.Name",	"pictureBox1");
-				cls_output_controller._v_parm(pictureBox1.BackgroundImage,			"pictureBox1.BackgroundImage",	"1.png");							
-				cls_output_controller._v_parm(pictureBox1.BackgroundImageLayout,	"pictureBox1.BackgroundImageLayout",	"Zoom");		
+				//cls_output_controller._v_obj_exists(pictureBox1,	"pictureBox1");
+				//cls_output_controller._v_parm(pictureBox1.Name,						"pictureBox1.Name",		"pictureBox1");
+				//cls_output_controller._v_parm(pictureBox1.Width,					"pictureBox1.Width",	"335");
+				//cls_output_controller._v_parm(pictureBox1.Height,					"pictureBox1.Height",	"85");
+				//cls_output_controller._v_parm(pictureBox1.BackgroundImage,		"pictureBox1.BackgroundImage",	"1.png");							
+				//cls_output_controller._v_parm(pictureBox1.BackgroundImageLayout,	"pictureBox1.BackgroundImageLayout",	"Zoom");		
 				//---------------------------------------------------->
 				//TextBox
 				//---------------------------------------------------->

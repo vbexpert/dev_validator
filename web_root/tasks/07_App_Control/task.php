@@ -38,8 +38,10 @@ $cls_Task->_block_end();
 $cls_Task->_block_start("Додати об'єкт: PictureBox", "_add_object.png");
 $cls_Task->_add_property("Exists", "Наявність", "");
 $cls_Task->_add_property("Name", "Ім'я", "pictureBox1");
-$cls_Task->_add_property("BackgroundImage", "Фонове зображення", "1.png");
-$cls_Task->_add_property("BackgroundImageLayout", "Спосіб відображення фонового малюнку", "Zoom");
+//$cls_Task->_add_property("Width", "Розмір", "335");
+//$cls_Task->_add_property("Height", "Розмір", "85");
+//$cls_Task->_add_property("BackgroundImage", "Фонове зображення", "1.png");
+//$cls_Task->_add_property("BackgroundImageLayout", "Спосіб відображення фонового малюнку", "Zoom");
 $cls_Task->_add_screen("Формула", "1.png");
 $cls_Task->_block_end();
 //---------------------------------------->
