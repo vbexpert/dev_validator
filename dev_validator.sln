@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26403.3
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dev_validator_C", "dev_validator_C\dev_validator_C.csproj", "{89E53C47-5189-4FAE-AE59-C48C31477783}"
 EndProject
@@ -127,6 +127,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_Button_10", "tasks_source_code\02_Button_10\02_Button_10.csproj", "{63E8CDDC-2869-453D-8CBC-EB40CFC5ACF5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_Button_11", "tasks_source_code\02_Button_11\02_Button_11.csproj", "{D5B35A63-060B-439F-B610-AD9D6F4EF00C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App_Control", "tasks_source_code\App_Control\App_Control.csproj", "{693F53B2-C2E7-4CB8-822E-501C6C21F249}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -400,6 +402,14 @@ Global
 		{D5B35A63-060B-439F-B610-AD9D6F4EF00C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D5B35A63-060B-439F-B610-AD9D6F4EF00C}.Release|x86.ActiveCfg = Release|Any CPU
 		{D5B35A63-060B-439F-B610-AD9D6F4EF00C}.Release|x86.Build.0 = Release|Any CPU
+		{693F53B2-C2E7-4CB8-822E-501C6C21F249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{693F53B2-C2E7-4CB8-822E-501C6C21F249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{693F53B2-C2E7-4CB8-822E-501C6C21F249}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{693F53B2-C2E7-4CB8-822E-501C6C21F249}.Debug|x86.Build.0 = Debug|Any CPU
+		{693F53B2-C2E7-4CB8-822E-501C6C21F249}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{693F53B2-C2E7-4CB8-822E-501C6C21F249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{693F53B2-C2E7-4CB8-822E-501C6C21F249}.Release|x86.ActiveCfg = Release|Any CPU
+		{693F53B2-C2E7-4CB8-822E-501C6C21F249}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -441,6 +451,7 @@ Global
 		{4623572C-48CB-4819-97F8-30D92EDFD711} = {85B7DAAD-F4E6-4A73-AE61-879ADBEC779A}
 		{63E8CDDC-2869-453D-8CBC-EB40CFC5ACF5} = {85B7DAAD-F4E6-4A73-AE61-879ADBEC779A}
 		{D5B35A63-060B-439F-B610-AD9D6F4EF00C} = {85B7DAAD-F4E6-4A73-AE61-879ADBEC779A}
+		{693F53B2-C2E7-4CB8-822E-501C6C21F249} = {413FB722-6CC8-4EDC-88CC-DE643CEF879F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24A63605-5F2D-439D-81C1-5E775F49DF3C}
