@@ -8,7 +8,7 @@ rem 3. сборка для web_root:
 mkdir %s_task_web_root_dir%
 copy %s_task_dev_dir%\code.txt %s_task_web_root_dir%\code.txt
 copy %s_task_dev_dir%\task.php %s_task_web_root_dir%\task.php
-copy %s_task_dev_dir%\target_form.png %s_task_web_root_dir%\target_form.png
+copy "%s_task_dev_dir%\*.png" %s_task_web_root_dir%
 rem 4. сборка бинарных файлов для app_for_testing:
 set s_task_app=%s_task_name%
 set s_task_app=%s_task_app:~1%

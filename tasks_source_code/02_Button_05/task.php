@@ -13,7 +13,7 @@ $cls_Task->_add_step("2. Завантажити програму у <b>DEV-VALID
 $cls_Task->_add_step("3. Добитися повної валідації програми.");
 $cls_Task->_add_step("4. Зберегти скріншот [Alt+PrintScreen] результатів у папку <b>Production</b>.");
 $cls_Task->_add_step("5. Зберегти програму у папку <b>Production</b>.");
-$cls_Task->_add_screen("","target_form.png");
+$cls_Task->_add_screen("Вигляд програми","target_form.png");
 
 $cls_Task->_block_start("Добитися валідації головної форми:", "_form.png");
 $cls_Task->_add_property("Availability of Form", "Наявність форми", "");
@@ -42,15 +42,38 @@ $cls_Task->_block_start("Додати новий компонент: Button", "_
 $cls_Task->_add_property("Exists", "Наявність", "");
 $cls_Task->_add_property("Name", "Ім'я", "btn_CopyText");
 $cls_Task->_add_property("Text", "Текст", "Скопіювати текст");
-$cls_Task->_add_code_validated("Код:","Написати код, який копіює текст з поля для вводу в напис"); 
 $cls_Task->_block_end();
+
+$cls_Task->_block_start("Сгенерувати подію <b>Click</b> для кнопки: <b>btn_CopyText</b>", "_add_event.png");
+$cls_Task->_add_code_validated("Код події:", "private void btn_CopyText_Click(object sender, EventArgs e)
+{
+    
+}", "");
+$cls_Task->_block_end();
+
+$cls_Task->_block_start("Написати код події <b>btn_CopyText_Click</b>:", "_add_code.png");
+$cls_Task->_add_code_validated("Вписати код:", "lb_Result.Text = tb_Input.Text;", "");
+$cls_Task->_add_screen("Вигляд програми після введення тексту та натискання на кнопку","2.png");
+$cls_Task->_block_end();
+
 
 $cls_Task->_block_start("Додати новий компонент: Button", "_add_object.png");
 $cls_Task->_add_property("Exists", "Наявність", "");
 $cls_Task->_add_property("Name", "Ім'я", "btn_Close");
 $cls_Task->_add_property("Text", "Текст", "Закрити");
-$cls_Task->_add_code_validated("Код:","Написати код, який закриває форму");
 $cls_Task->_block_end();
+
+$cls_Task->_block_start("Сгенерувати подію <b>Click</b> для кнопки: <b>btn_Close</b>", "_add_event.png");
+$cls_Task->_add_code_validated("Код події:", "private void btn_Close_Click(object sender, EventArgs e)
+{
+    
+}", "");
+
+$cls_Task->_block_end();
+$cls_Task->_block_start("Написати код події <b>btn_Close_Click</b>:", "_add_code.png");
+$cls_Task->_add_code_validated("Вписати код, який закриє програму:", "Close();", "");
+$cls_Task->_block_end();
+
 
 $cls_Task->s_learn_url = "http://informatics.in.ua/programming_csharp/part_02.php";
 $cls_Task->s_youtube_url = "https://youtu.be/hP0UsFULLuU";

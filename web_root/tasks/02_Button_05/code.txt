@@ -51,7 +51,8 @@ namespace ns_d_code
 				cls_output_controller._v_obj_exists(btn1, "btn_CopyText");
 				cls_output_controller._v_parm(btn1.Name, "Name", "btn_CopyText");
 				cls_output_controller._v_parm(btn1.Text, "Text", "Скопіювати текст");
-				//---------------------------------------------------->
+				//валидация: или есть ивент ("EventClick") у данного инстанса контрола (btn1):
+				cls_output_controller._v_HasEventHandler(btn1, "EventClick");
 				//Перевірка події на кнопці:
 				//встановлюємо невідомий учню контрольний маркер:
 				tb1.Text = "test-value-012345";
@@ -68,11 +69,13 @@ namespace ns_d_code
 				cls_output_controller._v_obj_exists(btn2, "btn_Close");
 				cls_output_controller._v_parm(btn2.Name, "Name", "btn_Close");
 				cls_output_controller._v_parm(btn2.Text, "Text", "Закрити");
+				//валидация: или есть ивент ("EventClick") у данного инстанса контрола (btn2):
+				cls_output_controller._v_HasEventHandler(btn2, "EventClick");
 				//підготовка аксессора метода - clickMethodInfo:
 				MethodInfo clickMethodInfo2 = f.GetType().GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
 				//виклик події - емуляція натискання на кнопку:
 				clickMethodInfo2.Invoke(btn2, new object[] { EventArgs.Empty });
-				//перевірка закриття форми
+//ToDo перевірка закриття форми 
 				cls_output_controller._v_form(f);
 				//---------------------------------------------------->
 			}

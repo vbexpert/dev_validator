@@ -9,7 +9,7 @@ namespace WindowsApplication1
 
         private void btn_Close_Click(object sender, EventArgs e)
         {
-             //Close();
+             Close();
         }
 
         private void btn_CopyText_Click(object sender, EventArgs e)
