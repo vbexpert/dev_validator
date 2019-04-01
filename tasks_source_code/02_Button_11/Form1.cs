@@ -39,7 +39,7 @@ namespace Task_01
             //Обрахунок 
             int Perimeter = Side * 4;
             int Square = Side * Side;
-            double Diagonal = Side * Math.Pow(2, .5);
+            double Diagonal = Side * Math.Pow(2, 0.5);
             //Виведення 
             lb_Side.Text = "Сторона: " + Side.ToString();
             lb_Perimeter.Text = "Периметр: " + Perimeter.ToString();

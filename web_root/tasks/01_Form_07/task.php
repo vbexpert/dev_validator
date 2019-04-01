@@ -22,7 +22,7 @@ $cls_Task->_add_property("Availability of Form", "Наявність форми"
 $cls_Task->_add_property("Application name", "Ім'я програми", "Form_07");
 $cls_Task->_add_property("AutoScaleMode", "Режим перерахунку форми", "None");
 $cls_Task->_add_property("Text", "Текст Форми", "Opacity - Напівпрозоре вікно");
-$cls_Task->_add_property("BackColor.Name", "Колір Форми", "Sienna");
+$cls_Task->_add_property("BackColor", "Колір Форми", "Sienna");
 $cls_Task->_add_property("WindowState", "Стартове положення вікна програми", "Розгорнуте на весь екран");
 $cls_Task->_add_property("Opacity", "Прозорість вікна", "50% або 0,5");
 
