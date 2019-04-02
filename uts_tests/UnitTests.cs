@@ -173,6 +173,13 @@ namespace uts_tests
             string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]
+        public void tm_App_Control()
+        {
+            string s_task_id = "App_Control";
+            string s_task_exe_ft = "App_Control.exe";
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
+        }
+        [TestMethod]
         public void tm_03_Label_01()
         {
             string s_task_id = "03_Label_01";
@@ -184,6 +191,13 @@ namespace uts_tests
         {
             string s_task_id = "03_Label_02";
             string s_task_exe_ft = "Label_02.exe";
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
+        }
+        [TestMethod]
+        public void tm_07_Circle()
+        {
+            string s_task_id = "07_Circle";
+            string s_task_exe_ft = "Circle.exe";
             string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]

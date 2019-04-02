@@ -13,9 +13,8 @@ namespace WindowsApplication1
         }
 
         private void btn_CopyText_Click(object sender, EventArgs e)
-        {
-            //lb_Target.Text = tb_Input.Text + 1;
-            lb_Target.Text = tb_Input.Text;
+        {           
+            lb_Result.Text = tb_Input.Text;
         }
     }
 }

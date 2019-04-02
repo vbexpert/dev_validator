@@ -37,13 +37,21 @@ if(isset($_SESSION["vr_percent"])){
 		
 		<!-- square btn - main uploader --> 
 		<div class='upload_square_btn'>
-		  <div class='upload_square_btn_upper'>Завантажити</div>
+		  <img class='hvr-pulse-grow' src='../../_img/up-arrow.png' onclick="">		
+		  <div class='upload_square_btn_upper'></div>
 		  <img class='hvr-pulse-grow' src='../../_img/upload-square.png' onclick="$('#fileToUpload').trigger('click');">
 		  </img>
-		  <div class='upload_square_btn_lower'>програму:</div>
+		  <div class='upload_square_btn_lower'>Завантажити <br> програму:</div>
 		</div>
 		<!-- square btn - main uploader --> 
-		
+
+		<!-- square btn - up --> 
+		<div class='up_square_btn'>		  
+		    
+		</div>
+		<!-- square btn - up --> 		
+
+
 		<!-- headers -------------------------------------------------------->
         <h2 class="centered"><?php echo($cls_Task->s_title) . ": " . $cls_Task->s_description; ?></h2>
 		
@@ -69,7 +77,7 @@ if(isset($_SESSION["vr_percent"])){
 		<!-- validation upload -------------------------------------------->
 
 		<hr>
-        <h2 class="centered">Теорія (план дій, покроково):</h2>
+        <h2 class="centered">Теорія:</h2>
 		<br>
 		
 		<!-- steps ---------------------------------------------------------->
@@ -96,7 +104,7 @@ if(isset($_SESSION["vr_percent"])){
            <a class="btn btn-info regular_button btn_img1 btn_img_discuss btn_help hvr-pulse-shrink" href="<?php echo($cls_Task->s_discuss_url) ?>" role="button" target="_blank"><div class='help_btn_text'>Обговорити</div></a>
         </div>
 		<hr>
-        <h2 class="centered">Практика (покрокова валідація):</h2>
+        <h2 class="centered">Практика:</h2>
 		
 		<!-- properties ----------------------------------------------------->
 		<?php
@@ -187,7 +195,7 @@ if(isset($_SESSION["vr_percent"])){
 				  echo("<td>$cls_property->s_title</td>");
 				  echo("<td colspan='3'>
 				          <div class='screen'>
-						    <img src='$cls_property->s_master_value'>
+						    <img class='f_img' src='$cls_property->s_master_value'>
 							</img>
 					      </div>
 						</td>");
@@ -323,9 +331,9 @@ function _table_start($tbl_title){
         <caption class='app_specs' align='top'>$tbl_title</caption>
           <thead >
             <tr >
-              <th>Об`єкт (англ.):</th>
-              <th>Об`єкт \ властивість (укр.):</th>
-              <th>Потрібне значення:</th>
+              <th>Properties:</th>
+              <th>Властивість:</th>
+              <th>Значення:</th>
               <th>Валідація:</th>
             </tr>
           </thead>
