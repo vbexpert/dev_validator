@@ -26,7 +26,7 @@ $cls_Task->_add_property("Font.Size", "Розмір шрифту", "20");
 $cls_Task->_add_property("StartPosition", "Початкова позиція", "По центру екрана");
 $cls_Task->_block_end();
 
-$cls_Task->_add_screen("Контроли на формі на формі","1.png");
+$cls_Task->_add_screen("Об'єкти на формі","1.png");
 
 $cls_Task->_block_start("Додати новий компонент: Label", "_add_object.png");
 $cls_Task->_add_property("Exists", "Наявність", "");
@@ -77,7 +77,7 @@ $cls_Task->_block_end();
 $cls_Task->_block_start("Додати новий компонент: Label", "_add_object.png");
 $cls_Task->_add_property("Exists", "Наявність", "");
 $cls_Task->_add_property("Name", "Ім'я", "label6");
-$cls_Task->_add_property("Text", "Текст ", "* Об'єм сфери:");
+$cls_Task->_add_property("Text", "Текст ", "Об'єм сфери:");
 $cls_Task->_block_end();
 
 $cls_Task->_block_start("Додати новий компонент: Label", "_add_object.png");
@@ -117,7 +117,7 @@ $cls_Task->_add_property("Text", "Текст", "Розрахувати");
 $cls_Task->_block_end();
 
 $cls_Task->_block_start("Сгенерувати подію <b>Click</b> для кнопки: <b>btn_Calculate</b>", "_add_event.png");
-$cls_Task->_add_code_validated("Код події:", "private void btn_CopyText_Click(object sender, EventArgs e)
+$cls_Task->_add_code_validated("Код події:", "private void btn_Calculate_Click(object sender, EventArgs e)
 {
     
 }", "");
@@ -132,7 +132,7 @@ double Radius = double.Parse(tb_Input.Text);
 double Diameter = Radius * 2;
 double Length = 2 * Math.PI * Radius;
 double Square = Math.PI * Math.Pow(Radius,2);
-double Extent =  Math.PI * Math.Pow(Radius,3) * 3 / 4;
+double Extent =  Math.PI * Math.Pow(Radius,3) * 4 / 3;
 //Виведення
 lb_Radius.Text = Radius.ToString(\"#.##\");
 lb_Diameter.Text = Diameter.ToString(\"#.##\");
@@ -146,7 +146,7 @@ $cls_Task->_add_property("lb_Diameter.Text", "Текст ", "<i>Розрахов
 $cls_Task->_add_property("lb_Length.Text", "Текст ", "<i>Розраховані програмою значення</i>");
 $cls_Task->_add_property("lb_Square.Text", "Текст ", "<i>Розраховані програмою значення</i>");
 $cls_Task->_add_property("lb_Extent.Text", "Текст ", "<i>Розраховані програмою значення</i>");
-$cls_Task->_add_screen("Вигляд програми після введення значення та натискання на кнопку","0.png");
+$cls_Task->_add_screen("Вигляд програми після введення значення та натискання на кнопку","2.png");
 $cls_Task->_block_end();
 
 $cls_Task->_block_start("Додати новий компонент: Button", "_add_object.png");
@@ -181,8 +181,10 @@ $cls_Task->_add_property("Exists", "Наявність", "");
 $cls_Task->_add_property("Name", "Ім'я", "lb_Author");
 $cls_Task->_add_property("Font.Size", "Розмір шрифту", "12");
 $cls_Task->_add_property("ForeColor", "Колір тексту", "ControlDarkDark");
-$cls_Task->_add_property("Text", "Текст ", "<i>Ввести інформацію про автора за зразком</i>");
+$cls_Task->_add_property("Text", "Текст ", "<i>Ввести інформацію про автора згідно зразка</i>");
 $cls_Task->_block_end();
+
+$cls_Task->_add_screen("Вигляд програми","0.png");
 
 
 

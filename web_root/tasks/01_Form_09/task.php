@@ -23,7 +23,8 @@ $cls_Task->_add_property("Application name", "Ім'я програми", "Form_0
 $cls_Task->_add_property("AutoScaleMode", "Режим перерахунку форми", "None");
 $cls_Task->_add_property("Text", "Текст Форми", "Програма без іконки у рядку заголовку");
 $cls_Task->_add_property("Size.Width", "Ширина форми", "500");
-$cls_Task->_add_property("Size.StartPosition", "Початкова позиція", "По центру екрану");
+$cls_Task->_add_property("Size.Height", "Висота форми", "300");
+$cls_Task->_add_property("StartPosition", "Початкова позиція", "По центру екрану");
 $cls_Task->_add_property("ShowIcon", "Не відображати іконку програму у заголовку", "False");
 
 $cls_Task->_add_screen("Кінцевий вигляд Форми:", "target_form.png");

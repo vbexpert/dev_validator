@@ -103,11 +103,10 @@ include_once("main_config.php");
                   <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_04/task.php">Завдання 4: Подія на кнопці</a></div>
                   <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_05/task.php">Завдання 5: Робота з текстом - Відображення введеного тексту</a></div>
                   <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_06/task.php">Завдання 6: Робота з 2 полями для вводу</a></div>
-                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_07/task.php">Завдання 7: Подвоєння введеного числа</a></div>
+                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_07/task.php">Завдання 7: </a></div>
                   <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_08/task.php">Завдання 8: Умовні оператори: Перевірка на введення цифр</a></div>
                   <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_09/task.php">Завдання 9: Умовні оператори: Перевірка числа на рівність нулю</a></div>
                   <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_10/task.php">Завдання 10: Умовні оператори: Математичний калькулятор</a></div>
-                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_11/task.php">Завдання 11: Квадрат</a></div>
                 </div>                
               </div>
             </div>
@@ -122,7 +121,9 @@ include_once("main_config.php");
               </div>
               <div id="Label" class="panel-collapse collapse">                
                 <div class="panel-body">                                    	 
-                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/03_Label_00/task.php">Завдання 0: Додавання напису на форму</a></div>                    
+                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/03_Label_00/task.php">Завдання 0: Додавання напису на форму</a></div>
+                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/03_Label_01/task.php">Завдання 0: Додавання напису на форму</a></div> 
+                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/03_Label_02/task.php">Завдання 0: Додавання напису на форму</a></div>                     
                 </div>                
               </div>
             </div>
@@ -183,9 +184,10 @@ include_once("main_config.php");
               </div>
               <div id="Math" class="panel-collapse collapse">                
                 <div class="panel-body">                                    	 
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/06_2D_Graphics_01/task.php">Завдання 0: Додавання чисел </a></div>		 
+                  <div class="row pic-centered task_desc_row"><a href="">Завдання 0: Виведення введеного числа </a></div>	
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Doubling/task.php">Завдання 1: Подвоєння введеного числа</a></div> 
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_10/task.php">Завдання 1: Математичні дії</a></div>      
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_11/task.php">Завдання 2: Квадрат</a></div>
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Square/task.php">Завдання 2: Квадрат</a></div>
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Circle/task.php">Завдання 3: Коло</a></div>
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_App_Control/task.php">Завдання 4: Підсумковий урок</a></div>                    
 

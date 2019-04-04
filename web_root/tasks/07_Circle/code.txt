@@ -89,7 +89,7 @@ namespace ns_d_code
 				//валидация: exists & properties:
 				cls_output_controller._v_obj_exists(label6, "label6");
 				cls_output_controller._v_parm(label6.Name, "Name", "label6");
-				cls_output_controller._v_parm(label6.Text, "Text", "* Об'єм сфери:");
+				cls_output_controller._v_parm(label6.Text, "Text", "Об'єм сфери:");
 
 				//подключаемся к инстансу:
 				Label lb_Radius = (Label)cls_output_controller._v_get_obj(f, "lb_Radius");
@@ -146,7 +146,7 @@ namespace ns_d_code
 				cls_output_controller._v_parm(lb_Diameter.Text, "Text", "20");
 				cls_output_controller._v_parm(lb_Length.Text, "Text", "62,83");
 				cls_output_controller._v_parm(lb_Square.Text, "Text", "314,16");
-				cls_output_controller._v_parm(lb_Extent.Text, "Text", "2356,19");
+				cls_output_controller._v_parm(lb_Extent.Text, "Text", "4188,79");
 				
 				//подключаемся к инстансу:
 				Button btn_Close = (Button)cls_output_controller._v_get_obj(f, "btn_Close");  
