@@ -180,6 +180,13 @@ namespace uts_tests
             string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]
+        public void tm_03_Label_00()
+        {
+            string s_task_id = "03_Label_00";
+            string s_task_exe_ft = "Label_00.exe";
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
+        }
+        [TestMethod]
         public void tm_03_Label_01()
         {
             string s_task_id = "03_Label_01";

@@ -26,6 +26,8 @@ $cls_Task->_add_property("Font.Size", "Розмір шрифту", "20");
 $cls_Task->_add_property("StartPosition", "Початкова позиція", "По центру екрана");
 $cls_Task->_block_end();
 
+$cls_Task->_add_screen("Контроли на формі на формі","1.png");
+
 $cls_Task->_block_start("Додати новий компонент: Label", "_add_object.png");
 $cls_Task->_add_property("Exists", "Наявність", "");
 $cls_Task->_add_property("Name", "Ім'я", "label1");
@@ -35,7 +37,7 @@ $cls_Task->_block_end();
 $cls_Task->_block_start("Додати новий компонент: TextBox", "_add_object.png");
 $cls_Task->_add_property("Exists", "Наявність", "");
 $cls_Task->_add_property("Name", "Ім'я поля для вводу", "tb_Input");
-$cls_Task->_add_property("Text", "Текст ", "");
+$cls_Task->_add_property("Text", "Текст ", "0");
 $cls_Task->_block_end();
 
 $cls_Task->_block_start("Додати новий компонент: PictureBox", "_add_object.png");
@@ -43,9 +45,9 @@ $cls_Task->_add_property("Exists", "Наявність", "");
 $cls_Task->_add_property("Name", "Ім'я зображення", "pb_Image");
 $cls_Task->_add_property("Size.Width", "Ширина", "300");
 $cls_Task->_add_property("Size.Height", "Висота", "300");
-$cls_Task->_add_property("BackgroundImage", "зображення", "Circle.png");
+$cls_Task->_add_property("BackgroundImage", "Зображення", "Circle.png");
 $cls_Task->_add_property("BackgroundImageLayout", "Спосіб відображення", "Zoom");
-$cls_Task->_add_screen("Зображення кола","Circle.png");
+$cls_Task->_add_screen("Зображення кола завантажити в Resourses","Circle.png");
 $cls_Task->_block_end();
 
 $cls_Task->_block_start("Додати новий компонент: Label", "_add_object.png");
@@ -139,9 +141,13 @@ lb_Square.Text = Square.ToString(\"#.##\");
 lb_Extent.Text = Extent.ToString(\"#.##\");
 
 ", "");
-$cls_Task->_add_screen("Вигляд програми після введення тексту та натискання на кнопку","0.png");
+$cls_Task->_add_property("lb_Radius.Text", "Текст ", "<i>Розраховані програмою значення</i>");
+$cls_Task->_add_property("lb_Diameter.Text", "Текст ", "<i>Розраховані програмою значення</i>");
+$cls_Task->_add_property("lb_Length.Text", "Текст ", "<i>Розраховані програмою значення</i>");
+$cls_Task->_add_property("lb_Square.Text", "Текст ", "<i>Розраховані програмою значення</i>");
+$cls_Task->_add_property("lb_Extent.Text", "Текст ", "<i>Розраховані програмою значення</i>");
+$cls_Task->_add_screen("Вигляд програми після введення значення та натискання на кнопку","0.png");
 $cls_Task->_block_end();
-
 
 $cls_Task->_block_start("Додати новий компонент: Button", "_add_object.png");
 $cls_Task->_add_property("Exists", "Наявність", "");
@@ -163,7 +169,10 @@ $cls_Task->_block_end();
 $cls_Task->_block_start("Додати новий компонент: TextBox", "_add_object.png");
 $cls_Task->_add_property("Exists", "Наявність", "");
 $cls_Task->_add_property("Name", "Ім'я поля для вводу", "tb_Info");
+$cls_Task->_add_property("Width", "Ширина", "600");
+$cls_Task->_add_property("Height", "Висота", "50");
 $cls_Task->_add_property("Font.Size", "Розмір шрифту", "12");
+$cls_Task->_add_property("Multiline", "Багаторядковість", "True");
 $cls_Task->_add_property("Text", "Текст ", "Програма для розрахунку розмірностей кола та сфери створена у рамках вивчення програмування обчислювальних проектів.");
 $cls_Task->_block_end();
 

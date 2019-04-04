@@ -24,7 +24,7 @@ $cls_Task->_add_property("Availability of Form", "Наявність форми"
 $cls_Task->_add_property("Application name", "Ім'я програми", "Form_02");
 $cls_Task->_add_property("AutoScaleMode", "Режим перерахунку форми", "None");
 $cls_Task->_add_property("Text", "Текст Форми", "Розфарбуйте свою Windows форму");
-$cls_Task->_add_property("BackColor.Name", "Колір Форми", "CadetBlue");
+$cls_Task->_add_property("BackColor", "Колір Форми", "CadetBlue");
 
 //f screen:
 $cls_Task->_add_screen("Кінцевий вигляд Форми:", "target_form.png");

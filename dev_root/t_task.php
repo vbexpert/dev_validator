@@ -28,8 +28,7 @@ if(isset($_SESSION["vr_percent"])){
   <?php include_once("head_includes.php"); ?>
 </head>
 <body>
-
-  <div class="container">
+  <div class="container" id="section1">
     <div class="starter-template">
       <div class="jumbotron task_jumbotron_height_fix">
 	    <?php include("../../nav_menu.php"); ?>
@@ -37,7 +36,7 @@ if(isset($_SESSION["vr_percent"])){
 		
 		<!-- square btn - main uploader --> 
 		<div class='upload_square_btn'>
-		  <img class='hvr-pulse-grow' src='../../_img/up-arrow.png' onclick="">		
+			<a href="#section1"><img class='hvr-pulse-grow' src='../../_img/up-arrow.png' onclick=""></a>		
 		  <div class='upload_square_btn_upper'></div>
 		  <img class='hvr-pulse-grow' src='../../_img/upload-square.png' onclick="$('#fileToUpload').trigger('click');">
 		  </img>

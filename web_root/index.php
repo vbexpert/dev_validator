@@ -2,7 +2,7 @@
 session_start();
 //utf8 support:
 header('Content-Type: text/html; charset=utf-8');
-include("main_config.php");
+include_once("main_config.php");
 ?>
 <html>
   <head>
@@ -10,7 +10,7 @@ include("main_config.php");
     <title>Перевірка:</title>
     <!-- utf8 support: -->
 	<?php
-	  include("head_meta_tags.php");
+	  include_once("head_includes.php");
 	?>
 	<!-- external CSS: -->
     <link rel="stylesheet" type="text/css" href="_css/global.css">
@@ -122,7 +122,7 @@ include("main_config.php");
               </div>
               <div id="Label" class="panel-collapse collapse">                
                 <div class="panel-body">                                    	 
-                                    
+                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/03_Label_00/task.php">Завдання 0: Додавання напису на форму</a></div>                    
                 </div>                
               </div>
             </div>
