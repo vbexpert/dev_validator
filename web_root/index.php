@@ -85,10 +85,9 @@ include_once("main_config.php");
               </div>
             </div>
             <!-- task Event block end ---------------------->
-
-
-            <!-- task Button block start ------------------->
-            <div class="panel panel-default">
+			
+            <!-- task Button block start -------------------->
+			<div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
                   <a data-toggle="collapse" data-parent="#collapse-group" href="#Button">Button</a>
@@ -96,17 +95,17 @@ include_once("main_config.php");
               </div>
               <div id="Button" class="panel-collapse collapse">                
                 <div class="panel-body">  
-                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_00/task.php">Завдання 0: Додавання кнопки на форму</a></div>
-                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_01/task.php">Завдання 1: Зміна напису кнопки</a></div>
-                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_02/task.php">Завдання 2: Зміна імені кнопки</a></div>
-                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_03/task.php">Завдання 3: Розміщення кнопки на формі</a></div>
-                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_04/task.php">Завдання 4: Подія на кнопці</a></div>
-                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_05/task.php">Завдання 5: Робота з текстом - Відображення введеного тексту</a></div>
-                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_06/task.php">Завдання 6: Робота з 2 полями для вводу</a></div>
-                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_07/task.php">Завдання 7: </a></div>
-                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_08/task.php">Завдання 8: Умовні оператори: Перевірка на введення цифр</a></div>
-                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_09/task.php">Завдання 9: Умовні оператори: Перевірка числа на рівність нулю</a></div>
-                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_10/task.php">Завдання 10: Умовні оператори: Математичний калькулятор</a></div>
+                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/03_Button_00/task.php">Завдання 0: Додавання кнопки на форму</a></div>
+                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/03_Button_01/task.php">Завдання 1: Зміна напису кнопки</a></div>
+                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/03_Button_02/task.php">Завдання 2: Зміна імені кнопки</a></div>
+                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/03_Button_03/task.php">Завдання 3: Розміщення кнопки на формі</a></div>
+                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/03_Button_04/task.php">Завдання 4: Подія на кнопці</a></div>
+                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/03_Button_05/task.php">-Завдання 5: Робота з текстом - Відображення введеного тексту</a></div>
+                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/03_Button_06/task.php">-Завдання 6: Робота з 2 полями для вводу</a></div>
+                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/03_Button_07/task.php">-Завдання 7: </a></div>
+                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/03_Button_08/task.php">-Завдання 8: Умовні оператори: Перевірка на введення цифр</a></div>
+                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/03_Button_09/task.php">-Завдання 9: Умовні оператори: Перевірка числа на рівність нулю</a></div>
+                  <div class ="row pic-centered task_desc_row"><a href="/validator/tasks/03_Button_10/task.php">-Завдання 10: Умовні оператори: Математичний калькулятор</a></div>
                 </div>                
               </div>
             </div>
@@ -186,18 +185,33 @@ include_once("main_config.php");
                 <div class="panel-body">                                    	 
                   <div class="row pic-centered task_desc_row"><a href="">Завдання 0: Виведення введеного числа </a></div>	
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Doubling/task.php">Завдання 1: Подвоєння введеного числа</a></div> 
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Button_10/task.php">Завдання 1: Математичні дії</a></div>      
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/03_Button_10/task.php">Завдання 1: Математичні дії</a></div>      
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Square/task.php">Завдання 2: Квадрат</a></div>
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Circle/task.php">Завдання 3: Коло</a></div>
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_App_Control/task.php">Завдання 4: Підсумковий урок</a></div>                    
-
-
-
-
                 </div>                
               </div>
             </div>
             <!-- task Math block end ------------------->
+            <!-- task Phisics block start ----------------->
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Physics">Physics</a>
+                </h4>
+              </div>
+              <div id="Physics" class="panel-collapse collapse">                
+                <div class="panel-body">                                    	 
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/08_Energy/task.php">Завдання 0: Енергія </a></div>	
+                  <div class="row pic-centered task_desc_row"><a href="">Завдання 1: </a></div> 
+                  <div class="row pic-centered task_desc_row"><a href="">Завдання 2: </a></div>      
+                  <div class="row pic-centered task_desc_row"><a href="">Завдання 3: </a></div>
+                  <div class="row pic-centered task_desc_row"><a href="">Завдання 4: </a></div>
+                  <div class="row pic-centered task_desc_row"><a href="">Завдання 5: </a></div>                    
+                </div>                
+              </div>
+            </div>
+            <!-- task Phisics block end ------------------->            
           </div> 
           <!-- help block start ---------------------------->  
           <a class="btn btn-info btn-lg btn-block" href="https://docs.google.com/document/d/1ZZgKuX8jBzROxZpQMF0xoWBmxvjeD0nIIPz5oVXdhso/edit?usp=sharing" role="button" target="_blank">Читати навчальний матеріал</a>

@@ -4,50 +4,55 @@ require("../../main_config.php");
 require($s_v_app_root."task_core.php");
 $cls_Task = new cls_Task();
 //-------------------------------------------------->
-$cls_Task->s_title = "07_Circle";
-$cls_Task->s_id = "07_Circle";
-$cls_Task->s_description = "Коло";
+$cls_Task->s_title = "08_Energy";
+$cls_Task->s_id = "08_Energy";
+$cls_Task->s_description = "Енергія";
 
-$cls_Task->_add_step("1. Створити проект <b>Circle</b> відповідно специфікації у рішенні <b>Math</b> .");
-$cls_Task->_add_step("2. Завантажити програму у <b>DEV-VALIDATOR</b>.");
+$cls_Task->_add_step("1. Створити проект <b>Energy</b> відповідно специфікації у рішенні <b>Physics</b> .");
+$cls_Task->_add_step("2. Завантажити програму у <b>C-VALIDATOR</b>.");
 $cls_Task->_add_step("3. Добитися повної валідації програми.");
-$cls_Task->_add_step("4. Зберегти скріншот [Alt+PrintScreen] результатів у папку <b>Production</b>.");
 $cls_Task->_add_step("5. Зберегти програму у папку <b>Production</b>.");
-$cls_Task->_add_screen("Вигляд програми","0.png");
+$cls_Task->_add_screen("Вигляд програми - Вкладка <b>Кінетична</b>","0.png");
+$cls_Task->_add_screen("Вигляд програми - Вкладка <b>Потенціальна</b>","1.png");
 
 $cls_Task->_block_start("Добитися валідації головної форми:", "_form.png");
 $cls_Task->_add_property("Availability of Form", "Наявність форми", "");
-$cls_Task->_add_property("Application name", "Ім'я програми", "Circle");
+$cls_Task->_add_property("Application name", "Ім'я програми", "Energy");
 $cls_Task->_add_property("AutoScaleMode", "Режим перерахунку форми", "None");
-$cls_Task->_add_property("Text", "Заголовок Форми", "Коло");
-$cls_Task->_add_property("Width", "Ширина форми", "666");
-$cls_Task->_add_property("Height", "Висота форми", "666");
+$cls_Task->_add_property("Text", "Заголовок Форми", "Енергія");
+$cls_Task->_add_property("Width", "Ширина форми", "800");
+$cls_Task->_add_property("Height", "Висота форми", "600");
 $cls_Task->_add_property("Font.Size", "Розмір шрифту", "20");
 $cls_Task->_add_property("StartPosition", "Початкова позиція", "По центру екрана");
 $cls_Task->_block_end();
 
-$cls_Task->_add_screen("Об'єкти на формі","1.png");
-
-$cls_Task->_block_start("Додати новий компонент: Label", "_add_object.png");
+$cls_Task->_block_start("Додати новий компонент: TabControl", "_add_object.png");
 $cls_Task->_add_property("Exists", "Наявність", "");
-$cls_Task->_add_property("Name", "Ім'я", "label1");
-$cls_Task->_add_property("Text", "Текст ", "Введіть радіус кола");
+$cls_Task->_add_property("Name", "Ім'я", "tc_Energy");
+$cls_Task->_add_property("TabPages", "Закладки", "<i>Додати три необхідні закладки згідно зразку</>");
+$cls_Task->_block_end();
+
+$cls_Task->_block_start("Налаштувати колекцію TabPages", "_add_object.png");
+$cls_Task->_add_property("tabPage1.Text", "Текст", "Кінетична");
+$cls_Task->_add_property("tabPage2.Text", "Текст", "Потенціальна");
+$cls_Task->_add_property("tabPage3.Text", "Текст", "Пружини");
 $cls_Task->_block_end();
 
 $cls_Task->_block_start("Додати новий компонент: TextBox", "_add_object.png");
 $cls_Task->_add_property("Exists", "Наявність", "");
-$cls_Task->_add_property("Name", "Ім'я поля для вводу", "tb_Input");
-$cls_Task->_add_property("Text", "Текст ", "0");
+$cls_Task->_add_property("Name", "Ім'я поля для вводу", "tb_InfoKinetic");
+$cls_Task->_add_property("Multiline", "Багаторядковість", "true");
+$cls_Task->_add_property("Text", "Текст ", "Кінетична енергія — частина енергії фізичної системи, яку вона має завдяки руху.");
 $cls_Task->_block_end();
 
 $cls_Task->_block_start("Додати новий компонент: PictureBox", "_add_object.png");
 $cls_Task->_add_property("Exists", "Наявність", "");
-$cls_Task->_add_property("Name", "Ім'я зображення", "pb_Image");
-$cls_Task->_add_property("Size.Width", "Ширина", "300");
-$cls_Task->_add_property("Size.Height", "Висота", "300");
+$cls_Task->_add_property("Name", "Ім'я зображення", "pb_PictureKinetic");
+$cls_Task->_add_property("Size.Width", "Ширина", "200");
+$cls_Task->_add_property("Size.Height", "Висота", "150");
 $cls_Task->_add_property("BackgroundImage", "Зображення", "Circle.png");
 $cls_Task->_add_property("BackgroundImageLayout", "Спосіб відображення", "Zoom");
-$cls_Task->_add_screen("Зображення кола завантажити в Resourses","Circle.png");
+$cls_Task->_add_screen("Формула кінетичної енергії","kin.png");
 $cls_Task->_block_end();
 
 $cls_Task->_block_start("Додати новий компонент: Label", "_add_object.png");

@@ -24,12 +24,13 @@ namespace ns_d_code
 				//вызываем Form_Load у формы:
 				loadMethodInfo.Invoke(f, new object[] { EventArgs.Empty });
 				//---------------------------------------------------->	
-				cls_output_controller._v_parm(f.AutoScaleMode,	"AutoScaleMode",		"None");
-				cls_output_controller._v_parm(f.Text,			"Text",					"Коло");
-				cls_output_controller._v_parm(f.Width,			"Width",				"666");
-				cls_output_controller._v_parm(f.Height,			"Height",				"666");
-				cls_output_controller._v_parm(f.Font.Size,		"Font.Size",			"20");
-				cls_output_controller._v_parm(f.StartPosition,	"StartPosition",		"CenterScreen");
+				cls_output_controller._v_parm(f.AutoScaleMode,		"AutoScaleMode",		"None");
+				cls_output_controller._v_parm(f.Text,				"Text",					"Коло");
+				cls_output_controller._v_parm(f.Width,				"Width",				"666");
+				cls_output_controller._v_parm(f.Height,				"Height",				"666");	
+				cls_output_controller._v_parm(f.Font.Size,			"Font.Size",			"20");			
+				cls_output_controller._v_parm(f.StartPosition,		"StartPosition",		"CenterScreen");				
+				
 
 				//подключаемся к инстансу:
 				Label label1 = (Label)cls_output_controller._v_get_obj(f, "label1");

@@ -14,6 +14,7 @@ $cls_Task->_add_step("3. Добитися повної валідації про
 $cls_Task->_add_step("4. Зберегти скріншот [Alt+PrintScreen] результатів у папку <b>Production</b>.");
 $cls_Task->_add_step("5. Зберегти програму у папку <b>Production</b>.");
 $cls_Task->_add_screen("Вигляд програми", "target_form.png");
+//---------------------------------------->
 $cls_Task->_block_start("Добитися валідації головної форми:", "_form.png");
 $cls_Task->_add_property("Availability of Form", "Наявність форми", "");
 $cls_Task->_add_property("Application name", "Ім'я програми", "App_Control.exe");
@@ -143,10 +144,11 @@ Close();
 ", "");
 $cls_Task->_block_end();
 //---------------------------------------->
+$cls_Task->_add_screen("Вигляд програми", "target_form.png");
 
-$cls_Task->s_learn_url = "https://learn.ztu.edu.ua/mod/page/view.php?id=10041";
-$cls_Task->s_youtube_url = "https://youtu.be/hP0UsFULLuU";
-$cls_Task->s_discuss_url = "https://www.facebook.com/groups/1487277621317029/";
+$cls_Task->s_learn_url = "";
+$cls_Task->s_youtube_url = "";
+$cls_Task->s_discuss_url = "";
 //-------------------------------------------------->
 //run:
 include($s_v_app_root."t_task.php");

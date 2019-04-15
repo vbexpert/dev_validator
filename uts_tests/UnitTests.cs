@@ -131,44 +131,44 @@ namespace uts_tests
             string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]
-        public void tm_02_Button_00()
+        public void tm_03_Button_00()
         {
-            string s_task_id = "02_Button_00";
+            string s_task_id = "03_Button_00";
             string s_task_exe_ft = "Button_00.exe";
             string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]
-        public void tm_02_Button_01()
+        public void tm_03_Button_01()
         {
-            string s_task_id = "02_Button_01";
+            string s_task_id = "03_Button_01";
             string s_task_exe_ft = "Button_01.exe";
             string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]
-        public void tm_02_Button_02()
+        public void tm_03_Button_02()
         {
-            string s_task_id = "02_Button_02";
+            string s_task_id = "03_Button_02";
             string s_task_exe_ft = "Button_02.exe";
             string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]
-        public void tm_02_Button_03()
+        public void tm_03_Button_03()
         {
-            string s_task_id = "02_Button_03";
+            string s_task_id = "03_Button_03";
             string s_task_exe_ft = "Button_03.exe";
             string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]
-        public void tm_02_Button_04()
+        public void tm_03_Button_04()
         {
-            string s_task_id = "02_Button_04";
+            string s_task_id = "03_Button_04";
             string s_task_exe_ft = "Button_04.exe";
             string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]
-        public void tm_02_Button_05()
+        public void tm_03_Button_05()
         {
-            string s_task_id = "02_Button_05";
+            string s_task_id = "03_Button_05";
             string s_task_exe_ft = "Button_05.exe";
             string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
@@ -205,6 +205,13 @@ namespace uts_tests
         {
             string s_task_id = "07_Circle";
             string s_task_exe_ft = "Circle.exe";
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
+        }
+        [TestMethod]
+        public void tm_08_Energy()
+        {
+            string s_task_id = "08_Energy";
+            string s_task_exe_ft = "Energy.exe";
             string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]
