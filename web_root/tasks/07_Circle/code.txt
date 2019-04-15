@@ -135,6 +135,7 @@ namespace ns_d_code
 				cls_output_controller._v_parm(btn_Calculate.Text, "Text", "Розрахувати");
 				//валидация: или есть ивент ("EventClick") у данного инстанса контрола (btn_Calculate):
 				cls_output_controller._v_HasEventHandler(btn_Calculate, "EventClick");
+				cls_output_controller._v_HasEventHandler(btn_Calculate, "EventClick");//для відмітки провалідованого коду
 				//Перевірка події на кнопці:
 				//встановлюємо невідомий учню контрольний маркер:
 				tb_Input.Text = "10";
@@ -157,6 +158,7 @@ namespace ns_d_code
 				cls_output_controller._v_parm(btn_Close.Text, "Text", "Закрити");
 				//валидация: или есть ивент ("EventClick") у данного инстанса контрола (btn_Close):
 				cls_output_controller._v_HasEventHandler(btn_Close, "EventClick");
+				cls_output_controller._v_HasEventHandler(btn_Close, "EventClick");//для відмітки провалідованого коду
 				//підготовка аксессора метода - btn_Close_Click:
 				MethodInfo btn_Close_Click = f.GetType().GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
 				//виклик події - емуляція натискання на кнопку:
@@ -169,10 +171,11 @@ namespace ns_d_code
 				//валидация: exists & properties:
 				cls_output_controller._v_obj_exists(tb_Info, "tb_Info");				
 				cls_output_controller._v_parm(tb_Info.Name,			"Name",				"tb_Info");
+				cls_output_controller._v_parm(tb_Info.Multiline,	"Multiline",		"True");
 				cls_output_controller._v_parm(tb_Info.Width,		"Width",			"600");
 				cls_output_controller._v_parm(tb_Info.Height,		"Height",			"50");		
 				cls_output_controller._v_parm(tb_Info.Font.Size,	"Font.Size",		"12");		
-				cls_output_controller._v_parm(tb_Info.Multiline,	"Multiline",		"True");
+				
 				cls_output_controller._v_parm(tb_Info.Text,			"Text",				"Програма для розрахунку розмірностей кола та сфери створена у рамках вивчення програмування обчислювальних проектів.");	
 
 				//подключаемся к инстансу:

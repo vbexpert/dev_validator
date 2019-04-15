@@ -169,10 +169,10 @@ $cls_Task->_block_end();
 $cls_Task->_block_start("Додати новий компонент: TextBox", "_add_object.png");
 $cls_Task->_add_property("Exists", "Наявність", "");
 $cls_Task->_add_property("Name", "Ім'я поля для вводу", "tb_Info");
+$cls_Task->_add_property("Multiline", "Багаторядковість", "True");
 $cls_Task->_add_property("Width", "Ширина", "600");
 $cls_Task->_add_property("Height", "Висота", "50");
 $cls_Task->_add_property("Font.Size", "Розмір шрифту", "12");
-$cls_Task->_add_property("Multiline", "Багаторядковість", "True");
 $cls_Task->_add_property("Text", "Текст ", "Програма для розрахунку розмірностей кола та сфери створена у рамках вивчення програмування обчислювальних проектів.");
 $cls_Task->_block_end();
 
