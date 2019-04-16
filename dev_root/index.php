@@ -152,7 +152,7 @@ include_once("main_config.php");
             </div>
             <!-- task PictureBox block end -->
 
-            <!-- tas Graphics block start -->
+            <!-- task Graphics block start -->
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
@@ -167,6 +167,7 @@ include_once("main_config.php");
               </div>
             </div>
             <!-- task Graphics block end -->
+
             <!-- task Math block start -->
             <div class="panel panel-default">
               <div class="panel-heading">
@@ -186,6 +187,7 @@ include_once("main_config.php");
               </div>
             </div>
             <!-- task Math block end -->
+
             <!-- task Phisics block start -->
             <div class="panel panel-default">
               <div class="panel-heading">
