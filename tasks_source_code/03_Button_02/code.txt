@@ -1,0 +1,34 @@
+﻿using System.Windows.Forms;
+using System;
+using System.Collections.Generic;
+using System.Reflection;
+using System.ComponentModel;
+
+namespace ns_d_code
+{
+    public class cls_Main
+    {
+        public static string test(Form f, string s_app_fnp, string s_app_ft) //validation sub:
+        {
+			cls_output_controller cls_output_controller = new cls_output_controller();
+            //---------------------------------------------------->
+            cls_output_controller._v_form(f);
+			cls_output_controller._v_parm(s_app_ft,			"App name",             "Button_02.exe");			        
+			cls_output_controller._v_parm(f.AutoScaleMode,	"Form.AutoScaleMode",	"None");
+
+			//подключаемся к инстансу кнопки:
+			Button b1 = (Button)cls_output_controller._v_get_obj(f, "btn_Close");
+
+			//2. валидация: или существует кнопка btn_ChangeText:
+			cls_output_controller._v_obj_exists(b1,	"btn_Close");
+				
+			cls_output_controller._v_parm(b1.Name,		"btn_Close.Name",	"btn_Close");
+			cls_output_controller._v_parm(b1.Text,		"btn_Close.Text",	"Close");
+			//---------------------------------------------------->
+            return(cls_output_controller._final_result());
+        }
+        public static void Main() //main entry point:
+        {  }
+    }
+	//[validator-class-placeholder]
+}
