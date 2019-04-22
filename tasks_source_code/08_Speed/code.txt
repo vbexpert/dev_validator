@@ -74,7 +74,7 @@ namespace ns_d_code
 				//подключаемся к инстансу:
 				PictureBox pictureBox1 = (PictureBox)cls_output_controller._v_get_obj(f, "pictureBox1");
 				//валидация: exists & properties:
-				cls_output_controller._v_obj_exists(pictureBox1, "pictureBox1");				
+				//cls_output_controller._v_obj_exists(pictureBox1, "pictureBox1");				
 				cls_output_controller._v_parm(pictureBox1.Name,			"Name",					"pictureBox1");
 				cls_output_controller._v_parm(pictureBox1.Name,			"Name",					"pictureBox1");				
 				//cls_output_controller._v_parm(pictureBox1.BackgroundImage,		"BackgroundImage",	"car.png");							
@@ -83,7 +83,7 @@ namespace ns_d_code
 				//подключаемся к инстансу:
 				Button btn_Calculate = (Button)cls_output_controller._v_get_obj(f, "btn_Calculate");  
 				//валидация: exists & properties:
-				cls_output_controller._v_obj_exists(btn_Calculate, "btn_Calculate");
+				//cls_output_controller._v_obj_exists(btn_Calculate, "btn_Calculate");
 				cls_output_controller._v_parm(btn_Calculate.Name, "Name", "btn_Calculate");
 				cls_output_controller._v_parm(btn_Calculate.Text, "Text", "Обчислити");
 				//валидация: или есть ивент ("EventClick") у данного инстанса контрола (btn_Calculate):

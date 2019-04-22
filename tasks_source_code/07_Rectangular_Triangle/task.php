@@ -114,6 +114,7 @@ $cls_Task->_block_start("Написати код події <b>btn_Calculate_Cli
 $cls_Task->_add_code_validated("Вписати код:", "
 Детальна інструкція <a href=\"http://informatics.in.ua/programming_csharp/part_05.php\" target=\"_blank\">informatics.in.ua</a>
 ", "");
+$cls_Task->_add_screen("На даному етапі Валідатор введе випадкові дані у відправлену програму, прочитає результат і порівняє з правильним.","info.png");
 $cls_Task->_add_property("lb_SideC.Text", "Текст ", "<i>Розраховані програмою значення</i>");
 $cls_Task->_add_property("lb_Perimeter.Text", "Текст ", "<i>Розраховані програмою значення</i>");
 $cls_Task->_add_property("lb_Square.Text", "Текст ", "<i>Розраховані програмою значення</i>");

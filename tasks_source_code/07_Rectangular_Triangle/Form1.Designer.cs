@@ -134,7 +134,7 @@
             this.lb_SideC.AutoSize = true;
             this.lb_SideC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lb_SideC.ForeColor = System.Drawing.Color.Red;
-            this.lb_SideC.Location = new System.Drawing.Point(445, 38);
+            this.lb_SideC.Location = new System.Drawing.Point(443, 38);
             this.lb_SideC.Name = "lb_SideC";
             this.lb_SideC.Size = new System.Drawing.Size(21, 24);
             this.lb_SideC.TabIndex = 8;
@@ -145,7 +145,7 @@
             this.lb_Perimeter.AutoSize = true;
             this.lb_Perimeter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lb_Perimeter.ForeColor = System.Drawing.Color.Red;
-            this.lb_Perimeter.Location = new System.Drawing.Point(445, 91);
+            this.lb_Perimeter.Location = new System.Drawing.Point(434, 91);
             this.lb_Perimeter.Name = "lb_Perimeter";
             this.lb_Perimeter.Size = new System.Drawing.Size(21, 24);
             this.lb_Perimeter.TabIndex = 9;
@@ -156,7 +156,7 @@
             this.lb_Square.AutoSize = true;
             this.lb_Square.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lb_Square.ForeColor = System.Drawing.Color.Red;
-            this.lb_Square.Location = new System.Drawing.Point(445, 142);
+            this.lb_Square.Location = new System.Drawing.Point(396, 142);
             this.lb_Square.Name = "lb_Square";
             this.lb_Square.Size = new System.Drawing.Size(21, 24);
             this.lb_Square.TabIndex = 10;
@@ -164,7 +164,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::_07_Rectangular_Triangle.Properties.Resources.Rectangular_Triangle;
+            this.pictureBox1.BackgroundImage = global::Rectangular_Triangle.Properties.Resources.Rectangular_Triangle;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(567, 24);
             this.pictureBox1.Name = "pictureBox1";
@@ -174,8 +174,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(784, 261);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lb_Square);
@@ -190,8 +189,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Прямокутний трикутник - Rectangular Triangle";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

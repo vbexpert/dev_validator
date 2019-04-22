@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7F9C3332-E6A0-456E-A28D-9A8F0620004E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>_07_Rectangular_Triangle</RootNamespace>
-    <AssemblyName>07_Rectangular_Triangle</AssemblyName>
+    <RootNamespace>Rectangular_Triangle</RootNamespace>
+    <AssemblyName>Rectangular_Triangle</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -76,12 +76,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="task.php" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Rectangular_Triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="code.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
