@@ -156,7 +156,7 @@ include_once("main_config.php");
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Graphics">Graphics</a>
+                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Graphics">Graphics - Графіка</a>
                 </h4>
               </div>
               <div id="Graphics" class="panel-collapse collapse">                
@@ -172,16 +172,17 @@ include_once("main_config.php");
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Math">Mathematics</a>
+                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Math">Mathematics - Математика</a>
                 </h4>
               </div>
               <div id="Math" class="panel-collapse collapse">                
                 <div class="panel-body">                                    	 
                   <div class="row pic-centered task_desc_row"><a href="">Завдання 0: Виведення введеного числа </a></div>	
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Doubling/task.php">Завдання 1: Подвоєння введеного числа</a></div> 
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Doubling/task.php">Завдання 0: Подвоєння введеного числа</a></div> 
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/03_Button_10/task.php">Завдання 1: Математичні дії</a></div>      
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Square/task.php">Завдання 2: Квадрат</a></div>
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Circle/task.php">Завдання 3: Коло</a></div>
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Rectangular_Triangle/task.php">Завдання 4: Прямокутний трикутник</a></div>
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_App_Control/task.php">Завдання 4: Підсумковий урок</a></div>                    
                 </div>                
               </div>
@@ -192,13 +193,13 @@ include_once("main_config.php");
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Physics">Physics</a>
+                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Physics">Physics - Фізика</a>
                 </h4>
               </div>
               <div id="Physics" class="panel-collapse collapse">                
                 <div class="panel-body">                                    	 
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/08_Energy/task.php">Завдання 0: Енергія </a></div>	
-                  <div class="row pic-centered task_desc_row"><a href="">Завдання 1: </a></div> 
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/08_Speed/task.php">Завдання 1: Швидкість рівномірного прямолінійного руху</a></div> 
                   <div class="row pic-centered task_desc_row"><a href="">Завдання 2: </a></div>      
                   <div class="row pic-centered task_desc_row"><a href="">Завдання 3: </a></div>
                   <div class="row pic-centered task_desc_row"><a href="">Завдання 4: </a></div>

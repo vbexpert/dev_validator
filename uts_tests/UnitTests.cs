@@ -215,6 +215,13 @@ namespace uts_tests
             string s_result = _validate_task(s_task_id, s_task_exe_ft);
         }
         [TestMethod]
+        public void tm_08_Speed()
+        {
+            string s_task_id = "08_Speed";
+            string s_task_exe_ft = "Speed.exe";
+            string s_result = _validate_task(s_task_id, s_task_exe_ft);
+        }
+        [TestMethod]
         //[unit-test-insertion-point]
         private string _validate_task(string s_task_id, string s_task_exe_ft) {
             //move validator exe to temp:

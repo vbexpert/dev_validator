@@ -181,11 +181,11 @@ namespace ns_d_code
 				//подключаемся к инстансу:
 				Label lb_Author = (Label)cls_output_controller._v_get_obj(f, "lb_Author");
 				//валидация: exists & properties:
-				cls_output_controller._v_obj_exists(lb_Author, "lb_Author");
-				cls_output_controller._v_parm(lb_Author.Name, 		"Name", "lb_Author");
-				cls_output_controller._v_parm(lb_Author.Font.Size,	"Font.Size",		"12");	
-				cls_output_controller._v_parm(lb_Author.ForeColor.Name,	"ForeColor.Name",		"ControlDarkDark");
-				cls_output_controller._v_neg_parm(lb_Author.Text,		"Text",			"");
+				cls_output_controller._v_obj_exists(lb_Author, 			"lb_Author");
+				cls_output_controller._v_parm(lb_Author.Name, 			"Name", 			"lb_Author");
+				cls_output_controller._v_parm(lb_Author.Font.Size,		"Font.Size",		"12");	
+				cls_output_controller._v_parm(lb_Author.ForeColor.Name,	"ForeColor.Name",	"ControlDarkDark");
+				cls_output_controller._v_neg_parm(lb_Author.Text,		"Text",				"");
 			}
 			catch
 			{

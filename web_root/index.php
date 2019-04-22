@@ -26,17 +26,17 @@ include_once("main_config.php");
           ?>
           <!-- menu end: -->
       
-          <!-- header info block start: -------------------------------->
+          <!-- header info block start: -->
           <?php
               include("header.php");
           ?>
-          <!-- header info block end: ---------------------------------->
+          <!-- header info block end: -->
 
           <hr>
           <h2>Доступні завдання:</h2>
 
           <div class="panel-group" id="collapse-group">
-            <!-- task Forms block start ------------------>
+            <!-- task Forms block start -->
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
@@ -62,9 +62,9 @@ include_once("main_config.php");
                 </div>                
               </div>
             </div>
-            <!-- task Forms block end ------------------->
+            <!-- task Forms block end -->
 
-            <!-- task Event block start -------------------->
+            <!-- task Event block start -->
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
@@ -84,13 +84,13 @@ include_once("main_config.php");
                 </div>                
               </div>
             </div>
-            <!-- task Event block end ---------------------->
+            <!-- task Event block end -->
 			
-            <!-- task Button block start -------------------->
+            <!-- task Button block start -->
 			<div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Button">Button</a>
+                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Button">Button+</a>
                 </h4>
               </div>
               <div id="Button" class="panel-collapse collapse">                
@@ -103,9 +103,9 @@ include_once("main_config.php");
                 </div>                
               </div>
             </div>
-            <!-- task Button block end --------------------->
+            <!-- task Button block end -->
 
-            <!-- task Label block start -------------------->
+            <!-- task Label block start -->
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
@@ -120,9 +120,9 @@ include_once("main_config.php");
                 </div>                
               </div>
             </div>
-            <!-- task Label block end ---------------------->
+            <!-- task Label block end -->
 
-            <!-- task TextBox block start ------------------>
+            <!-- task TextBox block start -->
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
@@ -135,10 +135,9 @@ include_once("main_config.php");
                 </div>                
               </div>
             </div>
-            <!-- task TextBox block end -------------------->
+            <!-- task TextBox block end -->
 
-
-            <!-- task PictureBox block start --------------->
+			<!-- task PictureBox block start -->
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
@@ -151,13 +150,13 @@ include_once("main_config.php");
                 </div>                
               </div>
             </div>
-            <!-- task PictureBox block end ----------------->
+            <!-- task PictureBox block end -->
 
-            <!-- task Graphics block start ----------------->
+            <!-- task Graphics block start -->
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Graphics">Graphics</a>
+                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Graphics">Graphics - Графіка</a>
                 </h4>
               </div>
               <div id="Graphics" class="panel-collapse collapse">                
@@ -167,37 +166,40 @@ include_once("main_config.php");
                 </div>                
               </div>
             </div>
-            <!-- task Graphics block end ------------------->
-            <!-- task Math block start ----------------->
+            <!-- task Graphics block end -->
+
+            <!-- task Math block start -->
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Math">Mathematics</a>
+                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Math">Mathematics - Математика</a>
                 </h4>
               </div>
               <div id="Math" class="panel-collapse collapse">                
                 <div class="panel-body">                                    	 
                   <div class="row pic-centered task_desc_row"><a href="">Завдання 0: Виведення введеного числа </a></div>	
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Doubling/task.php">Завдання 1: Подвоєння введеного числа</a></div> 
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Doubling/task.php">Завдання 0: Подвоєння введеного числа</a></div> 
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/03_Button_10/task.php">Завдання 1: Математичні дії</a></div>      
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Square/task.php">Завдання 2: Квадрат</a></div>
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Circle/task.php">Завдання 3: Коло</a></div>
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Rectangular_Triangle/task.php">Завдання 4: Прямокутний трикутник</a></div>
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_App_Control/task.php">Завдання 4: Підсумковий урок</a></div>                    
                 </div>                
               </div>
             </div>
-            <!-- task Math block end ------------------->
-            <!-- task Phisics block start ----------------->
+            <!-- task Math block end -->
+
+            <!-- task Phisics block start -->
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
-                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Physics">Physics</a>
+                  <a data-toggle="collapse" data-parent="#collapse-group" href="#Physics">Physics - Фізика</a>
                 </h4>
               </div>
               <div id="Physics" class="panel-collapse collapse">                
                 <div class="panel-body">                                    	 
                   <div class="row pic-centered task_desc_row"><a href="/validator/tasks/08_Energy/task.php">Завдання 0: Енергія </a></div>	
-                  <div class="row pic-centered task_desc_row"><a href="">Завдання 1: </a></div> 
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/08_Speed/task.php">Завдання 1: Швидкість рівномірного прямолінійного руху</a></div> 
                   <div class="row pic-centered task_desc_row"><a href="">Завдання 2: </a></div>      
                   <div class="row pic-centered task_desc_row"><a href="">Завдання 3: </a></div>
                   <div class="row pic-centered task_desc_row"><a href="">Завдання 4: </a></div>
@@ -205,13 +207,13 @@ include_once("main_config.php");
                 </div>                
               </div>
             </div>
-            <!-- task Phisics block end ------------------->            
+            <!-- task Phisics block end -->            
           </div> 
-          <!-- help block start ---------------------------->  
+          <!-- help block start -->  
           <a class="btn btn-info btn-lg btn-block" href="https://docs.google.com/document/d/1ZZgKuX8jBzROxZpQMF0xoWBmxvjeD0nIIPz5oVXdhso/edit?usp=sharing" role="button" target="_blank">Читати навчальний матеріал</a>
           <a class="btn btn-info btn-lg btn-block" href="https://www.youtube.com/playlist?list=PLgNmtqlNFVjpYzErepZF2E8Mc4R27yXYf" role="button" target="_blank">Переглянути відеоуроки</a>
           <a class="btn btn-info btn-lg btn-block" href="http://informatics.in.ua/" role="button" target="_blank">Сайт Інформатика в школі</a>
-          <!-- help block end ------------------------------>          
+          <!-- help block end -->          
           
         </div>
       </div>
