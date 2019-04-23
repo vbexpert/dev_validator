@@ -16,6 +16,12 @@ namespace _06_Lines
         Graphics graph;
         Bitmap myBitmap;
         Pen myGreenPen;
+        SolidBrush myRedBrush;
+        Color selectedColor;
+        int a;
+        int b;
+        int tranparent;
+        int lineThikness;
 
         public Form1()
         {
@@ -38,8 +44,12 @@ namespace _06_Lines
             //підключаємо віртуальне зображення до графіки:
             graph = Graphics.FromImage(myBitmap);
             //створюємо об'єкт пензлик
-            myGreenPen = new Pen(Color.Green, 3);
-
+            lineThikness = 1;
+            myGreenPen = new Pen(Color.Green, lineThikness);
+            //початковий колір заливки
+            selectedColor = button4.BackColor;
+            //початкова прозорість
+            tranparent = 255;
         }
 
         //малювання ліній з кута
@@ -118,7 +128,7 @@ namespace _06_Lines
             pb_Result.Image = myBitmap;
 
             //обраховуємо крок зміщення ліній
-            int step = pb_Result.Height / 20;
+            int step = 50;
 
             for (int i = 0; i <= pb_Result.Height; i = i + step)
             {
@@ -147,7 +157,8 @@ namespace _06_Lines
             graph.Clear(Color.White);
         }
 
-        private void Target(int a,int b)
+        //малювання прицілу
+        private void Aim(int a,int b)
         {
             //очищуєуємо полотно
             graph.Clear(Color.FromArgb(0, 255, 0, 0));
@@ -161,21 +172,15 @@ namespace _06_Lines
             graph.DrawLine(myGreenPen, a + 50, b, a + 100, b);
         }
 
-        private void pb_Result_MouseMove(object sender, MouseEventArgs e)
-        {
-            
-        }
 
+        
+        //рух приціла над полем бою
         private void pb_BattleField_MouseMove(object sender, MouseEventArgs e)
         {
-            Target(e.X, e.Y);
+            Aim(e.X, e.Y);
         }
-
-        private void btn_SniperBattle_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+ 
+        //включення режиму снайперської битви
         private void chb_SniperBattle_CheckedChanged(object sender, EventArgs e)
         {
             if (chb_SniperBattle.Checked)
@@ -186,18 +191,65 @@ namespace _06_Lines
             {
                 pb_BattleField.Visible = false;
                 graph.Clear(Color.Black);
-
             }
         }
 
+        //лінії з точки кліка мишкою
         private void btn_LinesFromClick_Click(object sender, EventArgs e)
         {
 
         }
-
+        
         private void pb_Result_Click(object sender, EventArgs e)
         {
+            fillCell();
+        }
 
+        //зафарбовування клітинок
+        private void fillCell()
+        {
+            //встановлення заливки
+            myRedBrush = new SolidBrush(Color.FromArgb(tranparent, selectedColor));
+            graph.FillRectangle(myRedBrush, a, b, 50, 50);
+            //відображаємо зображення в компонент PictureBox:
+            pb_Result.Image = myBitmap;
+        }
+
+        private void pb_Result_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+        //встановлення прозорості заливки
+        private void trb_Transparent_Scroll(object sender, EventArgs e)
+        {
+            tranparent = trb_Transparent.Value;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        //рух над полем для малювання
+        private void pb_Result_MouseMove(object sender, MouseEventArgs e)
+        {
+
+            if (e.Button == MouseButtons.Left)
+            {                
+              // pb_Result_MouseClick(sender, e); 
+            }
+            
+            //button2.Text = e.X.ToString() +" : "+ e.Y.ToString();
+            //button3.Text = a.ToString() + " : " + b.ToString();
+            //if (pb_Result_MouseDown)
+            //{
+            //    
+            //}
+        }
+        private void pb_Result_MouseClick(object sender, MouseEventArgs e)
+        {
+            a = e.X / 50 * 50;
+            b = e.Y / 50 * 50;
+            fillCell();
         }
     }
 }

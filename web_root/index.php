@@ -73,12 +73,12 @@ include_once("main_config.php");
               </div>
               <div id="Event" class="panel-collapse collapse">                
                 <div class="panel-body">                                    	 
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/01_Event_00/task.php">Завдання 0: Створення події Load</a></div>
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/01_Event_01/task.php">Завдання 1: Створення події Click</a></div>		                                     
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/01_Event_02/task.php">Завдання 2: Створення події DoubleClick</a></div>		                                     
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/01_Event_03/task.php">Завдання 3: Створення події MouseEnter</a></div>		                                     
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/01_Event_04/task.php">Завдання 4: Створення події MouseLeave</a></div>
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/01_Event_05/task.php">Завдання 5: Створення події KeyPress</a></div>		                                     
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Form_Load_01/task.php">Завдання 0: Створення події Load</a></div>
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Event_01/task.php">Завдання 1: Створення події Click</a></div>		                                     
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Event_02/task.php">Завдання 2: Створення події DoubleClick</a></div>		                                     
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Event_03/task.php">Завдання 3: Створення події MouseEnter</a></div>		                                     
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Event_04/task.php">Завдання 4: Створення події MouseLeave</a></div>
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Event_05/task.php">Завдання 5: Створення події KeyPress</a></div>		                                     
 
 
                 </div>                
