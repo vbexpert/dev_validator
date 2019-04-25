@@ -27,7 +27,7 @@ $cls_Task->_add_property("Form.StartPosition", "Початкова позиці�
 $cls_Task->_block_end();
 
 $cls_Task->_block_start("Розмістити об'єкти на формі:", "_form.png");
-$cls_Task->_add_screen("","1.png");
+$cls_Task->_add_screen("","0.png");
 $cls_Task->_block_end();
 
 $cls_Task->_block_start("Додати компонент: TextBox (текстове поле)", "_add_object.png");
