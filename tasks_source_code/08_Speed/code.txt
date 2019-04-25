@@ -74,7 +74,7 @@ namespace ns_d_code
 				//подключаемся к инстансу:
 				PictureBox pictureBox1 = (PictureBox)cls_output_controller._v_get_obj(f, "pictureBox1");
 				//валидация: exists & properties:
-				//cls_output_controller._v_obj_exists(pictureBox1, "pictureBox1");				
+				cls_output_controller._v_obj_exists(pictureBox1, "pictureBox1");				
 				cls_output_controller._v_parm(pictureBox1.Name,			"Name",					"pictureBox1");
 				cls_output_controller._v_parm(pictureBox1.Name,			"Name",					"pictureBox1");				
 				//cls_output_controller._v_parm(pictureBox1.BackgroundImage,		"BackgroundImage",	"car.png");							

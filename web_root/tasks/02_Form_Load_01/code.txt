@@ -26,7 +26,7 @@ namespace ns_d_code
 				//---------------------------------------------------->	
 				cls_output_controller._v_parm(f.AutoScaleMode,		"AutoScaleMode",		"None");
 				cls_output_controller._v_parm(f.Text,				"Text",					"Подія завантаження форми");
-				//cls_output_controller._v_HasEventHandler(f, "LoadEvent");
+				//cls_output_controller._v_HasEventHandler(f, "OnLoad");
 			}
 			catch
 			{

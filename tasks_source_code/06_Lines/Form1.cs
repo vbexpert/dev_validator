@@ -87,7 +87,7 @@ namespace _06_Lines
             pb_Result.Image = myBitmap;
             
             //обраховуємо крок зміщення ліній
-            int step = pb_Result.Width / 20;
+            int step = 50;
 
             for (int i = 0; i <= pb_Result.Width; i = i + step)
             {
@@ -107,7 +107,7 @@ namespace _06_Lines
             pb_Result.Image = myBitmap;
 
             //обраховуємо крок зміщення ліній
-            int step = pb_Result.Height / 20;
+            int step = 50;
 
             for (int i = 0; i <= pb_Result.Height; i = i + step)
             {
