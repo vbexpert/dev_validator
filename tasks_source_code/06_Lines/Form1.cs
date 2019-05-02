@@ -229,21 +229,19 @@ namespace _06_Lines
         {
 
         }
+
         //рух над полем для малювання
         private void pb_Result_MouseMove(object sender, MouseEventArgs e)
         {
 
-            if (e.Button == MouseButtons.Left)
-            {                
-              // pb_Result_MouseClick(sender, e); 
-            }
-            
-            //button2.Text = e.X.ToString() +" : "+ e.Y.ToString();
-            //button3.Text = a.ToString() + " : " + b.ToString();
-            //if (pb_Result_MouseDown)
-            //{
-            //    
+            //if (e.Button == MouseButtons.Left)
+            //{                
+            // pb_Result_MouseClick(sender, e); 
             //}
+
+            button2.Text = e.X.ToString() + " : " + e.Y.ToString();
+            //button3.Text = a.ToString() + " : " + b.ToString();
+
         }
         private void pb_Result_MouseClick(object sender, MouseEventArgs e)
         {

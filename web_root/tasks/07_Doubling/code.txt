@@ -49,7 +49,7 @@ namespace ns_d_code
 				cls_output_controller._v_parm(btn_Doubling.Text, "Text", "Подвоїти");
 				//валидация: или есть ивент ("EventClick") у данного инстанса контрола (btn_Doubling):
 				cls_output_controller._v_HasEventHandler(btn_Doubling, "EventClick");
-				cls_output_controller._v_HasEventHandler(btn_Doubling, "EventClick");//для відмітки провалідованого коду
+				//cls_output_controller._v_HasEventHandler(btn_Doubling, "EventClick");//для відмітки провалідованого коду
 				//Перевірка події на кнопці:
 				//встановлюємо невідомий учню контрольний маркер:
 				tb_Input.Text = "22";				

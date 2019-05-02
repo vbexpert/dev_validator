@@ -73,12 +73,12 @@ include_once("main_config.php");
               </div>
               <div id="Event" class="panel-collapse collapse">                
                 <div class="panel-body">                                    	 
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Form_Load_01/task.php">Завдання 0: Створення події Load</a></div>
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Event_01/task.php">Завдання 1: Створення події Click</a></div>		                                     
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Event_02/task.php">Завдання 2: Створення події DoubleClick</a></div>		                                     
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Event_03/task.php">Завдання 3: Створення події MouseEnter</a></div>		                                     
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Event_04/task.php">Завдання 4: Створення події MouseLeave</a></div>
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Event_05/task.php">Завдання 5: Створення події KeyPress</a></div>		                                     
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Form_Load_01/task.php">Завдання 1: Створення події Load</a></div>
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Event_02/task.php">Завдання 1: Створення події Click</a></div>		                                     
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Event_03/task.php">Завдання 2: Створення події DoubleClick</a></div>		                                     
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Event_04/task.php">Завдання 3: Створення події MouseEnter</a></div>		                                     
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Event_05/task.php">Завдання 4: Створення події MouseLeave</a></div>
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/02_Event_06/task.php">Завдання 5: Створення події KeyPress</a></div>		                                     
 
 
                 </div>                
@@ -177,13 +177,13 @@ include_once("main_config.php");
               </div>
               <div id="Math" class="panel-collapse collapse">                
                 <div class="panel-body">                                    	 
-                  <div class="row pic-centered task_desc_row"><a href="">Завдання 0: Виведення введеного числа </a></div>	
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Doubling/task.php">Завдання 0: Подвоєння введеного числа</a></div> 
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/03_Button_10/task.php">Завдання 1: Математичні дії</a></div>      
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Square/task.php">Завдання 2: Квадрат</a></div>
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Circle/task.php">Завдання 3: Коло</a></div>
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Rectangular_Triangle/task.php">Завдання 4: Прямокутний трикутник</a></div>
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_App_Control/task.php">Завдання 4: Підсумковий урок</a></div>                    
+                  <div class="row pic-centered task_desc_row"><a href="">Завдання 1: Виведення введеного числа</a></div>	
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Doubling/task.php">Завдання 2: Подвоєння введеного числа</a></div> 
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/03_Button_10/task.php">Завдання 3: Математичні дії</a></div>      
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Square/task.php">Завдання 4: Квадрат</a></div>
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Circle/task.php">Завдання 5: Коло</a></div>
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_Rectangular_Triangle/task.php">Завдання 6: Прямокутний трикутник</a></div>
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/07_App_Control/task.php">Завдання 7: Підсумковий урок</a></div>                    
                 </div>                
               </div>
             </div>
@@ -198,8 +198,8 @@ include_once("main_config.php");
               </div>
               <div id="Physics" class="panel-collapse collapse">                
                 <div class="panel-body">                                    	 
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/08_Energy/task.php">Завдання 0: Енергія </a></div>	
-                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/08_Speed/task.php">Завдання 1: Швидкість рівномірного прямолінійного руху</a></div> 
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/08_Energy/task.php">Завдання 1: Енергія </a></div>	
+                  <div class="row pic-centered task_desc_row"><a href="/validator/tasks/08_Speed/task.php">Завдання 2: Швидкість рівномірного прямолінійного руху</a></div> 
                   <div class="row pic-centered task_desc_row"><a href="">Завдання 2: </a></div>      
                   <div class="row pic-centered task_desc_row"><a href="">Завдання 3: </a></div>
                   <div class="row pic-centered task_desc_row"><a href="">Завдання 4: </a></div>
