@@ -60,9 +60,12 @@ $cls_Task->_block_end();
 
 $cls_Task->_block_start("Написати код обробника події <b>btn_Doubling_Click</b>:", "_add_code.png");
 $cls_Task->_add_code_validated("Вписати код, який вдвічі збільшує введене у tb_Input число, та результат виводить у lb_Result.Text::", "private void btn_Doubling_Click(object sender, EventArgs e)
-{
+{       
+        //зчитування даних
         int a = int.Parse(tb_Input.Text);
+        //обрахунок
         int b = a * 2;
+        //виведення даних
         lb_Result.Text = b.ToString();
 }", "");
 $cls_Task->_add_property("lb_Result.Text", "Текст ", "<i>Значення введене в текстове поле</i>");
