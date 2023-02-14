@@ -1,3 +1,5 @@
+
+
 <?php
 error_reporting(E_ALL); //debug:
 ini_set('display_errors', 1);
@@ -6,6 +8,9 @@ header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0"); //no ca
 header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 //aux code:
+//Отримуємо процент виконання завдання з бази даних
+//$_SESSION["vr_percent"] = 
+// $var = 0;
 $s_task_page = $_SERVER["REQUEST_URI"];
 $_SESSION['s_task_page'] = $s_task_page;
 //access wall:
@@ -15,11 +20,11 @@ if($b_use_access_wall){
 $_SESSION["s_task_id"] = $cls_Task->s_id;
 
 //fix rocket flying too far:
-if(isset($_SESSION["vr_percent"])){
-  if($_SESSION["vr_percent"] >= 90){
-	$s_rocket_css = "hidden";
-  }
-}
+// if(isset($_SESSION["vr_percent"])){
+//   if($_SESSION["vr_percent"] >= 90){
+// 	$s_rocket_css = "hidden";
+//   }
+// }
 
 ?>
 <html>
@@ -28,8 +33,7 @@ if(isset($_SESSION["vr_percent"])){
   <?php include_once("head_includes.php"); ?>
 </head>
 <body>
-
-  <div class="container">
+  <div class="container" id="section1">
     <div class="starter-template">
       <div class="jumbotron task_jumbotron_height_fix">
 	    <?php include("../../nav_menu.php"); ?>
@@ -37,7 +41,7 @@ if(isset($_SESSION["vr_percent"])){
 		
 		<!-- square btn - main uploader --> 
 		<div class='upload_square_btn'>
-		  <img class='hvr-pulse-grow' src='../../_img/up-arrow.png' onclick="">		
+			<a href="#section1"><img class='hvr-pulse-grow' src='../../_img/up-arrow.png' onclick=""></a>		
 		  <div class='upload_square_btn_upper'></div>
 		  <img class='hvr-pulse-grow' src='../../_img/upload-square.png' onclick="$('#fileToUpload').trigger('click');">
 		  </img>
@@ -61,16 +65,58 @@ if(isset($_SESSION["vr_percent"])){
 		    <img src='../../_img/rocket.png'>
 		    </img>
 		  </span>
-		  <div class="progress-bar progress-bar-success progress-bar-striped pb-v-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo($_SESSION["vr_percent"]); ?>%">
-			<div class='pb-v-text'>
-			  Твій прогрес: <?php 
-			    if(isset($_SESSION["vr_percent"])){
-			      echo($_SESSION["vr_percent"]); 
-				}
-			    else{
-				  echo(0);
-				}
-			  ?>% вірно!
+		  <div class="progress-bar progress-bar-success progress-bar-striped pb-v-progress" role="progressbar" 
+		  	aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+			<div class='pb-v-text' id="progress">
+			  Твій прогрес:
+			  <script type="module">
+					import {testGet} from "../../_js/firebaseAuth.js";
+
+					const taskPath = window.location.href;
+					// розділяє стрічку по "/" на масив стрічок
+					// розділяє стрічку (третій елемент в попередньому масиві) по "_" на масив даних завдання (
+					// 0: номер теми завдання
+					// 1: названня теми завдання
+					// 2: номер конкретного завдання)
+					// посилання має зпочатку символ "/", тому першим значеням в масиві буде пуста стрічка
+					//console.log(taskPath);
+					const tasklets = (taskPath.split('/'))[5].split('_');
+					//console.log(tasklets);
+					// з'єднує номер та назву теми завдання
+					const lessonName = tasklets[0] + "_" + tasklets[1];
+					// номер конкретного завдання
+					const taskNumber = tasklets[2];
+					// назва загального об'єкту в якому вкладені теми завдань 
+					const taskedDefaultPath = "tasks"
+
+					//console.log(await testGet(taskedDefaultPath, lessonName, taskNumber))
+	  				var percentFromBD = await testGet(taskedDefaultPath, lessonName, taskNumber);
+					// this.innerHTML = percentFromBD;
+					document.getElementById("progress").innerText += " " + percentFromBD + "%";
+					if(percentFromBD < 90){
+						document.getElementById("progress").parentElement.style.width = percentFromBD + "%";
+					}else{
+						document.getElementById("progress").parentElement.style.width = percentFromBD + "%";
+						document.querySelector(".rocket").remove();
+					}
+					
+
+
+			  </script>
+			   
+			  <!-- ?php 
+			    // if(isset($_SESSION["vr_percent"])){
+				// 	//************************** */
+				// 	// Створюємо зміну для передачі в JS та виклику функції testSend
+				// 	$var = $_SESSION["vr_percent"];
+				// 	//************************** */
+			    //   echo($_SESSION["vr_percent"]); 
+				// }
+			    // else{
+				//   echo(0);
+				// }
+			  ?>% -->
+
 			</div>
 		  </div>
 		</div>
@@ -86,7 +132,7 @@ if(isset($_SESSION["vr_percent"])){
 			if(strpos($s_step, 'youtu.be') !== false){
 			  echo("<p class='lead lead-top-fix'>
 			          <a href='$s_step' target='_blank'>
-			            <img src='../../_img/_watch_on_youtube.png'> Подивитися, як це робити, на YouTube!
+			            <img src='../../_img/_watch_on_youtube.png'> Відеодопомога
 			            </img>
 					  </a>
 			       </p>");
@@ -104,7 +150,7 @@ if(isset($_SESSION["vr_percent"])){
            <a class="btn btn-info regular_button btn_img1 btn_img_discuss btn_help hvr-pulse-shrink" href="<?php echo($cls_Task->s_discuss_url) ?>" role="button" target="_blank"><div class='help_btn_text'>Обговорити</div></a>
         </div>
 		<hr>
-        <h2 class="centered">Практика:</h2>
+        <h2 class="centered">Практичне завдання:</h2>
 		
 		<!-- properties ----------------------------------------------------->
 		<?php
@@ -115,6 +161,8 @@ if(isset($_SESSION["vr_percent"])){
 		    // [!main validation feedback from V-Core!] patch with session vars:
 			$s_checked = "";
 			if(isset($_SESSION["vr_percent"])){
+				
+				
 			  $s_s_title="vr".$i_ctr."_reslt";
 			  if(isset($_SESSION[$s_s_title])){
 				if($_SESSION[$s_s_title] == true){
@@ -289,16 +337,94 @@ if(isset($_SESSION["vr_percent"])){
 <!-- modal msg end -------------------------------------->
 
 <!-- js ------------------------------------------------->
-<script>
+<script type="module">
   $('#fileToUpload').change(function(){
     $('#upload_file').submit();
 	exit;
   });
-  <!-- Initialize checkboxpicker -->
+  //<!-- Initialize checkboxpicker -->
   $(':checkbox').checkboxpicker();
-  <!-- Initialize highlight -->
+  //<!-- Initialize highlight -->
   hljs.initHighlightingOnLoad();
-  
+	//---------------------------------------------------------------
+  	import {testSend, testGet} from "../../_js/firebaseAuth.js";
+  	//Зчитування проценту з бази даних
+
+ //Визначення назви уроку та номеру завдання 	
+  //---------------------------------------------------------------
+  	const taskPath = window.location.href;
+	const percent =
+	<?php if(isset($_SESSION["vr_percent"])){
+		echo $_SESSION["vr_percent"];
+	}else{
+		echo("undefined");
+	} ?>;
+	// розділяє стрічку по "/" на масив стрічок
+	// розділяє стрічку (третій елемент в попередньому масиві) по "_" на масив даних завдання (
+	// 0: номер теми завдання
+	// 1: названня теми завдання
+	// 2: номер конкретного завдання)
+	// посилання має зпочатку символ "/", тому першим значеням в масиві буде пуста стрічка
+	const tasklets = (taskPath.split('/'))[5].split('_');
+	// // з'єднує номер та назву теми завдання
+	const lessonName = tasklets[0] + "_" + tasklets[1];
+	// // номер конкретного завдання
+	const taskNumber = tasklets[2];
+	// // назва загального об'єкту в якому вкладені теми завдань 
+	const taskedDefaultPath = "tasks"
+
+	// var percentFromBD = await testGet(taskedDefaultPath, lessonName, taskNumber)
+  	// console.log(percentFromBD);
+	// // для того, щоб оновити конкретне значення в вкладеному об'єкті,
+	// // потрібно вказати шлях до значення через крапку ("tasks.01_Form.00")
+	// // для того щоб, посилати змінні в назву значення в цьому об'єкті,
+	// // усю назву потрібно закрити в "[]" (приклад:
+	// // ["theObjectName" + "theNestedObject" + "propertyName")
+	const taskedPath = { [`${taskedDefaultPath}.${lessonName}.${taskNumber}`]: percent }
+	// const omegaTaskedPath = theTaskToUpdate(taskPath, 3, "tasks", percent);
+	if(percent !== "undefined" && percent !== 0){
+		testSend(taskedPath);
+	}
+  	
+	
+	// function theTaskToUpdate(thePath, thePlaceInPath, theTaskOutObj, result){
+	// 	// thePath - стрічка шляху до завдання
+	// 	// thePlaceInPath - місце назви завдання в шляху (число для масиву)
+	// 	// theTaskOuObj - Об'єкт, якому вкладені усі теми завданнь
+	// 	// result - результат завдання
+
+	// 	// розділяє стрічку по "/" на масив стрічок
+	// 	// розділяє стрічку (третій елемент в попередньому масиві) по "_" на масив даних завдання (
+	// 	// 0: номер теми завдання
+	// 	// 1: названня теми завдання
+	// 	// 2: номер конкретного завдання)
+	// 	// посилання має зпочатку символ "/", тому першим значеням в масиві буде пуста стрічка
+	// 	const tasklets = (thePath.split('/'))[thePlaceInPath].split('_');
+
+	// 	// з'єднує номер та назву теми завдання
+	// 	const lessonName = tasklets[0] + "_" + tasklets[1];
+
+	// 	// номер конкретного завдання
+	// 	const taskNumber = tasklets[2];
+
+	// 	// для того, щоб оновити конкретне значення в вкладеному об'єкті,
+	// 	// потрібно вказати шлях до значення через крапку ("tasks.01_Form.00")
+	// 	// для того щоб, посилати змінні в назву значення в цьому об'єкті,
+	// 	// усю назву потрібно закрити в "[]" (приклад:
+	// 	// ["theObjectName" + "theNestedObject" + "propertyName")
+		
+	// 	// повертає результат
+	// 	return  { [`${theTaskOutObj}.${lessonName}.${taskNumber}`]: result }
+	// }
+	//   console.log(taskPath);
+	  
+	//---------------------------------------------------------------
+
+  	// ***************************************************************
+	// виклик функції для зміни в базі даних
+  	// var percent = '';
+  	// ***************************************************************
+
 <?php
 //show completed window on 100%:
 if(isset($_SESSION["vr_percent"])){
@@ -313,6 +439,7 @@ if(isset($_SESSION["vr_percent"])){
 ?>
   
 </script>
+
 <!-- js ------------------------------------------------->
 
 <?php
@@ -324,7 +451,12 @@ if($_SESSION["b_debug"] == true){
 ?>
 
 </body>
-  
+
+	<!--Google auth-->
+	<script type="module" src="../../_js/firebaseAuth.js"></script>
+	
+
+
 <?php
 function _table_start($tbl_title){
   $s_data = "<table class='table table-striped table-bordered'>

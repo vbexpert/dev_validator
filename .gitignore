@@ -41,11 +41,9 @@ TestResult.xml
 dlldata.c
 
 # ignore tasks:
-tasks_source_code/
-*.exe
+tasks_source_code/*.exe
 
-app_for_testing/
-*.exe
+app_for_testing/*.exe
 
 # DNX
 project.lock.json
@@ -250,4 +248,4 @@ ModelManifest.xml
 .fake/
 
 #custom:
-dev_root/db_connect.php 
+dev_root/db_connect.php

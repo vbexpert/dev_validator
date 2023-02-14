@@ -1,0 +1,144 @@
+﻿using System.Windows.Forms;
+using System;
+using System.Collections.Generic;
+using System.Reflection;
+using System.ComponentModel;
+
+namespace ns_d_code
+{
+    public class cls_Main
+    {
+        public static string test(Form f, string s_app_fnp, string s_app_ft) //validation sub:
+        {
+			cls_output_controller cls_output_controller = new cls_output_controller();
+			try
+			{
+				//початок коду валідації:			
+				//---------------------------------------------------->
+				//v global properties:
+				cls_output_controller._v_form(f);
+				cls_output_controller._v_parm(s_app_ft,			"App name",             "Rectangular_Triangle.exe");
+				//---------------------------------------------------->
+				//подключаемся к инстансу ивента Form_Load
+				MethodInfo loadMethodInfo = f.GetType().GetMethod("OnLoad", BindingFlags.NonPublic | BindingFlags.Instance);
+				//вызываем Form_Load у формы:
+				loadMethodInfo.Invoke(f, new object[] { EventArgs.Empty });
+				//---------------------------------------------------->	
+				cls_output_controller._v_parm(f.AutoScaleMode,		"AutoScaleMode",		"None");
+				cls_output_controller._v_parm(f.Text,				"Text",					"Прямокутний трикутник - Rectangular Triangle");
+				cls_output_controller._v_parm(f.Width,				"Width",				"800");
+				cls_output_controller._v_parm(f.Height,				"Height",				"300");	
+				cls_output_controller._v_parm(f.Font.Size,			"Form.Font.Size",		"14");			
+				cls_output_controller._v_parm(f.StartPosition,		"StartPosition",		"CenterScreen");	
+
+				//подключаемся к инстансу:
+				Label label1 = (Label)cls_output_controller._v_get_obj(f, "label1");
+				//валидация: exists & properties:
+				cls_output_controller._v_obj_exists(label1, "label1");
+				cls_output_controller._v_parm(label1.Name, "Name", "label1");
+				cls_output_controller._v_parm(label1.Text, "Text", "Перший катет:");
+
+				//подключаемся к инстансу:
+				TextBox tb_SideA = (TextBox)cls_output_controller._v_get_obj(f, "tb_SideA");
+				//валидация: exists & properties:
+				cls_output_controller._v_obj_exists(tb_SideA, "tb_SideA");				
+				cls_output_controller._v_parm(tb_SideA.Name,	"Name",	"tb_SideA");
+
+				//подключаемся к инстансу:
+				Label label2 = (Label)cls_output_controller._v_get_obj(f, "label2");
+				//валидация: exists & properties:
+				cls_output_controller._v_obj_exists(label2, "label2");
+				cls_output_controller._v_parm(label2.Name, "Name", "label2");
+				cls_output_controller._v_parm(label2.Text, "Text", "Другий катет:");
+
+				//подключаемся к инстансу:
+				TextBox tb_SideB = (TextBox)cls_output_controller._v_get_obj(f, "tb_SideB");
+				//валидация: exists & properties:
+				cls_output_controller._v_obj_exists(tb_SideB, "tb_SideB");				
+				cls_output_controller._v_parm(tb_SideB.Name,	"Name",	"tb_SideB");
+
+				//подключаемся к инстансу:
+				Label label3 = (Label)cls_output_controller._v_get_obj(f, "label3");
+				//валидация: exists & properties:
+				cls_output_controller._v_obj_exists(label3, "label3");
+				cls_output_controller._v_parm(label3.Name, "Name", "label3");
+				cls_output_controller._v_parm(label3.Text, "Text", "Гіпотенуза =");
+
+				//подключаемся к инстансу:
+				Label label4 = (Label)cls_output_controller._v_get_obj(f, "label4");
+				//валидация: exists & properties:
+				cls_output_controller._v_obj_exists(label4, "label4");
+				cls_output_controller._v_parm(label4.Name, "Name", "label4");
+				cls_output_controller._v_parm(label4.Text, "Text", "Периметр =");
+
+				//подключаемся к инстансу:
+				Label label5 = (Label)cls_output_controller._v_get_obj(f, "label5");
+				//валидация: exists & properties:
+				cls_output_controller._v_obj_exists(label5, "label5");
+				cls_output_controller._v_parm(label5.Name, "Name", "label5");
+				cls_output_controller._v_parm(label5.Text, "Text", "Площа =");
+
+				//подключаемся к инстансу:
+				Label lb_SideC = (Label)cls_output_controller._v_get_obj(f, "lb_SideC");
+				//валидация: exists & properties:
+				cls_output_controller._v_obj_exists(lb_SideC, "lb_SideC");
+				cls_output_controller._v_parm(lb_SideC.Name, "Name", "lb_SideC");
+				cls_output_controller._v_parm(lb_SideC.Text, "Text", "0");	
+				
+				//подключаемся к инстансу:
+				Label lb_Perimeter = (Label)cls_output_controller._v_get_obj(f, "lb_Perimeter");
+				//валидация: exists & properties:
+				cls_output_controller._v_obj_exists(lb_Perimeter, "lb_Perimeter");
+				cls_output_controller._v_parm(lb_Perimeter.Name, "Name", "lb_Perimeter");
+				cls_output_controller._v_parm(lb_Perimeter.Text, "Text", "0");	
+				
+				//подключаемся к инстансу:
+				Label lb_Square = (Label)cls_output_controller._v_get_obj(f, "lb_Square");
+				//валидация: exists & properties:
+				cls_output_controller._v_obj_exists(lb_Square, "lb_Square");
+				cls_output_controller._v_parm(lb_Square.Name, "Name", "lb_Square");
+				cls_output_controller._v_parm(lb_Square.Text, "Text", "0");		
+
+				//подключаемся к инстансу:
+				PictureBox pictureBox1 = (PictureBox)cls_output_controller._v_get_obj(f, "pictureBox1");
+				//валидация: exists & properties:
+				cls_output_controller._v_obj_exists(pictureBox1, "pictureBox1");				
+				cls_output_controller._v_parm(pictureBox1.Name,			"Name",					"pictureBox1");
+				cls_output_controller._v_parm(pictureBox1.Name,			"Name",					"pictureBox1");				
+				//cls_output_controller._v_parm(pictureBox1.BackgroundImage,		"BackgroundImage",	"Rectangular_Triangle.png");							
+				cls_output_controller._v_parm(pictureBox1.BackgroundImageLayout,	"BackgroundImageLayout",	"Zoom");	
+
+				//подключаемся к инстансу:
+				Button btn_Calculate = (Button)cls_output_controller._v_get_obj(f, "btn_Calculate");  
+				//валидация: exists & properties:
+				cls_output_controller._v_obj_exists(btn_Calculate, "btn_Calculate");
+				cls_output_controller._v_parm(btn_Calculate.Name, "Name", "btn_Calculate");
+				cls_output_controller._v_parm(btn_Calculate.Text, "Text", "Обчислити");
+				//валидация: или есть ивент ("EventClick") у данного инстанса контрола (btn_Calculate):
+				cls_output_controller._v_HasEventHandler(btn_Calculate, "EventClick");
+				cls_output_controller._v_HasEventHandler(btn_Calculate, "EventClick");//для відмітки провалідованого коду
+				//Перевірка події на кнопці:
+				//встановлюємо невідомий учню контрольний маркер:
+				tb_SideA.Text = "4";
+				tb_SideB.Text = "7";
+				//підготовка аксессора метода - btn_Calculate_Click:
+				MethodInfo btn_Calculate_Click = f.GetType().GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
+				//виклик події - емуляція натискання на кнопку:
+				btn_Calculate_Click.Invoke(btn_Calculate, new object[] { EventArgs.Empty });
+				//перевірка копіювання (порівнюємо Результати із маркером):
+				cls_output_controller._v_parm(lb_SideC.Text, "Text", "8,062");	
+				cls_output_controller._v_parm(lb_Perimeter.Text, "Text", "19,062");		
+				cls_output_controller._v_parm(lb_Square.Text, "Text", "14");		
+
+			}
+			catch
+			{
+                //
+			}
+            return(cls_output_controller._final_result());
+        }
+        public static void Main() //main entry point:
+        {  }
+    }
+	//[validator-class-placeholder]
+}

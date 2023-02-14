@@ -1,0 +1,27 @@
+eval("\$_SESSION[\"vrp_count\"] = 8;");
+eval("\$_SESSION[\"vr0_reslt\"] = True;");
+eval("\$_SESSION[\"vr0_error\"] = \"\";");
+eval("\$_SESSION[\"vr0_score\"] = 20;");
+eval("\$_SESSION[\"vr1_reslt\"] = False;");
+eval("\$_SESSION[\"vr1_error\"] = \"App name=Task_00.exe master value: Form_09.exe\";");
+eval("\$_SESSION[\"vr1_score\"] = 20;");
+eval("\$_SESSION[\"vr2_reslt\"] = False;");
+eval("\$_SESSION[\"vr2_error\"] = \"Form.AutoScaleMode=Font master value: None\";");
+eval("\$_SESSION[\"vr2_score\"] = 20;");
+eval("\$_SESSION[\"vr3_reslt\"] = False;");
+eval("\$_SESSION[\"vr3_error\"] = \"Form.Text=Form1 master value: Програма без іконки у рядку заголовку\";");
+eval("\$_SESSION[\"vr3_score\"] = 20;");
+eval("\$_SESSION[\"vr4_reslt\"] = False;");
+eval("\$_SESSION[\"vr4_error\"] = \"Form.Width=695 master value: 500\";");
+eval("\$_SESSION[\"vr4_score\"] = 20;");
+eval("\$_SESSION[\"vr5_reslt\"] = False;");
+eval("\$_SESSION[\"vr5_error\"] = \"Form.Height=384 master value: 300\";");
+eval("\$_SESSION[\"vr5_score\"] = 20;");
+eval("\$_SESSION[\"vr6_reslt\"] = False;");
+eval("\$_SESSION[\"vr6_error\"] = \"Початкова позиція=WindowsDefaultLocation master value: CenterScreen\";");
+eval("\$_SESSION[\"vr6_score\"] = 20;");
+eval("\$_SESSION[\"vr7_reslt\"] = False;");
+eval("\$_SESSION[\"vr7_error\"] = \"Form.ShowIcon=True master value: False\";");
+eval("\$_SESSION[\"vr7_score\"] = 20;");
+eval("\$_SESSION[\"vr_percent\"] = 12;");
+
