@@ -1,0 +1,96 @@
+﻿using System.Windows.Forms;
+using System;
+using System.Collections.Generic;
+namespace ns_d_code
+{
+    public class cls_Main
+    {
+        public static string test(Form f, string s_app_fnp, string s_app_ft) //validation sub:
+        {
+			cls_output_controller cls_output_controller = new cls_output_controller();
+            //---------------------------------------------------->
+            //початок коду валідації:			
+            cls_output_controller._v_form(f);
+			cls_output_controller._v_parm(s_app_ft,			"App name",             "Button_04.exe");
+			cls_output_controller._v_parm(f.AutoScaleMode,	"Form.AutoScaleMode",	"None");
+            cls_output_controller._v_parm(f.Text,			"Form.Text",			"Подія на кнопці");
+			cls_output_controller._v_parm(f.Width,			"Form.Width",			"700");
+            cls_output_controller._v_parm(f.Height,			"Form.Height",			"500");
+            cls_output_controller._v_parm(f.StartPosition,	"StartPosition",		"CenterScreen");
+
+			
+			
+			//кнопка 1 (існує):
+			//---------------------------------------------------->
+			//спроба отримати інстанс обєкта:
+			object obj1 = cls_output_controller._v_get_obj(f, "btn_ChangeText");
+			//перевіряємо чи об'єкт існує (де-факто):
+			if(obj1 != null)
+			{
+			    //об'єкт існує - приводимо до типу кнопки:
+			    Button b1 = (Button)obj1;
+			    
+				//валідуємо обєкт для відображення у валідаторі:
+				cls_output_controller._v_obj_exists(b1,	"btn_ChangeText");
+
+				//об'єкт існує - валідуємо текст кнопки:			
+				
+				cls_output_controller._v_parm(b1.Name,		"btn_ChangeText.Name",	"btn_ChangeText");
+				cls_output_controller._v_parm(b1.Text,		"btn_ChangeText.Text",	"Змінити напис кнопки");
+				cls_output_controller._v_parm(b1.Width,		"btn_ChangeText.Width",	"500");
+				cls_output_controller._v_parm(b1.Height,	"btn_ChangeText.Height",	"100");
+				cls_output_controller._v_parm(b1.Location.X,		"btn_ChangeText.Location.X",	"100");
+				cls_output_controller._v_parm(b1.Location.Y,		"btn_ChangeText.Location.Y",	"200");
+				cls_output_controller._v_parm(b1.ForeColor.Name,	"btn_ChangeText.ForeColor",	"Crimson");
+				cls_output_controller._v_parm(b1.Font.Bold,	"btn_ChangeText.Font.Bold",	"True");
+				cls_output_controller._v_parm(b1.Font.Size,	"btn_ChangeText.Font.Size",	"22");
+
+			//---------------------------------------------------->
+			//<-- bingo start -->
+			//prepare clickMethodInfo:
+			MethodInfo clickMethodInfo = f.GetType().GetMethod("OnClick", BindingFlags.NonPublic | BindingFlags.Instance);
+			//invoke event:
+			clickMethodInfo.Invoke(b1, new object[] { EventArgs.Empty });
+
+			//validate if text changed:
+			//use accessor if required:
+ 			
+			cls_output_controller._v_parm(b1.Text, "btn_ChangeText.Text", "Напис на кнопці змінено!!!");
+
+			//<-- bingo end -->
+			//---------------------------------------------------->
+			}
+			else
+			{
+			    //об'єкт не існує (2 параметри треба будо звалідувати, тому 2 і зафейлити):
+			    cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+			//---------------------------------------------------->
+			//<-- bingo start -->
+			
+				cls_output_controller._add_fail_msg("Об'єкт btn_Close не знайдено!");
+				
+			//<-- bingo end -->
+			//---------------------------------------------------->
+
+			}
+			//---------------------------------------------------->
+			
+
+
+			//кінець коду валідації:
+			//---------------------------------------------------->
+            return(cls_output_controller._final_result());
+        }
+        public static void Main() //main entry point:
+        {  }
+    }
+	//[validator-class-placeholder]
+}

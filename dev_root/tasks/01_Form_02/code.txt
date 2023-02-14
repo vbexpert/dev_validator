@@ -1,0 +1,29 @@
+using System.Windows.Forms;
+using System;
+using System.Collections.Generic;
+using System.Reflection;
+using System.ComponentModel;
+
+namespace ns_d_code
+{
+    public class cls_Main
+    {
+        public static string test(Form f, string s_app_fnp, string s_app_ft) //validation sub:
+        {
+			cls_output_controller cls_output_controller = new cls_output_controller();
+            //---------------------------------------------------->
+			//початок коду валідації:
+            cls_output_controller._v_form(f);
+			cls_output_controller._v_parm(s_app_ft,			"App name",					    "Form_02.exe");
+			cls_output_controller._v_parm(f.AutoScaleMode,	"Form.AutoScaleMode",			"None");
+			cls_output_controller._v_parm(f.Text,		    "Form.Text",					"Розфарбуйте свою Windows форму");
+			cls_output_controller._v_parm(f.BackColor.Name, "Form.BackColor.Name",			"CadetBlue");
+			//кінець коду валідації:
+			//---------------------------------------------------->
+            return(cls_output_controller._final_result());
+        }
+        public static void Main() //main entry point:
+        {  }
+    }
+	//[validator-class-placeholder]
+}

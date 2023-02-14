@@ -13,7 +13,7 @@ include_once("main_config.php");
     <title>Графік Успішності:</title>
     <!-- utf8 support: -->
 	<?php
-	  include_once("head_meta_tags.php");
+	  //include_once("head_meta_tags.php");
 	?>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<!-- external CSS: -->
