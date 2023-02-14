@@ -342,3 +342,58 @@ html {
 .td_va{
     vertical-align: middle;
 }
+
+/* Modal account window */
+.modal-dialog{
+    width: 860px;
+}
+
+
+/* https://materializecss.com/ */
+.user-result {
+    /* border: 1px solid #000; */
+    display: flex;
+    flex-direction: column;
+}
+.divLessons{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px 0px 0px;    
+}
+
+.divLessonName{
+    /* flex: 1 0 50px; */
+    background-color: rgb(187, 187, 185);
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.divTasks{
+    /* flex: 0 0 50px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.divTaskResult{
+    flex: 0 0 auto;
+    flex-wrap: nowrap;
+    border: 1px solid #000;
+    font-weight: bold;
+    margin: 5px 5px 0px 0px;
+
+
+}
+
+progress {
+    /* display: inline-block; */
+    /* overflow: hidden; */
+    height: 2em;
+    width: 10em;
+    border: 0px solid black;
+    box-sizing: border-box;
+  }
